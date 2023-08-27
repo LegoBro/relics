@@ -1,0 +1,2 @@
+particle enchant ~ ~2 ~ 1 1 1 10 10000 force @a[tag=id]
+data merge entity @s {ShowArms:1b,Pose:{Body:[342f,0f,0f],Head:[309f,0f,0f],LeftLeg:[344f,0f,0f],RightLeg:[346f,0f,0f],LeftArm:[239f,324f,0f],RightArm:[231f,44f,0f]}}

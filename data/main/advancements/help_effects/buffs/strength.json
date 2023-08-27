@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:potion",
+      "nbt":"{Potion:\"minecraft:strength\"}"
+    },
+    "title": {
+      "translate": "effects.strength",
+      "color": "white",
+      "bold": true
+    },
+    "description": {
+      "translate": "effects.strength.des",
+      "color": "dark_red"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "main:help_effects/buffs/speed",
+  "criteria": {
+    "auto": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

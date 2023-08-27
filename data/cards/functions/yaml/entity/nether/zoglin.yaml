@@ -1,0 +1,18 @@
+card:
+  placement: 10
+  rarity: "rare"
+  type: "entity"
+  element: "nether"
+  name: "zoglin"
+  color: "green"
+  entity: "zoglin"
+  model_id: 40
+  cost: 8
+  maxHealth: 3
+  health: 3
+  attack: 7
+  range: 1
+  speed: 2
+  lore: ""
+  undead: True
+  fire_proof: True

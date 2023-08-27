@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:tnt"
+    },
+    "title": {
+      "translate": "quests.tnt",
+      "color": "green",
+      "bold": true
+    },
+    "description": {
+      "translate": "quests.tnt.des",
+      "color": "green"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false
+  },
+  "parent": "main:quests/tutorial",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "function": "main:player/advancement/quests/tnt"
+  }
+}

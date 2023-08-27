@@ -1,0 +1,13 @@
+card:
+  placement: 11
+  rarity: "unknown"
+  type: "consumable"
+  element: "defend"
+  name: "pitcher_plant"
+  color: "#FBB1F2"
+  cost: 0
+  model_id: 142
+  lore: ""
+  building:
+    health: 1
+    maxHealth: 1

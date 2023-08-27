@@ -1,0 +1,15 @@
+card:
+  placement: 11
+  rarity: "common"
+  type: "consumable"
+  element: "defend"
+  name: "bee_nest"
+  color: "green"
+  cost: 6
+  model_id: 105
+  lore: "Place a bee nest to discover a bee and give all bees +1 attack for every newly spawned bee"
+  building:
+    health: 3
+    maxHealth: 3
+    armor: 1
+    fire_proof: True

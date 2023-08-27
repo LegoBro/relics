@@ -1,0 +1,17 @@
+card:
+  placement: 10
+  rarity: "common"
+  type: "entity"
+  element: "end"
+  name: "enderman"
+  color: "green"
+  entity: "enderman"
+  model_id: 16
+  cost: 8
+  maxHealth: 4
+  health: 4
+  attack: 4
+  range: 1
+  speed: 4
+  lore: ""
+  teleport: True

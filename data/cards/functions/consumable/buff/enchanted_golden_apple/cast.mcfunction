@@ -1,0 +1,5 @@
+# Casts the consumable card
+tellraw @a[tag=id] [{"selector":"@s"},{"text":" uses "},{"underlined":true,"translate":"card.enchanted_golden_apple","hoverEvent":{"action":"show_item","contents":{"id":"minecraft:carrot_on_a_stick","Count":1,"tag":"{HideFlags:127,display:{Lore:['','[{\"translate\":\"cost\",\"italic\":false,\"color\":\"white\"},{\"text\":\" 20\",\"italic\":false,\"color\":\"white\"}]','{\"text\":\"\",\"color\":\"white\",\"italic\":false}','{\"translate\":\"card.enchanted_golden_apple.lore.0\",\"color\":\"white\",\"italic\":false}','{\"translate\":\"card.enchanted_golden_apple.lore.1\",\"color\":\"white\",\"italic\":false}','{\"translate\":\"card.enchanted_golden_apple.lore.2\",\"color\":\"white\",\"italic\":false}'],Name:\"{\\\"translate\\\":\\\"card.enchanted_golden_apple\\\",\\\"italic\\\":false,\\\"color\\\":\\\"green\\\"}\"}}"}}}]
+scoreboard players remove @s saturation 20
+function cards:consumable/buff/enchanted_golden_apple/activate
+function main:player/use_card/store

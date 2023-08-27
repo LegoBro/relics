@@ -1,0 +1,18 @@
+card:
+  placement: 10
+  rarity: "uncommon"
+  type: "entity"
+  element: "overworld"
+  name: "snow_golem"
+  color: "green"
+  entity: "snow_golem"
+  model_id: 6
+  cost: 9
+  maxHealth: 3
+  health: 3
+  special_attack: true
+  attack: 0
+  range: 2
+  speed: 1
+  ambush: true
+  lore: "Special Attack - shoot an enemy to give it slowness for 7 turns"

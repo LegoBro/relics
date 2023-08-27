@@ -1,0 +1,14 @@
+card:
+  placement: 11
+  rarity: "uncommon"
+  type: "consumable"
+  element: "defend"
+  name: "lightning_rod"
+  color: "#b4d99e"
+  cost: 7
+  model_id: 123
+  lore: "Absorbs all lightning strikes"
+  building:
+    health: 3
+    maxHealth: 3
+    fire_proof: True

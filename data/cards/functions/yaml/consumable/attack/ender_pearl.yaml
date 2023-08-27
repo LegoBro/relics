@@ -1,0 +1,10 @@
+card:
+  placement: 4
+  rarity: "common"
+  type: "consumable"
+  element: "attack"
+  name: "ender_pearl"
+  color: "green"
+  model_id: 72
+  cost: 13
+  lore: "After use, the next entity you select can move to any position on the board"

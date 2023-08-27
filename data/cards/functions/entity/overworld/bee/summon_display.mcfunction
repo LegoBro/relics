@@ -1,0 +1,2 @@
+playsound minecraft:entity.bee.loop_aggressive master @a[tag=id] ~ ~ ~ 10 1 1
+execute as @e[tag=id,tag=card.building,tag=bee_nest] at @s if entity @e[type=armor_stand,tag=board,tag=filled,tag=friendly,tag=id,limit=1,distance=..1.5] as @e[tag=id,type=bee,tag=bee,tag=card.entity] at @s if entity @e[type=armor_stand,tag=board,tag=filled,tag=friendly,tag=id,limit=1,distance=..1.5] run scoreboard players add @s attack 1

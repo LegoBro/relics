@@ -1,0 +1,17 @@
+card:
+  placement: 10
+  rarity: "common"
+  type: "entity"
+  element: "overworld"
+  name: "slime"
+  color: "green"
+  entity: "slime"
+  model_id: 34
+  cost: 5
+  maxHealth: 3
+  health: 3
+  attack: 2
+  range: 1
+  speed: 1
+  extra_nbt: "Size:2"
+  lore: "A squishy slime that breaks apart when killed"

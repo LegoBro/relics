@@ -1,0 +1,17 @@
+card:
+  placement: 10
+  rarity: "uncommon"
+  type: "entity"
+  element: "overworld"
+  name: "wolf"
+  color: "green"
+  entity: "wolf"
+  model_id: 10
+  cost: 7
+  maxHealth: 3
+  health: 3
+  attack: 4
+  range: 1
+  speed: 2
+  ambush: true
+  lore: ""

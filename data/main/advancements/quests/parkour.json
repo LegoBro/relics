@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:ladder"
+    },
+    "title": {
+      "translate": "quests.parkour",
+      "color": "green",
+      "bold": true
+    },
+    "description": {
+      "translate": "quests.parkour.des",
+      "color": "green"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false
+  },
+  "parent": "main:quests/tutorial",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "function": "main:player/advancement/quests/parkour"
+  }
+}

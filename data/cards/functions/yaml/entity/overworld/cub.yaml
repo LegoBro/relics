@@ -1,0 +1,17 @@
+card:
+  placement: 10
+  rarity: "uncommon"
+  type: "entity"
+  element: "overworld"
+  name: "cub"
+  color: "green"
+  entity: "polar_bear"
+  model_id: 94
+  cost: 2
+  maxHealth: 2
+  health: 2
+  attack: 1
+  range: 1
+  speed: 2
+  lore: ""
+  extra_nbt: "Age:-10000"

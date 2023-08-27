@@ -1,0 +1,10 @@
+card:
+  placement: 0
+  rarity: "epic"
+  type: "consumable"
+  element: "attack"
+  name: "tnt_cannon"
+  color: "green"
+  model_id: 93
+  cost: 14
+  lore: "Launch a devestating strike of TNT in the middle row of the board"

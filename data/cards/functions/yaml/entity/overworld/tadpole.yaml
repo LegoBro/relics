@@ -1,0 +1,17 @@
+card:
+  placement: 10
+  rarity: "common"
+  type: "entity"
+  element: "overworld"
+  name: "tadpole"
+  color: "#018a73"
+  entity: "tadpole"
+  model_id: 133
+  cost: 0
+  maxHealth: 1
+  health: 1
+  attack: 0
+  range: 1
+  speed: 0
+  lore: "Becomes a frog after 3 turns"
+  water: True

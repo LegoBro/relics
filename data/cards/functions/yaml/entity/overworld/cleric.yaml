@@ -1,0 +1,18 @@
+card:
+  placement: 10
+  rarity: "rare"
+  type: "entity"
+  element: "overworld"
+  name: "cleric"
+  color: "green"
+  entity: "villager"
+  model_id: 75
+  cost: 16
+  maxHealth: 4
+  health: 4
+  attack: 1
+  range: 1
+  speed: 1
+  extra_nbt: "VillagerData:{profession:\"minecraft:cleric\"}"
+  lore: "At the end of every turn, heals a random entity for +5 health"
+  emerald: True

@@ -1,0 +1,17 @@
+card:
+  placement: 10
+  rarity: "uncommon"
+  type: "entity"
+  element: "overworld"
+  name: "witch"
+  color: "green"
+  entity: "witch"
+  model_id: 80
+  cost: 15
+  maxHealth: 5
+  health: 5
+  attack: 0
+  special_attack: true
+  range: 2
+  speed: 1
+  lore: "Special Attack - debuff an enemy; at the end of your turn the witch will buff a random friendly unit"

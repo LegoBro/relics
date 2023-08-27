@@ -1,0 +1,10 @@
+card:
+  placement: 4
+  rarity: "common"
+  type: "consumable"
+  element: "attack"
+  name: "blaze_strike"
+  color: "green"
+  model_id: 30
+  cost: 8
+  lore: "Attack an enemy unit as well as two adjacent horizontal spaces with 3 fire damage"

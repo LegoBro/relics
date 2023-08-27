@@ -1,0 +1,16 @@
+card:
+  placement: 10
+  rarity: "uncommon"
+  type: "entity"
+  element: "overworld"
+  name: "fox"
+  color: "green"
+  entity: "fox"
+  model_id: 33
+  cost: 5
+  maxHealth: 3
+  health: 3
+  attack: 3
+  range: 1
+  speed: 2
+  lore: "A shy and cunning creature; has a chance to drop a card upon summon"

@@ -1,0 +1,10 @@
+card:
+  placement: 0
+  rarity: "rare"
+  type: "consumable"
+  element: "attack"
+  name: "thunderstorm"
+  color: "green"
+  model_id: 69
+  cost: 13
+  lore: "Strike 3 random entities with lightning that deals 7 damage as well as 3 damage to adjacent entities"

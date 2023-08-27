@@ -1,0 +1,3 @@
+## Displays for the front
+execute as @e[type=armor_stand,tag=hovered.slot,tag=id] run team join red @s
+execute if score #selected.z var matches 1..5 as @e[type=armor_stand,tag=hovered.slot,tag=id,tag=filled,tag=!block] if entity @e[tag=attackable,tag=!unbuffable,tag=!selectable,limit=1,sort=nearest,distance=..2] run team join green @s

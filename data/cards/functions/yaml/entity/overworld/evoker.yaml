@@ -1,0 +1,17 @@
+card:
+  placement: 10
+  rarity: "epic"
+  type: "entity"
+  element: "overworld"
+  name: "evoker"
+  color: "green"
+  entity: "evoker"
+  model_id: 86
+  cost: 20
+  maxHealth: 7
+  health: 7
+  attack: 2
+  range: 1
+  speed: 2
+  special_attack: False
+  lore: "A powerful summoner of vexes"

@@ -1,0 +1,10 @@
+card:
+  placement: 0
+  rarity: "rare"
+  type: "consumable"
+  element: "buff"
+  name: "frog_eggs"
+  color: "#018a73"
+  model_id: 134
+  cost: 5
+  lore: "Discover between 3 and 5 tadpoles"

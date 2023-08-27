@@ -1,0 +1,10 @@
+card:
+  placement: 13
+  rarity: "common"
+  type: "consumable"
+  element: "attack"
+  name: "piston"
+  color: "#b4d99e"
+  model_id: 121
+  cost: 6
+  lore: "Push an entity or block back towards your opponent"

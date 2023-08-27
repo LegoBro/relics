@@ -1,0 +1,11 @@
+card:
+  placement: 11
+  rarity: "epic"
+  type: "consumable"
+  element: "defend"
+  name: "skeleton_trap"
+  color: "green"
+  model_id: 59
+  cost: 18
+  hide: True
+  lore: "Place a trap that, when triggered, summons a 7 damage lightning bolt, and spawns 4 skeleton horse archers randomly on the board"

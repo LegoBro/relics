@@ -1,0 +1,19 @@
+card:
+  placement: 10
+  rarity: "common"
+  type: "entity"
+  element: "nether"
+  name: "baby_magma_cube"
+  color: "green"
+  entity: "magma_cube"
+  model_id: 12
+  cost: 2
+  maxHealth: 1
+  health: 1
+  attack: 1
+  range: 1
+  speed: 1
+  apply_fire: 1
+  ambush: true
+  lore: ""
+  fire_proof: True

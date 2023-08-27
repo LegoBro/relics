@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:sticky_piston"
+    },
+    "title": {
+      "translate": "quests.stickypiston",
+      "color": "green",
+      "bold": true
+    },
+    "description": {
+      "translate": "quests.stickypiston.des",
+      "color": "green"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden":true
+  },
+  "parent": "main:quests/root",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "function": "main:player/advancement/quests/stickypiston"
+  }
+}

@@ -1,0 +1,14 @@
+card:
+  placement: 2
+  rarity: "uncommon"
+  type: "consumable"
+  element: "defend"
+  name: "gilded_blackstone"
+  color: "green"
+  cost: 3
+  model_id: 51
+  lore: "Place a gilded blackstone block; when mined, this block has a 50% chance of dropping a golden item"
+  building:
+    health: 3
+    maxHealth: 3
+    fire_proof: True

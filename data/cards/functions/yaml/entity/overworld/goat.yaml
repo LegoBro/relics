@@ -1,0 +1,17 @@
+card:
+  placement: 10
+  rarity: "uncommon"
+  type: "entity"
+  element: "overworld"
+  name: "goat"
+  color: "#b4d99e"
+  entity: "goat"
+  model_id: 116
+  cost: 6
+  maxHealth: 4
+  health: 4
+  attack: 1
+  range: 1
+  speed: 1
+  lore: "Special Attack - charge through multiple enemies until a stopping point is found"
+  special_attack: true

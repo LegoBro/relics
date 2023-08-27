@@ -1,0 +1,10 @@
+card:
+  placement: 7
+  rarity: "common"
+  type: "consumable"
+  element: "buff"
+  name: "piercing"
+  color: "green"
+  model_id: 65
+  cost: 8
+  lore: "Allow a ranged entity to deal damage through armor"

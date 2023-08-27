@@ -1,0 +1,10 @@
+card:
+  placement: 7
+  rarity: "uncommon"
+  type: "consumable"
+  element: "buff"
+  name: "spectral_arrow"
+  color: "green"
+  model_id: 44
+  cost: 8
+  lore: "Increase the range of a ranged entity by 1"

@@ -1,0 +1,29 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:player_head",
+      "nbt": "{SkullOwner:LegoBro}"
+    },
+    "title": {
+      "translate": "quests.deckmaster",
+      "color": "green",
+      "bold": true
+    },
+    "description": {
+      "translate": "quests.deckmaster.des",
+      "color": "green"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false
+  },
+  "parent": "main:quests/ambush",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "function": "main:player/advancement/quests/deckmaster"
+  }
+}

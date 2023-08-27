@@ -1,0 +1,13 @@
+card:
+  placement: 11
+  rarity: "rare"
+  type: "consumable"
+  element: "defend"
+  name: "suspicious_sand"
+  color: "#FBB1F2"
+  cost: 4
+  model_id: 143
+  lore: "Place a suspicious sand that can be mined for various items"
+  building:
+    health: 3
+    maxHealth: 3

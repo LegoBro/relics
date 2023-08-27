@@ -1,0 +1,13 @@
+card:
+  placement: 11
+  rarity: "uncommon"
+  type: "consumable"
+  element: "defend"
+  name: "cherry_sapling"
+  color: "#FBB1F2"
+  cost: 9
+  model_id: 141
+  lore: "Place a cherry sapling that, after 8 turns, grows into a full cherry tree which heals all friendly units by +1 each turn"
+  building:
+    health: 4
+    maxHealth: 4

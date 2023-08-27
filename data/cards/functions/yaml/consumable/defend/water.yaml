@@ -1,0 +1,14 @@
+card:
+  placement: 11
+  rarity: "common"
+  type: "consumable"
+  element: "defend"
+  name: "water"
+  color: "green"
+  cost: 5
+  model_id: 113
+  lore: "Place a bucket of water that gives adjacent water mobs speed, damages adjacent blazes, and puts out fire on all nearby mobs"
+  building:
+    health: 3
+    maxHealth: 3
+    fire_proof: True

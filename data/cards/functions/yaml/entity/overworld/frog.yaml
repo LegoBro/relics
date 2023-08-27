@@ -1,0 +1,17 @@
+card:
+  placement: 10
+  rarity: "common"
+  type: "entity"
+  element: "overworld"
+  name: "frog"
+  color: "#018a73"
+  entity: "frog"
+  model_id: 132
+  cost: 2
+  maxHealth: 3
+  health: 3
+  attack: 1
+  range: 1
+  speed: 1
+  lore: ""
+  water: True

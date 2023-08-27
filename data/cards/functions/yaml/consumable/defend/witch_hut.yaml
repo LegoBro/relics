@@ -1,0 +1,14 @@
+card:
+  placement: 2
+  rarity: "rare"
+  type: "consumable"
+  element: "defend"
+  name: "witch_hut"
+  color: "green"
+  cost: 12
+  model_id: 111
+  lore: "Place a hut that has a 25% chance to discover a random potion each turn; this re-rolls for every witch on the board"
+  building:
+    health: 5
+    maxHealth: 5
+    armor: 2

@@ -1,0 +1,10 @@
+card:
+  placement: 4
+  rarity: "common"
+  type: "consumable"
+  element: "attack"
+  name: "dragons_breath"
+  color: "green"
+  model_id: 71
+  cost: 13
+  lore: "Launch a ball of dragon's breath that deals 2 poison damage and 2 wither damage to a unit as well as adjacent units"

@@ -1,0 +1,19 @@
+card:
+  placement: 10
+  rarity: "uncommon"
+  type: "entity"
+  element: "nether"
+  name: "blaze"
+  color: "green"
+  entity: "blaze"
+  model_id: 13
+  cost: 9
+  maxHealth: 4
+  health: 4
+  attack: 1
+  range: 3
+  speed: 1
+  apply_fire: 4
+  lore: "Deals an additional 4 fire damage"
+  flying: true
+  fire_proof: True

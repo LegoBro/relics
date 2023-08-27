@@ -1,0 +1,17 @@
+card:
+  placement: 10
+  rarity: "unknown"
+  type: "entity"
+  element: "overworld"
+  name: "warden"
+  color: "#018a73"
+  entity: "warden"
+  model_id: 131
+  cost: 0
+  maxHealth: 20
+  health: 20
+  attack: 20
+  range: 1
+  speed: 1
+  lore: "The terrifying Warden can only attack enemies that moved or attacked the previous turn; the Warden takes 1 damage per turn"
+  needs_vibration: True

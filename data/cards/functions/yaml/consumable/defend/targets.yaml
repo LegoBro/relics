@@ -1,0 +1,13 @@
+card:
+  placement: 2
+  rarity: "common"
+  type: "consumable"
+  element: "defend"
+  name: "targets"
+  color: "green"
+  cost: 9
+  model_id: 109
+  lore: "Place some targets that gives all nearby ranged units +1 attack"
+  building:
+    health: 4
+    maxHealth: 4

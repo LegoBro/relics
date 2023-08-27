@@ -1,0 +1,18 @@
+card:
+  placement: 10
+  rarity: "uncommon"
+  type: "entity"
+  element: "overworld"
+  name: "librarian"
+  color: "#FBB1F2"
+  entity: "villager"
+  model_id: 145
+  cost: 11
+  maxHealth: 3
+  health: 3
+  attack: 1
+  range: 1
+  speed: 1
+  extra_nbt: "VillagerData:{profession:\"minecraft:librarian\"}"
+  lore: "Gain +1 health per enchantment used; give an emerald to gain a random enchantment and +1 attack"
+  emerald: True

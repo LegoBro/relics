@@ -1,0 +1,25 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:wither_skeleton_skull"
+    },
+    "title": {
+      "translate": "effects.wither",
+      "color": "white",
+      "bold": true
+    },
+    "description": {
+      "translate": "effects.wither.des",
+      "color": "dark_gray"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "main:help_effects/debuffs/poison",
+  "criteria": {
+    "auto": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+card:
+  placement: 15
+  rarity: "common"
+  type: "consumable"
+  element: "attack"
+  name: "flint_and_steel"
+  color: "green"
+  model_id: 79
+  cost: 5
+  lore: "Set an enemy on fire for 5 fire damage or instantly explode a creeper"

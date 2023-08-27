@@ -1,0 +1,78 @@
+3.0 Changelog:
+
+Arenas:
+You can now select different arenas!
+Arenas are unlocked by accomplishing Quests, find all 9 of them!
+
+Heroes:
+Sick of playing as Steve?
+Change out your hero with one of 8 new heroes.
+Heroes are unlocked throught quests.
+
+New Gamemode:
+No Draw
+Get your entire deck immediately, but you can't draw anymore cards.  Once you run out of cards, you begin taking damage.
+
+New Settings:
+Hand Size:
+Change the max amount of cards you can hold at once.
+Along with this, the default hand size is 5, which we found makes cames shorter and more exciting
+Fatigue:
+Tired of those boring cycle decks? Try out fatigue options, these punish you for wasting cards
+
+Bug Fixes:
+Fletcher and Wandering Trader are now effected by lightning
+
+Card changes
+Piglin Bartering -> No longer caps at 8 max cards.
+Witch Hut Cost 16 -> 12
+Witch Hut Armor 0 -> 2
+Anvil Cost 4 -> 7
+Arrow Storm Cost 2 -> 4
+Blaze Strike Cost 6 -> 8
+Chorus Fruit -> Guarantees Teleport
+Dragons Breathe Cost 9 -> 13
+Ghast Fireball Cost 8 -> 12
+Ice Storm Cost 14 -> 16
+Trident Cost 10 -> 17
+Splash Poison Potion Cost 8 -> 11
+Leather armor cost 4 -> 5
+Golden armor cost 5 -> 6
+Iron Armor Cost 6 -> 8
+Iron armor given 3 -> 4
+Diamond armor cost 7 -> 10
+Diamond armor given 4 -> 6
+Netherite Armor Cost 8 -> 15
+Netherite Armor Given 5 -> 10
+TNT changes:
+Is now an entity
+Has 3 HP and takes 1 damage each turn
+also explodes when it runs out of health from other attacks
+TNT Cannon now spawns these TNT instead of the old TNT
+End Crystal Changes:
+Can no longer be buffed, or selected by default
+Honeycomb armor given 1 -> 3
+Honeycomb no longer gives armor to units
+Honeycomb seal only works on entities
+Removal of text for ambush, and text that doesn't add actual gameplay value
+Dolphin Cost 4 -> 6
+Dolphin Health 3 -> 2 (spawns with +1 from itself)
+Dolphin Attack 0 -> 1
+Drowned Cost 5 -> 4
+
+
+## New Cards
+Sculk Block
+Sculk Catalyst
+Sharpness
+Minecart
+Butcher
+Sculk Shrieker
+Sculk Sensor
+Warden
+Frog
+Frog Spawn
+Tadpole
+
+Saving and Loading Decks:
+Due to changes between versions, going from one version to another will delete your decks.  This does not mean you lose any of your collection, just that you will have to rebuild your 27 card decks.

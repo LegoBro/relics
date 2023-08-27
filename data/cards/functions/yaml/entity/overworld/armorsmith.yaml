@@ -1,0 +1,18 @@
+card:
+  placement: 10
+  rarity: "rare"
+  type: "entity"
+  element: "overworld"
+  name: "armorsmith"
+  color: "green"
+  entity: "villager"
+  model_id: 78
+  cost: 13
+  maxHealth: 4
+  health: 4
+  attack: 1
+  range: 1
+  speed: 1
+  extra_nbt: "VillagerData:{profession:\"minecraft:armorer\"}"
+  lore: "Give a random unit on the board +1 armor point at the end of every turn"
+  emerald: True

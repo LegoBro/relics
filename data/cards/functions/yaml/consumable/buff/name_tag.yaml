@@ -1,0 +1,10 @@
+card:
+  placement: 4
+  rarity: "epic"
+  type: "consumable"
+  element: "buff"
+  name: "name_tag"
+  color: "green"
+  model_id: 114
+  cost: 13
+  lore: "Rename a sheep to jeb_ (+5 attack), a rabbit to Toast (+5 HP), a vindicator to Johnny (+3 attack) or any other mob to Dinnerbone (swap attack and health stats)"

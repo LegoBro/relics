@@ -1,0 +1,10 @@
+card:
+  placement: 0
+  rarity: "unknown"
+  type: "consumable"
+  element: "buff"
+  name: "armor_trim"
+  color: "#FBB1F2"
+  model_id: 140
+  cost: 0
+  lore: "Give your hero +1 armor"

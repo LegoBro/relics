@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:sugar",
+      "nbt":"{CustomModelData:1}"
+    },
+    "title": {
+      "translate": "traits.ambush",
+      "color": "white",
+      "bold": true
+    },
+    "description": {
+      "translate": "traits.ambush.des",
+      "color": "dark_green"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "main:help_traits/root",
+  "criteria": {
+    "auto": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

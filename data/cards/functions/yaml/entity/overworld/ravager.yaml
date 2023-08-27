@@ -1,0 +1,16 @@
+card:
+  placement: 10
+  rarity: "rare"
+  type: "entity"
+  element: "overworld"
+  name: "ravager"
+  color: "green"
+  entity: "ravager"
+  model_id: 4
+  cost: 14
+  maxHealth: 7
+  health: 7
+  attack: 7
+  range: 1
+  speed: 2
+  lore: ""

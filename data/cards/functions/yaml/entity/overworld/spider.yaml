@@ -1,0 +1,16 @@
+card:
+  placement: 10
+  rarity: "common"
+  type: "entity"
+  element: "overworld"
+  name: "spider"
+  color: "green"
+  entity: "spider"
+  model_id: 7
+  cost: 4
+  maxHealth: 3
+  health: 3
+  attack: 2
+  range: 1
+  speed: 2
+  lore: ""

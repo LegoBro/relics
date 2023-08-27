@@ -1,0 +1,17 @@
+card:
+  placement: 10
+  rarity: "legendary"
+  type: "entity"
+  element: "overworld"
+  name: "sniffer"
+  color: "#FBB1F2"
+  entity: "sniffer"
+  model_id: 146
+  cost: 15
+  maxHealth: 6
+  health: 6
+  attack: 0
+  range: 1
+  speed: 1
+  armor: 0
+  lore: "Each time moved, discover an ancient plant"

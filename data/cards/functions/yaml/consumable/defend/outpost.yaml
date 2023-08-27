@@ -1,0 +1,14 @@
+card:
+  placement: 11
+  rarity: "common"
+  type: "consumable"
+  element: "defend"
+  name: "outpost"
+  color: "green"
+  cost: 9
+  model_id: 102
+  lore: "Place an outpost that deals 1 damage to every adjacent spot at the end of every turn"
+  building:
+    health: 4
+    maxHealth: 4
+    armor: 2

@@ -1,0 +1,5 @@
+# Casts the consumable card
+tellraw @a[tag=id] [{"selector":"@s"},{"text":" uses "},{"underlined":true,"translate":"card.tnt","hoverEvent":{"action":"show_item","contents":{"id":"minecraft:carrot_on_a_stick","Count":1,"tag":"{HideFlags:127,display:{Lore:['','[{\"translate\":\"cost\",\"italic\":false,\"color\":\"white\"},{\"text\":\" 6\",\"italic\":false,\"color\":\"white\"}]','{\"text\":\"\",\"color\":\"white\",\"italic\":false}','{\"translate\":\"card.tnt.lore.0\",\"color\":\"white\",\"italic\":false}','{\"translate\":\"card.tnt.lore.1\",\"color\":\"white\",\"italic\":false}','{\"translate\":\"card.tnt.lore.2\",\"color\":\"white\",\"italic\":false}'],Name:\"{\\\"translate\\\":\\\"card.tnt\\\",\\\"italic\\\":false,\\\"color\\\":\\\"green\\\"}\"}}"}}}]
+scoreboard players remove @s saturation 6
+function cards:consumable/attack/tnt/activate
+function main:player/use_card/store

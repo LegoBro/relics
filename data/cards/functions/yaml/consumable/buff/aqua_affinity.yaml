@@ -1,0 +1,10 @@
+card:
+  placement: 17
+  rarity: "common"
+  type: "consumable"
+  element: "buff"
+  name: "aqua_affinity"
+  color: "#FBB1F2"
+  model_id: 137
+  cost: 2
+  lore: "Gives any entity the aquatic trait"

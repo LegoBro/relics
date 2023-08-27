@@ -1,0 +1,2 @@
+# Bee attack getter
+execute if score @s attack matches 20.. if entity @e[type=armor_stand,tag=board,tag=filled,tag=id,limit=1,sort=nearest,tag=friendly,distance=..1.5] run advancement grant @p[tag=id,tag=turn] only main:quests/bee

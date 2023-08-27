@@ -1,0 +1,16 @@
+card:
+  placement: 10
+  rarity: "uncommon"
+  type: "entity"
+  element: "overworld"
+  name: "polar_bear"
+  color: "green"
+  entity: "polar_bear"
+  model_id: 95
+  cost: 8
+  maxHealth: 4
+  health: 4
+  attack: 3
+  range: 1
+  speed: 1
+  lore: "Gains +1 attack at the end of a turn for every adjacent cub"

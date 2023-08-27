@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:iron_bars"
+    },
+    "title": {
+      "translate": "quests.loser",
+      "color": "green",
+      "bold": true
+    },
+    "description": {
+      "translate": "quests.loser.des",
+      "color": "green"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false
+  },
+  "parent": "main:quests/parkour",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "function": "main:player/advancement/quests/loser"
+  }
+}

@@ -1,0 +1,10 @@
+card:
+  placement: 12
+  rarity: "common"
+  type: "consumable"
+  element: "buff"
+  name: "emerald"
+  color: "green"
+  model_id: 76
+  cost: 2
+  lore: "Trade with a villager to buff it and trigger a special event"

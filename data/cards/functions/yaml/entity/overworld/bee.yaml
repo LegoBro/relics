@@ -1,0 +1,18 @@
+card:
+  placement: 10
+  rarity: "common"
+  type: "entity"
+  element: "overworld"
+  name: "bee"
+  color: "green"
+  entity: "bee"
+  model_id: 61
+  cost: 1
+  maxHealth: 1
+  health: 1
+  attack: 1
+  range: 1
+  speed: 1
+  apply_poison: 2
+  flying: true
+  lore: "Carries a poisonous stinger that deals an additional 2 poison damage"

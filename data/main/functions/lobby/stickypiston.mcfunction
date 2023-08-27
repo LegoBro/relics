@@ -1,0 +1,2 @@
+tellraw @s [{"text":"Want 20% off a Stickypiston server?\n","color":"gray","bold":true,"hoverEvent":{"action":"show_text","contents":[{"text":"Click here!"}]},"clickEvent":{"action":"open_url","value":"https://stickypiston.co/brickmasons"}},{"text":"Or try out their map trials.","color":"green","bold":true,"clickEvent":{"action":"open_url","value":"https://stickypiston.co/brickmasons/play/afoxslife"},"hoverEvent":{"action":"show_text","contents":[{"text":"Play A Fox's Life on a free trial server!"}]}}]
+playsound minecraft:block.piston.extend master @s

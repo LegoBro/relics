@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:sugar",
+      "nbt":"{CustomModelData:9}"
+    },
+    "title": {
+      "translate": "traits.wither",
+      "color": "white",
+      "bold": true
+    },
+    "description": {
+      "translate": "traits.wither.des",
+      "color": "dark_green"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "main:help_traits/water",
+  "criteria": {
+    "auto": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

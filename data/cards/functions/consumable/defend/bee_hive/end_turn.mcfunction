@@ -1,0 +1,1 @@
+execute if entity @e[type=armor_stand,tag=board,tag=filled,tag=friendly,tag=id,limit=1,distance=..1.5] run function cards:consumable/defend/bee_hive/summon

@@ -1,0 +1,19 @@
+card:
+  placement: 10
+  rarity: "uncommon"
+  type: "entity"
+  element: "end"
+  name: "phantom"
+  color: "green"
+  entity: "phantom"
+  model_id: 62
+  cost: 14
+  maxHealth: 5
+  health: 5
+  attack: 4
+  range: 1
+  speed: 3
+  flying: true
+  lore: "Fast Flyer - has a 50% chance to dodge an attack"
+  extra_nbt: "ActiveEffects:[{Id:12b,Amplifier:1b,Duration:2000000,ShowParticles:0b}]"
+  undead: True

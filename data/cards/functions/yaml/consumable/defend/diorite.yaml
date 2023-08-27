@@ -1,0 +1,14 @@
+card:
+  placement: 2
+  rarity: "common"
+  type: "consumable"
+  element: "defend"
+  name: "diorite"
+  color: "green"
+  cost: 9
+  model_id: 108
+  lore: "Place a diorite block that is so ugly it blinds a random nearby entity at the end of every turn"
+  building:
+    health: 3
+    maxHealth: 3
+    fire_proof: True

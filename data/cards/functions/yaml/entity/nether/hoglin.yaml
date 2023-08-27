@@ -1,0 +1,16 @@
+card:
+  placement: 10
+  rarity: "uncommon"
+  type: "entity"
+  element: "nether"
+  name: "hoglin"
+  color: "green"
+  entity: "hoglin"
+  model_id: 35
+  cost: 9
+  maxHealth: 7
+  health: 7
+  attack: 3
+  range: 1
+  speed: 2
+  lore: ""

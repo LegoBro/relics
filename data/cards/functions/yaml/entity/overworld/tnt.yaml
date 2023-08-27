@@ -1,0 +1,20 @@
+card:
+  placement: 11
+  rarity: "uncommon"
+  type: "entity"
+  element: "overworld"
+  name: "tnt"
+  color: "green"
+  entity: "tnt"
+  extra_nbt: "Fuse:10000"
+  model_id: 68
+  cost: 6
+  lore: "Plant TNT that will explode for 5 damage in all adjacent spots in 3 turns, or when it runs out of health"
+  maxHealth: 3
+  health: 3
+  attack: 5
+  special_attack: true
+  range: 0
+  speed: 0
+  unselectable: true
+  unbuffable: true

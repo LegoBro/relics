@@ -1,0 +1,17 @@
+card:
+  placement: 10
+  rarity: "rare"
+  type: "entity"
+  element: "overworld"
+  name: "vindicator"
+  color: "green"
+  entity: "vindicator"
+  model_id: 85
+  cost: 13
+  maxHealth: 5
+  health: 5
+  attack: 7
+  range: 1
+  speed: 3
+  lore: ""
+  emerald: True

@@ -1,0 +1,14 @@
+card:
+  placement: 2
+  rarity: "uncommon"
+  type: "consumable"
+  element: "defend"
+  name: "well"
+  color: "green"
+  cost: 11
+  model_id: 107
+  lore: "Place a well that heals all nearby units by +2 health each turn"
+  building:
+    health: 3
+    maxHealth: 3
+    fire_proof: True

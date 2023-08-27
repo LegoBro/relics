@@ -1,0 +1,11 @@
+card:
+  placement: 11
+  rarity: "common"
+  type: "consumable"
+  element: "defend"
+  name: "cobweb_trap"
+  color: "green"
+  model_id: 26
+  cost: 3
+  hide: True
+  lore: "Place a trap that, when triggered, gives a unit slowness for 7 turns"

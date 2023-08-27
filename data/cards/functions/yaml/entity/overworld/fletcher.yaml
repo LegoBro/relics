@@ -1,0 +1,18 @@
+card:
+  placement: 10
+  rarity: "uncommon"
+  type: "entity"
+  element: "overworld"
+  name: "fletcher"
+  color: "#b4d99e"
+  entity: "villager"
+  model_id: 117
+  cost: 6
+  maxHealth: 4
+  health: 4
+  attack: 1
+  range: 1
+  speed: 1
+  extra_nbt: "VillagerData:{profession:\"minecraft:fletcher\"}"
+  lore: "Generates emeralds for every adjacent ranged enemy unit"
+  emerald: True

@@ -1,0 +1,11 @@
+card:
+  placement: 11
+  rarity: "uncommon"
+  type: "consumable"
+  element: "defend"
+  name: "wither_trap"
+  color: "green"
+  model_id: 27
+  cost: 3
+  hide: True
+  lore: "Place a trap that, when triggered, gives the unit 6 withering damage"

@@ -1,0 +1,169 @@
+Changelog Time!
+
+New and improved Deck Manager!
+Sort cards, build multiple decks and do more with the new deck manager
+It's much better than the old system, and supports a lot more cards!
+
+
+Icons:
+Added Icons for entities to make it more clear on how they react to their environment
+
+XP Amount:
+Can now see values above 20
+
+Cards:
+Piglin Bartering:
+Piglin bartering never felt like a useful card in play, and now feels quite powerful, but requires a decent set up
+Cost 5 -> 1
+
+Emerald:
+Similar to Piglin Bartering, but emerald is more versatile, so less of a buff
+Cost 5 -> 2
+
+Splash Poison Potion:
+Felt not very useful, especially with poison immunity by undead, reduced price to compensate
+Cost 12 -> 8
+
+Golden Apple:
+While some cards dealt a lot of damage, Golden apple was a little too expensive to be worthwhile
+Cost 6 -> 4
+
+Zombified Piglin:
+It's stats were just way above everything else of the similar cost, so a minor nerf
+Cost 4 -> 5
+
+Creeper:
+Creeper never felt like a threat, which is obviously a problem.  Attack and cost have been changed
+Special Attack - Explodes after you end your turn (previously after 3 end of turns)
+Cost 3 -> 5
+
+Charged Creeper:
+Same buff as creeper to special attack, but cost remains the same due to how easy it is to blow up your own units.
+Special Attack - Explodes after you end your turn (previously after 3 end of turns)
+
+Diorite:
+Diorite was impossible to attack if you didn't have a melee mob on hand.  This is no fun, so changes were made to rebalance it to give more ways to attack it.
+Now Blinds a random adjacent entity
+Health 5 -> 3
+
+Spawner:
+Spawner was also quite impossible to attack because of board control loss.  I reworked it to be a bit more balanced while remaining useful.
+Now only spawns up to 4 silverfish total
+Cost 10 -> 7
+Health 6 -> 5
+Armor 3 -> 1
+
+Bee Hive:
+Bee hive was just super annoying and was never fun to attack.  Some changes were made to make it more of an early game boost rather than a late game pester.
+Cost 12 -> 8
+Health 6 -> 10
+Now takes 1 damage for every bee spawned
+
+Bee Nest:
+Same as before, but because it was somewhat useless on it's own, you also discover a bee to help snowball the bee buffing
+Also discovers a bee on summon
+
+Flint and Steel:
+Too expensive.  Not worthwhile to have because of it's lack of usability vs. price.
+Cost 9 -> 5
+
+Wither Trap:
+I really like traps, but they are hard to get full value.  Because of this, I think reducing price a little bit will make them more viable
+Cost 4 -> 3
+
+Lava Pocket:
+Same as above
+Cost 7 -> 4
+
+Skeleton Trap:
+Even though it's really powerful, still faces the same problem as the above traps.  Slightly reduced cost
+Cost 20 -> 18
+
+Silverfish:
+Why was this card so expensive?  It's not good, and is of little use other than to waste a turn or get 1 free damage, cost reduced greatly.
+Cost 3 -> 0
+
+Cobblestone:
+All values reduced to be more of a minor hindrance than a major one.
+Cost 4 -> 2
+Health 5 -> 2
+
+Witch Hut:
+That's a lot of health... Reworked to still be useful for it's lower health
+Health 10 -> 5
+Chance to gain potion 10% -> 25%
+
+Farmland:
+A really good card, wanted to make it more of a target to destroy
+Health 5 -> 4
+
+Water:
+while it is a very powerful card, it was a bit too expensive
+Cost 7 -> 5
+
+Gilded Blackstone:
+Reduced health and cost like other simpler blocks
+Cost 4 -> 3
+Health 5 -> 3
+
+Outpost:
+I like outpost as a good line of defense or attack, but I wanted to make attacking it a little easier
+Health 6 -> 4
+
+Targets:
+I don't see these being used much other than as a shield to waste a turn, so health reduced and cost reduced
+Health 7 -> 4
+Cost 10 -> 9
+
+Well:
+A really powerful card that can be used to quickly heal your units.  Reducing health makes it more of a possibility to kill your own well before your opponent uses it against you.
+Health 5 -> 3
+
+TNT:
+While useful for keeping enemies at bay, it took too long to detonate, making it easily avoided and ignored, fuse time shortened
+Fuse Turns: 4 -> 2
+
+Thunderstorm:
+I really like this card, but mostly how it's a huge game changer depending on complete luck.  There is a little too much luck involved with such a high cost card, so cost is reduced
+Cost 15 -> 13
+
+TNT Cannon:
+I like the clear potential of this card, but because of giving an opportunity to flee for faster mobs, a cost buff will help with it's value potential
+Cost 16 -> 14
+
+Dolphin:
+Another case of why was this so expensive, also removed attack for more hay bale synergy
+Cost 9 -> 4
+Damage 1 -> 0
+
+Killer Rabbit:
+It just didn't make sense for this guy to spawn with 1 armor, removing it will increase the value of putting armor/healing on him
+Armor 1 -> 0
+
+Pillager:
+Pillager had the same stats as piglin, except having 1 more health.  This plus the pillager's better buff (using emeralds) warrants a cost nerf
+Cost 8 -> 9
+
+Guardian:
+His eye beam attack was impossible to go up against, I reduced damage, and hopefully it will be good enough for now
+Attack 5 -> 3
+
+Elder Guardian:
+Same issue as above, but also gave a minor health buff to compensate
+Attack 7 -> 5
+Health 5 -> 7
+
+Evoker:
+Was very hard to counter before it overwhelmed the board
+Health 9 -> 7
+
+Baby Magma Cube:
+Another cost adjustment
+Cost 4 -> 2
+
+
+Alchemists Tower - Strings by Kevin MacLeod is licensed under a Creative Commons Attribution 4.0 license. https://creativecommons.org/licenses/by/4.0/
+
+Source: http://incompetech.com/music/royalty-free/index.html?isrc=USUAN1100632
+
+Artist: http://incompetech.com/

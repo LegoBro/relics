@@ -1,0 +1,16 @@
+card:
+  placement: 10
+  rarity: "uncommon"
+  type: "entity"
+  element: "overworld"
+  name: "horse"
+  color: "green"
+  entity: "horse"
+  model_id: 97
+  cost: 6
+  maxHealth: 6
+  health: 6
+  attack: 1
+  range: 1
+  speed: 3
+  lore: ""

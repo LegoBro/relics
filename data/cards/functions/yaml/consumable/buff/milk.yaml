@@ -1,0 +1,10 @@
+card:
+  placement: 4
+  rarity: "common"
+  type: "consumable"
+  element: "buff"
+  name: "milk"
+  color: "green"
+  model_id: 112
+  cost: 8
+  lore: "Remove all potion effects from an entity"

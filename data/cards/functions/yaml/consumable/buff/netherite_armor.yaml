@@ -1,0 +1,10 @@
+card:
+  placement: 5
+  rarity: "epic"
+  type: "consumable"
+  element: "buff"
+  name: "netherite_armor"
+  color: "green"
+  model_id: 49
+  cost: 15
+  lore: "Give +10 armor to a friendly unit"

@@ -1,0 +1,10 @@
+card:
+  placement: 14
+  rarity: "uncommon"
+  type: "consumable"
+  element: "attack"
+  name: "sticky_piston"
+  color: "#b4d99e"
+  model_id: 122
+  cost: 8
+  lore: "Pull an entity or block towards yourself"

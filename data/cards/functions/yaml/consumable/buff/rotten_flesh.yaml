@@ -1,0 +1,10 @@
+card:
+  placement: 16
+  rarity: "common"
+  type: "consumable"
+  element: "buff"
+  name: "rotten_flesh"
+  color: "#FBB1F2"
+  model_id: 135
+  cost: 4
+  lore: "Permanently increase the attack damage of a friendly non-ranged undead unit by +1 and heals +2"

@@ -1,0 +1,17 @@
+card:
+  placement: 10
+  rarity: "rare"
+  type: "entity"
+  element: "overworld"
+  name: "killer_rabbit"
+  color: "green"
+  entity: "rabbit"
+  model_id: 92
+  cost: 8
+  maxHealth: 1
+  health: 1
+  armor: 0
+  attack: 10
+  range: 1
+  speed: 2
+  lore: ""

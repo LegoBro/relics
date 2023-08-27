@@ -1,0 +1,14 @@
+card:
+  placement: 11
+  rarity: "epic"
+  type: "consumable"
+  element: "defend"
+  name: "sculk_shrieker"
+  color: "#018a73"
+  cost: 7
+  model_id: 126
+  lore: "When an enemy entity travels to an adjacent spot, discover a random sculk block; after 4 triggers, discover the Warden"
+  building:
+    health: 4
+    maxHealth: 4
+    fire_proof: True

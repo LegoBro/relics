@@ -1,0 +1,16 @@
+card:
+  placement: 10
+  rarity: "unknown"
+  type: "entity"
+  element: "overworld"
+  name: "baby_slime"
+  color: "green"
+  entity: "slime"
+  model_id: 34
+  cost: 0
+  maxHealth: 1
+  health: 1
+  attack: 0
+  range: 1
+  speed: 1
+  lore: "A tiny and weak spawn of a slime"

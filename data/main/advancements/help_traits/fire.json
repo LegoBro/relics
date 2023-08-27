@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:sugar",
+      "nbt":"{CustomModelData:3}"
+    },
+    "title": {
+      "translate": "traits.fire",
+      "color": "white",
+      "bold": true
+    },
+    "description": {
+      "translate": "traits.fire.des",
+      "color": "dark_green"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "main:help_traits/emerald",
+  "criteria": {
+    "auto": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

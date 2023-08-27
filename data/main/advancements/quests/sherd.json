@@ -1,0 +1,29 @@
+{
+    "display": {
+      "icon": {
+        "item": "minecraft:blade_pottery_sherd"
+      },
+      "title": {
+        "translate": "quests.sherd",
+        "color": "green",
+        "bold": true
+      },
+      "description": {
+        "translate": "quests.sherd.des",
+        "color": "green"
+      },
+      "frame": "goal",
+      "show_toast": true,
+      "announce_to_chat": false
+    },
+    "parent": "main:quests/tutorial",
+    "criteria": {
+      "impossible": {
+        "trigger": "minecraft:impossible"
+      }
+    },
+    "rewards": {
+      "function": "main:player/advancement/quests/sherd"
+    }
+  }
+  

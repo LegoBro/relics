@@ -1,0 +1,10 @@
+card:
+  placement: 0
+  rarity: "rare"
+  type: "consumable"
+  element: "buff"
+  name: "goat_horn"
+  color: "#FBB1F2"
+  model_id: 136
+  cost: 8
+  lore: "Give illagers, camels and goats speed, and camels and goats strength for 1 turn"

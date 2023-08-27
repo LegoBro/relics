@@ -1,0 +1,18 @@
+card:
+  placement: 10
+  rarity: "common"
+  type: "entity"
+  element: "nether"
+  name: "piglin"
+  color: "green"
+  entity: "piglin"
+  model_id: 36
+  cost: 8
+  maxHealth: 3
+  health: 3
+  attack: 1
+  range: 3
+  speed: 2
+  lore: ""
+  extra_nbt: "HandItems:[{id:'minecraft:crossbow',Count:1b},{}]"
+  gold: True

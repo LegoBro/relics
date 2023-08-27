@@ -1,0 +1,17 @@
+card:
+  placement: 10
+  rarity: "rare"
+  type: "entity"
+  element: "overworld"
+  name: "axolotl"
+  color: "#b4d99e"
+  entity: "axolotl"
+  model_id: 115
+  cost: 7
+  maxHealth: 3
+  health: 3
+  attack: 2
+  range: 1
+  speed: 1
+  lore: "Play dead - if at less than full health, the axolotl will play dead to heal"
+  water: True

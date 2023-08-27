@@ -1,0 +1,10 @@
+card:
+  placement: 0
+  rarity: "common"
+  type: "consumable"
+  element: "buff"
+  name: "bread"
+  color: "green"
+  model_id: 22
+  cost: 0
+  lore: "Snack on some bread and gain +2 XP"

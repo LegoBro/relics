@@ -1,0 +1,18 @@
+card:
+  placement: 10
+  rarity: "common"
+  type: "entity"
+  element: "overworld"
+  name: "turtle"
+  color: "green"
+  entity: "turtle"
+  model_id: 9
+  cost: 7
+  maxHealth: 5
+  health: 5
+  attack: 1
+  range: 1
+  speed: 1
+  armor: 3
+  lore: "An aquatic creature with a sturdy outer shell"
+  water: True

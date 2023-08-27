@@ -1,0 +1,10 @@
+card:
+  placement: 15
+  rarity: "common"
+  type: "consumable"
+  element: "buff"
+  name: "minecart"
+  color: "#018a73"
+  model_id: 129
+  cost: 6
+  lore: "Allow a unit to move horizontally without using its turn; ejected from minecart if moved fowards or backwards"

@@ -1,0 +1,14 @@
+card:
+  placement: 2
+  rarity: "common"
+  type: "consumable"
+  element: "defend"
+  name: "cobblestone"
+  color: "green"
+  cost: 2
+  model_id: 25
+  lore: "Place a cobblestone block on any open slot on the board"
+  building:
+    health: 2
+    maxHealth: 2
+    fire_proof: True

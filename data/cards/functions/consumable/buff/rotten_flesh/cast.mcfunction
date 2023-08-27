@@ -1,0 +1,5 @@
+# Casts the consumable card
+tellraw @a[tag=id] [{"selector":"@s"},{"text":" uses "},{"underlined":true,"translate":"card.rotten_flesh","hoverEvent":{"action":"show_item","contents":{"id":"minecraft:carrot_on_a_stick","Count":1,"tag":"{HideFlags:127,display:{Lore:['','[{\"translate\":\"cost\",\"italic\":false,\"color\":\"white\"},{\"text\":\" 4\",\"italic\":false,\"color\":\"white\"}]','{\"text\":\"\",\"color\":\"white\",\"italic\":false}','{\"translate\":\"card.rotten_flesh.lore.0\",\"color\":\"white\",\"italic\":false}','{\"translate\":\"card.rotten_flesh.lore.1\",\"color\":\"white\",\"italic\":false}','{\"translate\":\"card.rotten_flesh.lore.2\",\"color\":\"white\",\"italic\":false}','{\"translate\":\"card.rotten_flesh.lore.3\",\"color\":\"white\",\"italic\":false}'],Name:\"{\\\"translate\\\":\\\"card.rotten_flesh\\\",\\\"italic\\\":false,\\\"color\\\":\\\"green\\\"}\"}}"}}}]
+scoreboard players remove @s saturation 4
+function cards:consumable/buff/rotten_flesh/activate
+function main:player/use_card/store

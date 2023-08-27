@@ -1,0 +1,24 @@
+#subtypes in card use tree (generated)
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"bee_hive"}}}}] run function cards:consumable/defend/bee_hive/use
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"bee_nest"}}}}] run function cards:consumable/defend/bee_nest/use
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"cobblestone"}}}}] run function cards:consumable/defend/cobblestone/use
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"cobweb_trap"}}}}] run function cards:consumable/defend/cobweb_trap/use
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"diorite"}}}}] run function cards:consumable/defend/diorite/use
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"farmland"}}}}] run function cards:consumable/defend/farmland/use
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"gilded_blackstone"}}}}] run function cards:consumable/defend/gilded_blackstone/use
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"hay_bale"}}}}] run function cards:consumable/defend/hay_bale/use
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"jail"}}}}] run function cards:consumable/defend/jail/use
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"lava_pocket"}}}}] run function cards:consumable/defend/lava_pocket/use
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"lightning_rod"}}}}] run function cards:consumable/defend/lightning_rod/use
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"outpost"}}}}] run function cards:consumable/defend/outpost/use
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"sculk_block"}}}}] run function cards:consumable/defend/sculk_block/use
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"sculk_catalyst"}}}}] run function cards:consumable/defend/sculk_catalyst/use
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"sculk_sensor"}}}}] run function cards:consumable/defend/sculk_sensor/use
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"sculk_shrieker"}}}}] run function cards:consumable/defend/sculk_shrieker/use
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"skeleton_trap"}}}}] run function cards:consumable/defend/skeleton_trap/use
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"spawner"}}}}] run function cards:consumable/defend/spawner/use
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"targets"}}}}] run function cards:consumable/defend/targets/use
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"water"}}}}] run function cards:consumable/defend/water/use
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"well"}}}}] run function cards:consumable/defend/well/use
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"witch_hut"}}}}] run function cards:consumable/defend/witch_hut/use
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"wither_trap"}}}}] run function cards:consumable/defend/wither_trap/use

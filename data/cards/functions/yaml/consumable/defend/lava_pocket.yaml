@@ -1,0 +1,11 @@
+card:
+  placement: 11
+  rarity: "common"
+  type: "consumable"
+  element: "defend"
+  name: "lava_pocket"
+  color: "green"
+  model_id: 43
+  cost: 4
+  hide: True
+  lore: "Place a trap that, when triggered, deals 3 damage and deals an additional 5 fire damage"

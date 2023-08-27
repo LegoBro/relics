@@ -1,0 +1,16 @@
+card:
+  placement: 10
+  rarity: "common"
+  type: "entity"
+  element: "overworld"
+  name: "silverfish"
+  color: "green"
+  entity: "silverfish"
+  model_id: 63
+  cost: 0
+  maxHealth: 1
+  health: 1
+  attack: 1
+  range: 1
+  speed: 1
+  lore: "Hidden Friends - has a 50% chance for every cobblestone to destroy it and spawn a silverfish upon death"

@@ -1,0 +1,11 @@
+card:
+  placement: 11
+  rarity: "unknown"
+  type: "consumable"
+  element: "defend"
+  name: "sculk_sensor"
+  color: "#018a73"
+  model_id: 127
+  cost: 5
+  hide: True
+  lore: "Place a trap that, when triggered, activates all sculk shriekers"

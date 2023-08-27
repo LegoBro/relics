@@ -1,0 +1,10 @@
+card:
+  placement: 8
+  rarity: "common"
+  type: "consumable"
+  element: "buff"
+  name: "sharpness"
+  color: "#018a73"
+  model_id: 128
+  cost: 5
+  lore: "Permanently increase the attack damage of a friendly non-ranged unit by +1"

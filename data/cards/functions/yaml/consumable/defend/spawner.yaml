@@ -1,0 +1,15 @@
+card:
+  placement: 2
+  rarity: "rare"
+  type: "consumable"
+  element: "defend"
+  name: "spawner"
+  color: "green"
+  cost: 7
+  model_id: 64
+  lore: "Spawns a silverfish randomly on the board every turn, stops spawning if there are 4 or more silverfish on the board"
+  building:
+    health: 5
+    maxHealth: 5
+    armor: 1
+    fire_proof: True

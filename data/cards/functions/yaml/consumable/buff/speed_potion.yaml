@@ -1,0 +1,10 @@
+card:
+  placement: 5
+  rarity: "common"
+  type: "consumable"
+  element: "buff"
+  name: "speed_potion"
+  color: "green"
+  model_id: 32
+  cost: 5
+  lore: "Increase a friendly unit's speed by 2 for 3 of your turns"

@@ -1,0 +1,5 @@
+# Casts the consumable card
+tellraw @a[tag=id] [{"selector":"@s"},{"text":" uses "},{"underlined":true,"translate":"card.flint_and_steel","hoverEvent":{"action":"show_item","contents":{"id":"minecraft:carrot_on_a_stick","Count":1,"tag":"{HideFlags:127,display:{Lore:['','[{\"translate\":\"cost\",\"italic\":false,\"color\":\"white\"},{\"text\":\" 5\",\"italic\":false,\"color\":\"white\"}]','{\"text\":\"\",\"color\":\"white\",\"italic\":false}','{\"translate\":\"card.flint_and_steel.lore.0\",\"color\":\"white\",\"italic\":false}','{\"translate\":\"card.flint_and_steel.lore.1\",\"color\":\"white\",\"italic\":false}','{\"translate\":\"card.flint_and_steel.lore.2\",\"color\":\"white\",\"italic\":false}'],Name:\"{\\\"translate\\\":\\\"card.flint_and_steel\\\",\\\"italic\\\":false,\\\"color\\\":\\\"green\\\"}\"}}"}}}]
+scoreboard players remove @s saturation 5
+function cards:consumable/attack/flint_and_steel/activate
+function main:player/use_card/store

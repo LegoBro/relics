@@ -1,0 +1,31 @@
+## Sorted view of cards
+execute store result score #rand var run loot spawn 0 -200 0 loot cards:open/3
+execute if score #rand var matches 1..5 run function cards:consumable/buff/bread/unlock
+execute if score #rand var matches 6..9 run function cards:consumable/buff/piglin_bartering/unlock
+execute if score #rand var matches 10..14 run function cards:consumable/buff/aqua_affinity/unlock
+execute if score #rand var matches 15..19 run function cards:consumable/buff/emerald/unlock
+execute if score #rand var matches 20..24 run function cards:consumable/buff/rotten_flesh/unlock
+execute if score #rand var matches 25..28 run function cards:consumable/buff/golden_apple/unlock
+execute if score #rand var matches 29..33 run function cards:consumable/buff/leather_armor/unlock
+execute if score #rand var matches 34..38 run function cards:consumable/buff/sharpness/unlock
+execute if score #rand var matches 39..43 run function cards:consumable/buff/speed_potion/unlock
+execute if score #rand var matches 44..47 run function cards:consumable/buff/honeycomb/unlock
+execute if score #rand var matches 48..50 run function cards:consumable/buff/frog_eggs/unlock
+execute if score #rand var matches 51..55 run function cards:consumable/buff/golden_armor/unlock
+execute if score #rand var matches 56..60 run function cards:consumable/buff/minecart/unlock
+execute if score #rand var matches 61..65 run function cards:consumable/buff/splash_fire_resistance_potion/unlock
+execute if score #rand var matches 66..70 run function cards:consumable/buff/strength_potion/unlock
+execute if score #rand var matches 71..75 run function cards:consumable/buff/milk/unlock
+execute if score #rand var matches 76..80 run function cards:consumable/buff/piercing/unlock
+execute if score #rand var matches 81..84 run function cards:consumable/buff/iron_armor/unlock
+execute if score #rand var matches 85..88 run function cards:consumable/buff/spectral_arrow/unlock
+execute if score #rand var matches 89..91 run function cards:consumable/buff/goat_horn/unlock
+execute if score #rand var matches 92..95 run function cards:consumable/buff/haste_potion/unlock
+execute if score #rand var matches 96..99 run function cards:consumable/buff/curse_of_binding/unlock
+execute if score #rand var matches 100..102 run function cards:consumable/buff/diamond_armor/unlock
+execute if score #rand var matches 103..105 run function cards:consumable/buff/invisibility_potion/unlock
+execute if score #rand var matches 106..107 run function cards:consumable/buff/name_tag/unlock
+execute if score #rand var matches 108..109 run function cards:consumable/buff/miners_resilience/unlock
+execute if score #rand var matches 110..111 run function cards:consumable/buff/netherite_armor/unlock
+execute if score #rand var matches 112..113 run function cards:consumable/buff/elytra/unlock
+execute if score #rand var matches 114 run function cards:consumable/buff/enchanted_golden_apple/unlock

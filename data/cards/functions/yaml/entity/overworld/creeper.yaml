@@ -1,0 +1,18 @@
+card:
+  placement: 10
+  rarity: "common"
+  type: "entity"
+  element: "overworld"
+  name: "creeper"
+  color: "green"
+  entity: "creeper"
+  model_id: 2
+  cost: 5
+  maxHealth: 3
+  health: 3
+  special_attack: true
+  attack: 5
+  range: 1
+  speed: 2
+  ambush: true
+  lore: "Special Attack - attack an enemy to start a fuse, explodes at the end of turn"

@@ -1,0 +1,14 @@
+card:
+  placement: 2
+  rarity: "common"
+  type: "consumable"
+  element: "defend"
+  name: "hay_bale"
+  color: "green"
+  cost: 5
+  model_id: 106
+  lore: "Place a hay bale that gives strength to all entities with 0 attack"
+  building:
+    health: 4
+    maxHealth: 4
+    fire_proof: True

@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:potion",
+      "nbt":"{Potion:\"minecraft:invisibility\"}"
+    },
+    "title": {
+      "translate": "effects.invis",
+      "color": "white",
+      "bold": true
+    },
+    "description": {
+      "translate": "effects.invis.des",
+      "color": "white"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "main:help_effects/buffs/strength",
+  "criteria": {
+    "auto": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

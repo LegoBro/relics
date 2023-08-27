@@ -1,0 +1,27 @@
+{
+    "pools": [
+        {
+            "rolls": 25,
+            "entries": [
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:pink_dye"
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:magenta_dye"
+                },
+                {
+                    "type": "minecraft:item",
+                    "name": "minecraft:purple_dye"
+                },{
+                    "type": "minecraft:item",
+                    "name": "minecraft:popped_chorus_fruit"
+                },{
+                    "type": "minecraft:item",
+                    "name": "minecraft:amethyst_shard"
+                }
+            ]
+        }
+    ]
+}

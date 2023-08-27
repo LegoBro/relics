@@ -1,0 +1,14 @@
+card:
+  placement: 11
+  rarity: "epic"
+  type: "consumable"
+  element: "defend"
+  name: "sculk_catalyst"
+  color: "#018a73"
+  cost: 15
+  model_id: 125
+  lore: "Whenever an entity dies, place a sculk block where that entity died"
+  building:
+    health: 6
+    maxHealth: 6
+    fire_proof: True

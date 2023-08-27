@@ -1,0 +1,5 @@
+# Casts the consumable card
+tellraw @a[tag=id] [{"selector":"@s"},{"text":" uses "},{"underlined":true,"translate":"card.pottery_sherd","hoverEvent":{"action":"show_item","contents":{"id":"minecraft:carrot_on_a_stick","Count":1,"tag":"{HideFlags:127,display:{Lore:['','[{\"translate\":\"cost\",\"italic\":false,\"color\":\"white\"},{\"text\":\" 0\",\"italic\":false,\"color\":\"white\"}]','{\"text\":\"\",\"color\":\"white\",\"italic\":false}','{\"translate\":\"card.pottery_sherd.lore.0\",\"color\":\"white\",\"italic\":false}','{\"translate\":\"card.pottery_sherd.lore.1\",\"color\":\"white\",\"italic\":false}','{\"translate\":\"card.pottery_sherd.lore.2\",\"color\":\"white\",\"italic\":false}'],Name:\"{\\\"translate\\\":\\\"card.pottery_sherd\\\",\\\"italic\\\":false,\\\"color\\\":\\\"green\\\"}\"}}"}}}]
+scoreboard players remove @s saturation 0
+function cards:consumable/buff/pottery_sherd/activate
+function main:player/use_card/store

@@ -1,0 +1,14 @@
+card:
+  placement: 11
+  rarity: "common"
+  type: "consumable"
+  element: "defend"
+  name: "farmland"
+  color: "green"
+  cost: 10
+  model_id: 103
+  lore: "Plant a farm that gives you +2 XP at the beginning of every turn"
+  building:
+    health: 4
+    maxHealth: 4
+    fire_proof: True

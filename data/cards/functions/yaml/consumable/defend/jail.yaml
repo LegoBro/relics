@@ -1,0 +1,14 @@
+card:
+  placement: 4
+  rarity: "rare"
+  type: "consumable"
+  element: "defend"
+  name: "jail"
+  color: "green"
+  cost: 13
+  model_id: 110
+  lore: "Place a jail on an entity to instantly kill it; while on board, also costs 3 XP per turn to maintain"
+  building:
+    health: 10
+    maxHealth: 10
+    armor: 5

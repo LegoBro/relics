@@ -1,0 +1,10 @@
+card:
+  placement: 0
+  rarity: "unknown"
+  type: "consumable"
+  element: "buff"
+  name: "golden_carrot"
+  color: "green"
+  model_id: 52
+  cost: 3
+  lore: "Eat a golden carrot to gain +8 XP"

@@ -1,0 +1,24 @@
+#subtypes in card hover tree (generated)
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"bee_hive"}}}}] run function cards:consumable/defend/bee_hive/hover
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"bee_nest"}}}}] run function cards:consumable/defend/bee_nest/hover
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"cobblestone"}}}}] run function cards:consumable/defend/cobblestone/hover
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"cobweb_trap"}}}}] run function cards:consumable/defend/cobweb_trap/hover
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"diorite"}}}}] run function cards:consumable/defend/diorite/hover
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"farmland"}}}}] run function cards:consumable/defend/farmland/hover
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"gilded_blackstone"}}}}] run function cards:consumable/defend/gilded_blackstone/hover
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"hay_bale"}}}}] run function cards:consumable/defend/hay_bale/hover
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"jail"}}}}] run function cards:consumable/defend/jail/hover
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"lava_pocket"}}}}] run function cards:consumable/defend/lava_pocket/hover
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"lightning_rod"}}}}] run function cards:consumable/defend/lightning_rod/hover
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"outpost"}}}}] run function cards:consumable/defend/outpost/hover
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"sculk_block"}}}}] run function cards:consumable/defend/sculk_block/hover
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"sculk_catalyst"}}}}] run function cards:consumable/defend/sculk_catalyst/hover
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"sculk_sensor"}}}}] run function cards:consumable/defend/sculk_sensor/hover
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"sculk_shrieker"}}}}] run function cards:consumable/defend/sculk_shrieker/hover
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"skeleton_trap"}}}}] run function cards:consumable/defend/skeleton_trap/hover
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"spawner"}}}}] run function cards:consumable/defend/spawner/hover
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"targets"}}}}] run function cards:consumable/defend/targets/hover
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"water"}}}}] run function cards:consumable/defend/water/hover
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"well"}}}}] run function cards:consumable/defend/well/hover
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"witch_hut"}}}}] run function cards:consumable/defend/witch_hut/hover
+execute if entity @s[nbt={SelectedItem:{tag:{card:{name:"wither_trap"}}}}] run function cards:consumable/defend/wither_trap/hover

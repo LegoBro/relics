@@ -1,0 +1,19 @@
+card:
+  placement: 10
+  rarity: "common"
+  type: "entity"
+  element: "overworld"
+  name: "zombie_villager"
+  color: "green"
+  entity: "zombie_villager"
+  model_id: 56
+  cost: 3
+  maxHealth: 3
+  health: 3
+  attack: 2
+  range: 1
+  speed: 1
+  extra_nbt: 'ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b}]'
+  lore: ""
+  undead: True
+  emerald: True

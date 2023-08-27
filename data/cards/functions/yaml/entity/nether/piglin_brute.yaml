@@ -1,0 +1,18 @@
+card:
+  placement: 10
+  rarity: "rare"
+  type: "entity"
+  element: "nether"
+  name: "piglin_brute"
+  color: "green"
+  entity: "piglin_brute"
+  model_id: 37
+  cost: 16
+  maxHealth: 5
+  health: 5
+  attack: 9
+  range: 1
+  speed: 2
+  armor: 3
+  lore: ""
+  gold: True

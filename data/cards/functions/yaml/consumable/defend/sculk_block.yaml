@@ -1,0 +1,14 @@
+card:
+  placement: 2
+  rarity: "uncommon"
+  type: "consumable"
+  element: "defend"
+  name: "sculk_block"
+  color: "#018a73"
+  cost: 0
+  model_id: 124
+  lore: "Place a sculk block that gives 3 XP when destroyed"
+  building:
+    health: 1
+    maxHealth: 1
+    fire_proof: True

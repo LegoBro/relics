@@ -1,0 +1,10 @@
+card:
+  placement: 5
+  rarity: "common"
+  type: "consumable"
+  element: "buff"
+  name: "leather_armor"
+  color: "green"
+  model_id: 46
+  cost: 5
+  lore: "Give +1 armor to a friendly unit"

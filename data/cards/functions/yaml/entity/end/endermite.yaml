@@ -1,0 +1,18 @@
+card:
+  placement: 10
+  rarity: "common"
+  type: "entity"
+  element: "end"
+  name: "endermite"
+  color: "green"
+  entity: "endermite"
+  model_id: 17
+  cost: 1
+  maxHealth: 1
+  health: 1
+  attack: 1
+  range: 1
+  speed: 1
+  ambush: true
+  extra_nbt: "PersistenceRequired:1b,PlayerSpawned:0b"
+  lore: ""

@@ -1,0 +1,10 @@
+card:
+  placement: 4
+  rarity: "common"
+  type: "consumable"
+  element: "attack"
+  name: "splash_damage_potion"
+  color: "#b4d99e"
+  model_id: 119
+  cost: 12
+  lore: "Deals 3 damage to target, as well as 2 healing to any adjacent tiles.  Heals undead by 2 to target or 1 to adjacent"

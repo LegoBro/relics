@@ -1,0 +1,16 @@
+card:
+  placement: 2
+  rarity: "common"
+  type: "entity"
+  element: "overworld"
+  name: "pig"
+  color: "green"
+  entity: "pig"
+  model_id: 28
+  cost: 2
+  maxHealth: 2
+  health: 2
+  attack: 0
+  range: 1
+  speed: 1
+  lore: "A foolish passive animal that you can place anywhere on the board"

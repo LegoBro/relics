@@ -1,0 +1,18 @@
+card:
+  placement: 10
+  rarity: "rare"
+  type: "entity"
+  element: "end"
+  name: "shulker"
+  color: "green"
+  entity: "shulker"
+  model_id: 18
+  cost: 13
+  maxHealth: 3
+  health: 3
+  attack: 1
+  range: 5
+  speed: 0
+  armor: 1
+  lore: ""
+  teleport: True

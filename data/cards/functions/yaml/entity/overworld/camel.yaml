@@ -1,0 +1,18 @@
+card:
+  placement: 10
+  rarity: "common"
+  type: "entity"
+  element: "overworld"
+  name: "camel"
+  color: "#FBB1F2"
+  entity: "camel"
+  model_id: 147
+  cost: 12
+  maxHealth: 6
+  health: 6
+  attack: 3
+  range: 1
+  speed: 2
+  armor: 2
+  lore: "Special Attack - charge through multiple enemies until a stopping point is found"
+  special_attack: true

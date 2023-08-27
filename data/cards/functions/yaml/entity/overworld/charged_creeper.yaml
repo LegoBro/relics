@@ -1,0 +1,19 @@
+card:
+  placement: 10
+  rarity: "epic"
+  type: "entity"
+  element: "overworld"
+  name: "charged_creeper"
+  color: "green"
+  entity: "creeper"
+  model_id: 70
+  cost: 9
+  maxHealth: 3
+  health: 3
+  special_attack: true
+  attack: 7
+  range: 1
+  speed: 1
+  ambush: true
+  extra_nbt: "powered:1b"
+  lore: "Special Attack - ignite and explode for multitudes of damage at the end of your turn"

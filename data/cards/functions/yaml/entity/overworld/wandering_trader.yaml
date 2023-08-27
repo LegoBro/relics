@@ -1,0 +1,17 @@
+card:
+  placement: 2
+  rarity: "rare"
+  type: "entity"
+  element: "overworld"
+  name: "wandering_trader"
+  color: "green"
+  entity: "wandering_trader"
+  model_id: 77
+  cost: 9
+  maxHealth: 4
+  health: 4
+  attack: 1
+  range: 1
+  speed: 1
+  lore: "Travels to a random spot each turn.  On death, summons a llama"
+  emerald: True

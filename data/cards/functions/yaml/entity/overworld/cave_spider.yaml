@@ -1,0 +1,17 @@
+card:
+  placement: 10
+  rarity: "uncommon"
+  type: "entity"
+  element: "overworld"
+  name: "cave_spider"
+  color: "green"
+  entity: "cave_spider"
+  model_id: 1
+  cost: 4
+  maxHealth: 2
+  health: 2
+  attack: 1
+  range: 1
+  speed: 1
+  apply_poison: 3
+  lore: "Deals an additional 3 poison damage"

@@ -1,0 +1,13 @@
+card:
+  placement: 11
+  rarity: "uncommon"
+  type: "consumable"
+  element: "defend"
+  name: "bee_hive"
+  color: "green"
+  cost: 8
+  model_id: 104
+  lore: "Place a bee hive that spawns a bee nearby at the end of every turn, takes one damage per bee spawned"
+  building:
+    health: 10
+    maxHealth: 10

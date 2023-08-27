@@ -1,0 +1,10 @@
+card:
+  placement: 8
+  rarity: "common"
+  type: "consumable"
+  element: "buff"
+  name: "strength_potion"
+  color: "green"
+  model_id: 24
+  cost: 7
+  lore: "Increase the attack damage of a friendly non-ranged unit by +3 for 2 of your turns"

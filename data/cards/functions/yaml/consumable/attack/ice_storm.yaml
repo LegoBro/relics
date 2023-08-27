@@ -1,0 +1,10 @@
+card:
+  placement: 4
+  rarity: "rare"
+  type: "consumable"
+  element: "attack"
+  name: "ice_storm"
+  color: "green"
+  model_id: 99
+  cost: 16
+  lore: "Freeze all entities; doing so will deal 1 damage and reduce their speed by 1"

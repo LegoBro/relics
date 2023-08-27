@@ -1,0 +1,1 @@
+#subtypes in card hover tree (generated)
