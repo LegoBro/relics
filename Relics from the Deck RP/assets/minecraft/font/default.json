@@ -1,0 +1,140 @@
+{
+	"providers": [
+
+		{
+			"type": "bitmap",
+			"file": "minecraft:lang/card/health.png",
+			"ascent": 10,
+			"height": 12,
+			"chars": [
+				"♥"
+			]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:lang/card/armor.png",
+			"ascent": 10,
+			"height": 12,
+			"chars": [
+				"🛡"
+			]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:lang/card/attack.png",
+			"ascent": 10,
+			"height": 12,
+			"chars": [
+				"🗡"
+			]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:lang/card/range.png",
+			"ascent": 10,
+			"height": 12,
+			"chars": [
+				"🏹"
+			]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:lang/card/cost.png",
+			"ascent": 10,
+			"height": 12,
+			"chars": [
+				"¢"
+			]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:lang/card/speed.png",
+			"ascent": 10,
+			"height": 12,
+			"chars": [
+				"🥾"
+			]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:lang/icon.png",
+			"ascent": 640,
+			"height": 640,
+			"chars": [
+				"߷"
+			]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:lang/brickmasons.png",
+			"ascent": 64,
+			"height": 64,
+			"chars": [
+				"🧱"
+			]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:lang/icon.png",
+			"ascent": 0,
+			"height": 48,
+			"chars": [
+				"🧭"
+			]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:lang/brickmasons.png",
+			"ascent": 8,
+			"height": 16,
+			"chars": [
+				"💣"
+			]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:lang/card/explode.png",
+			"ascent": 10,
+			"height": 12,
+			"chars": [
+				"🧨"
+			]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:lang/card/fire.png",
+			"ascent": 10,
+			"height": 12,
+			"chars": [
+				"🔥"
+			]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:lang/card/poison.png",
+			"ascent": 10,
+			"height": 12,
+			"chars": [
+				"☣"
+			]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:lang/card/wither.png",
+			"ascent": 10,
+			"height": 12,
+			"chars": [
+				"💀"
+			]
+		},
+		{
+			"type": "bitmap",
+			"file": "minecraft:lang/brick_dubloon.png",
+			"ascent": 10,
+			"height": 12,
+			"chars": [
+				"$"
+			]
+		}
+	]
+}

@@ -1,0 +1,24 @@
+{
+    "textures": {
+        "layer0": "item/book"
+    },
+    "overrides": [
+
+	{"predicate": {"custom_model_data":1}, "model": "item/cell_state/empty"},
+	{"predicate": {"custom_model_data":2}, "model": "item/cell_state/card_pile"},
+	{"predicate": {"custom_model_data":3}, "model": "item/cell_state/player1"},
+	{"predicate": {"custom_model_data":4}, "model": "item/cell_state/player2"},
+	{"predicate": {"custom_model_data":5}, "model": "item/cell_state/blocked"},
+	{"predicate": {"custom_model_data":6}, "model": "item/cell_state/move"},
+	{"predicate": {"custom_model_data":7}, "model": "item/cell_state/attack"},
+	{"predicate": {"custom_model_data":8}, "model": "item/cell_state/trash"},
+	{"predicate": {"custom_model_data":9}, "model": "item/cell_state/blocked_player1"},
+	{"predicate": {"custom_model_data":10}, "model": "item/cell_state/blocked_player2"},
+	{"predicate": {"custom_model_data":11}, "model": "item/cell_state/minecart"}
+
+
+
+
+	
+    ]
+}

@@ -1,0 +1,59 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "item/card/back",
+		"particle": "item/card/back"
+	},
+	"elements": [
+		{
+			"name": "base",
+			"from": [4, 0, 9],
+			"to": [12, 12, 9.1],
+			"rotation": {"angle": 0, "axis": "x", "origin": [10, 8, 17]},
+			"faces": {
+				"north": {"uv": [0, 0, 8, 12], "texture": "#0"},
+				"east": {"uv": [7.75, 0, 8, 12], "texture": "#0"},
+				"south": {"uv": [0, 0, 8, 12], "texture": "#0"},
+				"west": {"uv": [0, 0, 0.25, 12], "texture": "#0"},
+				"up": {"uv": [0, 0, 8, 0.25], "rotation": 270, "texture": "#0"},
+				"down": {"uv": [0, 11.75, 8, 12], "rotation": 270, "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, -180, 0],
+			"translation": [0, 3.75, 1],
+			"scale": [0.51, 0.51, 0.51]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, -180, 0],
+			"translation": [0, 3.75, 1],
+			"scale": [0.51, 0.51, 0.51]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, -180, 0],
+			"translation": [-1.5, 10, 0]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, -180, 0],
+			"translation": [-1.5, 10, 0]
+		},
+		"gui": {
+			"rotation": [0, -180, 0],
+			"translation": [0, 3, 0],
+			"scale": [1.5, 1.5, 1.5]
+		},
+		"fixed": {
+			"translation": [0, 0, -1.5]
+		}
+	},
+	"groups": [
+		{
+			"name": "card",
+			"origin": [3.5, 12.4, 9],
+			"color": 0,
+			"children": [0]
+		}
+	]
+}

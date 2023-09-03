@@ -1,0 +1,29 @@
+{
+    "textures": {
+        "layer0": "item/paper"
+    },
+    "overrides": [
+{"predicate": {"custom_model_data":0}, "model": "item/card_pack/0"},
+{"predicate": {"custom_model_data":1}, "model": "item/card_pack/1"},
+{"predicate": {"custom_model_data":2}, "model": "item/card_pack/2"},
+{"predicate": {"custom_model_data":3}, "model": "item/card_pack/3"},
+{"predicate": {"custom_model_data":4}, "model": "item/card_pack/4"},
+{"predicate": {"custom_model_data":5}, "model": "item/card_pack/5"},
+{"predicate": {"custom_model_data":6}, "model": "item/card_pack/6"},
+{"predicate": {"custom_model_data":7}, "model": "item/card_pack/7"},
+{"predicate": {"custom_model_data":8}, "model": "item/card_pack/8"},
+{"predicate": {"custom_model_data":9}, "model": "item/card_pack/9"},
+{"predicate": {"custom_model_data":10}, "model": "item/card_pack/10"},
+{"predicate": {"custom_model_data":11}, "model": "item/card_pack/11"},
+{"predicate": {"custom_model_data":12}, "model": "item/card_pack/12"},
+{"predicate": {"custom_model_data":13}, "model": "item/card_pack/13"},
+{"predicate": {"custom_model_data":14}, "model": "item/card_pack/14"},
+{"predicate": {"custom_model_data":15}, "model": "item/card_pack/15"},
+{"predicate": {"custom_model_data":16}, "model": "item/card_pack/16"},
+{"predicate": {"custom_model_data":17}, "model": "item/card_pack/17"},
+{"predicate": {"custom_model_data":18}, "model": "item/card_pack/18"},
+{"predicate": {"custom_model_data":19}, "model": "item/card_pack/19"},
+{"predicate": {"custom_model_data":20}, "model": "item/card_pack/20"},
+{"predicate": {"custom_model_data":21}, "model": "item/card_pack/21"}
+    ]
+}

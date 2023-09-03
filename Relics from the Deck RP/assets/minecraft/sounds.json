@@ -1,0 +1,225 @@
+{
+  "coin_earn": {
+  "sounds": [
+   {"name": "coin_earn",
+    "stream":"false"
+   }
+  ]
+ },
+ "music.game.creative.creative1": {
+  "sounds": [{"name": "music/game/creative/creative1", "stream": true}]
+},
+"music.game.creative.creative2": {
+  "sounds": [{"name": "music/game/creative/creative2", "stream": true}]
+},
+"music.game.creative.creative3": {
+  "sounds": [{"name": "music/game/creative/creative3", "stream": true}]
+},
+"music.game.creative.creative4": {
+  "sounds": [{"name": "music/game/creative/creative4", "stream": true}]
+},
+"music.game.creative.creative5": {
+  "sounds": [{"name": "music/game/creative/creative5", "stream": true}]
+},
+"music.game.creative.creative6": {
+  "sounds": [{"name": "music/game/creative/creative6", "stream": true}]
+},
+"music.game.end.credits": {
+  "sounds": [{"name": "music/game/end/credits", "stream": true}]
+},
+"music.game.end.boss": {
+  "sounds": [{"name": "music/game/end/boss", "stream": true}]
+},
+"music.game.end.end": {
+  "sounds": [{"name": "music/game/end/end", "stream": true}]
+},
+"music.game.calm1": {
+  "sounds": [{"name": "music/game/calm1", "stream": true}]
+},
+"music.game.calm2": {
+  "sounds": [{"name": "music/game/calm2", "stream": true}]
+},
+"music.game.calm3": {
+  "sounds": [{"name": "music/game/calm3", "stream": true}]
+},
+"music.game.comforting_memories": {
+  "sounds": [{"name": "music/game/comforting_memories", "stream": true}]
+},
+"music.game.floating_dream": {
+  "sounds": [{"name": "music/game/floating_dream", "stream": true}]
+},
+"music.game.hal1": {
+  "sounds": [{"name": "music/game/hal1", "stream": true}]
+},
+"music.game.hal2": {
+  "sounds": [{"name": "music/game/hal2", "stream": true}]
+},
+"music.game.hal3": {
+  "sounds": [{"name": "music/game/hal3", "stream": true}]
+},
+"music.game.hal4": {
+  "sounds": [{"name": "music/game/hal4", "stream": true}]
+},
+"music.game.left_to_bloom": {
+  "sounds": [{"name": "music/game/left_to_bloom", "stream": true}]
+},
+"music.game.nuance1": {
+  "sounds": [{"name": "music/game/nuance1", "stream": true}]
+},
+"music.game.nuance2": {
+  "sounds": [{"name": "music/game/nuance2", "stream": true}]
+},
+"music.game.one_more_day": {
+  "sounds": [{"name": "music/game/one_more_day", "stream": true}]
+},
+"music.game.piano1": {
+  "sounds": [{"name": "music/game/piano1", "stream": true}]
+},
+"music.game.piano2": {
+  "sounds": [{"name": "music/game/piano2", "stream": true}]
+},
+"music.game.piano3": {
+  "sounds": [{"name": "music/game/piano3", "stream": true}]
+},
+"music.game.swamp.aerie": {
+  "sounds": [{"name": "music/game/swamp/aerie", "stream": true}]
+},
+"music.game.swamp.firebugs": {
+  "sounds": [{"name": "music/game/swamp/firebugs", "stream": true}]
+},
+"music.game.swamp.labyrinthine": {
+  "sounds": [{"name": "music/game/swamp/labyrinthine", "stream": true}]
+},
+"music.menu.menu1": {
+  "sounds": [{"name": "music/menu/menu1", "stream": true}]
+},
+"music.menu.menu2": {
+  "sounds": [{"name": "music/menu/menu2", "stream": true}]
+},
+"music.menu.menu3": {
+  "sounds": [{"name": "music/menu/menu3", "stream": true}]
+},
+"music.menu.menu4": {
+  "sounds": [{"name": "music/menu/menu4", "stream": true}]
+},
+"music.game.nether.nether1": {
+  "sounds": [{"name": "music/game/nether/nether1", "stream": true}]
+},
+"music.game.nether.nether2": {
+  "sounds": [{"name": "music/game/nether/nether2", "stream": true}]
+},
+"music.game.nether.nether3": {
+  "sounds": [{"name": "music/game/nether/nether3", "stream": true}]
+},
+"music.game.nether.nether4": {
+  "sounds": [{"name": "music/game/nether/nether4", "stream": true}]
+},
+"music.game.nether.soulsand_valley.so_below": {
+  "sounds": [
+     {
+        "name": "music/game/nether/soulsand_valley/so_below",
+        "stream": true
+     }
+  ]
+},
+"music.game.nether.crimson_forest.chrysopoeia": {
+  "sounds": [
+     {
+        "name": "music/game/nether/crimson_forest/chrysopoeia",
+        "stream": true
+     }
+  ]
+},
+"music.game.nether.nether_wastes.rubedo": {
+  "sounds": [
+     {
+        "name": "music/game/nether/nether_wastes/rubedo",
+        "stream": true
+     }
+  ]
+},
+"music.game.ancestry": {
+  "sounds": [{"name": "music/game/ancestry", "stream": true}]
+},
+"music.game.an_ordinary_day": {
+  "sounds": [{"name": "music/game/an_ordinary_day", "stream": true}]
+},
+"music.game.infinite_amethyst": {
+  "sounds": [{"name": "music/game/infinite_amethyst", "stream": true}]
+},
+"music.game.wending": {
+  "sounds": [{"name": "music/game/wending", "stream": true}]
+},
+"music.game.stand_tall": {
+  "sounds": [{"name": "music/game/stand_tall", "stream": true}]
+},
+"music.game.water.axolotl": {
+  "sounds": [{"name": "music/game/water/axolotl", "stream": true}]
+},
+"music.game.water.dragon_fish": {
+  "sounds": [{"name": "music/game/water/dragon_fish", "stream": true}]
+},
+"music.game.water.shuniji": {
+  "sounds": [{"name": "music/game/water/shuniji", "stream": true}]
+},
+"music.game.a_familiar_room": {
+  "sounds": [{"name": "music/game/a_familiar_room", "stream": true}]
+},
+"music.game.bromeliad": {
+  "sounds": [{"name": "music/game/bromeliad", "stream": true}]
+},
+"music.game.crescent_dunes": {
+  "sounds": [{"name": "music/game/crescent_dunes", "stream": true}]
+},
+"music.game.echo_in_the_wind": {
+  "sounds": [{"name": "music/game/echo_in_the_wind", "stream": true}]
+},
+"music_disc.11": {
+  "sounds": [{"name": "records/11", "stream": true,"attenuation_distance":0}]
+},
+"music_disc.13": {
+  "sounds": [{"name": "records/13", "stream": true,"attenuation_distance":0}]
+},
+"music_disc.5": {
+  "sounds": [{"name": "records/5", "stream": true,"attenuation_distance":0}]
+},
+"music_disc.blocks": {
+  "sounds": [{"name": "records/blocks", "stream": true,"attenuation_distance":0}]
+},
+"music_disc.cat": {
+  "sounds": [{"name": "records/cat", "stream": true,"attenuation_distance":0}]
+},
+"music_disc.chirp": {
+  "sounds": [{"name": "records/chirp", "stream": true,"attenuation_distance":0}]
+},
+"music_disc.far": {
+  "sounds": [{"name": "records/far", "stream": true,"attenuation_distance":0}]
+},
+"music_disc.mall": {
+  "sounds": [{"name": "records/mall", "stream": true,"attenuation_distance":0}]
+},
+"music_disc.mellohi": {
+  "sounds": [{"name": "records/mellohi", "stream": true,"attenuation_distance":0}]
+},
+"music_disc.otherside": {
+  "sounds": [{"name": "records/otherside", "stream": true,"attenuation_distance":0}]
+},
+"music_disc.pigstep": {
+  "sounds": [{"name": "records/pigstep", "stream": true,"attenuation_distance":0}]
+},
+"music_disc.stal": {
+  "sounds": [{"name": "records/stal", "stream": true,"attenuation_distance":0}]
+},
+"music_disc.strad": {
+  "sounds": [{"name": "records/strad", "stream": true,"attenuation_distance":0}]
+},
+"music_disc.wait": {
+  "sounds": [{"name": "records/wait", "stream": true,"attenuation_distance":0}]
+},
+"music_disc.ward": {
+  "sounds": [{"name": "records/ward", "stream": true,"attenuation_distance":0}]
+},
+"music_disc.relic": {
+  "sounds": [{"name": "records/relic", "stream": true,"attenuation_distance":0}]
+}
+}
