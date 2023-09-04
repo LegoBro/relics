@@ -2,7 +2,7 @@
 
 "draw.fail":"これ以上カードを引くことはできません!",
 "cards_left":"残りカード: ",
-"before_fatigue":" Reshuffles before fatigue: ",
+"before_fatigue":" 疲労前の再シャッフル: ",
 "reshuffle":" 再びシャッフルする",
 "fatigue_damage":" 再シャッフルによる疲労ダメージ: ",
 "fatigue_damage_take":" 疲労ダメージ: ",
@@ -13,7 +13,7 @@
 
 "villager.coffee.0":"このマップを気に入りましたか? ここをクリックしてcoffeeを買ってください!",
 
-"soundCategory.music": "オフにする",
+"soundCategory.music": "オフ推奨",
 "soundCategory.record": "音楽",
 
 "fatigue.warn":"次の再シャッフルで疲労ダメージを受けます！",
@@ -74,13 +74,13 @@
 "traits.fire.des":"炎によるダメージを受けない",
 
 "traits.flying":"飛行",
-"traits.flying.des":"トラップを作動させない",
+"traits.flying.des":"トラップを発動させない",
 
 "traits.gold":"金",
 "traits.gold.des":"ピグリンとの物々交換でカウントされる",
 
 "traits.teleport":"エンダー",
-"traits.teleport.des":"ダメージを受けると、移動しようとする",
+"traits.teleport.des":"ダメージを受けると移動しようとする",
 
 "traits.undead":"アンデッド",
 "traits.undead.des":"即時ダメージと回復に対して逆の反応し、スマイトに弱い",
@@ -133,10 +133,10 @@
 "hero.killer":"スレイヤー",
 "hero.trickster":"トリックスター",
 "hero.deckmaster":"デッキマスター",
-"hero.unlock":"新しいヒーロースキンを開放しました: ",
+"hero.unlock":"新しいヒーローのスキンを開放しました: ",
 
 "duel.invite.settings.handsize":"最大ハンドサイズ: ",
-"duel.invite.settings.fatigue":"Fatigue Start: ",
+"duel.invite.settings.fatigue":"開始疲労: ",
 
 "quests.deckmaster":"デッキマスター",
 "quests.deckmaster.des":"デッキマスタースキンで誰かを倒す",
@@ -161,15 +161,15 @@
 "deck_builder.fail_exit":"新しいカードパックを開封したため、カードをストレージかデッキに保存する必要があります。",
 "game.win":"は試合に勝利した!",
 
-"lobby.queue":"対戦を募集中です。 2人のプレイヤーの準備ができたら、試合が始まります。",
-"lobby.queue.leave":"対戦の募集を取りやめました。。",
-"cheater":"プレイヤーが不正をしました!",
-"shop.success":"購入が完了しました!",
-"shop.fail":"これは購入できません!",
+"lobby.queue":"マッチング待機中です。 2人のプレイヤーが準備を完了すると試合が始まります。",
+"lobby.queue.leave":"マッチングを取りやめました。",
+"cheater":"プレイヤーがチーターになりました！",
+"shop.success":"購入が完了しました！",
+"shop.fail":"これは購入できません！",
 
-"quick_play":"対戦の募集をする",
+"quick_play":"マッチング",
 "quick_deck_builder":"デッキ構築",
-"quick_spectate":"最も近いプレイヤーを観戦する",
+"quick_spectate":"最も近いプレイヤーを観戦",
 
 "cards":"Relics from the Deck",
 "cards.des":"デッキ構築型戦略ゲーム",
@@ -220,7 +220,7 @@
 "too_slow":"時間をかけ過ぎたので、あなたのターンは終了しました。",
 
 "credits.map":"🧭",
-"credits.brickmasons":"by The Brickmasons",
+"credits.brickmasons":"The Brickmasons制作",
 "credits.team":"マップチーム",
 "credits.testers":"テストプレイヤー",
 "credits.sounds":"Sound from Zapsplat.com",
@@ -233,7 +233,7 @@
 "duel.search":"プレイヤーをクリックしてデュエルをする",
 "duel.invite.1":"Invited ",
 "duel.invite.2":"をデュエルに招待する",
-"duel.invite.3":"があなたをデュエル招待しました",
+"duel.invite.3":"があなたをデュエルに招待しました",
 
 "duel.invite.settings":"試合設定:",
 "duel.invite.settings.mode":"モード: ",
@@ -248,7 +248,7 @@
 "villager.stephen":"Stephen",
 "villager.stephen.0":"プレイしたことはありますか? 下のチュートリアルをクリックしてください!",
 "villager.legobro":"LegoBro",
-"villager.legobro.0":"うーん。幅が10のボードは遊べないと思う...",
+"villager.legobro.0":"うーん。幅が10のボードは遊べないと思うよ...",
 "villager.gem":"ThatGreenGem",
 "villager.gem.0":"私はRelics from the DeckのWikiを作りました! 見たい人はここをクリック!",
 "villager.think":"thinkrocks12",
@@ -305,25 +305,25 @@
 "quests.sacrifice.des":"500体のエンティティを消費する",
 
 "quests.end":"エンド",
-"quests.end.des":"エンドのエンティティを50体プレイする",
+"quests.end.des":"エンドのエンティティを50体場に出す",
 
 "quests.nether":"ネザー",
-"quests.nether.des":"ネザーのエンティティを100体プレイする",
+"quests.nether.des":"ネザーのエンティティを100体場に出す",
 
 "quests.overworld":"オーバーワールド",
-"quests.overworld.des":"オーバーワールドのエンティティを250体プレイする",
+"quests.overworld.des":"オーバーワールドのエンティティを250体場に出す",
 
 "quests.potion":"ポーション",
-"quests.potion.des":"ポーションを50プレイする",
+"quests.potion.des":"ポーションを50使用する",
 
 "quests.armor":"アーマー",
-"quests.armor.des":"防具の破片を50プレイする",
+"quests.armor.des":"防具の破片を50使用する",
 
 "quests.trap":"トラップ",
-"quests.trap.des":"トラップを50プレイする",
+"quests.trap.des":"トラップを50使用する",
 
 "quests.water":"水生",
-"quests.water.des":"水生のエンティティを50体プレイする",
+"quests.water.des":"水生のエンティティを50体場に出す",
 
 "quests.conversion":"転化",
 "quests.conversion.des":"50体のエンティティを転化させる",
@@ -349,7 +349,7 @@
 "quests.piston":"少し押し強い",
 "quests.piston.des":"1ターンに3つのピストンまたは粘着ピストンを使う",
 
-"quests.bee":"泣きっ面にハチだ...",
+"quests.bee":"泣きっ面にハチ...",
 "quests.bee.des":"ミツバチに20回攻撃させる",
 
 "quests.tnt":"爆発的なディフェンス",
@@ -428,8 +428,8 @@
 "tutorial":"[チュートリアル] ",
 "tutorial.fail":"あなたはどうにかしてヒーローを殺すことに成功した。 あなたはチュートリアルに失敗した。 あなたが本当に上手なのか、それとも本当に下手なのか。",
 "tutorial.1":"こんにちは! Relics from the Deckへようこそ!",
-"tutorial.2":"このゲームの目標は敵のヒーローを殺すことです。",
-"tutorial.3":"ぞれと同時に、あなたはヒーローを守ろうとします。",
+"tutorial.2":"このゲームの目標は敵のヒーローを倒すことです。",
+"tutorial.3":"それと同時に、あなたはヒーローを守ろうとします。",
 "tutorial.4":"そうするためには、デッキを使います。",
 "tutorial.5":"自分のデッキを見ながら矢印で右クリックし、カードを1枚引きます。 その際、XP(経験値)を2消費します。",
 "tutorial.6":"ゾンビのカードを引きました!",
@@ -694,10 +694,10 @@
 "card.strength_potion.lore.2": "1体の攻撃力",
 "card.strength_potion.lore.3": "を+3増やす",
 "card.bee_hive": "養蜂箱",
-"card.bee_hive.lore.0": "養蜂箱を設置する。",
+"card.bee_hive.lore.0": "養蜂箱を設置する",
 "card.bee_hive.lore.1": "毎ターン終了時にミツバチを",
 "card.bee_hive.lore.2": "近くに1匹生み出し、ミツバチ",
-"card.bee_hive.lore.3": "1匹につきダメージを1与える。",
+"card.bee_hive.lore.3": "1匹につきダメージを1与える",
 "card.bee_nest": "ミツバチの巣",
 "card.bee_nest.lore.0": "ミツバチの巣を設置してミツバチ",
 "card.bee_nest.lore.1": "を見つけ、新たにミツバチが1匹",
@@ -983,8 +983,8 @@
 "card.skeleton_horse": "スケルトンホース",
 "card.skeleton_horse.lore.0": "",
 "card.slime": "スライム",
-"card.slime.lore.0": "ネバネバなスライム。",
-"card.slime.lore.1": "倒されると分裂する。",
+"card.slime.lore.0": "ネバネバなスライム",
+"card.slime.lore.1": "倒されると分裂する",
 "card.sniffer": "スニッファー",
 "card.sniffer.lore.0": "移動するたびに",
 "card.sniffer.lore.1": "太古の植物を見つける",

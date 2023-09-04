@@ -7,4 +7,6 @@ execute unless entity @s[nbt={SelectedItem:{tag:{card:{trash:1b}}}}] run loot in
 clear @s
 
 execute store result score #length var run data get block ~ ~-2 ~ Items
+tag @s add draft_ignore
 execute if score #length var matches ..12 run function main:player/use_card/refill
+tag @s remove draft_ignore
