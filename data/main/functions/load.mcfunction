@@ -206,22 +206,22 @@ setblock 0 1 1 minecraft:acacia_sign
 #function main:advertise
 kill @e[tag=lobby.npc]
 summon armor_stand 20 200 -2 {Tags:["lobby.npc"],ShowArms:1b,Pose:{Body:[8f,0f,0f],LeftArm:[360f,21f,0f],RightArm:[275f,344f,0f],LeftLeg:[272f,355f,14f],RightLeg:[283f,13f,360f],Head:[27f,0f,0f]},DisabledSlots:4144959,ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:1835008}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:10719584}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:2697727}}},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:"LegoBro"}}]}
-summon villager 20 200 -2 {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["lobby.npc","display","LegoBro"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:1000000000,ShowParticles:0b}],Offers:{}}
+summon villager 20 200 -2 {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["lobby.npc","display","LegoBro"],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:-1,show_particles:0b}],Offers:{}}
 
 summon armor_stand 24 200 6 {ShowArms:1b,DisabledSlots:4144959,Silent:1b,Invulnerable:1b,Tags:["lobby.npc","follow"],Pose:{Body:[8f,0f,0f],RightArm:[309f,0f,18f],LeftArm:[8f,205f,0f],LeftLeg:[343f,325f,0f],RightLeg:[8f,17f,7f]},HandItems:[{id:"minecraft:paper",Count:1b,tag:{CustomModelData:7}},{}],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:4282684}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:3188223}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:11403206}}},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:"ThatGreenGem"}}]}
-summon villager 24 200 6 {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["lobby.npc","display","gem"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:1000000000,ShowParticles:0b}],Offers:{}}
+summon villager 24 200 6 {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["lobby.npc","display","gem"],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:-1,show_particles:0b}],Offers:{}}
 
 summon armor_stand -2 200 -4 {Rotation:[270f],Tags:["lobby.npc"],ShowArms:1b,Pose:{Body:[8f,0f,0f],LeftArm:[360f,21f,0f],RightArm:[350f,344f,0f],LeftLeg:[272f,355f,14f],RightLeg:[283f,13f,360f],Head:[0f,0f,0f]},DisabledSlots:4144959,HandItems:[{id:"minecraft:paper",Count:1b,tag:{CustomModelData:3}},{}],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:1835008}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:788999}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:1381654}}},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:"thinkrocks12"}}]}
-summon villager -2 200 -4 {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["lobby.npc","display","think"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:1000000000,ShowParticles:0b}],Offers:{}}
+summon villager -2 200 -4 {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["lobby.npc","display","think"],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:-1,show_particles:0b}],Offers:{}}
 
 summon armor_stand 11 200 28 {Rotation:[90f],Tags:["lobby.npc"],ShowArms:1b,Pose:{Body:[8f,0f,0f],LeftLeg:[335f,325f,0f],RightLeg:[335f,17f,7f],LeftArm:[0f,0f,334f],RightArm:[8f,205f,0f]},DisabledSlots:4144959,ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:1835008}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:2565409}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:3289665}}},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:"J_Brimstone"}}]}
-summon villager 11 200 28 {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["lobby.npc","display","j"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:1000000000,ShowParticles:0b}],Offers:{}}
+summon villager 11 200 28 {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["lobby.npc","display","j"],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:-1,show_particles:0b}],Offers:{}}
 
 summon armor_stand 5.245 205 29.314 {Tags:["lobby.npc"],Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,ShowArms:1b,Rotation:[10f],ArmorItems:[{id:"minecraft:leather_boots",tag:{display:{color:4075054}},Count:1b},{id:"minecraft:leather_leggings",tag:{display:{color:10561065}},Count:1b},{id:"minecraft:leather_chestplate",tag:{display:{color:10561065}},Count:1b},{id:"player_head",Count:1b,tag:{SkullOwner:{Id:[I;-1220400931,2005419403,-2039953282,-447624220],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWIzM2RhNTIxOWQzY2FkMjJmNWI4NjM5NjhlOWE3NGZkOTNiYmMwZDA3M2Y4ZDRmMzcxNTM4ODY4YWFkY2JkNyJ9fX0="}]}}}}],HandItems:[{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:129},Count:1b},{}],CustomName:'{"text":"RedstoneBattery"}',DisabledSlots:4144959,Pose:{Body:[0f,9f,1f],Head:[0f,44f,3f],LeftLeg:[276f,359f,3f],RightLeg:[298f,29f,7f],LeftArm:[9f,44f,0f],RightArm:[323f,49f,0f]}}
-summon villager 5.245 205 29.314 {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["lobby.npc","display","redstone"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:1000000000,ShowParticles:0b}],Offers:{}}
+summon villager 5.245 205 29.314 {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["lobby.npc","display","redstone"],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:-1,show_particles:0b}],Offers:{}}
 
 # Coffee
 summon block_display 17.22 201.03125 -4.0 {block_state:{Name:"minecraft:magenta_carpet"},Tags:["display"],Rotation:[32.0f,0.0f]}
-summon villager 17.35 200 -3.3 {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["lobby.npc","display","coffee"],ActiveEffects:[{Id:14b,Amplifier:0b,Duration:1000000000,ShowParticles:0b}],Offers:{}}
+summon villager 17.35 200 -3.3 {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["lobby.npc","display","coffee"],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:-1,show_particles:0b}],Offers:{}}
 
 function music:load

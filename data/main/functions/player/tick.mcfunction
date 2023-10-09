@@ -29,3 +29,5 @@ execute if entity @s[team=!in_game,gamemode=!adventure] run function main:player
 scoreboard players operation #time_test var = @s world.link
 scoreboard players operation #time_test var -= @s dailyLoginTime
 execute if score #time_test var matches 1728000.. run function main:player/daily_reward
+
+scoreboard players set @s set.fatigue -2

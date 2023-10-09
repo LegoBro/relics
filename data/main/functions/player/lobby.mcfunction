@@ -56,3 +56,13 @@ execute if score #q_play var matches 2.. run function main:lobby/ready
 execute if score #q_deck_builder var matches 2.. run function main:arena/create/deck_builder
 execute if score #q_spectate var matches 2.. run tp @s @p[tag=turn]
 execute if score #q_spectate var matches 2.. unless entity @p[tag=turn] run playsound minecraft:block.note_block.didgeridoo master @s
+
+## Safety for settings
+execute unless score @s set.arena matches 0.. run scoreboard players set @s set.arena 0
+execute unless score @s set.hero matches 0.. run scoreboard players set @s set.hero 0
+execute unless score @s set.music matches 0.. run scoreboard players set @s set.music 0
+
+execute unless score @s set.mode matches 0.. run scoreboard players set @s set.mode 0
+execute unless score @s set.time matches 0.. run scoreboard players set @s set.time 0
+execute unless score @s set.handSize matches 3.. run scoreboard players set @s set.handSize 5
+execute unless score @s set.fatigue matches -2000000000.. run scoreboard players set @s set.fatigue 0

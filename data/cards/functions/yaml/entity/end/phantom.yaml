@@ -15,5 +15,4 @@ card:
   speed: 3
   flying: true
   lore: "Fast Flyer - has a 50% chance to dodge an attack"
-  extra_nbt: "ActiveEffects:[{Id:12b,Amplifier:1b,Duration:2000000,ShowParticles:0b}]"
   undead: True

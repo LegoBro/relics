@@ -1,3 +1,0 @@
-Changes for 4.2:
-
-New cheatcodes for enabling and disabling tournament mode (mostly useful for realms where functions are disabled)
