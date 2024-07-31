@@ -1,0 +1,26 @@
+name: Upload to FTP
+on:
+  push:
+    branches: [ main ]
+jobs:
+  upload:
+    name: Upload 🔼
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get latest code 👀
+        uses: actions/checkout@v2
+      - name: Sync files 📁
+        uses: sebastianpopp/ftp-action@releases/v2
+        with:
+          host:  ${{ secrets.ftp_server }}
+          user:  ${{ secrets.ftp_username }}
+          password: ${{ secrets.ftp_password }}
+          remoteDir: "./Relics_from_the_Deck/datapacks"
+          options: "--only-newer"
+      - name: RCON Connection 🔌
+        uses: Plagiatus/RCON-Action@v0.2
+        with:
+          server: ${{ secrets.rcon_server }}
+          port: ${{ secrets.rcon_port }}
+          password: ${{ secrets.rcon_password }}
+          commands: '["reload"]'
