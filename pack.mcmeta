@@ -1,7 +1,7 @@
   {
        "pack": {
-           "pack_format": 18,
-           "description": "engine for Minecraft Cards"
+           "pack_format": 26,
+           "description": "Gameplay engine for Relics from the Deck"
        },
        "filter": {
            "block": [
