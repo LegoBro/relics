@@ -9,7 +9,9 @@ def createCard(yaml_path):
     generator.recursiveCreateFolder(path)
 
 
-    lore = "Lore:['"
+    # /give @p carrot_on_a_stick[lore=[{"color":"white","italic":true,"translate":"cost"}],item_name={"color":"green","translate":"card.zombie"},item_model="item/card/zombie",custom_data={card:{trash:1b,category:"entity",element:"overworld",rarity:"common",name:"zombie",cost:2,placement:10}}] 1
+
+    lore = "lore=[" # May include a ' after [ and before ]
 
     if card['type'] == "entity":
         lore += f'\',\'[{{"translate":"cost","italic":false,"color":"white"}},{{"text":" {card["cost"]}","italic":false,"color":"white"}},{{"text":"        {card["health"]} ","italic":false,"color":"white"}},{{"translate":"health","italic":false,"color":"white"}}]'
@@ -57,10 +59,21 @@ def createCard(yaml_path):
         pass
 
 
-    lore += "']"
+    lore += "]"
 
-    give_command = "give @s carrot_on_a_stick{gui:False,display:{" + lore + ",Name:'[{\"translate\":\"card." + card["name"] + "\",\"italic\":\"false\",\"color\":\"" + card["color"] + "\"}]'},HideFlags:127,Unbreakable:1b,CustomModelData:" + str(card["model_id"]) + ",card:{category:\"" + card["type"] + "\",element:\"" + card["element"] + "\",rarity:\"" + card["rarity"] + "\",name:\"" + card["name"] + "\",cost:" + str(card["cost"]) + ",placement:" + str(card["placement"]) + "}} 1"
+    item_name = 'item_name={"color":"' + card["color"] + '","translate":"card.' + card["name"] + '"}'
 
+    item_model = 'item_model={card.'+ card["name"] +'}'
+
+    custom_data = "custom_data={card:{category:\"" + card["type"] + "\",element:\"" + card["element"] + "\",rarity:\"" + card["rarity"] + "\",name:\"" + card["name"] + "\",cost:" + str(card["cost"]) + ",placement:" + str(card["placement"]) + "}}"
+
+    item = "carrot_on_a_stick[" + lore + ',' + item_name + ", minecraft:unbreakable={}," + item_model + "," + custom_data + "]"
+
+    give_command = "give @s " + item
+
+    print(give_command)
+    
+    input()
     generator.writeFunction(path + "/give", give_command)
 
     insert_command = "execute store result score #any var run data get entity @s EnderItems[0].tag.Collection[{id:" + str(card["model_id"]) + "}].count"

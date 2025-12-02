@@ -1,7 +1,8 @@
   {
        "pack": {
-           "pack_format": 48,
-           "description": "Gameplay Engine for Relics from the Deck"
+        "min_format": 88,
+        "max_format": 88,
+        "description": "Gameplay Engine for Relics from the Deck"
        },
        "filter": {
            "block": [
