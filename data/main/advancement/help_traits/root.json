@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:writable_book"
+      "id": "minecraft:writable_book"
     },
     "title": {
       "translate": "traits"
@@ -9,7 +9,7 @@
     "description": {
       "translate": "traits.des"
     },
-    "background": "minecraft:textures/block/stripped_mangrove_log.png",
+    "background": "block/stripped_mangrove_log",
     "frame": "task",
     "show_toast": false,
     "announce_to_chat": false,

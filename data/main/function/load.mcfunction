@@ -28,6 +28,10 @@ team modify purple color dark_purple
 team add gray
 team modify gray color gray
 
+## BOSSBAR
+bossbar add minecraft:not_turn "Not your turn"
+bossbar add minecraft:turn "Your Turn"
+
 # Scoreboards
 scoreboard objectives add var dummy
 scoreboard objectives add id dummy
@@ -149,27 +153,27 @@ scoreboard players set #1200 var 1200
 #-1 var
 
 kill @e[tag=display]
-#summon armor_stand 8 212 -29 {Invisible:1b,Marker:1b,Tags:["display"],CustomNameVisible:1b,CustomName:'{"text":"߷"}'}
-summon armor_stand 3 203 -17 {Invisible:1b,Marker:1b,Tags:["display"],CustomNameVisible:1b,CustomName:'{"text":"Jump off to spectate"}'}
-#summon armor_stand -7 203 8 {Invisible:1b,Marker:1b,Tags:["display"],CustomNameVisible:1b,CustomName:'{"text":"🧱"}'}
+#summon armor_stand 8 212 -29 {Invisible:1b,Marker:1b,Tags:["display"],CustomNameVisible:1b,CustomName:{"text":"߷"}}
+summon armor_stand 3 203 -17 {Invisible:1b,Marker:1b,Tags:["display"],CustomNameVisible:1b,CustomName:{"text":"Jump off to spectate"}}
+#summon armor_stand -7 203 8 {Invisible:1b,Marker:1b,Tags:["display"],CustomNameVisible:1b,CustomName:{"text":"🧱"}}
 
-summon armor_stand 8 204 23 {Invisible:1b,Marker:1b,Tags:["display"],CustomNameVisible:1b,CustomName:'{"text":"Info","color":"yellow","bold":true}'}
-summon armor_stand -7 204 8 {Invisible:1b,Marker:1b,Tags:["display"],CustomNameVisible:1b,CustomName:'{"text":"Play","color":"green","bold":true}'}
-summon armor_stand 23 204 8 {Invisible:1b,Marker:1b,Tags:["display"],CustomNameVisible:1b,CustomName:'{"text":"Workshop","color":"gold","bold":true}'}
+summon armor_stand 8 204 23 {Invisible:1b,Marker:1b,Tags:["display"],CustomNameVisible:1b,CustomName:{"text":"Info","color":"yellow","bold":true}}
+summon armor_stand -7 204 8 {Invisible:1b,Marker:1b,Tags:["display"],CustomNameVisible:1b,CustomName:{"text":"Play","color":"green","bold":true}}
+summon armor_stand 23 204 8 {Invisible:1b,Marker:1b,Tags:["display"],CustomNameVisible:1b,CustomName:{"text":"Workshop","color":"gold","bold":true}}
 
-#front_text:{messages:['{"text":""}','{"text":""}','{"text":""}','{"text":""}']}
+#front_text:{messages:[{"text":""},{"text":""},{"text":""},{"text":""}]}
 
-data merge block 20 217 20 {Text2:'{"text":"Reward","color":"gray","bold":true,"clickEvent":{"action":"run_command","value":"function main:lobby/parkour"}}',Text3:'{"text":"[Right Click]","color":"dark_green"}'}
-data merge block 6 200 22 {Text3:'{"color":"dark_green","text":"[Right Click]"}',Text2:'{"color":"yellow","bold":true,"clickEvent":{"action":"run_command","value":"function main:arena/create/tutorial"},"text":"Tutorial"}'}
-data merge block 5 200 22 {front_text:{messages:['{"text":""}','{"color":"gold","bold":true,"clickEvent":{"action":"run_command","value":"function main:arena/create/tutorial_skip"},"text":"Practice Board"}','{"color":"dark_green","text":"[Right Click]"}','{"text":""}']},Text3:'',Text2:''}
+setblock 20 217 20 minecraft:dark_oak_sign[rotation=14,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:["","","",""]},components:{},front_text:{color:"black",has_glowing_text:0b,messages:["",{bold:1b,click_event:{action:"run_command",command:"function main:lobby/parkour"},color:"gray",text:"Reward"},{color:"dark_green",text:"[Right Click]"},""]},is_waxed:0b}
+setblock 6 200 22 minecraft:dark_oak_wall_sign[facing=north,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:["","","",""]},components:{},front_text:{color:"black",has_glowing_text:0b,messages:["",{bold:1b,click_event:{action:"run_command",command:"function main:arena/create/tutorial"},color:"yellow",text:"Tutorial"},{color:"dark_green",text:"[Right Click]"},""]},is_waxed:0b}
+data merge block 5 200 22 {front_text:{messages:[{"text":""},{"color":"gold","bold":true,"click_event":{"action":"run_command",command:"function main:arena/create/tutorial_skip"},"text":"Practice Board"},{"color":"dark_green","text":"[Right Click]"},{"text":""}]}}
 # Cheat Book
-data merge block 6 200 30 {Text2:'{"text":"Cheating Info","color":"dark_aqua","bold":true,"clickEvent":{"action":"run_command","value":"function main:arena/create/deck_builder/signs/cheat_info"}}',Text3:'{"text":"[Right Click]","color":"dark_green"}'}
+setblock 6 200 30 minecraft:dark_oak_wall_sign[facing=east,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:["","","",""]},components:{},front_text:{color:"black",has_glowing_text:0b,messages:["",{bold:1b,click_event:{action:"run_command",command:"function main:arena/create/deck_builder/signs/cheat_info"},color:"dark_aqua",text:"Cheating Info"},{color:"dark_green",text:"[Right Click]"},""]},is_waxed:0b}
 
-data merge block 10 200 22 {front_text:{messages:['{"text":"Booster Pack","color":"white","bold":true}','{"text":"Purchase for","color":"yellow"}','[{"text":"20","color":"gold"},{"text":"$","color":"white"}]','{"text":"[Right Click]","color":"dark_green","clickEvent":{"action":"run_command","value":"function main:lobby/shop/purchase"}}']}}
-data merge block 9 200 22 {front_text:{messages:['{"text":""}','{"text":""}','{"text":"<<<<<","color":"dark_green","clickEvent":{"action":"run_command","value":"function main:lobby/shop/left"}}','{"text":""}']}}
-data merge block 11 200 22 {front_text:{messages:['{"text":""}','{"text":""}','{"text":">>>>>","color":"dark_green","clickEvent":{"action":"run_command","value":"function main:lobby/shop/right"}}','{"text":""}']}}
+data merge block 10 200 22 {front_text:{messages:[{"text":"Booster Pack","color":"white","bold":true},{"text":"Purchase for","color":"yellow"},[{"text":"20","color":"gold"},{"text":"$","color":"white"}],{"text":"[Right Click]","color":"dark_green","click_event":{"action":"run_command",command:"function main:lobby/shop/purchase"}}]}}
+data merge block 9 200 22 {front_text:{messages:[{"text":""},{"text":""},{"text":"<<<<<","color":"dark_green","click_event":{"action":"run_command",command:"function main:lobby/shop/left"}},{"text":""}]}}
+data merge block 11 200 22 {front_text:{messages:[{"text":""},{"text":""},{"text":">>>>>","color":"dark_green","click_event":{"action":"run_command",command:"function main:lobby/shop/right"}},{"text":""}]}}
 
-data merge block -3 200 19 {Color:"-1",Text1:'{"text":"Special Thanks:","color":"dark_purple"}',Text2:'{"text":"Stickypiston","color":"green","bold":true}',Text3:'{"text":"Server Hosting","color":"green","bold":true}',Text4:'{"text":"[Right Click]","color":"dark_green","clickEvent":{"action":"run_command","value":"function main:lobby/stickypiston"}}'}
+setblock -3 200 19 minecraft:birch_sign[rotation=10,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:["","","",""]},components:{},front_text:{color:"black",has_glowing_text:0b,messages:[{color:"dark_purple",text:"Special Thanks:"},{bold:1b,color:"green",text:"Stickypiston"},{bold:1b,color:"green",text:"Server Hosting"},{click_event:{action:"run_command",command:"function main:lobby/stickypiston"},color:"dark_green",text:"[Right Click]"}]},is_waxed:0b}
 
 ## Shop Transition
 summon item_display 10 202.25 24 {Tags:["shop.display.new_left","transition","shop.display","display"],billboard:"fixed",transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[1f,0f,-0.5f],scale:[0f,0f,0f]},interpolation_duration:3}
@@ -187,12 +191,12 @@ summon item_display 10 202.25 24 {Tags:["shop.display.right","shop.display","dis
 scoreboard players set #shop display 0
 function main:lobby/shop/display
 
-summon villager 6 200 24 {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["display","stephen","follow"],CustomName:'{"text":"Stephen","color":"yellow"}',VillagerData:{profession:"minecraft:mason",type:"minecraft:plains"},Offers:{}}
+summon villager 6 200 24 {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["display","stephen","follow"],CustomName:{"text":"Stephen","color":"yellow"},VillagerData:{profession:"minecraft:mason",type:"minecraft:plains"},Offers:{}}
 
-summon minecraft:glow_item_frame 25 201 5 {Fixed:1b,Tags:["display"],Invisible:1b,Invulnerable:1b,Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{CustomModelData:54}},ItemRotation:3b,Facing:1b}
-summon minecraft:glow_item_frame 25 201 7 {Fixed:1b,Tags:["display"],Invisible:1b,Invulnerable:1b,Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{CustomModelData:15}},ItemRotation:1b,Facing:1b}
-summon minecraft:glow_item_frame 25 201 10 {Fixed:1b,Tags:["display"],Invisible:1b,Invulnerable:1b,Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{CustomModelData:23}},ItemRotation:2b,Facing:1b}
-summon minecraft:glow_item_frame 24 201 12 {Fixed:1b,Tags:["display"],Invisible:1b,Invulnerable:1b,Item:{id:"minecraft:carrot_on_a_stick",Count:1b,tag:{CustomModelData:74}},ItemRotation:4b,Facing:1b}
+summon minecraft:glow_item_frame 25 201 5 {Fixed:1b,Tags:["display"],Invisible:1b,Invulnerable:1b,Item:{id:"minecraft:carrot_on_a_stick",count:1b,components:{item_model:stone_54}},ItemRotation:3b,Facing:1b}
+summon minecraft:glow_item_frame 25 201 7 {Fixed:1b,Tags:["display"],Invisible:1b,Invulnerable:1b,Item:{id:"minecraft:carrot_on_a_stick",count:1b,components:{item_model:stone_15}},ItemRotation:1b,Facing:1b}
+summon minecraft:glow_item_frame 25 201 10 {Fixed:1b,Tags:["display"],Invisible:1b,Invulnerable:1b,Item:{id:"minecraft:carrot_on_a_stick",count:1b,components:{item_model:stone_23}},ItemRotation:2b,Facing:1b}
+summon minecraft:glow_item_frame 24 201 12 {Fixed:1b,Tags:["display"],Invisible:1b,Invulnerable:1b,Item:{id:"minecraft:carrot_on_a_stick",count:1b,components:{item_model:stone_74}},ItemRotation:4b,Facing:1b}
 
 summon interaction 10 214 6 {width:0.5f,height:0.5f,response:0b,Tags:["display"]}
 summon interaction 10 214 10 {width:0.5f,height:0.5f,response:0b,Tags:["display"]}
@@ -205,19 +209,20 @@ setblock 0 1 1 minecraft:acacia_sign
 
 #function main:advertise
 kill @e[tag=lobby.npc]
-summon armor_stand 20 200 -2 {Tags:["lobby.npc"],ShowArms:1b,Pose:{Body:[8f,0f,0f],LeftArm:[360f,21f,0f],RightArm:[275f,344f,0f],LeftLeg:[272f,355f,14f],RightLeg:[283f,13f,360f],Head:[27f,0f,0f]},DisabledSlots:4144959,ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:1835008}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:10719584}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:2697727}}},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:"LegoBro"}}]}
+
+summon armor_stand 20 200 -2 {Tags:["lobby.npc"],ShowArms:1b,Pose:{Body:[8f,0f,0f],LeftArm:[360f,21f,0f],RightArm:[275f,344f,0f],LeftLeg:[272f,355f,14f],RightLeg:[283f,13f,360f],Head:[27f,0f,0f]},DisabledSlots:4144959,equipment:{feet:{id:"minecraft:leather_boots",count:1b,components:{dyed_color:1835008}},legs:{id:"minecraft:leather_leggings",count:1b,components:{dyed_color:10719584}},chest:{id:"minecraft:leather_chestplate",count:1b,components:{dyed_color:2697727}},head:{id:"minecraft:player_head",count:1b,components:{profile:"LegoBro"}}}}
 summon villager 20 200 -2 {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["lobby.npc","display","LegoBro"],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:-1,show_particles:0b}],Offers:{}}
 
-summon armor_stand 24 200 6 {ShowArms:1b,DisabledSlots:4144959,Silent:1b,Invulnerable:1b,Tags:["lobby.npc","follow"],Pose:{Body:[8f,0f,0f],RightArm:[309f,0f,18f],LeftArm:[8f,205f,0f],LeftLeg:[343f,325f,0f],RightLeg:[8f,17f,7f]},HandItems:[{id:"minecraft:paper",Count:1b,tag:{CustomModelData:7}},{}],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:4282684}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:3188223}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:11403206}}},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:"ThatGreenGem"}}]}
+summon armor_stand 24 200 6 {ShowArms:1b,DisabledSlots:4144959,Silent:1b,Invulnerable:1b,Tags:["lobby.npc","follow"],Pose:{Body:[8f,0f,0f],RightArm:[309f,0f,18f],LeftArm:[8f,205f,0f],LeftLeg:[343f,325f,0f],RightLeg:[8f,17f,7f]},equipment:{mainhand:{id:"minecraft:paper",count:1b,components:{item_model:stone_7}},feet:{id:"minecraft:leather_boots",count:1b,components:{dyed_color:4282684}},legs:{id:"minecraft:leather_leggings",count:1b,components:{dyed_color:3188223}},chest:{id:"minecraft:leather_chestplate",count:1b,components:{dyed_color:11403206}},head:{id:"minecraft:player_head",count:1b,components:{profile:"ThatGreenGem"}}}}
 summon villager 24 200 6 {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["lobby.npc","display","gem"],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:-1,show_particles:0b}],Offers:{}}
 
-summon armor_stand -2 200 -4 {Rotation:[270f],Tags:["lobby.npc"],ShowArms:1b,Pose:{Body:[8f,0f,0f],LeftArm:[360f,21f,0f],RightArm:[350f,344f,0f],LeftLeg:[272f,355f,14f],RightLeg:[283f,13f,360f],Head:[0f,0f,0f]},DisabledSlots:4144959,HandItems:[{id:"minecraft:paper",Count:1b,tag:{CustomModelData:3}},{}],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:1835008}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:788999}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:1381654}}},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:"thinkrocks12"}}]}
+summon armor_stand -2 200 -4 {Rotation:[270f,0f],Tags:["lobby.npc"],ShowArms:1b,Pose:{Body:[8f,0f,0f],LeftArm:[360f,21f,0f],RightArm:[350f,344f,0f],LeftLeg:[272f,355f,14f],RightLeg:[283f,13f,360f],Head:[0f,0f,0f]},DisabledSlots:4144959,equipment:{mainhand:{id:"minecraft:paper",count:1b,components:{item_model:stone_3}},feet:{id:"minecraft:leather_boots",count:1b,components:{dyed_color:1835008}},legs:{id:"minecraft:leather_leggings",count:1b,components:{dyed_color:788999}},chest:{id:"minecraft:leather_chestplate",count:1b,components:{dyed_color:1381654}},head:{id:"minecraft:player_head",count:1b,components:{profile:"thinkrocks12"}}}}
 summon villager -2 200 -4 {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["lobby.npc","display","think"],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:-1,show_particles:0b}],Offers:{}}
 
-summon armor_stand 11 200 28 {Rotation:[90f],Tags:["lobby.npc"],ShowArms:1b,Pose:{Body:[8f,0f,0f],LeftLeg:[335f,325f,0f],RightLeg:[335f,17f,7f],LeftArm:[0f,0f,334f],RightArm:[8f,205f,0f]},DisabledSlots:4144959,ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:1835008}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:2565409}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:3289665}}},{id:"minecraft:player_head",Count:1b,tag:{SkullOwner:"J_Brimstone"}}]}
+summon armor_stand 11 200 28 {Rotation:[90f,0f],Tags:["lobby.npc"],ShowArms:1b,Pose:{Body:[8f,0f,0f],LeftLeg:[335f,325f,0f],RightLeg:[335f,17f,7f],LeftArm:[0f,0f,334f],RightArm:[8f,205f,0f]},DisabledSlots:4144959,equipment:{feet:{id:"minecraft:leather_boots",count:1b,components:{dyed_color:1835008}},legs:{id:"minecraft:leather_leggings",count:1b,components:{dyed_color:2565409}},chest:{id:"minecraft:leather_chestplate",count:1b,components:{dyed_color:3289665}},head:{id:"minecraft:player_head",count:1b,components:{profile:"J_Brimstone"}}}}
 summon villager 11 200 28 {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["lobby.npc","display","j"],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:-1,show_particles:0b}],Offers:{}}
 
-summon armor_stand 5.245 205 29.314 {Tags:["lobby.npc"],Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,ShowArms:1b,Rotation:[10f],ArmorItems:[{id:"minecraft:leather_boots",tag:{display:{color:4075054}},Count:1b},{id:"minecraft:leather_leggings",tag:{display:{color:10561065}},Count:1b},{id:"minecraft:leather_chestplate",tag:{display:{color:10561065}},Count:1b},{id:"player_head",Count:1b,tag:{SkullOwner:{Id:[I;-1220400931,2005419403,-2039953282,-447624220],Properties:{textures:[{Value:"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOWIzM2RhNTIxOWQzY2FkMjJmNWI4NjM5NjhlOWE3NGZkOTNiYmMwZDA3M2Y4ZDRmMzcxNTM4ODY4YWFkY2JkNyJ9fX0="}]}}}}],HandItems:[{id:"minecraft:carrot_on_a_stick",tag:{CustomModelData:129},Count:1b},{}],CustomName:'{"text":"RedstoneBattery"}',DisabledSlots:4144959,Pose:{Body:[0f,9f,1f],Head:[0f,44f,3f],LeftLeg:[276f,359f,3f],RightLeg:[298f,29f,7f],LeftArm:[9f,44f,0f],RightArm:[323f,49f,0f]}}
+summon armor_stand 5.245 205 29.314 {Tags:["lobby.npc"],Invulnerable:1b,NoBasePlate:1b,NoGravity:1b,ShowArms:1b,Rotation:[10f,0f],equipment:{feet:{id:"minecraft:leather_boots",components:{dyed_color:4075054},count:1b},legs:{id:"minecraft:leather_leggings",components:{dyed_color:10561065},count:1b},chest:{id:"minecraft:leather_chestplate",components:{dyed_color:10561065},count:1b},head:{id:"player_head",count:1b,components:{profile: "RedstoneBattery"}},mainhand:{id:"minecraft:carrot_on_a_stick",components:{item_model:stone_129},count:1b}},CustomName:{"text":"RedstoneBattery"},DisabledSlots:4144959,Pose:{Body:[0f,9f,1f],Head:[0f,44f,3f],LeftLeg:[276f,359f,3f],RightLeg:[298f,29f,7f],LeftArm:[9f,44f,0f],RightArm:[323f,49f,0f]}}
 summon villager 5.245 205 29.314 {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["lobby.npc","display","redstone"],active_effects:[{id:"minecraft:invisibility",amplifier:0,duration:-1,show_particles:0b}],Offers:{}}
 
 # Coffee

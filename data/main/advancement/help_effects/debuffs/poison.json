@@ -1,8 +1,12 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:splash_potion",
-      "nbt":"{Potion:\"minecraft:poison\"}"
+      "id": "minecraft:splash_potion",
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "poison"
+        }
+      }
     },
     "title": {
       "translate": "effects.poison",

@@ -1,8 +1,12 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:potion",
-      "nbt":"{Potion:\"minecraft:strength\"}"
+      "id": "minecraft:potion",
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "strength"
+        }
+      }
     },
     "title": {
       "translate": "effects.strength",

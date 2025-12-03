@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:paper",
-      "nbt": "{CustomModelData:0}"
+      "id": "minecraft:paper",
+      "components": {
+        "minecraft:item_model": "minecraft:stone_0"
+      }
     },
     "title": {
       "translate": "quests.tutorial",

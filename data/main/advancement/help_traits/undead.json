@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:sugar",
-      "nbt":"{CustomModelData:7}"
+      "id": "minecraft:sugar",
+      "components": {
+        "minecraft:item_model": "minecraft:stone_7"
+      }
     },
     "title": {
       "translate": "traits.undead",

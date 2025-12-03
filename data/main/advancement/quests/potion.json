@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:potion"
+      "id": "minecraft:potion"
     },
     "title": {
       "translate": "quests.potion",

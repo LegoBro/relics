@@ -1,8 +1,12 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:splash_potion",
-      "nbt":"{Potion:\"minecraft:fire_resistance\"}"
+      "id": "minecraft:splash_potion",
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "fire_resistance"
+        }
+      }
     },
     "title": {
       "translate": "effects.fire_resistance",

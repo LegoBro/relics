@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:player_head",
-      "nbt": "{SkullOwner:LegoBro}"
+      "id": "minecraft:player_head",
+      "components": {
+        "minecraft:profile": "LegoBro"
+      }
     },
     "title": {
       "translate": "quests.deckmaster",

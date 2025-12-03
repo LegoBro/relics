@@ -1,8 +1,12 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:potion",
-      "nbt":"{Potion:\"minecraft:invisibility\"}"
+      "id": "minecraft:potion",
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "invisibility"
+        }
+      }
     },
     "title": {
       "translate": "effects.invis",

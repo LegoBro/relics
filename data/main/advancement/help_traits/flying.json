@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:sugar",
-      "nbt":"{CustomModelData:4}"
+      "id": "minecraft:sugar",
+      "components": {
+        "minecraft:item_model": "minecraft:stone_4"
+      }
     },
     "title": {
       "translate": "traits.flying",

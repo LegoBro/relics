@@ -1,8 +1,12 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:potion",
-      "nbt":"{Potion:\"minecraft:swiftness\"}"
+      "id": "minecraft:potion",
+      "components": {
+        "minecraft:potion_contents": {
+          "potion": "swiftness"
+        }
+      }
     },
     "title": {
       "translate": "effects.speed",

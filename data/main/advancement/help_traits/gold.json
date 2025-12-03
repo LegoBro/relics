@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:sugar",
-      "nbt":"{CustomModelData:5}"
+      "id": "minecraft:sugar",
+      "components": {
+        "minecraft:item_model": "minecraft:stone_5"
+      }
     },
     "title": {
       "translate": "traits.gold",

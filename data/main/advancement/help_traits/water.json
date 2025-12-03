@@ -1,8 +1,10 @@
 {
   "display": {
     "icon": {
-      "item": "minecraft:sugar",
-      "nbt":"{CustomModelData:8}"
+      "id": "minecraft:sugar",
+      "components": {
+        "minecraft:item_model": "minecraft:stone_8"
+      }
     },
     "title": {
       "translate": "traits.water",
