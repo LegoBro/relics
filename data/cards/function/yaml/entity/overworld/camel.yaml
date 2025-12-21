@@ -14,5 +14,6 @@ card:
   range: 1
   speed: 2
   armor: 2
-  lore: "Special Attack - charge through multiple enemies until a stopping point is found"
+  lore: ""
+  lunging: True
   special_attack: true

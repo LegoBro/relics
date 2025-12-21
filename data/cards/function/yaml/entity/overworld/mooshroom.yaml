@@ -13,4 +13,5 @@ card:
   attack: 0
   range: 1
   speed: 1
-  lore: "A strange cow hybrid that has a chance to produce food each turn"
+  lore: "Mushroom Stew - has a chance to produce food each turn"
+  passive: true

@@ -14,5 +14,6 @@ card:
   range: 1
   speed: 3
   flying: true
-  lore: "Fast Flyer - has a 50% chance to dodge an attack"
+  lore: ""
   undead: True
+  evasive: True

@@ -1,5 +1,5 @@
 ## Dictionary for collection Storing
-execute store result score #card_id var run data get block 0 0 1 Items[0].tag.CustomModelData
+execute store result score #card_id var run data get block 0 0 1 Items[0].components."minecraft:custom_data".card.id
 execute if score #card_id var matches 1 run function cards:entity/overworld/cave_spider/change
 execute if score #card_id var matches 2 run function cards:entity/overworld/creeper/change
 execute if score #card_id var matches 3 run function cards:entity/overworld/iron_golem/change

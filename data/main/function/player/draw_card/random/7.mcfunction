@@ -1,4 +1,3 @@
 ## Slot for card
-data modify block 0 0 0 Items[{Slot:0b}] set from block ~ ~-2 ~ Items[{Slot:7b}]
+item replace block 0 0 0 container.0 from block ~ ~-2 ~ container.7
 item replace block ~ ~-2 ~ container.7 with air
-tag @s remove redraw

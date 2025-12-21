@@ -13,6 +13,6 @@ card:
   attack: 2
   range: 3
   speed: 1
-  extra_nbt: 'ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b}],HandItems:[{id:"minecraft:bow",Count:1b},{}]'
+  extra_nbt: 'equipment:{head:{id:"minecraft:book",count:1b},mainhand:{id:"minecraft:bow",count:1}}'
   lore: ""
   undead: True

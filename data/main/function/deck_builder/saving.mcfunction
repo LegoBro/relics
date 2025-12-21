@@ -7,4 +7,4 @@ execute store result score #test var run clear @s brown_shulker_box 0
 
 execute if score #test var matches 0 run item replace entity @s hotbar.0 from entity @s enderchest.0
 
-execute if entity @s[nbt={Inventory:[{Slot:-106b, tag:{Collection:[{}]}}]}] run function main:deck_builder/load
+execute if items entity @s weapon.offhand *[custom_data~{Collection:[{}]}] run function main:deck_builder/load

@@ -7,7 +7,7 @@ card:
   color: "green"
   cost: 3
   model_id: 51
-  lore: "Place a gilded blackstone block; when mined, this block has a 50% chance of dropping a golden item"
+  lore: "Place a gilded blackstone block; when mined, discover a golden item"
   building:
     health: 3
     maxHealth: 3

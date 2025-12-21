@@ -8,7 +8,7 @@ execute if score #y var matches ..100 run tp @s ~ ~10 ~
 
 tag @s[advancements={main:trigger/inventory_change=true}] add inv_changed
 
-item replace entity @s[tag=!waiting] hotbar.4 with carrot_on_a_stick[item_name={"translate":"duel","italic":false,"color":"blue"}]
+item replace entity @s[tag=!waiting] hotbar.4 with carrot_on_a_stick[item_model=arrow,item_name={"translate":"duel","italic":false,"color":"blue"}]
 item replace entity @s hotbar.8 with gold_nugget[item_name={"translate":"coins","italic":false,"color":"gold"}]
 
 item replace entity @s inventory.11 with pink_carpet[item_name={"translate":"quick_play","italic":false,"color":"green"}]

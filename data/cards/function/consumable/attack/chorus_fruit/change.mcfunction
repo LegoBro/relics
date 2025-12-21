@@ -1,4 +1,4 @@
-execute store result score #count var run data get block 0 0 0 Items[0].tag.Collection[{id:73}].count
+execute store result score #count var run data get block 0 0 0 Items[0].components."minecraft:custom_data".Collection[{id:73}].count
 scoreboard players operation #count var += #change var
-execute unless data block 0 0 0 Items[0].tag.Collection[{id:73}] run data modify block 0 0 0 Items[0].tag.Collection append value {count:0,id:73}
-execute store result block 0 0 0 Items[0].tag.Collection[{id:73}].count int 1 run scoreboard players get #count var
+execute unless data block 0 0 0 Items[0].components."minecraft:custom_data".Collection[{id:73}] run data modify block 0 0 0 Items[0].components."minecraft:custom_data".Collection append value {count:0,id:73}
+execute store result block 0 0 0 Items[0].components."minecraft:custom_data".Collection[{id:73}].count int 1 run scoreboard players get #count var

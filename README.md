@@ -16,12 +16,139 @@ I know this pack is a little bit of a mess, but I probably won't be cleaning it 
 # Update Changelogs
 
 ## 5.0
-Updated to 1.21.0
+Updated to 1.21.11
 
 ### Updates
 
-### Fixes
+### New Card Traits
+Passive - can place anywhere
+Lunging - (replaces camel and goat's special attack)
+Arthropod - Immune to slowness/cobwebs
+Frozen - Buffable by certain cards
+Evasive - replaces Phantom's special ability for 50% chance to dodge an attack
+Illager - can be buffed by illager buffs
+Defensive - doesn't advance to targets spot when dealing a killing blow
+Unselectable - target can't be selected
+Unbuffable - target cannot have buffs applied to it
 
+
+### New Cards
+#### Entity
+Gopper Golem - Swaps position of targeted entity with entity opposite from it
+Parched - Skeleton that gives weakness
+Bogged - Skeleton that gives poison
+
+#### Buff
+Saddle - Combine two entities by taking the ridden entity's health and speed, and the rider's attack and range.
+Iron Spear - Increase range of melee mob by 1 for 3 turns (Still has melee movement)
+Iron Sword - Convert a Ranged mob into a melee one, giving +3 Attack
+
+#### Defend
+Enchantment Table - Every enchanted Book gets refunded 1 XP
+
+### Card Change Ideas
+Silverfish - Hidden Friends Ability now deals 1 damage to all buildings, when one is broken, it spawns a silverfish
+Turtle Egg - Hatches Faster, Armor Reduced by 1 (From 1 to 0)
+Chorus Fruit - Now guaranteed to work, but requires a board spot to be open
+Piercing - Cost Reduced by 2 (From 8 to 6)
+Piglin - Cost Reduced by 1 (From 8 to 7)
+Outpost - Cost Increased by 3 (From 9 to 12), Health Increased by 2 (From 4 to 6), Adjacent damage increased by 1 (From 1 to 2)
+Pillager - Damage Increased by 1 (From 1 to 2)
+Targets - Cost Decreased by 2 (From 9 to 7)
+Hay Bale - only apply if existing or don't apply until end of turn
+
+Lightning Rod - ??? Too niche
+Stickypiston and Piston - merged into one card, hold shift while using "Piston" to pull, otherwise push, cost is 6
+Guardian - Damage Increased by 1 (From 3 to 4)
+Ice Storm - Now ignores frozen mobs, instead giving them speed and haste
+Warden - Now heals +5HP to full every entity it kills, +1 Speed
+Miner's Resilience - Only steals 1 or 1/2 total armor, whichever is higher from every entity
+Evoker - Cost Reduced by 5 (From 20 to 15), Range Increased by 1 (From 1 to 2), Now only spawns a Vex on a successful attack
+Pitcher Plant - Make not useless???
+--Redstone's Ideas--
+Armorsmith - Only buffs allies
+Butcher - significantly reduce cost
+Camel - feels too clunky to use, a lower cost would allow minecart or haste synergy, but would make it realistically too strong, debuffing its stats would contend with the goat. Perhaps a rework of some sort?
+Cleric - only heal allies, possibly reduce healing done to compensate
+Goat - increase damage by 1, reduce health by 1 - makes the ability on it more useful without need for goat horn
+Librarian - Change to: Whenever a mob is enchanted, give it +2 health; …
+Mooshroom - less health, guaranteed food
+Well - only target allies
+
+### Card Changes
+#### Entities
+Drowned - Impaler changed to require 2 other drowned to give trident, then 100% chance.
+    We didn't like the uncertainty of this card, and wanted to focus on adding value to synergistic cards such as pottery sherd
+Baby Magma Cube - Cost Reduced by 1 ( From 2 to 1)
+    Baby Magma Cube fell far behind some similar cards that are cheaper
+Horse - Attack decreased by 1 (From 1 to 0), gained Passive trait
+    Horse having one attack is kind of confusing in reference to the other passive entities, and will actually make for a better synergy with Hay Bale
+Pig - Increased health by +1 (From 2 to 3), gained passive trait
+    This change helps pig stand out a little more between chicken and sheep, as generally 2 chickens would be a better card combo
+Frog - Health Reduced by 1 (From 3 to 2)
+    Because aquatic entities have more synergies, we didn't want frog spam to be extremely strong.
+Parrot - Now only mimics allies
+    This now allows better synergies and deck composition opportunities
+Fox - Damage Decreased by 1 (From 3 to 2), Chance to discover item changed to 100% (from 50%), Gained Frozen trait
+    The cards fox gave were never really powerful, so making them 100% chance gives a lot more reason to use fox in early game decks.
+    
+##### Minor Entity Changes
+Phantom - Special Ability moved into Evasive trait
+Cub - Gained frozen trait
+Polar Bear - Gained frozen trait
+Vex - Gained Illager trait
+Goat - Gained Lunging trait
+Husk - Now has description for having higher max health
+Camel - Gained lunging trait
+Sheep - Better explained special ability "Wooly Armor", gained passive trait
+Stray - Gained frozen trait
+Witch - Gained Illager trait
+Evoker - Gained Illager Trait
+Spider - Gained arthropod trait
+Warden - Changed description
+Chicken - Gained passive trait
+Ravager - Gained illager trait
+Sniffer - Changed description, gained passive trait
+Pillager - Gained Illager trait
+Mooshroom - Gained passive trait
+Silverfish - gained arthropod trait
+Snow Golem - gained frozen trait
+Turtle Egg - now no longer selectable or buffable
+Vindicator - gained illager trait
+Cave Spider - gained arthropod trait
+Killer Rabbit - gained frozen trait
+
+
+#### Attack
+
+#### Buff
+
+#### Defense
+Sculk Block - Health Increased by 1 (From 1 to 2)
+    A lot of the time, sculk block can function as a better version of bread, especially if placed in front of the hero, so increasing health will help make it more nuanced.
+Gilded Blackstone - Chance to discover item changed to 100% (Was 50%)
+    Gilded blackstone didn't make sense in general, so changing the discover item to be 100% will give it value as a defensive block that can propagate into a more aggressive next turn.
+Cobblestone - Cost Reduced by 2 (From 2 to 0)
+    Cobblestone doesn't really do anything, so reducing it's cost will better situate it into being an early game defense.
+Witch Hut - Renamed to "Alchemy Hut", changed ability to return +2XP for every potion used, health increased by 1 (From 5 to 6), armor decreased by 2 (from 2 to 0)
+    Alchemy hut never really made sense as a structure, so changing it's core gameplay to enhance the use of normal potions will fit into more strategies.
+
+### Fixes
+Bee Hive last spawn (when building breaks) spawns bee as enemy team -> spawn before destroy?
+Draw game settings don't apply properly
+Farmland talks about saturation -> XP on texture
+Clear Totem of Dying Effects after use
+Husk - mention the increased max hp on the card
+Fletcher - clear up wording - currently unclear whether it is a on play effect or continuous effect.
+Changed Bee card to properly show that it only has 2 poison instead of 3
+
+### Improvements to do
+Multi-Open Card pack
+Convert all texts to translatable strings
+Convert Heroes into mannequins
+Sharable decks or suggested decks
+
+### Improvements Done
 
 ## 4.3
 

@@ -13,5 +13,5 @@ card:
   attack: 20
   range: 1
   speed: 1
-  lore: "The terrifying Warden can only attack enemies that moved or attacked the previous turn; the Warden takes 1 damage per turn"
+  lore: "Sensing - Can only attack enemies that moved or attacked the previous turn; the Warden takes 1 damage per turn"
   needs_vibration: True

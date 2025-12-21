@@ -13,4 +13,5 @@ card:
   attack: 0
   range: 1
   speed: 1
-  lore: "A foolish passive animal that you can place anywhere on the board"
+  lore: ""
+  passive: true

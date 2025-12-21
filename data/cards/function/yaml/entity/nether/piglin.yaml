@@ -14,5 +14,5 @@ card:
   range: 3
   speed: 2
   lore: ""
-  extra_nbt: "HandItems:[{id:'minecraft:crossbow',Count:1b},{}]"
+  extra_nbt: "equipment:{mainhand:{id:'minecraft:crossbow',count:1}}"
   gold: True

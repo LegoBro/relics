@@ -10,7 +10,8 @@ card:
   cost: 5
   maxHealth: 3
   health: 3
-  attack: 3
+  attack: 2
   range: 1
   speed: 2
-  lore: "A shy and cunning creature; has a chance to drop a card upon summon"
+  frozen: True
+  lore: "Full Mouth - drops a card upon summon"

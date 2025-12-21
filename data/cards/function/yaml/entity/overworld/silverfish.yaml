@@ -13,4 +13,5 @@ card:
   attack: 1
   range: 1
   speed: 1
+  arthropod: True
   lore: "Hidden Friends - has a 50% chance for every cobblestone to destroy it and spawn a silverfish upon death"

@@ -1,4 +1,5 @@
 #Origin point of card tree (generated)
+execute store result score #id var run data get entity @s SelectedItem.components."minecraft:custom_data".card.id
 execute if score #id var matches 19 run function cards:consumable/attack/anvil/hover
 execute if score #id var matches 20 run function cards:consumable/attack/arrow_storm/hover
 execute if score #id var matches 30 run function cards:consumable/attack/blaze_strike/hover

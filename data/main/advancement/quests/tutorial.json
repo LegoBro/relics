@@ -3,7 +3,7 @@
     "icon": {
       "id": "minecraft:paper",
       "components": {
-        "minecraft:item_model": "minecraft:stone_0"
+        "minecraft:item_model": "minecraft:arrow"
       }
     },
     "title": {

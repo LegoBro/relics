@@ -1,35 +1,35 @@
 
-execute store result score #card var run clear @s carrot_on_a_stick{gui:True}
+execute store result score #card var run clear @s carrot_on_a_stick[custom_data~{gui:True}]
 execute store result score #overwrite var run clear @s feather
-execute store result score #deck_1 var run clear @s white_stained_glass{gui:True,deck:True}
-execute store result score #deck_2 var run clear @s red_stained_glass{gui:True,deck:True}
-execute store result score #deck_3 var run clear @s orange_stained_glass{gui:True,deck:True}
-execute store result score #deck_4 var run clear @s yellow_stained_glass{gui:True,deck:True}
-execute store result score #deck_5 var run clear @s green_stained_glass{gui:True,deck:True}
-execute store result score #deck_6 var run clear @s cyan_stained_glass{gui:True,deck:True}
-execute store result score #deck_7 var run clear @s blue_stained_glass{gui:True,deck:True}
-execute store result score #deck_8 var run clear @s purple_stained_glass{gui:True,deck:True}
-execute store result score #deck_9 var run clear @s black_stained_glass{gui:True,deck:True}
+execute store result score #deck_1 var run clear @s white_stained_glass[custom_data~{gui:True,deck:True}]
+execute store result score #deck_2 var run clear @s red_stained_glass[custom_data~{gui:True,deck:True}]
+execute store result score #deck_3 var run clear @s orange_stained_glass[custom_data~{gui:True,deck:True}]
+execute store result score #deck_4 var run clear @s yellow_stained_glass[custom_data~{gui:True,deck:True}]
+execute store result score #deck_5 var run clear @s green_stained_glass[custom_data~{gui:True,deck:True}]
+execute store result score #deck_6 var run clear @s cyan_stained_glass[custom_data~{gui:True,deck:True}]
+execute store result score #deck_7 var run clear @s blue_stained_glass[custom_data~{gui:True,deck:True}]
+execute store result score #deck_8 var run clear @s purple_stained_glass[custom_data~{gui:True,deck:True}]
+execute store result score #deck_9 var run clear @s black_stained_glass[custom_data~{gui:True,deck:True}]
 
-execute store result score #deck_1_grab var run clear @s white_shulker_box{gui:True,grab:True}
-execute store result score #deck_2_grab var run clear @s red_shulker_box{gui:True,grab:True}
-execute store result score #deck_3_grab var run clear @s orange_shulker_box{gui:True,grab:True}
-execute store result score #deck_4_grab var run clear @s yellow_shulker_box{gui:True,grab:True}
-execute store result score #deck_5_grab var run clear @s green_shulker_box{gui:True,grab:True}
-execute store result score #deck_6_grab var run clear @s cyan_shulker_box{gui:True,grab:True}
-execute store result score #deck_7_grab var run clear @s blue_shulker_box{gui:True,grab:True}
-execute store result score #deck_8_grab var run clear @s purple_shulker_box{gui:True,grab:True}
-execute store result score #deck_9_grab var run clear @s black_shulker_box{gui:True,grab:True}
+execute store result score #deck_1_grab var run clear @s white_shulker_box[custom_data~{gui:True,grab:True}]
+execute store result score #deck_2_grab var run clear @s red_shulker_box[custom_data~{gui:True,grab:True}]
+execute store result score #deck_3_grab var run clear @s orange_shulker_box[custom_data~{gui:True,grab:True}]
+execute store result score #deck_4_grab var run clear @s yellow_shulker_box[custom_data~{gui:True,grab:True}]
+execute store result score #deck_5_grab var run clear @s green_shulker_box[custom_data~{gui:True,grab:True}]
+execute store result score #deck_6_grab var run clear @s cyan_shulker_box[custom_data~{gui:True,grab:True}]
+execute store result score #deck_7_grab var run clear @s blue_shulker_box[custom_data~{gui:True,grab:True}]
+execute store result score #deck_8_grab var run clear @s purple_shulker_box[custom_data~{gui:True,grab:True}]
+execute store result score #deck_9_grab var run clear @s black_shulker_box[custom_data~{gui:True,grab:True}]
 
-execute store result score #select_1 var run clear @s white_shulker_box{gui:True,select:True}
-execute store result score #select_2 var run clear @s red_shulker_box{gui:True,select:True}
-execute store result score #select_3 var run clear @s orange_shulker_box{gui:True,select:True}
-execute store result score #select_4 var run clear @s yellow_shulker_box{gui:True,select:True}
-execute store result score #select_5 var run clear @s green_shulker_box{gui:True,select:True}
-execute store result score #select_6 var run clear @s cyan_shulker_box{gui:True,select:True}
-execute store result score #select_7 var run clear @s blue_shulker_box{gui:True,select:True}
-execute store result score #select_8 var run clear @s purple_shulker_box{gui:True,select:True}
-execute store result score #select_9 var run clear @s black_shulker_box{gui:True,select:True}
+execute store result score #select_1 var run clear @s white_shulker_box[custom_data~{gui:True,select:True}]
+execute store result score #select_2 var run clear @s red_shulker_box[custom_data~{gui:True,select:True}]
+execute store result score #select_3 var run clear @s orange_shulker_box[custom_data~{gui:True,select:True}]
+execute store result score #select_4 var run clear @s yellow_shulker_box[custom_data~{gui:True,select:True}]
+execute store result score #select_5 var run clear @s green_shulker_box[custom_data~{gui:True,select:True}]
+execute store result score #select_6 var run clear @s cyan_shulker_box[custom_data~{gui:True,select:True}]
+execute store result score #select_7 var run clear @s blue_shulker_box[custom_data~{gui:True,select:True}]
+execute store result score #select_8 var run clear @s purple_shulker_box[custom_data~{gui:True,select:True}]
+execute store result score #select_9 var run clear @s black_shulker_box[custom_data~{gui:True,select:True}]
 
 execute if score #card var matches 1.. run function main:deck_builder/card_manager/update/decks
 

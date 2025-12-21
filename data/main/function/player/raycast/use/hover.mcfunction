@@ -2,7 +2,7 @@
 
 effect give @e[type=armor_stand,tag=hovered.slot,tag=id] minecraft:glowing 1 0 true
 
-execute store result score #placement var run data get entity @s SelectedItem.tag.card.placement
+execute store result score #placement var run data get entity @s SelectedItem.components."minecraft:custom_data".card.placement
 execute if score #placement var matches 0 run function main:player/raycast/use/display/anywhere
 execute if score #placement var matches 1 run function main:player/raycast/use/display/anywhere_blocked
 execute if score #placement var matches 2 run function main:player/raycast/use/display/anywhere_unfilled
@@ -29,7 +29,7 @@ execute if entity @s[tag=player.1] unless entity @s[scores={binding_timer=1..}] 
 execute if entity @s[tag=player.2] unless entity @s[scores={binding_timer=1..}] as @e[type=armor_stand,tag=hovered.slot,tag=discard_pile,tag=discard.player.2,tag=id] run team join purple @s
 
 
-execute store result score #id var run data get entity @s SelectedItem.tag.CustomModelData
+execute store result score #id var run data get entity @s SelectedItem.components."minecraft:custom_data".card.id
 
 execute unless score @s rightClick matches 1.. at @e[type=armor_stand,tag=hovered.slot,team=green,tag=id,limit=1,sort=nearest] run function cards:hover
 

@@ -1,5 +1,5 @@
-give @s carrot_on_a_stick{gui:False,display:{Lore:['','[{"translate":"cost","italic":false,"color":"white"},{"text":" 11","italic":false,"color":"white"}]','{"text":"","color":"white","italic":false}','{"translate":"card.well.lore.0","color":"white","italic":false}','{"translate":"card.well.lore.1","color":"white","italic":false}','{"translate":"card.well.lore.2","color":"white","italic":false}'],Name:'{"translate":"card.well","italic":"false","color":"green"}'},HideFlags:127,Unbreakable:1b,CustomModelData:107,card:{category:"consumable",element:"defend",rarity:"uncommon",name:"well",cost:11,placement:2}} 1
-item replace entity @s weapon.offhand with minecraft:totem_of_undying{CustomModelData:107}
+give @s carrot_on_a_stick[lore=[[{"translate":"cost","italic":false,"color":"white"},{"text":" 11","italic":false,"color":"white"}],{"text":"","color":"white","italic":false},{"translate":"card.well.lore.0","color":"white","italic":false},{"translate":"card.well.lore.1","color":"white","italic":false},{"translate":"card.well.lore.2","color":"white","italic":false}],item_name={"color":"green","translate":"card.well"}, minecraft:unbreakable={},item_model="cards/well",custom_data={gui:False, card:{id:107,category:"consumable",element:"defend",rarity:"uncommon",name:"well",cost:11,placement:2}}]
+item replace entity @s weapon.offhand with minecraft:totem_of_undying[item_model="cards/well"]
 effect give @s minecraft:instant_damage 1 100
 scoreboard players set #change var 1
 data merge block 0 0 0 {}

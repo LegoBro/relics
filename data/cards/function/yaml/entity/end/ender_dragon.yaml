@@ -15,4 +15,4 @@ card:
   speed: 2
   flying: true
   lore: "Heals 2 health for every end crystal on the board"
-  extra_nbt: 'CustomName:"{\"text\":\"Ender Dragon\"}",Marker:1b,Invisible:1,DisabledSlots:4144959,ArmorItems:[{},{},{},{id:"minecraft:scute",Count:1b}]'
+  extra_nbt: 'CustomName:{"text":"Ender Dragon"},Marker:1b,Invisible:1,DisabledSlots:4144959,equipment:{head:{id:"minecraft:turtle_scute",Count:1b}}'

@@ -14,3 +14,4 @@ card:
   range: 1
   speed: 2
   lore: ""
+  illager: True

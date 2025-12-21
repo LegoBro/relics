@@ -1,18 +1,18 @@
   {
        "pack": {
-        "min_format": 88,
-        "max_format": 88,
+        "min_format": 94,
+        "max_format": 200,
         "description": "Gameplay Engine for Relics from the Deck"
        },
        "filter": {
            "block": [
                {
                    "namespace": "minecraft",
-                   "path": "recipes/.*"
+                   "path": "recipe/.*"
                },
                {
                    "namespace": "minecraft",
-                   "path": "advancements/.*"
+                   "path": "advancement/.*"
                }
            ]
        }

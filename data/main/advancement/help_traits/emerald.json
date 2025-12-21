@@ -3,7 +3,7 @@
     "icon": {
       "id": "minecraft:sugar",
       "components": {
-        "minecraft:item_model": "minecraft:stone_2"
+        "minecraft:item_model": "minecraft:trait/emerald"
       }
     },
     "title": {

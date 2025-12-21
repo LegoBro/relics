@@ -8,6 +8,8 @@ execute at @e[type=armor_stand,tag=destination,tag=id,limit=1] run tp @e[tag=car
 execute at @e[type=armor_stand,tag=start,tag=id,limit=1] run clone ~-1 ~1 ~-1 ~1 ~3 ~1 0 10 0 replace move
 execute at @e[type=armor_stand,tag=destination,tag=id,limit=1] run clone 0 10 0 2 12 2 ~-1 ~1 ~-1 replace move
 
+# Wheat field Fix
+execute at @n[tag=card.building,tag=farmland,tag=moving,tag=id,limit=1,sort=nearest,distance=..250] run fill ~1 ~1 ~1 ~-1 ~1 ~-1 wheat[age=7]
 
 tag @e[type=armor_stand,tag=destination,tag=id] add filled
 tag @e[type=armor_stand,tag=destination,tag=id] add block

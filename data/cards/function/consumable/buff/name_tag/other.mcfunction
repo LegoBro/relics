@@ -6,4 +6,4 @@ scoreboard players operation @s attack = #health var
 scoreboard players operation @s health = #attack var
 
 
-data merge entity @s {CustomName:'{"text":"Dinnerbone"}'}
+data merge entity @s {CustomName:{"text":"Dinnerbone"}}

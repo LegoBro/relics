@@ -14,4 +14,5 @@ card:
   special_attack: true
   range: 2
   speed: 1
+  illager: True
   lore: "Special Attack - debuff an enemy; at the end of your turn the witch will buff a random friendly unit"

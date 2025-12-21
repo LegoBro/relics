@@ -8,7 +8,7 @@ scoreboard players operation #test var = @s turnTimer
 
 scoreboard players operation #test var %= #8 var
 
-execute store result score #cost var run data get entity @s SelectedItem.tag.card.cost
+execute store result score #cost var run data get entity @s SelectedItem.components."minecraft:custom_data".card.cost
 execute if score #test var matches ..3 unless score #cost var > #cost_bar var run scoreboard players operation #cost_bar var -= #cost var
 
 # 32 per level

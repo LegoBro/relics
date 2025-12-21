@@ -5,7 +5,7 @@ execute at @s positioned ~ ~ ~4 as @e[type=armor_stand,tag=board,tag=!filled,tag
 execute at @s positioned ~ ~ ~-4 as @e[type=armor_stand,tag=board,tag=!filled,tag=id,limit=1,distance=..1.5,sort=nearest] run tag @s add summon.bee
 
 execute as @e[type=armor_stand,tag=board,tag=id,tag=!draw_pile,tag=!discard_pile,tag=summon.bee,limit=1,sort=random] at @s run tag @s add summon.bee.chosen
-execute as @e[type=armor_stand,tag=board,tag=id,tag=summon.bee.chosen] at @s run data merge entity @s {CustomName:'{"text":"Bee Hive"}'}
+execute as @e[type=armor_stand,tag=board,tag=id,tag=summon.bee.chosen] at @s run data merge entity @s {CustomName:{"text":"Bee Hive"}}
 execute as @e[type=armor_stand,tag=board,tag=id,tag=summon.bee.chosen] at @s run team join red @s
 execute as @e[type=armor_stand,tag=board,tag=id,tag=summon.bee.chosen] at @s run function cards:entity/overworld/bee/summon
 execute if entity @e[type=armor_stand,tag=id,tag=summon.bee.chosen] run function cards:consumable/defend/bee_hive/damage

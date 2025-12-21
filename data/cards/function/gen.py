@@ -4,6 +4,7 @@ import json
 
 
 def createCard(yaml_path):
+    print(generator.readYaml(yaml_path))
     card = generator.readYaml(yaml_path)["card"]
     path = f"./{card['type']}/{card['element']}/{card['name']}"
     generator.recursiveCreateFolder(path)
@@ -14,18 +15,18 @@ def createCard(yaml_path):
     lore = "lore=[" # May include a ' after [ and before ]
 
     if card['type'] == "entity":
-        lore += f'\',\'[{{"translate":"cost","italic":false,"color":"white"}},{{"text":" {card["cost"]}","italic":false,"color":"white"}},{{"text":"        {card["health"]} ","italic":false,"color":"white"}},{{"translate":"health","italic":false,"color":"white"}}]'
+        lore += f'[{{"translate":"cost","italic":false,"color":"white"}},{{"text":" {card["cost"]}","italic":false,"color":"white"}},{{"text":"        {card["health"]} ","italic":false,"color":"white"}},{{"translate":"health","italic":false,"color":"white"}}]'
         if  "armor" in card.keys():
             pass
         else:
             card["armor"] = 0
             pass
-        lore += f'\',\'[{{"translate":"attack","italic":false,"color":"white"}},{{"text":" {card["attack"]}","italic":false,"color":"white"}},{{"text":"        {card["armor"]} ","italic":false,"color":"white"}},{{"translate":"armor","italic":false,"color":"white"}}]'
-        lore += f'\',\'[{{"translate":"speed","italic":false,"color":"white"}},{{"text":" {card["speed"]}","italic":false,"color":"white"}},{{"text":"        {card["range"]} ","italic":false,"color":"white"}},{{"translate":"range","italic":false,"color":"white"}}]'
+        lore += f',[{{"translate":"attack","italic":false,"color":"white"}},{{"text":" {card["attack"]}","italic":false,"color":"white"}},{{"text":"        {card["armor"]} ","italic":false,"color":"white"}},{{"translate":"armor","italic":false,"color":"white"}}]'
+        lore += f',[{{"translate":"speed","italic":false,"color":"white"}},{{"text":" {card["speed"]}","italic":false,"color":"white"}},{{"text":"        {card["range"]} ","italic":false,"color":"white"}},{{"translate":"range","italic":false,"color":"white"}}]'
 
 
     elif card['type'] == 'consumable':
-        lore += f'\',\'[{{"translate":"cost","italic":false,"color":"white"}},{{"text":" {card["cost"]}","italic":false,"color":"white"}}]'
+        lore += f'[{{"translate":"cost","italic":false,"color":"white"}},{{"text":" {card["cost"]}","italic":false,"color":"white"}}]'
 
     loreTextArray = card["lore"].split()
     maxLoreLength = 20
@@ -45,7 +46,7 @@ def createCard(yaml_path):
             pass
         pass
 
-    lore += f'\',\'{{"text":"","color":"white","italic":false}}'
+    lore += f',{{"text":"","color":"white","italic":false}}'
 
     name = card["name"].replace("_"," ").title()
 
@@ -53,7 +54,7 @@ def createCard(yaml_path):
     print(f'"card.{card["name"]}": "{name}",') #Name translation key
 
     for line in range(0,len(finalLoreArray)):
-        lore += f'\',\'{{"translate":"card.{card["name"]}.lore.{line}","color":"white","italic":false}}' # Lore Translation Key(s)
+        lore += f',{{"translate":"card.{card["name"]}.lore.{line}","color":"white","italic":false}}' # Lore Translation Key(s)
 
         print(f'"card.{card["name"]}.lore.{line}": "{finalLoreArray[line]}",')
         pass
@@ -61,41 +62,59 @@ def createCard(yaml_path):
 
     lore += "]"
 
+    tellraw_lore = lore.replace('/"','"').replace("lore=","")
+
     item_name = 'item_name={"color":"' + card["color"] + '","translate":"card.' + card["name"] + '"}'
 
-    item_model = 'item_model={card.'+ card["name"] +'}'
+    discover_item_name = 'item_name={"color":"' + card["color"] + '","translate":"card.' + card["name"] + '", "italic": true}'
 
-    custom_data = "custom_data={card:{category:\"" + card["type"] + "\",element:\"" + card["element"] + "\",rarity:\"" + card["rarity"] + "\",name:\"" + card["name"] + "\",cost:" + str(card["cost"]) + ",placement:" + str(card["placement"]) + "}}"
+    item_model = 'item_model="cards/'+ card["name"] +'"'
+
+    custom_data = "custom_data={gui:false, card:{id:" + str(card["model_id"]) + ",category:\"" + card["type"] + "\",element:\"" + card["element"] + "\",rarity:\"" + card["rarity"] + "\",name:\"" + card["name"] + "\",cost:" + str(card["cost"]) + ",placement:" + str(card["placement"]) + "}}"
+
+    discover_custom_data = "custom_data={trash:1b, card:{id:" + str(card["model_id"]) + ",category:\"" + card["type"] + "\",element:\"" + card["element"] + "\",rarity:\"" + card["rarity"] + "\",name:\"" + card["name"] + "\",cost:" + str(card["cost"]) + ",placement:" + str(card["placement"]) + "}}"
+
+    insert_custom_data = "custom_data={gui:True, card:{id:" + str(card["model_id"]) + ",category:\"" + card["type"] + "\",element:\"" + card["element"] + "\",rarity:\"" + card["rarity"] + "\",name:\"" + card["name"] + "\",cost:" + str(card["cost"]) + ",placement:" + str(card["placement"]) + "}}"
 
     item = "carrot_on_a_stick[" + lore + ',' + item_name + ", minecraft:unbreakable={}," + item_model + "," + custom_data + "]"
+
+    discover_item = "carrot_on_a_stick[" + lore + ',' + discover_item_name + ", minecraft:unbreakable={}," + item_model + "," + discover_custom_data + "]"
+
+    insert_item_data = "[" + lore + ',' + item_name + ", minecraft:unbreakable={}," + item_model + "," + insert_custom_data + "]"
+
+    empty_insert_item_data = "[" + lore + ',' + item_name + ", minecraft:unbreakable={}," + insert_custom_data + ", item_model='air']"
+
+    unlock_custom_data = "custom_data={gui:False, card:{id:" + str(card["model_id"]) + ",category:\"" + card["type"] + "\",element:\"" + card["element"] + "\",rarity:\"" + card["rarity"] + "\",name:\"" + card["name"] + "\",cost:" + str(card["cost"]) + ",placement:" + str(card["placement"]) + "}}"
+
+    unlock_item = "carrot_on_a_stick[" + lore + ',' + item_name + ", minecraft:unbreakable={}," + item_model + "," + unlock_custom_data + "]"
 
     give_command = "give @s " + item
 
     print(give_command)
     
-    input()
+    
     generator.writeFunction(path + "/give", give_command)
 
-    insert_command = "execute store result score #any var run data get entity @s EnderItems[0].tag.Collection[{id:" + str(card["model_id"]) + "}].count"
+    insert_command = "execute store result score #any var run data get entity @s EnderItems[0].components.\"minecraft:custom_data\".Collection[{id:" + str(card["model_id"]) + "}].count"
     
-    insert_command += "\nexecute unless score #any var matches 1.. run item replace block 0 0 0 container.0 with iron_nugget{gui:True,display:{Name:'[{\"translate\":\"card." + card["name"] + "\",\"italic\":\"false\",\"color\":\"gray\"}]'},HideFlags:127}"
+    insert_command += "\nexecute unless score #any var matches 1.. run item replace block 0 0 0 container.0 with iron_nugget[custom_data={gui:True}," + item_name + "]"
     
-    insert_command += "\nexecute store result score #count var run data get entity @s EnderItems[1].tag.Collection[{id:" + str(card["model_id"]) + "}].count"
-    insert_command += "\nexecute if score #any var matches 1.. if score #count var matches 1.. run item replace block 0 0 0 container.0 with carrot_on_a_stick{gui:True,display:{" + lore + ",Name:'[{\"translate\":\"card." + card["name"] + "\",\"italic\":\"false\",\"color\":\"" + card["color"] + "\"}]'},HideFlags:127,Unbreakable:1b,CustomModelData:" + str(card["model_id"]) + ",card:{category:\"" + card["type"] + "\",element:\"" + card["element"] + "\",rarity:\"" + card["rarity"] + "\",name:\"" + card["name"] + "\",cost:" + str(card["cost"]) + ",placement:" + str(card["placement"]) + "}} 1"
-    insert_command += "\nexecute if score #any var matches 1.. if score #count var matches 0 run item replace block 0 0 0 container.0 with stick{gui:True,display:{" + lore + ",Name:'[{\"translate\":\"card." + card["name"] + "\",\"italic\":\"false\",\"color\":\"" + card["color"] + "\"},{\"text\":\" (\",\"italic\":\"false\",\"color\":\"gray\"},{\"text\":\"0\",\"italic\":\"false\",\"color\":\"white\"},{\"text\":\")\",\"italic\":\"false\",\"color\":\"gray\"}]'},HideFlags:127,Unbreakable:1b,CustomModelData:" + str(card["model_id"]) + ",card:{category:\"" + card["type"] + "\",element:\"" + card["element"] + "\",rarity:\"" + card["rarity"] + "\",name:\"" + card["name"] + "\",cost:" + str(card["cost"]) + ",placement:" + str(card["placement"]) + "}} 1"
-    insert_command += "\nexecute if score #any var matches 1.. if score #count var matches 1.. run data modify block 1 1 0 Text1 set from block 0 0 0 Items[0].tag.display.Name"
-    insert_command += """\nexecute if score #any var matches 1.. if score #count var matches 1.. run data merge block 1 1 0 {Text2:'[{"text":" (","italic":"false","color":"gray"},{"score":{"name":"#count","objective":"var"},"italic":"false","color":"white"},{"text":")","italic":"false","color":"gray"}]'}"""
-    insert_command += """\nexecute if score #any var matches 1.. if score #count var matches 1.. run data merge block 1 1 0 {Text3:'[{"nbt":"Text1","block":"1 1 0","interpret":true},{"nbt":"Text2","block":"1 1 0","interpret":true}]'}"""
-    insert_command += "\nexecute if score #any var matches 1.. if score #count var matches 1.. run data modify block 0 0 0 Items[0].tag.display.Name set from block 1 1 0 Text3"
+    insert_command += "\nexecute store result score #count var run data get entity @s EnderItems[1].components.\"minecraft:custom_data\".Collection[{id:" + str(card["model_id"]) + "}].count"
+    insert_command += "\nexecute if score #any var matches 1.. if score #count var matches 1.. run item replace block 0 0 0 container.0 with carrot_on_a_stick" + insert_item_data
+    insert_command += "\nexecute if score #any var matches 1.. if score #count var matches 0 run item replace block 0 0 0 container.0 with stick" + empty_insert_item_data
+    insert_command += "\nexecute if score #any var matches 1.. if score #count var matches 1.. run data modify block 1 1 0 front_text.messages[0] set from block 0 0 0 Items[0].components.\"minecraft:item_name\""
+    insert_command += """\nexecute if score #any var matches 1.. if score #count var matches 1.. run data modify block 1 1 0 front_text.messages[1] set value [{"text":" (","italic":false,"color":"gray"},{"score":{"name":"#count","objective":"var"},"italic":false,"color":"white"},{"text":")","italic":false,"color":"gray"}]"""
+    insert_command += """\nexecute if score #any var matches 1.. if score #count var matches 1.. run data modify block 1 1 0 front_text.messages[2] set value [{"nbt":"front_text.messages[0]","block":"1 1 0","interpret":true},{"nbt":"front_text.messages[1]","block":"1 1 0","interpret":true}]"""
+    insert_command += "\nexecute if score #any var matches 1.. if score #count var matches 1.. run data modify block 0 0 0 Items[0].components.\"minecraft:item_name\" set from block 1 1 0 front_text.messages[2]"
 
-    insert_command += "\nloot insert ~ ~ ~ mine 0 0 0 air{drop_contents:1b}"
+    insert_command += "\nloot insert ~ ~ ~ mine 0 0 0 minecraft:stone[custom_data={drop_contents:1b}]"
     generator.writeFunction(path + "/insert", insert_command)
 
-    discover_command = "give @s carrot_on_a_stick{display:{" + lore + ",Name:'{\"translate\":\"card." + card["name"] + "\",\"color\":\"" + card["color"] + "\"}'},HideFlags:127,Unbreakable:1b,CustomModelData:" + str(card["model_id"]) + ",card:{trash:1b,category:\"" + card["type"] + "\",element:\"" + card["element"] + "\",rarity:\"" + card["rarity"] + "\",name:\"" + card["name"] + "\",cost:" + str(card["cost"]) + ",placement:" + str(card["placement"]) + "}} 1"
+    discover_command = "give @s " + discover_item
     generator.writeFunction(path + "/discover", discover_command)
 
-    unlock_command = "give @s carrot_on_a_stick{gui:False,display:{" + lore + ",Name:'{\"translate\":\"card." + card["name"] + "\",\"italic\":\"false\",\"color\":\"" + card["color"] + "\"}'},HideFlags:127,Unbreakable:1b,CustomModelData:" + str(card["model_id"]) + ",card:{category:\"" + card["type"] + "\",element:\"" + card["element"] + "\",rarity:\"" + card["rarity"] + "\",name:\"" + card["name"] + "\",cost:" + str(card["cost"]) + ",placement:" + str(card["placement"]) + "}} 1"
-    unlock_command += f"\nitem replace entity @s weapon.offhand with minecraft:totem_of_undying{{CustomModelData:{str(card['model_id'])}}}"
+    unlock_command = "give @s " + unlock_item
+    unlock_command += f"\nitem replace entity @s weapon.offhand with minecraft:totem_of_undying[{item_model}]"
     unlock_command += "\neffect give @s minecraft:instant_damage 1 100"
     unlock_command += "\nscoreboard players set #change var 1"
     unlock_command += "\ndata merge block 0 0 0 {}"
@@ -105,10 +124,10 @@ def createCard(yaml_path):
     
     generator.writeFunction(path + "/unlock", unlock_command)
 
-    change_command = "execute store result score #count var run data get block 0 0 0 Items[0].tag.Collection[{id:" + str(card['model_id']) + "}].count"
+    change_command = "execute store result score #count var run data get block 0 0 0 Items[0].components.\"minecraft:custom_data\".Collection[{id:" + str(card['model_id']) + "}].count"
     change_command += "\nscoreboard players operation #count var += #change var"
-    change_command += "\nexecute unless data block 0 0 0 Items[0].tag.Collection[{id:" + str(card['model_id']) + "}] run data modify block 0 0 0 Items[0].tag.Collection append value {count:0,id:" + str(card['model_id']) + "}"
-    change_command += "\nexecute store result block 0 0 0 Items[0].tag.Collection[{id:" + str(card['model_id']) + "}].count int 1 run scoreboard players get #count var"
+    change_command += "\nexecute unless data block 0 0 0 Items[0].components.\"minecraft:custom_data\".Collection[{id:" + str(card['model_id']) + "}] run data modify block 0 0 0 Items[0].components.\"minecraft:custom_data\".Collection append value {count:0,id:" + str(card['model_id']) + "}"
+    change_command += "\nexecute store result block 0 0 0 Items[0].components.\"minecraft:custom_data\".Collection[{id:" + str(card['model_id']) + "}].count int 1 run scoreboard players get #count var"
     generator.writeFunction(path + "/change", change_command)
 
     collection_command = "scoreboard players set #change var -1"
@@ -121,7 +140,7 @@ def createCard(yaml_path):
 
 
 
-    card["use"] = r"""{"underlined":true,"translate":"card.""" + card["name"]+ '"' + r""","hoverEvent":{"action":"show_item","contents":{"id":"minecraft:carrot_on_a_stick","Count":1,"tag":"{HideFlags:127,display:{""" + lore + r""",Name:\"{\\\"translate\\\":\\\"card.""" + card["name"] + r"""\\\",\\\"italic\\\":false,\\\"color\\\":\\\"green\\\"}\"}}"}}}"""
+    card["use"] = r"""{"underlined":true,"translate":"card.""" + card["name"]+ '"' + r""","hover_event":{"action":"show_item","id":"minecraft:carrot_on_a_stick","count":1,"components":{"minecraft:item_name":""" + item_name.replace("item_name=","") + r""","minecraft:lore":""" + tellraw_lore + r"""}}}"""
 
 
     #tellraw @p {"text":"Card","hoverEvent":{"action":"show_item","contents":{"id":"minecraft:carrot_on_a_stick","Count":1,"tag":"{HideFlags:127,display:{Lore:['','[{\\\"translate\\\":\\\"cost\\\",\\\"italic\\\":false,\\\"color\\\":\\\"white\\\"},{\\\"text\\\":\\\" 3\\\",\\\"italic\\\":false,\\\"color\\\":\\\"white\\\"}]','{\\\"text\\\":\\\"\\\",\\\"color\\\":\\\"white\\\",\\\"italic\\\":false}','{\\\"translate\\\":\\\"card.anvil.lore.0\\\",\\\"color\\\":\\\"white\\\",\\\"italic\\\":false}','{\\\"translate\\\":\\\"card.anvil.lore.1\\\",\\\"color\\\":\\\"white\\\",\\\"italic\\\":false}'],Name:\"{\\\"translate\\\":\\\"card.anvil\\\",\\\"italic\\\":false,\\\"color\\\":\\\"green\\\"}\"}}"}}}
@@ -160,67 +179,86 @@ def createEntityCard(card, path):
     summon_command += "\nexecute if entity @s[tag=player.2] run tp @e[tag=get_id,tag=id,limit=1] ~ ~1 ~ 180 ~"
     summon_command += "\ntag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] add filled"
     summon_command += "\ntag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] add friendly"
-    summon_command += "\nscoreboard players operation @e[tag=get_id,limit=1,sort=nearest] id = game.id var"
-    summon_command += f"\nscoreboard players set @e[tag=get_id,limit=1,sort=nearest] health {card['health']}"
-    summon_command += f"\nscoreboard players set @e[tag=get_id,limit=1,sort=nearest] maxHealth {card['maxHealth']}"
-    summon_command += f"\nscoreboard players set @e[tag=get_id,limit=1,sort=nearest] attack {card['attack']}"
-    summon_command += f"\nscoreboard players set @e[tag=get_id,limit=1,sort=nearest] speed {card['speed']}"
-    summon_command += f"\nscoreboard players set @e[tag=get_id,limit=1,sort=nearest] range {card['range']}"
+    summon_command += "\nscoreboard players operation @n[tag=get_id] id = game.id var"
+    summon_command += f"\nscoreboard players set @n[tag=get_id] health {card['health']}"
+    summon_command += f"\nscoreboard players set @n[tag=get_id] maxHealth {card['maxHealth']}"
+    summon_command += f"\nscoreboard players set @n[tag=get_id] attack {card['attack']}"
+    summon_command += f"\nscoreboard players set @n[tag=get_id] speed {card['speed']}"
+    summon_command += f"\nscoreboard players set @n[tag=get_id] range {card['range']}"
 
     card["traits"] = []
 
     if  "flying" in card.keys() and card['flying']:
-        summon_command += f"\ntag @e[tag=get_id,limit=1,sort=nearest] add flying"
+        summon_command += f"\ntag @n[tag=get_id] add flying"
         card["traits"].append("flying")
 
     if  "fire_proof" in card.keys() and card['fire_proof']:
-        summon_command += f"\ntag @e[tag=get_id,limit=1,sort=nearest] add fire_proof"
+        summon_command += f"\ntag @n[tag=get_id] add fire_proof"
         card["traits"].append("fire")
 
     if  "emerald" in card.keys() and card['emerald']:
-        summon_command += f"\ntag @e[tag=get_id,limit=1,sort=nearest] add emerald"
+        summon_command += f"\ntag @n[tag=get_id] add emerald"
         card["traits"].append("emerald")
 
     if  "gold" in card.keys() and card['gold']:
-        summon_command += f"\ntag @e[tag=get_id,limit=1,sort=nearest] add gold"
+        summon_command += f"\ntag @n[tag=get_id] add gold"
         card["traits"].append("gold")
     
+    if  "passive" in card.keys() and card['passive']:
+        summon_command += f"\ntag @n[tag=get_id] add passive"
+        card["traits"].append("passive")
+    
+    if  "lunging" in card.keys() and card['lunging']:
+        summon_command += f"\ntag @n[tag=get_id] add lunging"
+        card["traits"].append("lunging")
+
+    if  "arthropod" in card.keys() and card['arthropod']:
+        summon_command += f"\ntag @n[tag=get_id] add arthropod"
+        card["traits"].append("arthropod")
+            
+    if  "frozen" in card.keys() and card['frozen']:
+        summon_command += f"\ntag @n[tag=get_id] add frozen"
+        card["traits"].append("frozen")
+
+    if  "evasive" in card.keys() and card['evasive']:
+        summon_command += f"\ntag @n[tag=get_id] add evasive"
+        card["traits"].append("evasive")
+
+    if  "illager" in card.keys() and card['illager']:
+        summon_command += f"\ntag @n[tag=get_id] add illager"
+        card["traits"].append("illager")
+        
+    if  "defensive" in card.keys() and card['illager']:
+        summon_command += f"\ntag @n[tag=get_id] add illager"
+        card["traits"].append("illager")
+    
     if  "water" in card.keys() and card['water']:
-        summon_command += f"\ntag @e[tag=get_id,limit=1,sort=nearest] add water"
+        summon_command += f"\ntag @n[tag=get_id] add water"
         card["traits"].append("water")
 
     if  "teleport" in card.keys() and card['teleport']:
-        summon_command += f"\ntag @e[tag=get_id,limit=1,sort=nearest] add teleport"
+        summon_command += f"\ntag @n[tag=get_id] add teleport"
         card["traits"].append("teleport")
 
     if  "meleeImmune" in card.keys() and card['meleeImmune']:
-        summon_command += f"\ntag @e[tag=get_id,limit=1,sort=nearest] add meleeImmune"
+        summon_command += f"\ntag @n[tag=get_id] add meleeImmune"
 
     if  "armor" in card.keys():
-        summon_command += f"\nscoreboard players set @e[tag=get_id,limit=1,sort=nearest] armor {card['armor']}"
+        summon_command += f"\nscoreboard players set @n[tag=get_id] armor {card['armor']}"
     else:
         card["armor"] = 0
-        pass
 
     if  "apply_fire" in card.keys():
-        summon_command += f"\nscoreboard players set @e[tag=get_id,limit=1,sort=nearest] apply_fire {card['apply_fire']}"
-    else:
-        pass
+        summon_command += f"\nscoreboard players set @n[tag=get_id] apply_fire {card['apply_fire']}"
 
     if  "apply_poison" in card.keys():
-        summon_command += f"\nscoreboard players set @e[tag=get_id,limit=1,sort=nearest] apply_poison {card['apply_poison']}"
-    else:
-        pass
+        summon_command += f"\nscoreboard players set @n[tag=get_id] apply_poison {card['apply_poison']}"
 
     if  "apply_wither" in card.keys():
-        summon_command += f"\nscoreboard players set @e[tag=get_id,limit=1,sort=nearest] apply_wither {card['apply_wither']}"
-    else:
-        pass
+        summon_command += f"\nscoreboard players set @n[tag=get_id] apply_wither {card['apply_wither']}"
 
     if  "special_attack" in card.keys() and card['special_attack']:
-        summon_command += f"\ntag @e[tag=get_id,limit=1,sort=nearest] add special_attack"
-    else:
-        pass
+        summon_command += f"\ntag @n[tag=get_id] add special_attack"
 
     if  "ambush" in card.keys() and card['ambush']:
         summon_command += f"\ntag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] add movable"
@@ -229,30 +267,21 @@ def createEntityCard(card, path):
         summon_command += f"\ntag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] remove movable"
 
     if  "wither_proof" in card.keys() and card['wither_proof']:
-        summon_command += f"\ntag @e[tag=get_id,limit=1,sort=nearest] add wither_proof"
+        summon_command += f"\ntag @n[tag=get_id] add wither_proof"
         card["traits"].append("wither")
-    else:
-        pass
 
     if  "undead" in card.keys() and card['undead']:
-        summon_command += f"\ntag @e[tag=get_id,limit=1,sort=nearest] add undead"
+        summon_command += f"\ntag @n[tag=get_id] add undead"
         card["traits"].append("undead")
-    else:
-        pass
 
     if  "unselectable" in card.keys() and card['unselectable']:
-        summon_command += f"\ntag @e[tag=get_id,limit=1,sort=nearest] add unselectable"
-    else:
-        pass
+        summon_command += f"\ntag @n[tag=get_id] add unselectable"
 
     if  "unbuffable" in card.keys() and card['unbuffable']:
-        summon_command += f"\ntag @e[tag=get_id,limit=1,sort=nearest] add unbuffable"
-    else:
-        pass
+        summon_command += f"\ntag @n[tag=get_id] add unbuffable"
+
     if  "needs_vibration" in card.keys() and card['needs_vibration']:
-        summon_command += f"\ntag @e[tag=get_id,limit=1,sort=nearest] add needs_vibration"
-    else:
-        pass
+        summon_command += f"\ntag @n[tag=get_id] add needs_vibration"
 
     # Fills up trait list with empty textures for safety
     card["traits"].extend(["empty","empty","empty","empty","empty","empty"])
@@ -292,24 +321,24 @@ def createConsumableCard(card, path):
         cast_command += f'\ntellraw @a[tag=id] [{{"selector":"@s"}},{{"text":" uses "}},{card["use"]}]'
 
     if  "building" in card.keys(): # Building
-        cast_command += f'\nsummon armor_stand ~ ~1 ~ {{CustomName:\'{{"translate":"card.{card["name"]}"}}\',Invisible:1b,PersistenceRequired:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["new","get_id","id","card","{card["name"]}","card.building","card.defend","attackable"],Team:"green"}}'
+        cast_command += f'\nsummon armor_stand ~ ~1 ~ {{CustomName:{{"translate":"card.{card["name"]}"}},Invisible:1b,Silent:1b,Invulnerable:1b,Tags:["new","get_id","id","card","{card["name"]}","card.building","card.defend","attackable"],Team:"green"}}'
         cast_command += "\ntag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] add filled"
         cast_command += "\ntag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] add blocked"
         cast_command += "\ntag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] add block"
         cast_command += "\ntag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] add friendly"
         cast_command += f"\ntag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] remove movable"
-        cast_command += "\nscoreboard players operation @e[tag=get_id,limit=1,sort=nearest] id = game.id var"
-        cast_command += f"\nscoreboard players set @e[tag=get_id,limit=1,sort=nearest] health {card['building']['health']}"
-        cast_command += f"\nscoreboard players set @e[tag=get_id,limit=1,sort=nearest] maxHealth {card['building']['maxHealth']}"
+        cast_command += "\nscoreboard players operation @n[tag=get_id] id = game.id var"
+        cast_command += f"\nscoreboard players set @n[tag=get_id] health {card['building']['health']}"
+        cast_command += f"\nscoreboard players set @n[tag=get_id] maxHealth {card['building']['maxHealth']}"
 
         if  "armor" in card['building'].keys():
-            cast_command += f"\nscoreboard players set @e[tag=get_id,limit=1,sort=nearest] armor {card['building']['armor']}"
+            cast_command += f"\nscoreboard players set @n[tag=get_id] armor {card['building']['armor']}"
         else:
             card['building']["armor"] = 0
             pass
 
         if  "fire_proof" in card['building'].keys() and card['building']['fire_proof']:
-            cast_command += f"\ntag @e[tag=get_id,limit=1,sort=nearest] add fire_proof"
+            cast_command += f"\ntag @n[tag=get_id] add fire_proof"
         else:
             pass
 
@@ -344,12 +373,13 @@ def makeEntityModelJson(card, path):
                 "speed": f"item/card/number/left/{card['speed']}",
                 "range": f"item/card/number/right/{card['range']}",
                 "rarity": f"item/card/front_{card['rarity']}",
-                "trait_1": f"item/card/{card['traits'][0]}",
-                "trait_2": f"item/card/{card['traits'][1]}",
-                "trait_3": f"item/card/{card['traits'][2]}",
-                "trait_4": f"item/card/{card['traits'][3]}",
-                "trait_5": f"item/card/{card['traits'][4]}",
-                "trait_6": f"item/card/{card['traits'][5]}"
+                "trait_1": f"item/card/trait/{card['traits'][0]}",
+                "trait_2": f"item/card/trait/{card['traits'][1]}",
+                "trait_3": f"item/card/trait/{card['traits'][2]}",
+                "trait_4": f"item/card/trait/{card['traits'][3]}",
+                "trait_5": f"item/card/trait/{card['traits'][4]}",
+                "trait_6": f"item/card/trait/{card['traits'][5]}",
+                "type":"item/card/trait/entity"
                 
 	         }
           }
@@ -370,9 +400,23 @@ def makeConsumableModelJson(card, path):
     		        "cost": f"item/card/number/left/{card['cost']}",
                     "health": f"item/card/number/right/{card['building']['health']}",
                     "armor": f"item/card/number/right/{card['building']['armor']}",
-                    "rarity": f"item/card/front_{card['rarity']}"
+                    "rarity": f"item/card/front_{card['rarity']}",
+                    "type":"item/card/trait/building"
     	         }
               }
+    elif "hide" in card.keys() and card['hide']:
+        model = {
+        "credit": "Made with Brickbench",
+        "parent": "item/cards/consumable_template",
+        "textures": {
+              "background": f"item/card/{card['name']}/background",
+              "foreground": f"item/card/{card['name']}/foreground",
+              "description": f"item/card/{card['name']}/description",
+              "cost": f"item/card/number/left/{card['cost']}",
+              "rarity": f"item/card/front_{card['rarity']}",
+              "type":f"item/card/trait/trap"
+           }
+        }
     else:
         model = {
         "credit": "Made with Brickbench",
@@ -382,7 +426,8 @@ def makeConsumableModelJson(card, path):
               "foreground": f"item/card/{card['name']}/foreground",
               "description": f"item/card/{card['name']}/description",
               "cost": f"item/card/number/left/{card['cost']}",
-              "rarity": f"item/card/front_{card['rarity']}"
+              "rarity": f"item/card/front_{card['rarity']}",
+              "type":f"item/card/trait/{card['element']}"
            }
         }
     #print(model)
@@ -399,7 +444,7 @@ collection = []
 use_command = "#Origin point of card tree (generated)"
 
 hover_command = "#Origin point of card tree (generated)\n"
-hover_command += "execute store result score #id var run data get entity @s SelectedItem.tag.CustomModelData"
+hover_command += "execute store result score #id var run data get entity @s SelectedItem.components.\"minecraft:custom_data\".card.id"
 
 for type in types:
     type_list.append(type)
@@ -543,14 +588,15 @@ def stype(val):
 ## Collection click dict
 collection_command = "## Dictionary for collection clicking"
 for card in collection:
-    collection_command += f"\nexecute store result score #pass var run clear @s carrot_on_a_stick{{gui:True,CustomModelData:{card[0]}}} 1"
+    print(card)
+    collection_command += f"\nexecute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{{gui:True}},item_model=\"cards/" + card[1] + "\"] 1"
     collection_command += f"\nexecute if score #pass var matches 1 run function cards:{card[2]}/{card[3]}/{card[1]}/collection"
     pass
 generator.writeFunction("./collection_dict" , collection_command)
 
 ## Collection Store dict
 store_command = "## Dictionary for collection Storing"
-store_command += "\nexecute store result score #card_id var run data get block 0 0 1 Items[0].tag.CustomModelData"
+store_command += "\nexecute store result score #card_id var run data get block 0 0 1 Items[0].components.\"minecraft:custom_data\".card.id"
 
 for card in collection:
     store_command += f"\nexecute if score #card_id var matches {card[0]} run function cards:{card[2]}/{card[3]}/{card[1]}/change"
@@ -721,7 +767,7 @@ for card in collection:
         tournament_deck.append("{id:" + str(card[0]) + ",count:1}")
         continue
     
-tournament_deck = f"""data modify block 0 0 0 Items[0].tag.Collection set value {str(tournament_deck).replace("'","")}"""
+tournament_deck = f"""data modify block 0 0 0 Items[0].components."minecraft:custom_data".Collection set value {str(tournament_deck).replace("'","")}"""
 generator.writeFunction("./tournament_give", tournament_deck)
 
 generator.writeFunction("./pack_open", pack_open)

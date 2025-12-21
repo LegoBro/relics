@@ -13,4 +13,5 @@ card:
   attack: 2
   range: 1
   speed: 2
+  arthropod: True
   lore: ""

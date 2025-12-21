@@ -1,5 +1,5 @@
-give @s carrot_on_a_stick{gui:False,display:{Lore:['','[{"translate":"cost","italic":false,"color":"white"},{"text":" 8","italic":false,"color":"white"}]','{"text":"","color":"white","italic":false}','{"translate":"card.piercing.lore.0","color":"white","italic":false}','{"translate":"card.piercing.lore.1","color":"white","italic":false}'],Name:'{"translate":"card.piercing","italic":"false","color":"green"}'},HideFlags:127,Unbreakable:1b,CustomModelData:65,card:{category:"consumable",element:"buff",rarity:"common",name:"piercing",cost:8,placement:7}} 1
-item replace entity @s weapon.offhand with minecraft:totem_of_undying{CustomModelData:65}
+give @s carrot_on_a_stick[lore=[[{"translate":"cost","italic":false,"color":"white"},{"text":" 8","italic":false,"color":"white"}],{"text":"","color":"white","italic":false},{"translate":"card.piercing.lore.0","color":"white","italic":false},{"translate":"card.piercing.lore.1","color":"white","italic":false}],item_name={"color":"green","translate":"card.piercing"}, minecraft:unbreakable={},item_model="cards/piercing",custom_data={gui:False, card:{id:65,category:"consumable",element:"buff",rarity:"common",name:"piercing",cost:8,placement:7}}]
+item replace entity @s weapon.offhand with minecraft:totem_of_undying[item_model="cards/piercing"]
 effect give @s minecraft:instant_damage 1 100
 scoreboard players set #change var 1
 data merge block 0 0 0 {}

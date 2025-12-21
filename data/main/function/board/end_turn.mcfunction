@@ -5,7 +5,7 @@
 advancement grant @a[tag=id,scores={saturation=30..},tag=turn] only main:quests/rich
 
 # Unknown advancement
-execute as @p[tag=id,tag=turn,advancements={main:quests/unknown=false}] store result score #unknowns var run clear @s minecraft:carrot_on_a_stick{card:{rarity:"unknown"}} 0
+execute as @p[tag=id,tag=turn,advancements={main:quests/unknown=false}] store result score #unknowns var run clear @s minecraft:carrot_on_a_stick[custom_data~{card:{rarity:"unknown"}}] 0
 execute as @p[tag=id,tag=turn,advancements={main:quests/unknown=false}] if score #unknowns var >= #set.handSize var run advancement grant @s only main:quests/unknown
 # Mansion advancement
 execute if entity @p[tag=id,tag=turn,advancements={main:quests/mansion=false}] at @e[tag=card.entity,tag=id,tag=pillager] if entity @e[type=armor_stand,tag=id,tag=friendly,distance=..1.5] at @e[tag=card.entity,tag=id,tag=vindicator] if entity @e[type=armor_stand,tag=id,tag=friendly,distance=..1.5] at @e[tag=card.entity,tag=id,tag=evoker] if entity @e[type=armor_stand,tag=id,tag=friendly,distance=..1.5] at @e[tag=card.entity,tag=id,tag=ravager] if entity @e[type=armor_stand,tag=id,tag=friendly,distance=..1.5] run advancement grant @p[tag=id,tag=turn] only main:quests/mansion
@@ -20,7 +20,7 @@ scoreboard players reset @a[tag=id] rightClick
 playsound minecraft:block.beacon.deactivate master @a[tag=id,tag=turn] ~ ~ ~ 10 0 1
 playsound minecraft:block.beacon.activate master @a[tag=id,tag=wait] ~ ~ ~ 10 2 1
 
-execute store result score #cards var run clear @p[tag=id,tag=turn] minecraft:carrot_on_a_stick{card:{}} 0
+execute store result score #cards var run clear @p[tag=id,tag=turn] minecraft:carrot_on_a_stick[custom_data~{card:{}}] 0
 execute store result score #player var if entity @p[tag=id,tag=player.2,tag=turn]
 scoreboard players operation #play_turn var = @p[tag=id,tag=turn] play.card.turn
 

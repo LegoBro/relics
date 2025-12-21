@@ -7,7 +7,7 @@ card:
   color: "green"
   entity: "magma_cube"
   model_id: 12
-  cost: 2
+  cost: 1
   maxHealth: 1
   health: 1
   attack: 1

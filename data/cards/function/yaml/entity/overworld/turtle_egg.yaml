@@ -15,5 +15,7 @@ card:
   speed: 0
   armor: 1
   lore: "Can't attack, but will hatch into a turtle after a while"
-  extra_nbt: 'CustomName:"{\"text\":\"Turtle Egg\"}",Marker:1b,Invisible:1,DisabledSlots:4144959'
+  extra_nbt: 'CustomName:{"text":"Turtle Egg"},Marker:1b,Invisible:1b,DisabledSlots:4144959'
   water: True
+  unselectable: true
+  unbuffable: true

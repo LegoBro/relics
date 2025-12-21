@@ -2,8 +2,8 @@
 	"credit": "Made with Blockbench",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "item/coffee",
-		"particle": "item/coffee"
+		"0": "block/coffee",
+		"particle": "block/coffee"
 	},
 	"elements": [
 		{

@@ -9,6 +9,6 @@ card:
   model_id: 124
   lore: "Place a sculk block that gives 3 XP when destroyed"
   building:
-    health: 1
-    maxHealth: 1
+    health: 2
+    maxHealth: 2
     fire_proof: True

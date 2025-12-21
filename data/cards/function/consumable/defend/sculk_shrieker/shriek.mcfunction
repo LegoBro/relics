@@ -1,7 +1,7 @@
 ## Gives card, also shrieks
-particle minecraft:shriek 1 ~ ~2 ~ 0 0 0 0 1 force @a
-particle minecraft:shriek 5 ~ ~2 ~ 0 0 0 0 1 force @a
-particle minecraft:shriek 10 ~ ~2 ~ 0 0 0 0 1 force @a
+particle minecraft:shriek{delay:20} ~ ~2 ~ 0 0 0 0 1 force @a
+particle minecraft:shriek{delay:20} ~ ~2 ~ 0 0 0 0 1 force @a
+particle minecraft:shriek{delay:20} ~ ~2 ~ 0 0 0 0 1 force @a
 playsound minecraft:block.sculk_shrieker.shriek master @a
 
 scoreboard players add @s endTurn 1

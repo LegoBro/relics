@@ -8,10 +8,10 @@ card:
   entity: "armor_stand"
   model_id: 1000
   cost: 0
-  maxHealth: 20
-  health: 20
+  maxHealth: 15
+  health: 15
   attack: 1
   range: 1
   speed: 0
   lore: ""
-  extra_nbt: 'ShowArms:1b,NoBasePlate:1b,DisabledSlots:4144959,HandItems:[{id:"minecraft:iron_pickaxe",Count:1b},{}],ArmorItems:[{id:"minecraft:leather_boots",Count:1b,tag:{display:{color:3682347}}},{id:"minecraft:leather_leggings",Count:1b,tag:{display:{color:2239935}}},{id:"minecraft:leather_chestplate",Count:1b,tag:{display:{color:1356287}}},{id:"minecraft:player_head",Count:1b}]'
+  extra_nbt: 'ShowArms:1b,NoBasePlate:1b,DisabledSlots:4144959,equipment:{mainhand:{id:"minecraft:iron_pickaxe",count:1},feet:{id:"minecraft:leather_boots",count:1b,components:{"minecraft:dyed_color":3682347}},legs:{id:"minecraft:leather_leggings",count:1b,components:{"minecraft:dyed_color":2239935}},chest:{id:"minecraft:leather_chestplate",count:1b,components:{"minecraft:dyed_color":1356287}},head:{id:"minecraft:player_head",count:1b}}'

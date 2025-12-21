@@ -4,7 +4,7 @@ scoreboard players operation game.id var = @s id
 execute as @e if score @s id = game.id var run tag @s add id
 tag @e[tag=id,tag=new] remove new
 tp @s ~ ~ ~ ~5 ~
-execute as @a[tag=id] at @s if entity @s[nbt={Inventory:[{Slot:-106b,id:"minecraft:carrot_on_a_stick"}]}] run function main:arena/create/deck_builder/store/offhand
+execute as @a[tag=id] at @s if items entity @s weapon.offhand carrot_on_a_stick run function main:arena/create/deck_builder/store/offhand
 execute if entity @s[tag=opening] run function main:deck_builder/expansion/open/dict
 execute if entity @s[tag=!opening] run function main:deck_builder/expansion/get_display
 

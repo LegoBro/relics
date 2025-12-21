@@ -33,8 +33,8 @@ execute if score @s tut.spot matches 54 if entity @a[tag=id,tag=wait] run functi
 
 execute as @e[tag=id,tag=friendly,tag=movable] at @s run particle witch ~ ~2 ~ 0.5 0 0.5 0 1 normal
 execute as @e[tag=id,scores={fire=1..}] at @s run particle flame ~ ~1 ~ 0.5 0.5 0.5 0 1 normal
-execute as @e[tag=id,scores={poison=1..}] at @s run particle minecraft:entity_effect ~ ~2 ~ 0.0 1.0 0.0 128 0 normal
-execute as @e[tag=id,scores={wither=1..}] at @s run particle minecraft:entity_effect ~ ~2 ~ 0.5 1.0 0.5 0 1 normal
+execute as @e[tag=id,scores={poison=1..}] at @s run particle minecraft:entity_effect{color:[0.267,1.000,0.000,1.00]} ~ ~2 ~ 0.0 1.0 0.0 0 1 normal
+execute as @e[tag=id,scores={wither=1..}] at @s run particle minecraft:entity_effect{color:[0.1,0.100,0.000,1.00]} ~ ~2 ~ 0.5 1.0 0.5 0 1 normal
 execute as @e[tag=id,scores={invisibility=1..}] at @s run effect give @s invisibility 1 0
 execute as @e[tag=id,scores={speed_pot=1..}] at @s run effect give @s speed 1 0
 execute as @e[tag=id,scores={strength=1..}] at @s run effect give @s strength 1 0

@@ -15,4 +15,5 @@ card:
   range: 2
   speed: 1
   ambush: true
+  frozen: True
   lore: "Special Attack - shoot an enemy to give it slowness for 7 turns"

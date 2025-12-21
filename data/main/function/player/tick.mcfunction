@@ -1,8 +1,8 @@
 ## Ticks as all players
 execute if entity @s[tag=!loaded] run function main:player/load
 
+## Global Link - 
 scoreboard players add @s world.link 1
-
 execute unless score @s world.link = #GLOBAL world.link run scoreboard players set @s music.time -100
 execute unless score @s world.link = #GLOBAL world.link run function main:player/send_to_lobby
 

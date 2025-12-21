@@ -15,7 +15,7 @@ execute if score #friendly var matches 0 run scoreboard players add @a[tag=id,ta
 function cards:entity/death_dict
 
 ## Sculk Catalyst interaction
-execute if entity @e[tag=sculk_catalyst,tag=id] as @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest,distance=..1.5] at @s run data merge entity @s {CustomName:'{"text":"Sculk Catalyst"}'}
+execute if entity @e[tag=sculk_catalyst,tag=id] as @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest,distance=..1.5] at @s run data merge entity @s {CustomName:{"text":"Sculk Catalyst"}}
 execute if entity @e[tag=sculk_catalyst,tag=id] as @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest,distance=..1.5] at @s run function cards:consumable/defend/sculk_block/cast
 
 execute if entity @e[tag=butcher,tag=id] run function cards:entity/overworld/butcher/test_death

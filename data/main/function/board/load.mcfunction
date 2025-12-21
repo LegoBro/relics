@@ -1,44 +1,44 @@
 ## Loads up a board
 #scoreboard players add game.id var 1
 
-summon armor_stand ~-8 ~ ~-8 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.nw","get_id","x0","z1"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
-summon armor_stand ~-8 ~ ~-4 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.nw","get_id","x0","z2"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
-summon armor_stand ~-8 ~ ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.w","get_id","x0","z3"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
-summon armor_stand ~-8 ~ ~4 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.sw","get_id","x0","z4"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
-summon armor_stand ~-8 ~ ~8 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.sw","get_id","x0","z5"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
+summon armor_stand ~-8 ~ ~-8 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.nw","get_id","x0","z1"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
+summon armor_stand ~-8 ~ ~-4 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.nw","get_id","x0","z2"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
+summon armor_stand ~-8 ~ ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.w","get_id","x0","z3"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
+summon armor_stand ~-8 ~ ~4 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.sw","get_id","x0","z4"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
+summon armor_stand ~-8 ~ ~8 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.sw","get_id","x0","z5"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
 
-summon armor_stand ~-4 ~ ~-8 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.nw","get_id","x1","z1"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
-summon armor_stand ~-4 ~ ~-4 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.nw","get_id","x1","z2"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
-summon armor_stand ~-4 ~ ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.w","get_id","x1","z3"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
-summon armor_stand ~-4 ~ ~4 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.sw","get_id","x1","z4"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
-summon armor_stand ~-4 ~ ~8 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.sw","get_id","x1","z5"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
+summon armor_stand ~-4 ~ ~-8 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.nw","get_id","x1","z1"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
+summon armor_stand ~-4 ~ ~-4 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.nw","get_id","x1","z2"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
+summon armor_stand ~-4 ~ ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.w","get_id","x1","z3"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
+summon armor_stand ~-4 ~ ~4 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.sw","get_id","x1","z4"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
+summon armor_stand ~-4 ~ ~8 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.sw","get_id","x1","z5"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
 
-summon armor_stand ~ ~ ~-8 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.n","get_id","x2","z1"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
-summon armor_stand ~ ~ ~-4 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.n","get_id","x2","z2"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
-summon armor_stand ~ ~ ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.center","get_id","x2","z3"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
-summon armor_stand ~ ~ ~4 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.s","get_id","x2","z4"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
-summon armor_stand ~ ~ ~8 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.s","get_id","x2","z5"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
+summon armor_stand ~ ~ ~-8 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.n","get_id","x2","z1"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
+summon armor_stand ~ ~ ~-4 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.n","get_id","x2","z2"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
+summon armor_stand ~ ~ ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.center","get_id","x2","z3"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
+summon armor_stand ~ ~ ~4 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.s","get_id","x2","z4"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
+summon armor_stand ~ ~ ~8 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.s","get_id","x2","z5"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
 
-summon armor_stand ~4 ~ ~-8 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.ne","get_id","x3","z1"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
-summon armor_stand ~4 ~ ~-4 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.ne","get_id","x3","z2"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
-summon armor_stand ~4 ~ ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.e","get_id","x3","z3"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
-summon armor_stand ~4 ~ ~4 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.se","get_id","x3","z4"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
-summon armor_stand ~4 ~ ~8 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.se","get_id","x3","z5"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
+summon armor_stand ~4 ~ ~-8 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.ne","get_id","x3","z1"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
+summon armor_stand ~4 ~ ~-4 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.ne","get_id","x3","z2"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
+summon armor_stand ~4 ~ ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.e","get_id","x3","z3"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
+summon armor_stand ~4 ~ ~4 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.se","get_id","x3","z4"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
+summon armor_stand ~4 ~ ~8 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.se","get_id","x3","z5"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
 
-summon armor_stand ~8 ~ ~-8 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.ne","get_id","x4","z1"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
-summon armor_stand ~8 ~ ~-4 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.ne","get_id","x4","z2"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
-summon armor_stand ~8 ~ ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.e","get_id","x4","z3"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
-summon armor_stand ~8 ~ ~4 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.se","get_id","x4","z4"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
-summon armor_stand ~8 ~ ~8 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.se","get_id","x4","z5"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
+summon armor_stand ~8 ~ ~-8 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.ne","get_id","x4","z1"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
+summon armor_stand ~8 ~ ~-4 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.ne","get_id","x4","z2"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
+summon armor_stand ~8 ~ ~ {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.e","get_id","x4","z3"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
+summon armor_stand ~8 ~ ~4 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.se","get_id","x4","z4"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
+summon armor_stand ~8 ~ ~8 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.se","get_id","x4","z5"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
 
-summon armor_stand ~ ~ ~-12 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.player.1","get_id","x2","z0"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
-summon armor_stand ~ ~ ~12 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.player.2","get_id","x2","z6"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
+summon armor_stand ~ ~ ~-12 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.player.1","get_id","x2","z0"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
+summon armor_stand ~ ~ ~12 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","board.player.2","get_id","x2","z6"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
 
-summon armor_stand ~4 ~ ~-12 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","draw_pile","draw.player.1","get_id"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}]}
-summon armor_stand ~-4 ~ ~-12 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","discard_pile","discard.player.1","get_id"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:8}}]}
+summon armor_stand ~4 ~ ~-12 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","draw_pile","draw.player.1","get_id"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}}}
+summon armor_stand ~-4 ~ ~-12 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","discard_pile","discard.player.1","get_id"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/trash"}}}}
 
-summon armor_stand ~-4 ~ ~12 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","draw_pile","draw.player.2","get_id"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:0}}],Rotation:[180F,0F]}
-summon armor_stand ~4 ~ ~12 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","discard_pile","discard.player.2","get_id"],ArmorItems:[{},{},{},{id:"minecraft:book",Count:1b,tag:{CustomModelData:8}}],Rotation:[180F,0F]}
+summon armor_stand ~-4 ~ ~12 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","draw_pile","draw.player.2","get_id"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/empty"}}},Rotation:[180F,0F]}
+summon armor_stand ~4 ~ ~12 {NoGravity:1b,Silent:1b,Invulnerable:1b,Marker:1b,Invisible:1b,Tags:["board","discard_pile","discard.player.2","get_id"],equipment:{head:{id:"minecraft:book",count:1b,components:{"minecraft:item_model":"cell_state/trash"}}},Rotation:[180F,0F]}
 
 scoreboard players set @e[tag=x0,tag=get_id] x 0
 scoreboard players set @e[tag=x1,tag=get_id] x 1

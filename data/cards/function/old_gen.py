@@ -62,19 +62,19 @@ def createCard(yaml_path):
 
     generator.writeFunction(path + "/give", give_command)
 
-    insert_command = "execute store result score #any var run data get entity @s EnderItems[0].tag.Collection[{id:" + str(card["model_id"]) + "}].count"
+    insert_command = "execute store result score #any var run data get entity @s EnderItems[0].components."minecraft:custom_data".Collection[{id:" + str(card["model_id"]) + "}].count"
     
     insert_command += "\nexecute unless score #any var matches 1.. run item replace block 0 0 0 container.0 with iron_nugget{gui:True,display:{Name:'[{\"translate\":\"card." + card["name"] + "\",\"italic\":\"false\",\"color\":\"gray\"}]'},HideFlags:127}"
     
-    insert_command += "\nexecute store result score #count var run data get entity @s EnderItems[1].tag.Collection[{id:" + str(card["model_id"]) + "}].count"
+    insert_command += "\nexecute store result score #count var run data get entity @s EnderItems[1].components."minecraft:custom_data".Collection[{id:" + str(card["model_id"]) + "}].count"
     insert_command += "\nexecute if score #any var matches 1.. if score #count var matches 1.. run item replace block 0 0 0 container.0 with carrot_on_a_stick{gui:True,display:{" + lore + ",Name:'[{\"translate\":\"card." + card["name"] + "\",\"italic\":\"false\",\"color\":\"" + card["color"] + "\"}]'},HideFlags:127,Unbreakable:1b,CustomModelData:" + str(card["model_id"]) + ",card:{category:\"" + card["type"] + "\",element:\"" + card["element"] + "\",name:\"" + card["name"] + "\",cost:" + str(card["cost"]) + ",placement:" + str(card["placement"]) + "}} 1"
     insert_command += "\nexecute if score #any var matches 1.. if score #count var matches 0 run item replace block 0 0 0 container.0 with stick{gui:True,display:{" + lore + ",Name:'[{\"translate\":\"card." + card["name"] + "\",\"italic\":\"false\",\"color\":\"" + card["color"] + "\"},{\"text\":\" (\",\"italic\":\"false\",\"color\":\"gray\"},{\"text\":\"0\",\"italic\":\"false\",\"color\":\"white\"},{\"text\":\")\",\"italic\":\"false\",\"color\":\"gray\"}]'},HideFlags:127,Unbreakable:1b,CustomModelData:" + str(card["model_id"]) + ",card:{category:\"" + card["type"] + "\",element:\"" + card["element"] + "\",name:\"" + card["name"] + "\",cost:" + str(card["cost"]) + ",placement:" + str(card["placement"]) + "}} 1"
-    insert_command += "\nexecute if score #any var matches 1.. if score #count var matches 1.. run data modify block 1 1 0 Text1 set from block 0 0 0 Items[0].tag.display.Name"
+    insert_command += "\nexecute if score #any var matches 1.. if score #count var matches 1.. run data modify block 1 1 0 Text1 set from block 0 0 0 Items[0].components."minecraft:custom_data".display.Name"
     insert_command += """\nexecute if score #any var matches 1.. if score #count var matches 1.. run data merge block 1 1 0 {Text2:'[{"text":" (","italic":"false","color":"gray"},{"score":{"name":"#count","objective":"var"},"italic":"false","color":"white"},{"text":")","italic":"false","color":"gray"}]'}"""
     insert_command += """\nexecute if score #any var matches 1.. if score #count var matches 1.. run data merge block 1 1 0 {Text3:'[{"nbt":"Text1","block":"1 1 0","interpret":true},{"nbt":"Text2","block":"1 1 0","interpret":true}]'}"""
-    insert_command += "\nexecute if score #any var matches 1.. if score #count var matches 1.. run data modify block 0 0 0 Items[0].tag.display.Name set from block 1 1 0 Text3"
+    insert_command += "\nexecute if score #any var matches 1.. if score #count var matches 1.. run data modify block 0 0 0 Items[0].components."minecraft:custom_data".display.Name set from block 1 1 0 Text3"
 
-    insert_command += "\nloot insert ~ ~ ~ mine 0 0 0 air{drop_contents:1b}"
+    insert_command += "\nloot insert ~ ~ ~ mine 0 0 0 minecraft:stone[custom_data={drop_contents:1b}]"
     generator.writeFunction(path + "/insert", insert_command)
 
     discover_command = "give @s carrot_on_a_stick{display:{" + lore + ",Name:'{\"translate\":\"card." + card["name"] + "\",\"color\":\"" + card["color"] + "\"}'},HideFlags:127,Unbreakable:1b,CustomModelData:" + str(card["model_id"]) + ",card:{trash:1b,category:\"" + card["type"] + "\",element:\"" + card["element"] + "\",name:\"" + card["name"] + "\",cost:" + str(card["cost"]) + ",placement:" + str(card["placement"]) + "}} 1"
@@ -91,10 +91,10 @@ def createCard(yaml_path):
     
     generator.writeFunction(path + "/unlock", unlock_command)
 
-    change_command = "execute store result score #count var run data get block 0 0 0 Items[0].tag.Collection[{id:" + str(card['model_id']) + "}].count"
+    change_command = "execute store result score #count var run data get block 0 0 0 Items[0].components."minecraft:custom_data".Collection[{id:" + str(card['model_id']) + "}].count"
     change_command += "\nscoreboard players operation #count var += #change var"
-    change_command += "\nexecute unless data block 0 0 0 Items[0].tag.Collection[{id:" + str(card['model_id']) + "}] run data modify block 0 0 0 Items[0].tag.Collection append value {count:0,id:" + str(card['model_id']) + "}"
-    change_command += "\nexecute store result block 0 0 0 Items[0].tag.Collection[{id:" + str(card['model_id']) + "}].count int 1 run scoreboard players get #count var"
+    change_command += "\nexecute unless data block 0 0 0 Items[0].components."minecraft:custom_data".Collection[{id:" + str(card['model_id']) + "}] run data modify block 0 0 0 Items[0].components."minecraft:custom_data".Collection append value {count:0,id:" + str(card['model_id']) + "}"
+    change_command += "\nexecute store result block 0 0 0 Items[0].components."minecraft:custom_data".Collection[{id:" + str(card['model_id']) + "}].count int 1 run scoreboard players get #count var"
     generator.writeFunction(path + "/change", change_command)
 
     collection_command = "scoreboard players set #change var -1"
@@ -524,7 +524,7 @@ generator.writeFunction("./collection_dict" , collection_command)
 
 ## Collection Store dict
 store_command = "## Dictionary for collection Storing"
-store_command += "\nexecute store result score #card_id var run data get block 0 0 1 Items[0].tag.CustomModelData"
+store_command += "\nexecute store result score #card_id var run data get block 0 0 1 Items[0].components."minecraft:custom_data".CustomModelData"
 
 for card in collection:
     store_command += f"\nexecute if score #card_id var matches {card[0]} run function cards:{card[2]}/{card[3]}/{card[1]}/change"
@@ -668,7 +668,7 @@ for card in collection:
         tournament_deck.append("{id:" + str(card[0]) + ",count:1}")
         continue
     
-tournament_deck = f"""data modify block 0 0 0 Items[0].tag.Collection set value {str(tournament_deck).replace("'","")}"""
+tournament_deck = f"""data modify block 0 0 0 Items[0].components."minecraft:custom_data".Collection set value {str(tournament_deck).replace("'","")}"""
 generator.writeFunction("./tournament_give", tournament_deck)
 
 generator.writeFunction("./pack_open", pack_open)

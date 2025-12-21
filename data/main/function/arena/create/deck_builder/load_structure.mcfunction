@@ -13,7 +13,8 @@ item replace entity @s enderchest.1 from entity @s enderchest.0
 tp @s ~23 ~4 ~16
 
 # Summon the main ep entity
-summon armor_stand ~22.5 ~4 ~22.5 {DisabledSlots:4144959,NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["deck.builder.anchor","get_id"],ArmorItems:[{},{},{},{id:"minecraft:air",Count:1b,tag:{CustomModelData:0}}]}
+# Removed air with custom_model_data=0 on head - what did that do?
+summon armor_stand ~22.5 ~4 ~22.5 {DisabledSlots:4144959,NoGravity:1b,Silent:1b,Invulnerable:1b,Invisible:1b,Tags:["deck.builder.anchor","get_id"]}
 summon marker ~22 ~4 ~14 {Tags:["deck.builder.marker","get_id"]}
 summon marker ~22 ~4 ~31 {Tags:["deck.builder.ah","get_id"]}
 execute as @e[tag=get_id] run scoreboard players operation @s id = game.id var

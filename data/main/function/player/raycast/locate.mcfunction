@@ -12,8 +12,8 @@ execute at @e[type=armor_stand,tag=hovered.slot,tag=id,tag=!filled,tag=draw_pile
 execute at @e[type=armor_stand,tag=hovered.slot,tag=id,tag=!filled,tag=!draw_pile] run title @s actionbar ""
 
 
-execute unless score #ignored var matches 1 if entity @s[tag=!selected,nbt={SelectedItem:{tag:{card:{}}}}] run function main:player/raycast/use/hover
-execute if entity @s[tag=!selected,nbt={SelectedItem:{tag:{selector:1b}}}] run function main:player/raycast/select/hover
+execute unless score #ignored var matches 1 if entity @s[tag=!selected,nbt={SelectedItem:{components:{"minecraft:custom_data":{card:{}}}}}] run function main:player/raycast/use/hover
+execute if entity @s[tag=!selected,nbt={SelectedItem:{components:{"minecraft:custom_data":{selector:1b}}}}] run function main:player/raycast/select/hover
 execute unless score #ignored var matches 1 if entity @s[tag=selected] run function main:player/raycast/selected/hover
 
 tag @e[tag=hovered.slot] remove hovered.slot

@@ -2,11 +2,11 @@
 function cards:consumable/buff/bread/insert
 function cards:entity/overworld/silverfish/insert
 function cards:entity/overworld/tadpole/insert
+function cards:entity/nether/baby_magma_cube/insert
 function cards:entity/overworld/bee/insert
 function cards:entity/overworld/chicken/insert
 function cards:entity/end/endermite/insert
 function cards:consumable/buff/aqua_affinity/insert
-function cards:entity/nether/baby_magma_cube/insert
 function cards:consumable/defend/cobblestone/insert
 function cards:consumable/buff/emerald/insert
 function cards:entity/overworld/frog/insert

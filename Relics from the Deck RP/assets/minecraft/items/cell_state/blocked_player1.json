@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "minecraft:item/cell_state/blocked_player1"
+  }
+}

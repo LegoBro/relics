@@ -14,4 +14,5 @@ card:
   attack: 0
   range: 1
   speed: 1
-  lore: "A peaceful creature with a protective coat; this coat has a chance to grow back once it is lost"
+  lore: "Wooly Armor - has a chance to grow armor"
+  passive: True

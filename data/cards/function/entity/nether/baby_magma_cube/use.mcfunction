@@ -1,2 +1,2 @@
-execute unless score @s saturation matches 2.. run function cards:too_poor
-execute if score @s saturation matches 2.. run function cards:entity/nether/baby_magma_cube/summon
+execute unless score @s saturation matches 1.. run function cards:too_poor
+execute if score @s saturation matches 1.. run function cards:entity/nether/baby_magma_cube/summon

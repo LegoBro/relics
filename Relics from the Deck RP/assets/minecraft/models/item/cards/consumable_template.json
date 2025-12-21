@@ -1,6 +1,6 @@
 {
+	"format_version": "1.21.11",
 	"credit": "Made with Blockbench",
-    "gui_light": "front",
 	"textures": {
 		"0": "item/card/back",
 		"5": "item/card/armor/0",
@@ -13,7 +13,7 @@
 			"name": "description",
 			"from": [4.75, 0.75, 8.95],
 			"to": [11.25, 5.75, 8.95],
-			"rotation": {"angle": 0, "axis": "y", "origin": [7, 12.4, 17]},
+			"rotation": {"x": 0, "y": 0, "z": 0, "origin": [7, 12.4, 17]},
 			"faces": {
 				"north": {"uv": [0, 0, 8.125, 6.25], "texture": "#description"},
 				"east": {"uv": [0, 0, 16, 16], "texture": "#11"},
@@ -27,21 +27,21 @@
 			"name": "base",
 			"from": [4, 0, 9],
 			"to": [12, 12, 9.1],
-			"rotation": {"angle": 0, "axis": "x", "origin": [10, 8, 17]},
+			"rotation": {"x": 0, "y": 0, "z": 0, "origin": [10, 8, 17]},
 			"faces": {
 				"north": {"uv": [0, 0, 8, 12], "texture": "#rarity"},
 				"east": {"uv": [0, 0, 8, 0.25], "rotation": 270, "texture": "#0"},
 				"south": {"uv": [0, 0, 8, 12], "texture": "#0"},
 				"west": {"uv": [0, 0, 8, 0.25], "rotation": 270, "texture": "#0"},
-				"up": {"uv": [0, 0, 8, 0.25], "rotation": 270, "texture": "#0"},
-				"down": {"uv": [0, 0, 8, 0.25], "rotation": 270, "texture": "#0"}
+				"up": {"uv": [0, 0, 8, 0.25], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [0, 11.75, 8, 12], "rotation": 180, "texture": "#0"}
 			}
 		},
 		{
 			"name": "cost",
 			"from": [10, 6.25, 8.95],
 			"to": [11.25, 7.75, 8.95],
-			"rotation": {"angle": 0, "axis": "y", "origin": [7, 12.4, 17]},
+			"rotation": {"x": 0, "y": 0, "z": 0, "origin": [7, 12.4, 17]},
 			"faces": {
 				"north": {"uv": [0, 0, 10, 12], "texture": "#9"},
 				"east": {"uv": [0, 0, 16, 16], "texture": "#11"},
@@ -55,7 +55,7 @@
 			"name": "cost_number",
 			"from": [8.25, 6.25, 8.95],
 			"to": [10, 7.75, 8.95],
-			"rotation": {"angle": 0, "axis": "y", "origin": [7, 12.4, 17]},
+			"rotation": {"x": 0, "y": 0, "z": 0, "origin": [7, 12.4, 17]},
 			"faces": {
 				"north": {"uv": [0, 0, 14, 12], "texture": "#cost"},
 				"east": {"uv": [0, 0, 16, 16], "texture": "#11"},
@@ -69,7 +69,7 @@
 			"name": "image",
 			"from": [4.75, 8.25, 8.95],
 			"to": [11.25, 11.25, 8.95],
-			"rotation": {"angle": 0, "axis": "y", "origin": [7, 14.4, 17]},
+			"rotation": {"x": 0, "y": 0, "z": 0, "origin": [7, 14.4, 17]},
 			"faces": {
 				"north": {"uv": [0, 0, 9.75, 4.5], "texture": "#foreground"},
 				"east": {"uv": [0, 0, 16, 16], "texture": "#5"},
@@ -80,6 +80,7 @@
 			}
 		}
 	],
+	"gui_light": "front",
 	"display": {
 		"thirdperson_righthand": {
 			"rotation": [0, -180, 0],
@@ -106,18 +107,29 @@
 		},
 		"fixed": {
 			"translation": [0, 0, -1.75]
+		},
+		"on_shelf": {
+			"rotation": [0, -180, 0],
+			"translation": [0, 12, 0],
+			"scale": [2, 2, 2]
 		}
 	},
 	"groups": [
 		{
 			"name": "card",
 			"origin": [3.5, 12.4, 9],
-			"children": [0, 1,
+			"color": 0,
+			"children": [
+				0,
+				1,
 				{
 					"name": "cost",
 					"origin": [7, 12.4, 17],
+					"color": 0,
 					"children": [2, 3]
-				}, 4]
+				},
+				4
+			]
 		}
 	]
 }

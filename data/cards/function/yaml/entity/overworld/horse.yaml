@@ -10,7 +10,8 @@ card:
   cost: 6
   maxHealth: 6
   health: 6
-  attack: 1
+  attack: 0
   range: 1
   speed: 3
   lore: ""
+  passive: true

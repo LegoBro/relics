@@ -1,18 +1,22 @@
 ## Select an entity
-tag @e[type=armor_stand,tag=hovered.slot,tag=id] add selected
+tag @n[type=armor_stand,tag=hovered.slot,tag=id,distance=..5] add selected
 tag @s add selected
-scoreboard players operation @s x = @e[type=armor_stand,tag=selected,tag=id] x
-scoreboard players operation @s z = @e[type=armor_stand,tag=selected,tag=id] z
-scoreboard players operation @s speed = @e[tag=card.entity,limit=1,sort=nearest,tag=id] speed
-scoreboard players operation @s range = @e[tag=card.entity,limit=1,sort=nearest,tag=id] range
-execute if entity @e[tag=card.entity,limit=1,sort=nearest,tag=id,tag=needs_vibration,distance=..1.5] run tag @s add needs_vibration
 
-execute if score @e[tag=card.entity,limit=1,sort=nearest,tag=id] speed_pot matches 1.. run scoreboard players add @s speed 2
-execute if score @e[tag=card.entity,limit=1,sort=nearest,tag=id] slowness matches 1.. run scoreboard players remove @s speed 2
-execute if score @e[tag=card.entity,limit=1,sort=nearest,tag=id] speed matches ..-1 run scoreboard players set @s speed 0
+## Get position of entity
+scoreboard players operation @s x = @n[type=armor_stand,tag=selected,tag=id,distance=..5] x
+scoreboard players operation @s z = @n[type=armor_stand,tag=selected,tag=id,distance=..5] z
 
-execute if score @e[tag=card.entity,limit=1,sort=nearest,tag=id] blindness matches 1.. run scoreboard players remove @s range 2
-execute if score @e[tag=card.entity,limit=1,sort=nearest,tag=id] range matches ..-1 run scoreboard players set @s range 0
+## Get stats of entity -> Convert to full breakdown?
+execute as @n[tag=card.entity,distance=..5,tag=id] run function cards:entity/calc_speed
+scoreboard players operation @s speed = #entity_speed var
+
+execute as @n[tag=card.entity,distance=..5,tag=id] run function cards:entity/calc_range
+scoreboard players operation @s range = #entity_range var
+
+## 
+execute if entity @n[tag=card.entity,tag=id,tag=needs_vibration,distance=..1.5] run tag @s add needs_vibration
+
+
 
 # Distance Logic
 tag @e[type=armor_stand,tag=board,tag=id] remove distance
@@ -32,7 +36,7 @@ execute as @e[tag=card.entity,tag=needs_vibration,limit=1,sort=nearest,tag=id] r
 
 # Ender pearl handling
 execute if entity @s[tag=ender_pearl] as @e[type=armor_stand,tag=board,tag=!filled,tag=!draw_pile,tag=!discard_pile,tag=id] at @s run scoreboard players set @s distance 1
-execute if entity @s[tag=ender_pearl] run item replace entity @e[type=armor_stand,tag=board,tag=!filled,tag=!draw_pile,tag=!discard_pile,tag=id] armor.head with book{CustomModelData:6}
+execute if entity @s[tag=ender_pearl] run item replace entity @e[type=armor_stand,tag=board,tag=!filled,tag=!draw_pile,tag=!discard_pile,tag=id] armor.head with book[item_model="cell_state/move"]
 scoreboard players set @s[tag=ender_pearl] speed 10
 
 # Minecart Handling

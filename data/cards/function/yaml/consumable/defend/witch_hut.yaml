@@ -7,8 +7,7 @@ card:
   color: "green"
   cost: 12
   model_id: 111
-  lore: "Place a hut that has a 25% chance to discover a random potion each turn; this re-rolls for every witch on the board"
+  lore: "Place a hut that gives +2XP for every potion used"
   building:
-    health: 5
-    maxHealth: 5
-    armor: 2
+    health: 6
+    maxHealth: 6
