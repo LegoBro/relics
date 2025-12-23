@@ -24,20 +24,9 @@ scoreboard players set @e[type=armor_stand,tag=selected,tag=id,distance=..250] d
 execute as @n[type=armor_stand,tag=selected,tag=id,distance=..250] at @s run function main:player/raycast/selected/distances
 
 ## Specialty Overrides
-
-# Needs Vibration (warden)
-execute if entity @s[tag=needs_vibration] run function cards:entity/select/needs_vibration
+execute as @n[tag=card.entity,distance=..1.5,tag=id] run function cards:entity/select/overrides
 
 # Ender pearl handling
 execute if entity @s[tag=ender_pearl] as @e[type=armor_stand,tag=board,tag=!filled,tag=!draw_pile,tag=!discard_pile,tag=id] at @s run scoreboard players set @s distance 1
 execute if entity @s[tag=ender_pearl] run item replace entity @e[type=armor_stand,tag=board,tag=!filled,tag=!draw_pile,tag=!discard_pile,tag=id] armor.head with book[item_model="cell_state/move"]
 scoreboard players set @s[tag=ender_pearl] speed 10
-
-# Minecart Handling
-tag @e[tag=id,tag=board,tag=minecart.rail_path] remove minecart.rail_path
-execute if entity @e[tag=card.entity,limit=1,distance=..1.5,sort=nearest,tag=id,tag=in_minecart] run function cards:entity/minecart
-
-# Lunging Handling
-
-## Entity Select Effects
-execute as @n[tag=card.entity,tag=id] at @s run function cards:entity/select_dict
