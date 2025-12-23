@@ -13,7 +13,15 @@ scoreboard players operation @s range = #entity_range var
 # Calculate Cells distance
 scoreboard players operation #range var = @s range
 scoreboard players operation #speed var = @s speed
-execute as @e[type=armor_stand,tag=id,tag=board] at @s run function main:board/cell/distance
+#execute as @e[type=armor_stand,tag=id,tag=board,tag=!discard_pile,tag=!draw_pile] at @s run function main:board/cell/distance
+
+# Distance Logic
+tag @e[type=armor_stand,tag=board,tag=id,distance=..250] remove distance
+tag @e[type=armor_stand,tag=board,tag=id,distance=..250] remove new_distance
+scoreboard players set @e[type=armor_stand,tag=board,tag=id,distance=..250] distance 100
+scoreboard players set @e[type=armor_stand,tag=selected,tag=id,distance=..250] distance 0
+
+execute as @n[type=armor_stand,tag=selected,tag=id,distance=..250] at @s run function main:player/raycast/selected/distances
 
 ## Specialty Overrides
 
