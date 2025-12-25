@@ -16,3 +16,6 @@ execute unless score #cards_left var matches 0 if score #fatigue_damage var matc
 
 execute if score #cards_left var matches 0 if score #fatigue_damage var matches 0.. run title @s actionbar [{"translate":"reshuffle","color":"dark_purple"},{"translate":"fatigue_damage_take","color":"dark_red"},{"score":{"name": "#fatigue_damage","objective": "var"},"color":"red"}]
 execute if score #cards_left var matches 0 if score #fatigue_damage var matches ..-1 run title @s actionbar [{"translate":"reshuffle","color":"dark_purple"}]
+
+## Draw 
+execute if score @s rightClick matches 1.. if score #holding_selector var matches 1.. run function main:player/raycast/select/draw

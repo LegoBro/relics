@@ -2,4 +2,4 @@
 scoreboard players operation @s distance = #distance var
 tag @s add new_distance
 #tag @s[tag=filled] add distance
-tag @s[tag=blocked] add distance
+execute if score #skip_blocking var matches 0 run tag @s[tag=blocked] add distance

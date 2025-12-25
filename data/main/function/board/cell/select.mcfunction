@@ -5,4 +5,4 @@ scoreboard players operation #x var = @s x
 scoreboard players operation #z var = @s z
 
 ## Select Entity
-execute as @n[tag=card.entity,distance=..5,tag=id] run function cards:select
+execute as @n[tag=card.entity,distance=..5,tag=id] run function cards:entity/select

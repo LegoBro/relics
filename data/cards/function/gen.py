@@ -228,9 +228,9 @@ def createEntityCard(card, path):
         summon_command += f"\ntag @n[tag=get_id] add illager"
         card["traits"].append("illager")
         
-    if  "defensive" in card.keys() and card['illager']:
-        summon_command += f"\ntag @n[tag=get_id] add illager"
-        card["traits"].append("illager")
+    if  "defensive" in card.keys() and card['defensive']:
+        summon_command += f"\ntag @n[tag=get_id] add defensive"
+        card["traits"].append("defensive")
     
     if  "water" in card.keys() and card['water']:
         summon_command += f"\ntag @n[tag=get_id] add water"
@@ -286,7 +286,7 @@ def createEntityCard(card, path):
     # Fills up trait list with empty textures for safety
     card["traits"].extend(["empty","empty","empty","empty","empty","empty"])
 
-    summon_command += f'\ntellraw @a[tag=id] [{{"selector":"@s"}},{{"text":" spawns "}},{card["use"]}]'
+    summon_command += f'\ntellraw @a[tag=id] [{{"selector":"@s"}},{{text:" "}},{{"translate":"entity.spawns"}},{{text:" "}},{card["use"]}]'
     summon_command += f'\ntag @e[tag=get_id,limit=1] add moving'
     summon_command += f'\ntag @e[type=armor_stand,tag=board,tag=trap,tag=id,limit=1,distance=..0.5] add destination'
     summon_command += f'\nexecute as @e[type=armor_stand,tag=board,tag=destination] unless entity @e[tag=card.entity,tag=get_id,tag=id,limit=1,sort=nearest,tag=flying] at @s run function cards:consumable/defend/trap/trigger_dict'
@@ -313,12 +313,12 @@ def createConsumableCard(card, path):
     cast_command = '# Casts the consumable card'
 
     if  "hide" in card.keys() and card['hide']: # Hide traps if flag is set
-        trigger_command = f'\ntellraw @a[tag=id] [{{"selector":"@s"}},{{"text":" triggers "}},{card["use"]}]'
+        trigger_command = f'\ntellraw @a[tag=id] [{{"selector":"@s"}},{{text:" "}},{{"translate":"move.trap_trigger"}},{{text:" "}},{card["use"]}]'
         generator.writeFunction(path + "/trigger_message",trigger_command)
     elif card['placement'] == "anywhere_filled" or card['placement'] == "anywhere_friendly" or card['placement'] == "anywhere_friendly_moved" or card['placement'] == "emerald":
-        cast_command += f'\nexecute at @e[type=armor_stand,tag=hovered.slot,tag=filled,tag=id,limit=1] run tellraw @a[tag=id] [{{"selector":"@s"}},{{"text":" uses "}},{card["use"]},{{"text":" on "}},{{"selector":"@e[tag=card.entity,tag=id,limit=1,sort=nearest]"}}]'
+        cast_command += f'\nexecute at @e[type=armor_stand,tag=hovered.slot,tag=filled,tag=id,limit=1] run tellraw @a[tag=id] [{{"selector":"@s"}},{{text:" "}},{{"translate":"cast.use"}},{{text:" "}},{card["use"]},{{text:" "}},{{"translate":"on"}},{{text:" "}},{{"selector":"@e[tag=card.entity,tag=id,limit=1,sort=nearest]"}}]'
     else:
-        cast_command += f'\ntellraw @a[tag=id] [{{"selector":"@s"}},{{"text":" uses "}},{card["use"]}]'
+        cast_command += f'\ntellraw @a[tag=id] [{{"selector":"@s"}},{{text:" "}},{{"translate":"cast.use"}},{{text:" "}},{card["use"]}]'
 
     if  "building" in card.keys(): # Building
         cast_command += f'\nsummon armor_stand ~ ~1 ~ {{CustomName:{{"translate":"card.{card["name"]}"}},Invisible:1b,Silent:1b,Invulnerable:1b,Tags:["new","get_id","id","card","{card["name"]}","card.building","card.defend","attackable"],Team:"green"}}'

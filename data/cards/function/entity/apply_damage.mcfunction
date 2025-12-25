@@ -3,7 +3,6 @@
 # Detect if entity was killed (useful for advancements)
 scoreboard players set #killed var 0
 
-# DOT (applied later)
 # health if no armor
 execute unless score @s armor matches 1.. run scoreboard players operation @s health -= #damage var
 execute unless score @s armor matches 1.. run execute if score @s health matches 1.. at @s run function cards:entity/damage_dict
@@ -20,5 +19,5 @@ execute if score @s[tag=card.building] health matches ..0 at @s run function car
 # Display
 kill @e[type=area_effect_cloud,tag=display_health,tag=id]
 
-tellraw @a[tag=id] [{"selector":"@s"},{"text":" took ","color":"white"},{"score":{"name":"#damage","objective":"var"},"bold":true,"color":"white"},{"text":" damage","color":"white"}]
+tellraw @a[tag=id] [{"selector":"@s"},{"text":" "},{"translate":"attack.damage.take","color":"white"},{"text":" "},{"score":{"name":"#damage","objective":"var"},"bold":true,"color":"white"},{"text":" "},{"translate":"attack.damage","color":"white"}]
 execute if score @s[tag=teleport] health matches 1.. at @s[tag=!in_minecart,tag=!moved_minecart] run function cards:entity/end/teleport

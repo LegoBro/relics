@@ -1,19 +1,19 @@
 ## Applies damage to an entity
 
-# DOT (applied later)
 # health if no armor
 scoreboard players operation #health var = @s health
 scoreboard players operation #armor var = @s armor
 
 execute unless score #armor var matches 1.. run scoreboard players operation #health var -= #damage var
-execute unless score #armor var matches 1.. if score #health var matches 1.. at @s run function cards:entity/display/health_change
-execute if score #health var matches ..0 at @s run function cards:entity/display/death
-
+execute unless score #armor var matches 1.. run scoreboard players operation #dealt_damage var += #damage var
+execute if score #health var matches ..0 at @s run scoreboard players add #dealt_deaths var 1 
+execute if score #health var matches ..-1 at @s run scoreboard players operation #dealt_damage var += #health var
+execute unless score #armor var matches 1.. run return 0
 
 # armor instead
-execute if score #armor var matches 1.. run scoreboard players operation #armor var -= #damage var
-execute if score #armor var matches 1.. run function cards:entity/display/armor_change
-execute if score @s armor matches 1.. if score #armor var matches ..0 run function cards:entity/display/armor_destroy
+scoreboard players operation #armor var -= #damage var
+scoreboard players operation #dealt_damage_armor var += #damage var
+execute if score #armor var matches ..-1 at @s run scoreboard players operation #dealt_damage_armor var += #armor var
 
 
 # Display

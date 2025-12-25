@@ -21,15 +21,15 @@ Updated to 1.21.11
 ### Updates
 
 ### New Card Traits
-Passive - can place anywhere
-Lunging - (replaces camel and goat's special attack)
+Passive - can place anywhere - technically incorporated, more so just visualizes the placement attribute
+Lunging - (replaces camel and goat's special attack) - done
 Arthropod - Immune to slowness/cobwebs
-Frozen - Buffable by certain cards
-Evasive - replaces Phantom's special ability for 50% chance to dodge an attack
-Illager - can be buffed by illager buffs
-Defensive - doesn't advance to targets spot when dealing a killing blow
-Unselectable - target can't be selected
-Unbuffable - target cannot have buffs applied to it
+Frozen - Buffable by certain cards - done
+Evasive - replaces Phantom's special ability for 50% chance to dodge an attack - done
+Illager - can be buffed by illager buffs - done
+Defensive - doesn't advance to targets spot when dealing a killing blow - done
+Unselectable - target can't be selected - done, not visualized
+Unbuffable - target cannot have buffs applied to it - done, not visualized
 
 
 ### New Cards

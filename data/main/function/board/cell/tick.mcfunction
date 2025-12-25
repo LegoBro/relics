@@ -1,0 +1,1 @@
+execute if entity @s[tag=friendly,tag=movable] run particle witch ~ ~2 ~ 0.5 0 0.5 0 1 normal

@@ -1,5 +1,5 @@
 ## Sorted view of cards
-execute store result score #rand var run random value 1..140
+execute store result score #rand var run loot spawn 0 -200 0 loot cards:rand_card
 execute if score #rand var matches 1 run function cards:entity/overworld/silverfish/give
 execute if score #rand var matches 2 run function cards:entity/overworld/tadpole/give
 execute if score #rand var matches 3 run function cards:entity/overworld/bee/give

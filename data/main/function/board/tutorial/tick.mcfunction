@@ -27,24 +27,15 @@ execute at @e[type=armor_stand,tag=board.player.1,tag=id] store result score @e[
 scoreboard players operation @e[tag=draw.player.1,tag=id] set.fatigue = @e[tag=id,tag=hero.1] set.fatigue
 
 
-scoreboard players set @a[tag=id,scores={turnTimer=..0}] turnTimer 1
+scoreboard players set @a[tag=id,scores={turnTimer=-301..}] turnTimer -1000
 execute as @a[tag=id] at @s run function main:board/player/tick
 execute if score @s tut.spot matches 54 if entity @a[tag=id,tag=wait] run function main:board/end_turn
 
-execute as @e[tag=id,tag=friendly,tag=movable] at @s run particle witch ~ ~2 ~ 0.5 0 0.5 0 1 normal
-execute as @e[tag=id,scores={fire=1..}] at @s run particle flame ~ ~1 ~ 0.5 0.5 0.5 0 1 normal
-execute as @e[tag=id,scores={poison=1..}] at @s run particle minecraft:entity_effect{color:[0.267,1.000,0.000,1.00]} ~ ~2 ~ 0.0 1.0 0.0 0 1 normal
-execute as @e[tag=id,scores={wither=1..}] at @s run particle minecraft:entity_effect{color:[0.1,0.100,0.000,1.00]} ~ ~2 ~ 0.5 1.0 0.5 0 1 normal
-execute as @e[tag=id,scores={invisibility=1..}] at @s run effect give @s invisibility 1 0
-execute as @e[tag=id,scores={speed_pot=1..}] at @s run effect give @s speed 1 0
-execute as @e[tag=id,scores={strength=1..}] at @s run effect give @s strength 1 0
-execute as @e[tag=id,scores={fire_resistance=1..}] at @s run effect give @s fire_resistance 1 0
-execute as @e[tag=id,scores={slowness=1..}] at @s run effect give @s slowness 1 0
-execute as @e[tag=id,scores={weakness=1..}] at @s run effect give @s weakness 1 0
-execute as @e[tag=id,scores={blindness=1..}] at @s run effect give @s blindness 1 0
+## Cell tick
+execute as @e[tag=id,tag=board,distance=..100] at @s run function main:board/cell/tick
+
+## Tick for board entity units/buildings
+execute as @e[tag=id,tag=attackable,distance=..100] at @s run function main:board/entity/unit/tick
 
 execute if entity @e[tag=id,tag=hero.2] unless entity @e[tag=id,tag=hero.1] run function main:board/tutorial/death
 #say @e[tag=id,tag=arena.anchor]
-
-# Finally, remove the id tag from all entities because the next board will now process
-tag @e remove id

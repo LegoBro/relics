@@ -1,8 +1,6 @@
 ## Click to select
 
-execute if entity @e[type=armor_stand,tag=hovered.slot,tag=id,team=green,limit=1,sort=nearest] run function main:board/select_cell
 
-execute if entity @e[type=armor_stand,tag=hovered.slot,tag=id,team=purple,limit=1,sort=nearest] run function main:player/raycast/select/draw
 
 #execute at @e[type=armor_stand,tag=hovered.slot,tag=id,team=yellow,limit=1,sort=nearest] run function main:player/raycast/select/mine
 

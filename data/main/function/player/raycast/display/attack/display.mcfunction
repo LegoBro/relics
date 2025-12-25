@@ -1,0 +1,1 @@
+## Displays the amount of damage dealt if ability used

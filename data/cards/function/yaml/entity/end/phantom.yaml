@@ -17,3 +17,4 @@ card:
   lore: ""
   undead: True
   evasive: True
+  extra_nbt: 'equipment:{head:{id:"minecraft:stone",count:1}}'
