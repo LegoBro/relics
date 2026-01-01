@@ -1,3 +1,24 @@
-## Movement
-execute if score @s range >= #temp.z var run team join orange @s
-execute if score @s range < #temp.z var run team join red @s
+## Attacks using the target and attacker tags
+
+execute as @n[tag=attacker,tag=id,distance=..100] run function cards:entity/get/attack
+
+scoreboard players operation #damage var = #attack var
+
+execute as @n[tag=target,tag=id,distance=..100] run function cards:entity/attack/hover
+
+tag @n[tag=attacker,tag=id,distance=..100] add swap_attacker
+tag @n[tag=attacker,tag=id,distance=..100] remove attacker
+
+tag @n[tag=target,tag=id,distance=..100,tag=!special_attack] add attacker
+tag @n[tag=target,tag=id,distance=..100] remove target
+
+tag @n[tag=swap_attacker,tag=id,distance=..100] add target
+tag @n[tag=swap_attacker,tag=id,distance=..100] remove swap_attacker
+
+execute as @n[tag=attacker,tag=id,distance=..100] run function cards:entity/get/attack
+scoreboard players operation #damage var = #attack var
+
+execute if entity @n[tag=attacker,tag=!card.building,tag=id,distance=..100] as @n[tag=target,tag=id,distance=..100] run function cards:entity/attack/hover
+
+tag @e[tag=target,tag=id,distance=..100] remove target
+tag @e[tag=attacker,tag=id,distance=..100] remove attacker

@@ -5,7 +5,7 @@ card:
   element: "defend"
   name: "cobblestone"
   color: "green"
-  cost: 2
+  cost: 0
   model_id: 25
   lore: "Place a cobblestone block on any open slot on the board"
   building:

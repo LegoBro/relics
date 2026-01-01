@@ -10,5 +10,5 @@ execute if entity @e[tag=card.entity,limit=1,distance=..1.5,sort=nearest,tag=id,
 execute if entity @s[tag=lunging] run function cards:entity/select/lunging
 
 ## Entity Select Effects, for visual and auditory purposes
-execute at @s run function cards:entity/select_dict
+execute at @s run function cards:entity/select/macro with entity @s data
 

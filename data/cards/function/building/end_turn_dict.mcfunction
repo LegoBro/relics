@@ -11,3 +11,4 @@ execute if entity @s[tag=water] run function cards:consumable/defend/water/end_t
 execute if entity @s[tag=well] run function cards:consumable/defend/well/end_turn
 execute if entity @s[tag=witch_hut] run function cards:consumable/defend/witch_hut/end_turn
 execute if entity @s[tag=cherry_sapling] run function cards:consumable/defend/cherry_sapling/end_turn
+execute if entity @s[tag=lightning_rod] run function cards:consumable/defend/lightning_rod/end_turn

@@ -27,6 +27,8 @@ execute as @n[type=armor_stand,tag=selected,tag=id,distance=..250] at @s run fun
 execute as @n[tag=card.entity,distance=..1.5,tag=id] run function cards:entity/select/overrides
 
 # Ender pearl handling
+execute if entity @n[tag=board.player.1,tag=selected,tag=id,distance=..100] run return 0
+execute if entity @n[tag=board.player.2,tag=selected,tag=id,distance=..100] run return 0
 execute if entity @s[tag=ender_pearl] as @e[type=armor_stand,tag=board,tag=!filled,tag=!draw_pile,tag=!discard_pile,tag=id] at @s run scoreboard players set @s distance 1
 execute if entity @s[tag=ender_pearl] run item replace entity @e[type=armor_stand,tag=board,tag=!filled,tag=!draw_pile,tag=!discard_pile,tag=id] armor.head with book[item_model="cell_state/move"]
 scoreboard players set @s[tag=ender_pearl] speed 10

@@ -7,10 +7,10 @@ card:
   color: "green"
   entity: "llama"
   model_id: 96
-  cost: 7
-  maxHealth: 5
-  health: 5
+  cost: 6
+  maxHealth: 4
+  health: 4
   attack: 1
   range: 2
   speed: 1
-  lore: "An aggressive farm animal"
+  lore: ""

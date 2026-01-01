@@ -1,6 +1,6 @@
 # Casts the consumable card
 tellraw @a[tag=id] [{"selector":"@s"},{text:" "},{"translate":"cast.use"},{text:" "},{"underlined":true,"translate":"card.well","hover_event":{"action":"show_item","id":"minecraft:carrot_on_a_stick","count":1,"components":{"minecraft:item_name":{"color":"green","translate":"card.well"},"minecraft:lore":[[{"translate":"cost","italic":false,"color":"white"},{"text":" 11","italic":false,"color":"white"}],{"text":"","color":"white","italic":false},{"translate":"card.well.lore.0","color":"white","italic":false},{"translate":"card.well.lore.1","color":"white","italic":false},{"translate":"card.well.lore.2","color":"white","italic":false}]}}}]
-summon armor_stand ~ ~1 ~ {CustomName:{"translate":"card.well"},Invisible:1b,Silent:1b,Invulnerable:1b,Tags:["new","get_id","id","card","well","card.building","card.defend","attackable"],Team:"green"}
+summon armor_stand ~ ~1 ~ {CustomName:{"translate":"card.well"},Invisible:1b,Silent:1b,Invulnerable:1b,Tags:["new","get_id","id","card","well","card.building","card.defend","attackable"],Team:"green",data:{path:"consumable/defend/well"}}
 tag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] add filled
 tag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] add blocked
 tag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] add block

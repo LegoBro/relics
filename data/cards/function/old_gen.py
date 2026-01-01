@@ -273,7 +273,7 @@ def createConsumableCard(card, path):
         trigger_command = f'\ntellraw @a[tag=id] [{{"selector":"@s"}},{{"text":" triggers "}},{card["use"]}]'
         generator.writeFunction(path + "/trigger_message",trigger_command)
     elif card['placement'] == "anywhere_filled" or card['placement'] == "anywhere_friendly" or card['placement'] == "anywhere_friendly_moved" or card['placement'] == "emerald":
-        cast_command += f'\nexecute at @e[type=armor_stand,tag=hovered.slot,tag=filled,tag=id,limit=1] run tellraw @a[tag=id] [{{"selector":"@s"}},{{"text":" uses "}},{card["use"]},{{"text":" on "}},{{"selector":"@e[tag=card.entity,tag=id,limit=1,sort=nearest]"}}]'
+        cast_command += f'\nexecute at @n[type=armor_stand,tag=hovered.slot,tag=filled,tag=id,distance=..100] run tellraw @a[tag=id] [{{"selector":"@s"}},{{"text":" uses "}},{card["use"]},{{"text":" on "}},{{"selector":"@e[tag=card.entity,tag=id,limit=1,sort=nearest]"}}]'
     else:
         cast_command += f'\ntellraw @a[tag=id] [{{"selector":"@s"}},{{"text":" uses "}},{card["use"]}]'
 

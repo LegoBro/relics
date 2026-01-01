@@ -23,14 +23,15 @@ function cards:entity/overworld/dolphin/insert
 function cards:entity/overworld/fletcher/insert
 function cards:entity/overworld/goat/insert
 function cards:entity/overworld/horse/insert
+function cards:entity/overworld/llama/insert
 function cards:entity/overworld/squid/insert
 function cards:entity/overworld/tnt/insert
-function cards:entity/overworld/turtle/insert
-execute positioned ~1 ~ ~ run function cards:entity/overworld/llama/insert
+execute positioned ~1 ~ ~ run function cards:entity/overworld/turtle/insert
 execute positioned ~1 ~ ~ run function cards:entity/overworld/parrot/insert
 execute positioned ~1 ~ ~ run function cards:entity/overworld/wolf/insert
 execute positioned ~1 ~ ~ run function cards:entity/overworld/axolotl/insert
 execute positioned ~1 ~ ~ run function cards:entity/overworld/stray/insert
+execute positioned ~1 ~ ~ run function cards:entity/overworld/butcher/insert
 execute positioned ~1 ~ ~ run function cards:entity/overworld/polar_bear/insert
 execute positioned ~1 ~ ~ run function cards:entity/overworld/skeleton_horse/insert
 execute positioned ~1 ~ ~ run function cards:entity/overworld/killer_rabbit/insert
@@ -43,4 +44,3 @@ execute positioned ~1 ~ ~ run function cards:entity/overworld/guardian/insert
 execute positioned ~1 ~ ~ run function cards:entity/overworld/iron_golem/insert
 execute positioned ~1 ~ ~ run function cards:entity/overworld/librarian/insert
 execute positioned ~1 ~ ~ run function cards:entity/overworld/camel/insert
-execute positioned ~1 ~ ~ run function cards:entity/overworld/butcher/insert

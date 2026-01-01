@@ -3,7 +3,7 @@
 #execute at @e[tag=start] run setblock ~ ~5 ~ stone
 # If entity has tag = target, then they are coming from an attack
 execute store success score #player1 var if entity @e[tag=player.1,tag=id,tag=turn,distance=..200]
-execute as @n[tag=card.entity,tag=id,tag=moving,distance=..100] at @s run function cards:entity/move_dict
+execute as @n[tag=card.entity,tag=id,tag=moving,distance=..100] at @s run function cards:entity/move/macro with entity @s data
 #tp @e[tag=card.entity,tag=moving,tag=id,limit=1,sort=nearest] @e[type=armor_stand,tag=destination,tag=id,limit=1]
 execute if score #player1 var matches 1 at @e[type=armor_stand,tag=destination,tag=id,limit=1] run tp @e[tag=card.entity,tag=moving,tag=id,limit=1,sort=nearest] ~ ~1 ~
 execute if score #player1 var matches 0 at @e[type=armor_stand,tag=destination,tag=id,limit=1] run tp @e[tag=card.entity,tag=moving,tag=id,limit=1,sort=nearest] ~ ~1 ~ 180 0

@@ -6,7 +6,7 @@
 scoreboard players operation @s health -= #damage var
 execute if score @s[tag=card.entity] health matches ..0 at @s run function cards:entity/death
 execute if score @s[tag=card.building] health matches ..0 at @s run function cards:building/death
-execute if score @s health matches 1.. at @s run function cards:entity/damage_dict
+execute if score @s health matches 1.. at @s run function cards:entity/damage/macro with entity @s data
 
 
 

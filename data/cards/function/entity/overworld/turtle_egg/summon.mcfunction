@@ -1,5 +1,5 @@
 #Summons the entity (generated)
-summon armor_stand ~ ~1 ~ {PersistenceRequired:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["new","get_id","id","card","turtle_egg","card.entity","card.overworld","attackable"],Team:"green",CustomName:{"text":"Turtle Egg"},Marker:1b,Invisible:1b,DisabledSlots:4144959}
+summon armor_stand ~ ~1 ~ {PersistenceRequired:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["new","get_id","id","card","turtle_egg","card.entity","card.overworld","attackable"],Team:"green",data:{path:"entity/overworld/turtle_egg"},CustomName:{"text":"Turtle Egg"},Marker:1b,Invisible:1b,DisabledSlots:4144959}
 execute if entity @s[tag=player.2] run tp @e[tag=get_id,tag=id,limit=1] ~ ~1 ~ 180 ~
 tag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] add filled
 tag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] add friendly

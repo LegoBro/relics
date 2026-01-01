@@ -6,5 +6,5 @@ card:
   name: "ice_storm"
   color: "green"
   model_id: 99
-  cost: 16
-  lore: "Freeze all entities; doing so will deal 1 damage and reduce their speed by 1"
+  cost: 13
+  lore: "Freeze all non-frozen entities, dealing 1 damage and -1 speed"

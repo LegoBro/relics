@@ -26,20 +26,20 @@ function cards:entity/end/ender_dragon/insert
 function cards:consumable/attack/chorus_fruit/insert
 function cards:consumable/attack/iron_pickaxe/insert
 function cards:consumable/attack/arrow_storm/insert
+execute positioned ~1 ~ ~ run function cards:consumable/attack/sticky_piston/insert
 execute positioned ~1 ~ ~ run function cards:consumable/attack/flint_and_steel/insert
 execute positioned ~1 ~ ~ run function cards:consumable/attack/piston/insert
 execute positioned ~1 ~ ~ run function cards:consumable/attack/anvil/insert
 execute positioned ~1 ~ ~ run function cards:consumable/attack/blaze_strike/insert
 execute positioned ~1 ~ ~ run function cards:consumable/attack/splash_healing_potion/insert
-execute positioned ~1 ~ ~ run function cards:consumable/attack/sticky_piston/insert
 execute positioned ~1 ~ ~ run function cards:consumable/attack/splash_poison_potion/insert
 execute positioned ~1 ~ ~ run function cards:consumable/attack/splash_damage_potion/insert
 execute positioned ~1 ~ ~ run function cards:consumable/attack/ghast_fireball/insert
 execute positioned ~1 ~ ~ run function cards:consumable/attack/dragons_breath/insert
 execute positioned ~1 ~ ~ run function cards:consumable/attack/ender_pearl/insert
+execute positioned ~1 ~ ~ run function cards:consumable/attack/ice_storm/insert
 execute positioned ~1 ~ ~ run function cards:consumable/attack/thunderstorm/insert
 execute positioned ~1 ~ ~ run function cards:consumable/attack/tnt_cannon/insert
-execute positioned ~1 ~ ~ run function cards:consumable/attack/ice_storm/insert
 execute positioned ~1 ~ ~ run function cards:consumable/attack/trident/insert
 execute positioned ~1 ~ ~ run function cards:consumable/buff/bread/insert
 execute positioned ~1 ~ ~ run function cards:consumable/buff/piglin_bartering/insert

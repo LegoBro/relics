@@ -17,8 +17,8 @@ execute as @e[type=armor_stand,tag=board,tag=id,tag=skeleton_trap.summon] at @s 
 execute as @e[type=armor_stand,tag=board,tag=id,tag=skeleton_trap.summon,tag=!filled] at @s unless entity @e[tag=id,tag=card.entity,distance=..1.5] run function cards:entity/overworld/skeleton_horse/summon
 tag @e[type=armor_stand,tag=id,tag=skeleton_trap.summon] remove skeleton_trap.summon
 
-execute if entity @s[tag=skeleton_trap.2] if entity @a[tag=id,tag=turn,tag=player.1] as @e[type=skeleton_horse,tag=new,tag=id] at @s run function cards:entity/nether/magma_cube/not_friendly
-execute if entity @s[tag=skeleton_trap.1] if entity @a[tag=id,tag=turn,tag=player.2] as @e[type=skeleton_horse,tag=new,tag=id] at @s run function cards:entity/nether/magma_cube/not_friendly
+execute if entity @s[tag=skeleton_trap.2] if entity @a[tag=id,tag=turn,tag=player.1] as @e[type=skeleton_horse,tag=new,tag=id] at @s run function cards:helper/not_friendly
+execute if entity @s[tag=skeleton_trap.1] if entity @a[tag=id,tag=turn,tag=player.2] as @e[type=skeleton_horse,tag=new,tag=id] at @s run function cards:helper/not_friendly
 
 
 

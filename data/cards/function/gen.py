@@ -166,6 +166,8 @@ def createCard(yaml_path):
 
 def createEntityCard(card, path):
 
+
+
     cost_command = f"execute unless score @s saturation matches {card['cost']}.. run function cards:too_poor"
     cost_command += f"\nexecute if score @s saturation matches {card['cost']}.. run function cards:{card['type']}/{card['element']}/{card['name']}/summon"
     generator.writeFunction(path + "/use",cost_command)
@@ -174,8 +176,10 @@ def createEntityCard(card, path):
     if "extra_nbt" in card.keys():
         nbt = f',{card["extra_nbt"]}'
 
+    data_path = path.replace("./","")
+
     summon_command = "#Summons the entity (generated)"
-    summon_command += f'\nsummon {card["entity"]} ~ ~1 ~ {{PersistenceRequired:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["new","get_id","id","card","{card["name"]}","card.{card["type"]}","card.{card["element"]}","attackable"],Team:"green"{nbt}}}'
+    summon_command += f'\nsummon {card["entity"]} ~ ~1 ~ {{PersistenceRequired:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["new","get_id","id","card","{card["name"]}","card.{card["type"]}","card.{card["element"]}","attackable"],Team:"green",data:{{path:"{data_path}"}}{nbt}}}'
     summon_command += "\nexecute if entity @s[tag=player.2] run tp @e[tag=get_id,tag=id,limit=1] ~ ~1 ~ 180 ~"
     summon_command += "\ntag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] add filled"
     summon_command += "\ntag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] add friendly"
@@ -306,6 +310,9 @@ def createEntityCard(card, path):
 
 def createConsumableCard(card, path):
 
+    
+    data_path = path.replace("./","")
+
     cost_command = f"execute unless score @s saturation matches {card['cost']}.. run function cards:too_poor"
     cost_command += f"\nexecute if score @s saturation matches {card['cost']}.. run function cards:{card['type']}/{card['element']}/{card['name']}/cast"
     generator.writeFunction(path + "/use",cost_command)
@@ -316,12 +323,12 @@ def createConsumableCard(card, path):
         trigger_command = f'\ntellraw @a[tag=id] [{{"selector":"@s"}},{{text:" "}},{{"translate":"move.trap_trigger"}},{{text:" "}},{card["use"]}]'
         generator.writeFunction(path + "/trigger_message",trigger_command)
     elif card['placement'] == "anywhere_filled" or card['placement'] == "anywhere_friendly" or card['placement'] == "anywhere_friendly_moved" or card['placement'] == "emerald":
-        cast_command += f'\nexecute at @e[type=armor_stand,tag=hovered.slot,tag=filled,tag=id,limit=1] run tellraw @a[tag=id] [{{"selector":"@s"}},{{text:" "}},{{"translate":"cast.use"}},{{text:" "}},{card["use"]},{{text:" "}},{{"translate":"on"}},{{text:" "}},{{"selector":"@e[tag=card.entity,tag=id,limit=1,sort=nearest]"}}]'
+        cast_command += f'\nexecute at @n[type=armor_stand,tag=hovered.slot,tag=filled,tag=id,distance=..100] run tellraw @a[tag=id] [{{"selector":"@s"}},{{text:" "}},{{"translate":"cast.use"}},{{text:" "}},{card["use"]},{{text:" "}},{{"translate":"on"}},{{text:" "}},{{"selector":"@e[tag=card.entity,tag=id,limit=1,sort=nearest]"}}]'
     else:
         cast_command += f'\ntellraw @a[tag=id] [{{"selector":"@s"}},{{text:" "}},{{"translate":"cast.use"}},{{text:" "}},{card["use"]}]'
 
     if  "building" in card.keys(): # Building
-        cast_command += f'\nsummon armor_stand ~ ~1 ~ {{CustomName:{{"translate":"card.{card["name"]}"}},Invisible:1b,Silent:1b,Invulnerable:1b,Tags:["new","get_id","id","card","{card["name"]}","card.building","card.defend","attackable"],Team:"green"}}'
+        cast_command += f'\nsummon armor_stand ~ ~1 ~ {{CustomName:{{"translate":"card.{card["name"]}"}},Invisible:1b,Silent:1b,Invulnerable:1b,Tags:["new","get_id","id","card","{card["name"]}","card.building","card.defend","attackable"],Team:"green",data:{{path:"{data_path}"}}}}'
         cast_command += "\ntag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] add filled"
         cast_command += "\ntag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] add blocked"
         cast_command += "\ntag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] add block"
@@ -466,7 +473,6 @@ for type in types:
             pass
 
         if type == "entity":
-            select_card_command = "#select for entities (generated)"
             death_card_command = "#deaths for entities (generated)"
             capture_card_command = "#capture for entities (generated)"
             attack_card_command = "#attack for entities (generated)"
@@ -476,8 +482,6 @@ for type in types:
             give_card_command = "#give card (gen)"
             for item in card_list:
                 item = item.replace(".yaml","")
-
-                select_card_command += f'\nexecute if entity @s[tag={item}] run function cards:entity/{subtype}/{item}/select'
                 death_card_command += f'\nexecute if entity @s[tag={item}] run function cards:entity/{subtype}/{item}/death'
                 capture_card_command += f'\nexecute if entity @s[tag={item}] as @p[tag=id,tag=turn] run function cards:entity/{subtype}/{item}/discover'
                 attack_card_command += f'\nexecute if entity @s[tag={item}] run function cards:entity/{subtype}/{item}/attack'
@@ -489,13 +493,12 @@ for type in types:
                 #hover_command += f'\nexecute if score #id var matches {} run function cards:{type}/{subtype}/{item}/hover'
                 
 
-            generator.writeFunction(f"./{type}/{subtype}/select_dict",select_card_command)
-            generator.writeFunction(f"./{type}/{subtype}/death_dict",death_card_command)
-            generator.writeFunction(f"./{type}/{subtype}/capture_dict",capture_card_command)
-            generator.writeFunction(f"./{type}/{subtype}/attack_dict",attack_card_command)
-            generator.writeFunction(f"./{type}/{subtype}/damage_dict",damage_card_command)
-            generator.writeFunction(f"./{type}/{subtype}/move_dict",move_card_command)
-            generator.writeFunction(f"./{type}/{subtype}/end_turn_dict",turn_card_command)
+            #generator.writeFunction(f"./{type}/{subtype}/death_dict",death_card_command)
+            #generator.writeFunction(f"./{type}/{subtype}/capture_dict",capture_card_command)
+            #generator.writeFunction(f"./{type}/{subtype}/attack_dict",attack_card_command)
+            #generator.writeFunction(f"./{type}/{subtype}/damage_dict",damage_card_command)
+            #generator.writeFunction(f"./{type}/{subtype}/move_dict",move_card_command)
+            #generator.writeFunction(f"./{type}/{subtype}/end_turn_dict",turn_card_command)
             generator.writeFunction(f"./{type}/{subtype}/give",give_card_command)
         pass
 
@@ -512,7 +515,6 @@ for type in types:
     generator.writeFunction(f"./{type}/hover",hover_subtype_command)
 
     if type == "entity":
-        select_subtype_command = "#select for entities (generated)"
         death_subtype_command = "#deaths for entities (generated)"
         capture_subtype_command = "#capture for entities (generated)"
         attack_subtype_command = "#attack for entities (generated)"
@@ -520,20 +522,18 @@ for type in types:
         move_subtype_command = "#move for entities (generated)"
         turn_subtype_command = "#end turn for entities (generated)"
         for item in subtype_list:
-            select_subtype_command += f'\nexecute if entity @s[tag=card.{item}] run function cards:entity/{item}/select_dict'
             death_subtype_command += f'\nexecute if entity @s[tag=card.{item}] run function cards:entity/{item}/death_dict'
             capture_subtype_command += f'\nexecute if entity @s[tag=card.{item}] run function cards:entity/{item}/capture_dict'
             attack_subtype_command += f'\nexecute if entity @s[tag=card.{item}] run function cards:entity/{item}/attack_dict'
             damage_subtype_command += f'\nexecute if entity @s[tag=card.{item}] run function cards:entity/{item}/damage_dict'
             move_subtype_command += f'\nexecute if entity @s[tag=card.{item}] run function cards:entity/{item}/move_dict'
             turn_subtype_command += f'\nexecute if entity @s[tag=card.{item}] run function cards:entity/{item}/end_turn_dict'
-        generator.writeFunction(f"./{type}/select_dict",select_subtype_command)
-        generator.writeFunction(f"./{type}/death_dict",death_subtype_command)
-        generator.writeFunction(f"./{type}/capture_dict",capture_subtype_command)
-        generator.writeFunction(f"./{type}/attack_dict",attack_subtype_command)
-        generator.writeFunction(f"./{type}/damage_dict",damage_subtype_command)
-        generator.writeFunction(f"./{type}/move_dict",move_subtype_command)
-        generator.writeFunction(f"./{type}/end_turn_dict",turn_subtype_command)
+        #generator.writeFunction(f"./{type}/death_dict",death_subtype_command)
+        #generator.writeFunction(f"./{type}/capture_dict",capture_subtype_command)
+        #generator.writeFunction(f"./{type}/attack_dict",attack_subtype_command)
+        #generator.writeFunction(f"./{type}/damage_dict",damage_subtype_command)
+        #generator.writeFunction(f"./{type}/move_dict",move_subtype_command)
+        #generator.writeFunction(f"./{type}/end_turn_dict",turn_subtype_command)
 
     pass
 

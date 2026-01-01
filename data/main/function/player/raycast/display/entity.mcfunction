@@ -28,15 +28,3 @@ execute if score #speed var matches ..-1 run scoreboard players set #speed var 0
 execute if score #range var matches ..-1 run scoreboard players set #range var 0
 execute if score #attack var matches ..-1 run scoreboard players set #attack var 0
 
-#data merge block 0 1 1 {Text1:'[{"score":{"name":"#health","objective":"var"},"color":"red","bold":true},{"text":"/","color":"red","bold":false},{"score":{"name":"#maxHealth","objective":"var"},"color":"red","bold":true},{"translate":"♥","color":"white","bold":false},{"text":" "}]'}
-#data merge block 0 1 1 {Text2:'[{"score":{"name":"#attack","objective":"var"},"color":"dark_red","bold":true},{"translate":"🗡","color":"white","bold":false},{"text":" "}]'}
-#data merge block 0 1 1 {Text3:'[{"score":{"name":"#armor","objective":"var"},"color":"gray","bold":true},{"translate":"🛡","color":"white","bold":false},{"text":" "}]'}
-#execute unless score #armor var matches 1.. run data merge block 0 1 1 {Text4:'[{"nbt":"Text1","block":"0 1 1","interpret":true},{"nbt":"Text2","block":"0 1 1","interpret":true}]'}
-#execute if score #armor var matches 1.. run data merge block 0 1 1 {Text4:'[{"nbt":"Text3","block":"0 1 1","interpret":true},{"nbt":"Text1","block":"0 1 1","interpret":true},{"nbt":"Text2","block":"0 1 1","interpret":true}]'}
-
-#summon area_effect_cloud ~ ~ ~ {CustomNameVisible:1b,Particle:"ash",Duration:10000,Tags:["get_id","id","rename","display_health"]}
-#scoreboard players operation @e[tag=get_id] id = game.id var
-#execute as @e[type=area_effect_cloud,tag=rename,tag=id,limit=1,sort=nearest,tag=get_id] run data modify entity @s CustomName set from block 0 1 1 Text4
-#tag @e[tag=get_id] remove get_id
-
-#title @p actionbar [{"text":"#count: "},{"score":{"name":"#count","objective":"var"}}]

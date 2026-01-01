@@ -6,5 +6,5 @@ card:
   name: "sticky_piston"
   color: "#b4d99e"
   model_id: 122
-  cost: 8
+  cost: 4
   lore: "Pull an entity or block towards yourself"

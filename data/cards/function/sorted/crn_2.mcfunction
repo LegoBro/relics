@@ -1,4 +1,5 @@
 ## Sorted view of cards
+function cards:consumable/defend/targets/insert
 function cards:entity/nether/blaze/insert
 function cards:consumable/defend/cherry_sapling/insert
 function cards:consumable/buff/haste_potion/insert
@@ -23,9 +24,9 @@ function cards:consumable/attack/ghast_fireball/insert
 function cards:consumable/defend/witch_hut/insert
 function cards:consumable/attack/dragons_breath/insert
 function cards:consumable/attack/ender_pearl/insert
-function cards:entity/overworld/butcher/insert
 function cards:entity/overworld/armorsmith/insert
-function cards:consumable/defend/jail/insert
+function cards:consumable/attack/ice_storm/insert
+execute positioned ~1 ~ ~ run function cards:consumable/defend/jail/insert
 execute positioned ~1 ~ ~ run function cards:entity/end/shulker/insert
 execute positioned ~1 ~ ~ run function cards:consumable/attack/thunderstorm/insert
 execute positioned ~1 ~ ~ run function cards:entity/overworld/vindicator/insert
@@ -39,7 +40,6 @@ execute positioned ~1 ~ ~ run function cards:consumable/buff/netherite_armor/ins
 execute positioned ~1 ~ ~ run function cards:consumable/defend/sculk_catalyst/insert
 execute positioned ~1 ~ ~ run function cards:entity/overworld/sniffer/insert
 execute positioned ~1 ~ ~ run function cards:entity/overworld/cleric/insert
-execute positioned ~1 ~ ~ run function cards:consumable/attack/ice_storm/insert
 execute positioned ~1 ~ ~ run function cards:entity/nether/piglin_brute/insert
 execute positioned ~1 ~ ~ run function cards:consumable/buff/elytra/insert
 execute positioned ~1 ~ ~ run function cards:consumable/attack/trident/insert

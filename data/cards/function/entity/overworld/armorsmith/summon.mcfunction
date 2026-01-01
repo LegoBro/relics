@@ -1,5 +1,5 @@
 #Summons the entity (generated)
-summon villager ~ ~1 ~ {PersistenceRequired:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["new","get_id","id","card","armorsmith","card.entity","card.overworld","attackable"],Team:"green",VillagerData:{profession:"minecraft:armorer"}}
+summon villager ~ ~1 ~ {PersistenceRequired:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["new","get_id","id","card","armorsmith","card.entity","card.overworld","attackable"],Team:"green",data:{path:"entity/overworld/armorsmith"},VillagerData:{profession:"minecraft:armorer"}}
 execute if entity @s[tag=player.2] run tp @e[tag=get_id,tag=id,limit=1] ~ ~1 ~ 180 ~
 tag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] add filled
 tag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] add friendly

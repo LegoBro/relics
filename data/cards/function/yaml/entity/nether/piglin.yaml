@@ -7,7 +7,7 @@ card:
   color: "green"
   entity: "piglin"
   model_id: 36
-  cost: 8
+  cost: 7
   maxHealth: 3
   health: 3
   attack: 1

@@ -1,5 +1,5 @@
 #Summons the entity (generated)
-summon magma_cube ~ ~1 ~ {PersistenceRequired:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["new","get_id","id","card","magma_cube","card.entity","card.nether","attackable"],Team:"green",Size:2}
+summon magma_cube ~ ~1 ~ {PersistenceRequired:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["new","get_id","id","card","magma_cube","card.entity","card.nether","attackable"],Team:"green",data:{path:"entity/nether/magma_cube"},Size:2}
 execute if entity @s[tag=player.2] run tp @e[tag=get_id,tag=id,limit=1] ~ ~1 ~ 180 ~
 tag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] add filled
 tag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] add friendly

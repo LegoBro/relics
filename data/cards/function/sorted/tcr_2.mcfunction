@@ -25,8 +25,8 @@ function cards:consumable/buff/miners_resilience/insert
 function cards:consumable/buff/netherite_armor/insert
 function cards:consumable/buff/elytra/insert
 function cards:consumable/buff/enchanted_golden_apple/insert
-function cards:consumable/defend/sculk_block/insert
-execute positioned ~1 ~ ~ run function cards:consumable/defend/cobblestone/insert
+function cards:consumable/defend/cobblestone/insert
+execute positioned ~1 ~ ~ run function cards:consumable/defend/sculk_block/insert
 execute positioned ~1 ~ ~ run function cards:consumable/defend/cobweb_trap/insert
 execute positioned ~1 ~ ~ run function cards:consumable/defend/gilded_blackstone/insert
 execute positioned ~1 ~ ~ run function cards:consumable/defend/wither_trap/insert

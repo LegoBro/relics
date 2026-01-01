@@ -1,2 +1,2 @@
-execute unless score @s saturation matches 2.. run function cards:too_poor
-execute if score @s saturation matches 2.. run function cards:consumable/defend/cobblestone/cast
+execute unless score @s saturation matches 0.. run function cards:too_poor
+execute if score @s saturation matches 0.. run function cards:consumable/defend/cobblestone/cast

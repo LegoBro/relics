@@ -1,6 +1,6 @@
 # Casts the consumable card
 tellraw @a[tag=id] [{"selector":"@s"},{text:" "},{"translate":"cast.use"},{text:" "},{"underlined":true,"translate":"card.suspicious_sand","hover_event":{"action":"show_item","id":"minecraft:carrot_on_a_stick","count":1,"components":{"minecraft:item_name":{"color":"#FBB1F2","translate":"card.suspicious_sand"},"minecraft:lore":[[{"translate":"cost","italic":false,"color":"white"},{"text":" 4","italic":false,"color":"white"}],{"text":"","color":"white","italic":false},{"translate":"card.suspicious_sand.lore.0","color":"white","italic":false},{"translate":"card.suspicious_sand.lore.1","color":"white","italic":false},{"translate":"card.suspicious_sand.lore.2","color":"white","italic":false}]}}}]
-summon armor_stand ~ ~1 ~ {CustomName:{"translate":"card.suspicious_sand"},Invisible:1b,Silent:1b,Invulnerable:1b,Tags:["new","get_id","id","card","suspicious_sand","card.building","card.defend","attackable"],Team:"green"}
+summon armor_stand ~ ~1 ~ {CustomName:{"translate":"card.suspicious_sand"},Invisible:1b,Silent:1b,Invulnerable:1b,Tags:["new","get_id","id","card","suspicious_sand","card.building","card.defend","attackable"],Team:"green",data:{path:"consumable/defend/suspicious_sand"}}
 tag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] add filled
 tag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] add blocked
 tag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] add block

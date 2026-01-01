@@ -12,7 +12,7 @@ execute if score #friendly var matches 1 run scoreboard players add @a[tag=id,ta
 execute if score #friendly var matches 1 run scoreboard players add @a[tag=id,tag=wait] entity.kills 1
 execute if score #friendly var matches 0 run scoreboard players add @a[tag=id,tag=wait] entity.deaths 1
 
-function cards:entity/death_dict
+function cards:entity/death/macro with entity @s data
 
 ## Sculk Catalyst interaction
 execute if entity @e[tag=sculk_catalyst,tag=id] as @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest,distance=..1.5] at @s run data merge entity @s {CustomName:{"text":"Sculk Catalyst"}}

@@ -14,4 +14,4 @@ kill @e[type=area_effect_cloud,tag=display_health,tag=id]
 
 
 # dict for special cases
-execute if score @s health matches 1.. run function cards:building/end_turn_dict
+execute if score @s health matches 1.. run function cards:entity/end_turn/macro with entity @s data
