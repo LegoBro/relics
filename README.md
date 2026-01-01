@@ -37,14 +37,27 @@ Unbuffable - target cannot have buffs applied to it
 Gopper Golem - Swaps position of targeted entity with entity opposite from it
 Parched - Skeleton that gives weakness
 Bogged - Skeleton that gives poison
+Camel Husk - Undead variant of Camel, deals more damage, spawns only partially healed
+Farmer - Give emerald to gain +1/1 health and a bread
+Strider - Passive unit with medium health and lava immunity
+
+#### Attack
+Mace - Deal 3 damage to a unit, on kill return ethereal version of card (vanishes at the end of turn)
+Critical Hit - Deal 3 damage per effect or dot on an entity
+Wind Charge - Move adjacent units away from targeted position
 
 #### Buff
 Saddle - Combine two entities by taking the ridden entity's health and speed, and the rider's attack and range.
 Iron Spear - Increase range of melee mob by 1 for 3 turns (Still has melee movement)
 Iron Sword - Convert a Ranged mob into a melee one, giving +3 Attack
+Lunge - Give a unit the lunging trait
+Repeater - Apply a building's end of turn ability immediately
+Flame - Give a ranged unit +1 fire damage, or a melee unit +2
+Looting - Draw 1 card for every enemy unit killed this turn
 
 #### Defend
 Enchantment Table - Every enchanted Book gets refunded 1 XP
+Trial Spawner - Generates 1 card every 4 turns, when broken give all
 
 ### Card Change Ideas
 
