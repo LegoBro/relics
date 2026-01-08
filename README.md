@@ -37,9 +37,9 @@ Unbuffable - target cannot have buffs applied to it
 Gopper Golem - Swaps position of targeted entity with entity opposite from it
 Parched - Skeleton that gives weakness
 Bogged - Skeleton that gives poison
-Camel Husk - Undead variant of Camel, deals more damage, spawns only partially healed
 Farmer - Give emerald to gain +1/1 health and a bread
 Strider - Passive unit with medium health and lava immunity
+Camel Husk - Undead variant of Camel, deals more damage, spawns only partially healed
 
 #### Attack
 Mace - Deal 3 damage to a unit, on kill return ethereal version of card (vanishes at the end of turn)
@@ -57,7 +57,7 @@ Looting - Draw 1 card for every enemy unit killed this turn
 
 #### Defend
 Enchantment Table - Every enchanted Book gets refunded 1 XP
-Trial Spawner - Generates 1 card every 4 turns, when broken give all
+Vault - Generates 1 card every 4 turns, when broken give all
 
 ### Card Change Ideas
 
@@ -171,7 +171,7 @@ Witch Hut - Renamed to "Alchemy Hut", changed ability to return +2XP for every p
 Hay Bale - No longer applies effect immediately on place
     Hay Bale can be a tricky card to counter-play against if you don't expect it, so this should give the enemy a little more time to plan a strategy, nerfing passive unit spam.
 
-Lightning Rod - Added end of turn counter, which slowly oxidizes over time.  When fully oxizied, strike a lightning, but revert back to plain copper.
+Lightning Rod - Added end of turn counter, which slowly oxidizes over time.  When fully oxidized, strike a lightning, but revert back to plain copper.
     Lightning Rod really wasn't that useful until now, there needed to be an additional purpose.  By functioning similarly to outpost, it can provide a unique twist for defenses, and allow cheaper conversion of units.
 
 ### Fixes
@@ -179,20 +179,23 @@ Bee Hive last spawn (when building breaks) spawns bee as enemy team -> spawn bef
 Draw game settings don't apply properly
 Farmland talks about saturation -> XP on texture
 Clear Totem of Dying Effects after use
-Husk - mention the increased max hp on the card
-Fletcher - clear up wording - currently unclear whether it is a on play effect or continuous effect.
+Various improvements to card descriptions, and unifying of entity descriptions.
 Changed Bee card to properly show that it only has 2 poison instead of 3
 Ice Storm no longer damages/slows the hero
+Updated Vex card to display newer vex style
+
 
 ### Improvements to do
-Multi-Open Card pack
+Multi-Open Card pack (fast_open tag now works)
 Convert all texts to translatable strings
-Convert Heroes into mannequins
 Sharable decks or suggested decks
+Fix vault giving too many cards
+Make square for saddle appear different
 
 ### Improvements Done
 Reworked many hover displays to showcase what is happening more effectively.  Also, now only uses actionbar.
 Improved performance on many behind the scenes functionality
+Converted Heroes into mannequins
 
 ## 4.3
 

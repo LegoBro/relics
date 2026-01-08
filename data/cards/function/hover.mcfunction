@@ -4,12 +4,14 @@ execute if score #id var matches 19 run function cards:consumable/attack/anvil/h
 execute if score #id var matches 20 run function cards:consumable/attack/arrow_storm/hover
 execute if score #id var matches 30 run function cards:consumable/attack/blaze_strike/hover
 execute if score #id var matches 73 run function cards:consumable/attack/chorus_fruit/hover
+execute if score #id var matches 155 run function cards:consumable/attack/critical_hit/hover
 execute if score #id var matches 71 run function cards:consumable/attack/dragons_breath/hover
 execute if score #id var matches 72 run function cards:consumable/attack/ender_pearl/hover
 execute if score #id var matches 79 run function cards:consumable/attack/flint_and_steel/hover
 execute if score #id var matches 39 run function cards:consumable/attack/ghast_fireball/hover
 execute if score #id var matches 99 run function cards:consumable/attack/ice_storm/hover
 execute if score #id var matches 21 run function cards:consumable/attack/iron_pickaxe/hover
+execute if score #id var matches 154 run function cards:consumable/attack/mace/hover
 execute if score #id var matches 121 run function cards:consumable/attack/piston/hover
 execute if score #id var matches 119 run function cards:consumable/attack/splash_damage_potion/hover
 execute if score #id var matches 118 run function cards:consumable/attack/splash_healing_potion/hover
@@ -19,6 +21,7 @@ execute if score #id var matches 69 run function cards:consumable/attack/thunder
 execute if score #id var matches 93 run function cards:consumable/attack/tnt_cannon/hover
 execute if score #id var matches 144 run function cards:consumable/attack/torchflower/hover
 execute if score #id var matches 66 run function cards:consumable/attack/trident/hover
+execute if score #id var matches 156 run function cards:consumable/attack/wind_charge/hover
 execute if score #id var matches 137 run function cards:consumable/buff/aqua_affinity/hover
 execute if score #id var matches 140 run function cards:consumable/buff/armor_trim/hover
 execute if score #id var matches 22 run function cards:consumable/buff/bread/hover
@@ -27,6 +30,7 @@ execute if score #id var matches 48 run function cards:consumable/buff/diamond_a
 execute if score #id var matches 90 run function cards:consumable/buff/elytra/hover
 execute if score #id var matches 76 run function cards:consumable/buff/emerald/hover
 execute if score #id var matches 53 run function cards:consumable/buff/enchanted_golden_apple/hover
+execute if score #id var matches 162 run function cards:consumable/buff/flame_aspect/hover
 execute if score #id var matches 134 run function cards:consumable/buff/frog_eggs/hover
 execute if score #id var matches 136 run function cards:consumable/buff/goat_horn/hover
 execute if score #id var matches 31 run function cards:consumable/buff/golden_apple/hover
@@ -36,7 +40,11 @@ execute if score #id var matches 29 run function cards:consumable/buff/haste_pot
 execute if score #id var matches 120 run function cards:consumable/buff/honeycomb/hover
 execute if score #id var matches 83 run function cards:consumable/buff/invisibility_potion/hover
 execute if score #id var matches 23 run function cards:consumable/buff/iron_armor/hover
+execute if score #id var matches 158 run function cards:consumable/buff/iron_spear/hover
+execute if score #id var matches 159 run function cards:consumable/buff/iron_sword/hover
 execute if score #id var matches 46 run function cards:consumable/buff/leather_armor/hover
+execute if score #id var matches 163 run function cards:consumable/buff/looting/hover
+execute if score #id var matches 160 run function cards:consumable/buff/lunge/hover
 execute if score #id var matches 112 run function cards:consumable/buff/milk/hover
 execute if score #id var matches 129 run function cards:consumable/buff/minecart/hover
 execute if score #id var matches 50 run function cards:consumable/buff/miners_resilience/hover
@@ -45,7 +53,9 @@ execute if score #id var matches 49 run function cards:consumable/buff/netherite
 execute if score #id var matches 65 run function cards:consumable/buff/piercing/hover
 execute if score #id var matches 42 run function cards:consumable/buff/piglin_bartering/hover
 execute if score #id var matches 139 run function cards:consumable/buff/pottery_sherd/hover
+execute if score #id var matches 161 run function cards:consumable/buff/repeater/hover
 execute if score #id var matches 135 run function cards:consumable/buff/rotten_flesh/hover
+execute if score #id var matches 157 run function cards:consumable/buff/saddle/hover
 execute if score #id var matches 128 run function cards:consumable/buff/sharpness/hover
 execute if score #id var matches 44 run function cards:consumable/buff/spectral_arrow/hover
 execute if score #id var matches 32 run function cards:consumable/buff/speed_potion/hover
@@ -57,6 +67,7 @@ execute if score #id var matches 141 run function cards:consumable/defend/cherry
 execute if score #id var matches 25 run function cards:consumable/defend/cobblestone/hover
 execute if score #id var matches 26 run function cards:consumable/defend/cobweb_trap/hover
 execute if score #id var matches 108 run function cards:consumable/defend/diorite/hover
+execute if score #id var matches 164 run function cards:consumable/defend/enchantment_table/hover
 execute if score #id var matches 103 run function cards:consumable/defend/farmland/hover
 execute if score #id var matches 51 run function cards:consumable/defend/gilded_blackstone/hover
 execute if score #id var matches 106 run function cards:consumable/defend/hay_bale/hover
@@ -73,6 +84,7 @@ execute if score #id var matches 59 run function cards:consumable/defend/skeleto
 execute if score #id var matches 64 run function cards:consumable/defend/spawner/hover
 execute if score #id var matches 143 run function cards:consumable/defend/suspicious_sand/hover
 execute if score #id var matches 109 run function cards:consumable/defend/targets/hover
+execute if score #id var matches 165 run function cards:consumable/defend/vault/hover
 execute if score #id var matches 113 run function cards:consumable/defend/water/hover
 execute if score #id var matches 107 run function cards:consumable/defend/well/hover
 execute if score #id var matches 111 run function cards:consumable/defend/witch_hut/hover
@@ -90,6 +102,7 @@ execute if score #id var matches 35 run function cards:entity/nether/hoglin/hove
 execute if score #id var matches 14 run function cards:entity/nether/magma_cube/hover
 execute if score #id var matches 36 run function cards:entity/nether/piglin/hover
 execute if score #id var matches 37 run function cards:entity/nether/piglin_brute/hover
+execute if score #id var matches 149 run function cards:entity/nether/strider/hover
 execute if score #id var matches 41 run function cards:entity/nether/wither/hover
 execute if score #id var matches 15 run function cards:entity/nether/wither_skeleton/hover
 execute if score #id var matches 40 run function cards:entity/nether/zoglin/hover
@@ -98,18 +111,22 @@ execute if score #id var matches 78 run function cards:entity/overworld/armorsmi
 execute if score #id var matches 115 run function cards:entity/overworld/axolotl/hover
 execute if score #id var matches 34 run function cards:entity/overworld/baby_slime/hover
 execute if score #id var matches 61 run function cards:entity/overworld/bee/hover
+execute if score #id var matches 151 run function cards:entity/overworld/bogged/hover
 execute if score #id var matches 130 run function cards:entity/overworld/butcher/hover
 execute if score #id var matches 147 run function cards:entity/overworld/camel/hover
+execute if score #id var matches 148 run function cards:entity/overworld/camel_husk/hover
 execute if score #id var matches 1 run function cards:entity/overworld/cave_spider/hover
 execute if score #id var matches 70 run function cards:entity/overworld/charged_creeper/hover
 execute if score #id var matches 101 run function cards:entity/overworld/chicken/hover
 execute if score #id var matches 75 run function cards:entity/overworld/cleric/hover
+execute if score #id var matches 153 run function cards:entity/overworld/copper_golem/hover
 execute if score #id var matches 2 run function cards:entity/overworld/creeper/hover
 execute if score #id var matches 94 run function cards:entity/overworld/cub/hover
 execute if score #id var matches 87 run function cards:entity/overworld/dolphin/hover
 execute if score #id var matches 54 run function cards:entity/overworld/drowned/hover
 execute if score #id var matches 89 run function cards:entity/overworld/elder_guardian/hover
 execute if score #id var matches 86 run function cards:entity/overworld/evoker/hover
+execute if score #id var matches 150 run function cards:entity/overworld/farmer/hover
 execute if score #id var matches 117 run function cards:entity/overworld/fletcher/hover
 execute if score #id var matches 33 run function cards:entity/overworld/fox/hover
 execute if score #id var matches 132 run function cards:entity/overworld/frog/hover
@@ -122,6 +139,7 @@ execute if score #id var matches 92 run function cards:entity/overworld/killer_r
 execute if score #id var matches 145 run function cards:entity/overworld/librarian/hover
 execute if score #id var matches 96 run function cards:entity/overworld/llama/hover
 execute if score #id var matches 100 run function cards:entity/overworld/mooshroom/hover
+execute if score #id var matches 152 run function cards:entity/overworld/parched/hover
 execute if score #id var matches 98 run function cards:entity/overworld/parrot/hover
 execute if score #id var matches 28 run function cards:entity/overworld/pig/hover
 execute if score #id var matches 84 run function cards:entity/overworld/pillager/hover

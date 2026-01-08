@@ -1,0 +1,18 @@
+card:
+  placement: 2
+  rarity: "uncommon"
+  type: "entity"
+  element: "nether"
+  name: "strider"
+  color: "#E0673A"
+  entity: "strider"
+  model_id: 149
+  cost: 6
+  maxHealth: 5
+  health: 5
+  attack: 0
+  range: 1
+  speed: 1
+  lore: ""
+  passive: true
+  fireproof: true

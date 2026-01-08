@@ -12,6 +12,7 @@ function cards:consumable/buff/piglin_bartering/insert
 function cards:consumable/buff/aqua_affinity/insert
 function cards:consumable/buff/emerald/insert
 function cards:entity/overworld/frog/insert
+function cards:consumable/buff/iron_sword/insert
 function cards:entity/overworld/pig/insert
 function cards:entity/overworld/turtle_egg/insert
 function cards:entity/overworld/vex/insert
@@ -20,12 +21,14 @@ function cards:entity/overworld/cub/insert
 function cards:consumable/attack/chorus_fruit/insert
 function cards:consumable/defend/cobweb_trap/insert
 function cards:consumable/attack/iron_pickaxe/insert
+function cards:consumable/buff/repeater/insert
 function cards:entity/overworld/zombie_villager/insert
+function cards:consumable/attack/critical_hit/insert
 function cards:consumable/defend/gilded_blackstone/insert
 function cards:consumable/defend/wither_trap/insert
-function cards:consumable/attack/arrow_storm/insert
-function cards:entity/overworld/drowned/insert
-function cards:entity/overworld/husk/insert
+execute positioned ~1 ~ ~ run function cards:consumable/attack/arrow_storm/insert
+execute positioned ~1 ~ ~ run function cards:entity/overworld/drowned/insert
+execute positioned ~1 ~ ~ run function cards:entity/overworld/husk/insert
 execute positioned ~1 ~ ~ run function cards:consumable/defend/lava_pocket/insert
 execute positioned ~1 ~ ~ run function cards:consumable/buff/rotten_flesh/insert
 execute positioned ~1 ~ ~ run function cards:entity/overworld/spider/insert
@@ -41,6 +44,3 @@ execute positioned ~1 ~ ~ run function cards:consumable/buff/sharpness/insert
 execute positioned ~1 ~ ~ run function cards:entity/overworld/sheep/insert
 execute positioned ~1 ~ ~ run function cards:entity/overworld/skeleton/insert
 execute positioned ~1 ~ ~ run function cards:entity/overworld/slime/insert
-execute positioned ~1 ~ ~ run function cards:consumable/buff/speed_potion/insert
-execute positioned ~1 ~ ~ run function cards:consumable/defend/water/insert
-execute positioned ~1 ~ ~ run function cards:entity/nether/zombified_piglin/insert

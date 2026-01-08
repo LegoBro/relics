@@ -14,5 +14,5 @@ card:
   range: 1
   speed: 1
   extra_nbt: "VillagerData:{profession:\"minecraft:fletcher\"}"
-  lore: "Generates emeralds for every adjacent ranged enemy unit"
+  lore: "Ranged Sales - at the end of every turn, discover an emerald if a ranged enemy unit is next to fletcher"
   emerald: True

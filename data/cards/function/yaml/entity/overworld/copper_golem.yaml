@@ -1,0 +1,18 @@
+card:
+  placement: 10
+  rarity: "common"
+  type: "entity"
+  element: "overworld"
+  name: "copper_golem"
+  color: "#E0673A"
+  entity: "copper_golem"
+  model_id: 153
+  cost: 8
+  maxHealth: 4
+  health: 4
+  special_attack: true
+  attack: 0
+  range: 1
+  speed: 1
+  lore: "Shuffle - Move target to opposite side of copper golem"
+  can_attack_friendly: True

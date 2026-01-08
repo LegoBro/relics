@@ -14,5 +14,5 @@ card:
   range: 1
   speed: 1
   extra_nbt: "VillagerData:{profession:\"minecraft:armorer\"}"
-  lore: "Give a random unit on the board +1 armor point at the end of every turn"
+  lore: "Armorer - Give a random friendly unit on the board +1 armor at the end of every turn; Emerald - Give hero +1 armor"
   emerald: True

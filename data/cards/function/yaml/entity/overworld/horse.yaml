@@ -1,5 +1,5 @@
 card:
-  placement: 10
+  placement: 2
   rarity: "uncommon"
   type: "entity"
   element: "overworld"

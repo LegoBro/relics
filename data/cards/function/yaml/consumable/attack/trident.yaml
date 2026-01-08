@@ -7,4 +7,4 @@ card:
   color: "green"
   model_id: 66
   cost: 17
-  lore: "Throw a channeling trident that deals 7 damage from lightning as well as 3 damage nearby"
+  lore: "Deal 7 damage top target as well as 3 damage to adjacent units"

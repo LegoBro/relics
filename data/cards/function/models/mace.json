@@ -1,0 +1,1 @@
+{"credit": "Made with Brickbench", "parent": "item/cards/consumable_template", "textures": {"background": "item/card/mace/background", "foreground": "item/card/mace/foreground", "description": "item/card/mace/description", "cost": "item/card/number/left/12", "rarity": "item/card/front_legendary", "type": "item/card/trait/attack"}}

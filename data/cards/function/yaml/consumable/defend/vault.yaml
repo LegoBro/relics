@@ -1,0 +1,15 @@
+card:
+  placement: 11
+  rarity: "rare"
+  type: "consumable"
+  element: "defend"
+  name: "vault"
+  color: "#E0673A"
+  model_id: 165
+  cost: 15
+  lore: "Place a vault that creates and stores 1 card every 4 turns, and drops all when mined"
+  building:
+    health: 10
+    maxHealth: 10
+    armor: 10
+    fire_proof: True

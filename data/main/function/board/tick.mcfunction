@@ -15,6 +15,9 @@ execute at @e[type=armor_stand,tag=board.player.2,tag=id] store result score @e[
 scoreboard players operation @e[tag=draw.player.1,tag=id] set.fatigue = @e[tag=id,tag=hero.1] set.fatigue
 scoreboard players operation @e[tag=draw.player.2,tag=id] set.fatigue = @e[tag=id,tag=hero.2] set.fatigue
 
+## Cell tick
+execute as @e[tag=id,tag=board,distance=..100] at @s run function main:board/cell/tick
+
 ## Tick for board entity units/buildings
 execute as @e[tag=id,tag=attackable,distance=..100] at @s run function main:board/entity/unit/tick
 

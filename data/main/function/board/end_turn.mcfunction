@@ -14,6 +14,13 @@ execute as @p[tag=id,tag=turn,advancements={main:quests/ocean=false}] at @e[tag=
 # Piston advancement
 scoreboard players reset @a[tag=id] play.piston
 
+# Clear looting
+tag @a[tag=id] remove looting
+
+# Clear ethereal cards
+clear @a[tag=id] *[custom_data~{ethereal:1b}]
+execute at @a[tag=id] run kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{ethereal:1b}}}},distance=..5]
+
 scoreboard players operation @a[tag=id] turnTimer = @e[type=armor_stand,tag=board.center,limit=1,tag=id] set.time
 scoreboard players reset @a[tag=id] endTurn
 scoreboard players reset @a[tag=id] rightClick
@@ -31,8 +38,8 @@ tag @e[tag=id,tag=vibration_signal] remove vibration_signal
 scoreboard players set #cherry_count var 0
 # Count frogs, I know, weird
 scoreboard players set #frog_count var 0
-execute as @e[tag=card.entity,tag=id] at @s run function main:board/end_turn/entity
-execute as @e[tag=card.building,tag=id] at @s run function main:board/end_turn/building
+execute as @e[tag=card.entity,tag=id,distance=..100] at @s run function main:board/end_turn/entity
+execute as @e[tag=card.building,tag=id,distance=..100] at @s run function main:board/end_turn/building
 
 # Frog advancement
 execute if entity @p[tag=id,tag=turn,advancements={main:quests/frog=false}] if score #frog_count var matches 15.. run advancement grant @s only main:quests/frog

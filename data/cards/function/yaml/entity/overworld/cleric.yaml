@@ -14,5 +14,5 @@ card:
   range: 1
   speed: 1
   extra_nbt: "VillagerData:{profession:\"minecraft:cleric\"}"
-  lore: "At the end of every turn, heals a random entity for +5 health"
+  lore: "Clerical - At the end of every turn, heals a random friendly entity for +5 health"
   emerald: True

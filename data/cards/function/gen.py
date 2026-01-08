@@ -4,7 +4,7 @@ import json
 
 
 def createCard(yaml_path):
-    print(generator.readYaml(yaml_path))
+    # print(generator.readYaml(yaml_path))
     card = generator.readYaml(yaml_path)["card"]
     path = f"./{card['type']}/{card['element']}/{card['name']}"
     generator.recursiveCreateFolder(path)
@@ -89,8 +89,6 @@ def createCard(yaml_path):
     unlock_item = "carrot_on_a_stick[" + lore + ',' + item_name + ", minecraft:unbreakable={}," + item_model + "," + unlock_custom_data + "]"
 
     give_command = "give @s " + item
-
-    print(give_command)
     
     
     generator.writeFunction(path + "/give", give_command)
@@ -114,8 +112,8 @@ def createCard(yaml_path):
     generator.writeFunction(path + "/discover", discover_command)
 
     unlock_command = "give @s " + unlock_item
-    unlock_command += f"\nitem replace entity @s weapon.offhand with minecraft:totem_of_undying[{item_model}]"
-    unlock_command += "\neffect give @s minecraft:instant_damage 1 100"
+    unlock_command += f"\nitem replace entity @s[tag=!fast_open] weapon.offhand with minecraft:totem_of_undying[{item_model}]"
+    unlock_command += "\neffect give @s[tag=!fast_open] minecraft:instant_damage 1 100"
     unlock_command += "\nscoreboard players set #change var 1"
     unlock_command += "\ndata merge block 0 0 0 {}"
     unlock_command += "\nitem replace block 0 0 0 container.0 from entity @s enderchest.0"
@@ -286,6 +284,9 @@ def createEntityCard(card, path):
 
     if  "needs_vibration" in card.keys() and card['needs_vibration']:
         summon_command += f"\ntag @n[tag=get_id] add needs_vibration"
+    
+    if  "can_attack_friendly" in card.keys() and card['can_attack_friendly']:
+        summon_command += f"\ntag @n[tag=get_id] add can_attack_friendly"
 
     # Fills up trait list with empty textures for safety
     card["traits"].extend(["empty","empty","empty","empty","empty","empty"])
@@ -588,7 +589,7 @@ def stype(val):
 ## Collection click dict
 collection_command = "## Dictionary for collection clicking"
 for card in collection:
-    print(card)
+    # print(card)
     collection_command += f"\nexecute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{{gui:True}},item_model=\"cards/" + card[1] + "\"] 1"
     collection_command += f"\nexecute if score #pass var matches 1 run function cards:{card[2]}/{card[3]}/{card[1]}/collection"
     pass
@@ -729,7 +730,7 @@ generator.writeFunction("./draft", draft)
 
 ## Pack Opening randomness and tournament deck
 pack_open = "## Sorted view of cards"
-pack_open += "\nexecute store result score #rand var run loot spawn 0 -200 0 loot cards:pack_open"
+pack_open += "\nexecute store result score #rand var run random value 1..631"
 index = 0
 page = 0
 tournament_deck = []

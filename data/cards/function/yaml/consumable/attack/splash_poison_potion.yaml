@@ -7,4 +7,4 @@ card:
   color: "green"
   model_id: 82
   cost: 11
-  lore: "Throw a poison potion that deals 6 poison damage to a unit and all adjacent units"
+  lore: "Deal 6 poison damage to target and all adjacent units"

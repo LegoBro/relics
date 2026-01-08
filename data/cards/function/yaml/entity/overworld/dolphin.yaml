@@ -13,5 +13,5 @@ card:
   attack: 1
   range: 1
   speed: 1
-  lore: "When spawned, gives all aquatic entities +1 health and +1 max health"
+  lore: "Aquatic Assistance - gives all aquatic entities +1 health and +1 max health"
   water: True

@@ -1,0 +1,10 @@
+card:
+  placement: 7
+  rarity: "common"
+  type: "consumable"
+  element: "buff"
+  name: "iron_sword"
+  color: "#E0673A"
+  model_id: 159
+  cost: 2
+  lore: "Convert a ranged unit into a melee unit and give +3 attack"

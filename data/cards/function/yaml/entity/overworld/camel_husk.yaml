@@ -1,0 +1,18 @@
+card:
+  placement: 10
+  rarity: "rare"
+  type: "entity"
+  element: "overworld"
+  name: "camel_husk"
+  color: "#E0673A"
+  entity: "camel_husk"
+  model_id: 148
+  cost: 18
+  maxHealth: 10
+  health: 6
+  attack: 6
+  range: 1
+  speed: 3
+  armor: 3
+  lore: "Weathered Wounds - Spawns partially damaged"
+  lunging: True

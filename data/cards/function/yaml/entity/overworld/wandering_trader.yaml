@@ -13,5 +13,5 @@ card:
   attack: 1
   range: 1
   speed: 1
-  lore: "Travels to a random spot each turn.  On death, summons a llama"
+  lore: "Traveler - Travels to a random spot each turn;  On death, summon a llama; Emerald - summon a llama"
   emerald: True

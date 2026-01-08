@@ -13,7 +13,7 @@ card:
   attack: 0
   range: 0
   speed: 0
-  lore: "Provides healing to enderdragons as well as creates an explosive defense"
+  lore: "Unstable - explodes when destroyed for 5 damage to adjacent spots"
   extra_nbt: 'CustomName:{"text":"End Crystal"},Marker:1b,Invisible:1,DisabledSlots:4144959,Passengers:[{id:"minecraft:end_crystal",Tags:["card.passenger"]}]'
   unbuffable: true
   unselectable: true

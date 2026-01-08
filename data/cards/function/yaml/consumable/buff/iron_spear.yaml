@@ -1,0 +1,10 @@
+card:
+  placement: 8
+  rarity: "common"
+  type: "consumable"
+  element: "buff"
+  name: "iron_spear"
+  color: "#E0673A"
+  model_id: 158
+  cost: 12
+  lore: "Increase the range of a melee unit by 1 for 3 turns"

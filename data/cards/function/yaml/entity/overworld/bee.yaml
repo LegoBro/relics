@@ -15,4 +15,4 @@ card:
   speed: 1
   apply_poison: 2
   flying: true
-  lore: "Carries a poisonous stinger that deals an additional 2 poison damage"
+  lore: "Poisonous Stinger - deal an additional 2 poison damage"

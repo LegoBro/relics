@@ -7,4 +7,4 @@ card:
   color: "green"
   model_id: 39
   cost: 12
-  lore: "Launch a ghast fireball to deal 3 damage to one target and 2 damage to adjacent targets"
+  lore: "Deal 3 damage to target and 2 damage to adjacent units"

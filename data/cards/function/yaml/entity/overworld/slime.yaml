@@ -14,4 +14,4 @@ card:
   range: 1
   speed: 1
   extra_nbt: "Size:2"
-  lore: "A squishy slime that breaks apart when killed"
+  lore: "Oozing - spawns 3 baby slimes when killed"

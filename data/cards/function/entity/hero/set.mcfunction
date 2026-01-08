@@ -1,5 +1,5 @@
 ## Sets a hero at the start
-summon armor_stand ~ ~1 ~ {PersistenceRequired:1b,Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["new","get_id","id","card","steve","card.entity","card.hero","attackable"],Team:"green",ShowArms:1b,NoBasePlate:1b,DisabledSlots:4144959,equipment:{mainhand:{id:"minecraft:iron_pickaxe",count:1},feet:{id:"minecraft:leather_boots",count:1b,components:{"minecraft:dyed_color":3682347}},legs:{id:"minecraft:leather_leggings",count:1b,components:{"minecraft:dyed_color":2239935}},chest:{id:"minecraft:leather_chestplate",count:1b,components:{"minecraft:dyed_color":1356287}},head:{id:"minecraft:player_head",count:1b}},CustomName:{"text":"Steve"}}
+summon mannequin ~ ~1 ~ {CustomName:"Hero",Silent:1b,Invulnerable:1b,Tags:["new","get_id","id","card","steve","card.entity","card.hero","attackable"],Team:"green",data:{path:"entity/hero/steve"},profile:"MHF_Steve",equipment:{mainhand:{id:"minecraft:iron_pickaxe",count:1}}}
 execute if entity @s[tag=board.player.2] run tp @e[tag=get_id,tag=id,limit=1] ~ ~1 ~ 180 ~
 tag @s add filled
 execute if score #friendly var matches 1 run tag @s add friendly

@@ -7,4 +7,4 @@ card:
   color: "#FBB1F2"
   model_id: 144
   cost: 5
-  lore: "Sets the enemy hero on fire for 1 turn"
+  lore: "Deal 1 fire damage to enemy hero"

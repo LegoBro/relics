@@ -1,0 +1,10 @@
+card:
+  placement: 0
+  rarity: "uncommon"
+  type: "consumable"
+  element: "attack"
+  name: "wind_charge"
+  color: "#E0673A"
+  model_id: 156
+  cost: 8
+  lore: "Move adjacent units 1 space away from targeted position"

@@ -1,0 +1,18 @@
+card:
+  placement: 10
+  rarity: "common"
+  type: "entity"
+  element: "overworld"
+  name: "farmer"
+  color: "#E0673A"
+  entity: "villager"
+  model_id: 150
+  cost: 7
+  maxHealth: 4
+  health: 4
+  attack: 1
+  range: 1
+  speed: 1
+  extra_nbt: "VillagerData:{profession:\"minecraft:farmer\"}"
+  lore: "Emerald - Discover a bread"
+  emerald: True

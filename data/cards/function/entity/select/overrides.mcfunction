@@ -6,8 +6,10 @@ execute if entity @s[tag=needs_vibration] run function cards:entity/select/needs
 tag @e[tag=id,tag=board,tag=minecart.rail_path] remove minecart.rail_path
 execute if entity @e[tag=card.entity,limit=1,distance=..1.5,sort=nearest,tag=id,tag=in_minecart] run function cards:entity/minecart
 
-# Lunging Trait
-execute if entity @s[tag=lunging] run function cards:entity/select/lunging
+# Lunging Trait - actually doesn't matter for select
+#execute if entity @s[tag=lunging] run function cards:entity/select/lunging
+# Spear
+execute if score @s spear matches 1.. run function cards:entity/select/spear
 
 ## Entity Select Effects, for visual and auditory purposes
 execute at @s run function cards:entity/select/macro with entity @s data

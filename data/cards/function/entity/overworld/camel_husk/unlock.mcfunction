@@ -1,0 +1,8 @@
+give @s carrot_on_a_stick[lore=[[{"translate":"cost","italic":false,"color":"white"},{"text":" 18","italic":false,"color":"white"},{"text":"        6 ","italic":false,"color":"white"},{"translate":"health","italic":false,"color":"white"}],[{"translate":"attack","italic":false,"color":"white"},{"text":" 6","italic":false,"color":"white"},{"text":"        3 ","italic":false,"color":"white"},{"translate":"armor","italic":false,"color":"white"}],[{"translate":"speed","italic":false,"color":"white"},{"text":" 3","italic":false,"color":"white"},{"text":"        1 ","italic":false,"color":"white"},{"translate":"range","italic":false,"color":"white"}],{"text":"","color":"white","italic":false},{"translate":"card.camel_husk.lore.0","color":"white","italic":false},{"translate":"card.camel_husk.lore.1","color":"white","italic":false}],item_name={"color":"#E0673A","translate":"card.camel_husk"}, minecraft:unbreakable={},item_model="cards/camel_husk",custom_data={gui:False, card:{id:148,category:"entity",element:"overworld",rarity:"rare",name:"camel_husk",cost:18,placement:10}}]
+item replace entity @s[tag=!fast_open] weapon.offhand with minecraft:totem_of_undying[item_model="cards/camel_husk"]
+effect give @s[tag=!fast_open] minecraft:instant_damage 1 100
+scoreboard players set #change var 1
+data merge block 0 0 0 {}
+item replace block 0 0 0 container.0 from entity @s enderchest.0
+function cards:entity/overworld/camel_husk/change
+item replace entity @s enderchest.0 from block 0 0 0 container.0

@@ -14,4 +14,4 @@ card:
   range: 1
   speed: 2
   flying: true
-  lore: "A talkative parrot that mimics the attack, health and max health of random units on the board"
+  lore: "Mimic - copies the attack, health and max health of random friendly units on the board"

@@ -14,5 +14,5 @@ card:
   range: 1
   speed: 1
   apply_poison: 3
-  lore: "Deals an additional 3 poison damage"
+  lore: "Venom - deal an additional 3 poison damage"
   arthropod: true

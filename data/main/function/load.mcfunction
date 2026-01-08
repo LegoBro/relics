@@ -102,6 +102,7 @@ scoreboard objectives add blindness dummy
 scoreboard objectives add weakness dummy
 scoreboard objectives add slowness dummy
 
+scoreboard objectives add spear dummy
 scoreboard objectives add invisibility dummy
 scoreboard objectives add speed_pot dummy
 scoreboard objectives add strength dummy
@@ -149,7 +150,9 @@ scoreboard objectives add tnt.kills dummy
 # CONSTANTS
 scoreboard players set #-1 var -1
 scoreboard players set #2 var 2
+scoreboard players set #4 var 4
 scoreboard players set #8 var 8
+scoreboard players set #16 var 16
 scoreboard players set #20 var 20
 scoreboard players set #400 var 400
 scoreboard players set #1200 var 1200

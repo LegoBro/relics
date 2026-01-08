@@ -1,4 +1,5 @@
 ## Select a cell - executed as player
+execute unless score #friendly_movable var matches 1 run return fail
 execute as @n[type=armor_stand,tag=hovered.slot,tag=id,distance=..5] at @s run function main:board/cell/select
 
 tag @s add selected

@@ -4,6 +4,9 @@ scoreboard players add @s turnTimer 1
 effect give @p[tag=id] mining_fatigue 10 100 true
 effect clear @p[tag=id] resistance
 
+execute if entity @p[tag=id,tag=fast_open] if score @s turnTimer matches ..38 run scoreboard players set @s turnTimer 39
+execute if entity @p[tag=id,tag=fast_open] if score @s turnTimer matches 41..68 run scoreboard players set @s turnTimer 69
+execute if entity @p[tag=id,tag=fast_open] if score @s turnTimer matches 71..98 run scoreboard players set @s turnTimer 99
 
 execute if score @s turnTimer matches 1..40 run tp @s ~ ~ ~ ~10 ~
 execute if score @s turnTimer matches 41..70 run tp @s ~ ~ ~ ~15 ~

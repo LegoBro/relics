@@ -1,2 +1,2 @@
-## Strike 3 random entitites with lightning
+## Ender pearl
 function cards:entity/display/unknown

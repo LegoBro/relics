@@ -15,6 +15,4 @@ execute at @n[type=armor_stand,tag=hovered.slot,tag=filled,tag=id,distance=..100
 
 
 
-
-function cards:consumable/defend/witch_hut/detect
-scoreboard players add @s play.potion 1
+function cards:consumable/generic/use_potion

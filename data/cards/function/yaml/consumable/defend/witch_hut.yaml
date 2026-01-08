@@ -7,7 +7,7 @@ card:
   color: "green"
   cost: 12
   model_id: 111
-  lore: "Place a hut that gives +2XP for every potion used"
+  lore: "Place a hut that gives 2 XP for every potion used"
   building:
     health: 6
     maxHealth: 6

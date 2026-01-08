@@ -1,0 +1,10 @@
+card:
+  placement: 4
+  rarity: "uncommon"
+  type: "consumable"
+  element: "attack"
+  name: "critical_hit"
+  color: "#E0673A"
+  model_id: 155
+  cost: 3
+  lore: "Deal 3 damage to targeted unit for every status effect it has"

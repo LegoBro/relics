@@ -1,0 +1,1 @@
+playsound minecraft:entity.copper_golem.spawn master @a[tag=id] ~ ~ ~ 10 1 1

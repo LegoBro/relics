@@ -15,5 +15,5 @@ card:
   speed: 1
   apply_fire: 1
   extra_nbt: "Size:2"
-  lore: "When defeated, breaks down into smaller magma cubes in adjacent horizontal spaces"
+  lore: "Magmatic Ooze - break down into smaller magma cubes in adjacent horizontal spaces"
   fire_proof: True

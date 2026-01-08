@@ -1,0 +1,19 @@
+card:
+  placement: 10
+  rarity: "common"
+  type: "entity"
+  element: "overworld"
+  name: "bogged"
+  color: "#E0673A"
+  entity: "bogged"
+  model_id: 151
+  cost: 7
+  maxHealth: 2
+  health: 2
+  attack: 2
+  range: 3
+  speed: 1
+  lore: "Poison Arrows - Deal an additional 2 poison damage"
+  apply_poison: 2
+  undead: True
+  extra_nbt: 'equipment:{head:{id:"minecraft:book",count:1b},mainhand:{id:"minecraft:bow",count:1}}'

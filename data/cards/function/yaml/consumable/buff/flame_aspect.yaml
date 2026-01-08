@@ -1,0 +1,10 @@
+card:
+  placement: 5
+  rarity: "uncommon"
+  type: "consumable"
+  element: "buff"
+  name: "flame_aspect"
+  color: "#E0673A"
+  model_id: 162
+  cost: 6
+  lore: "Give a ranged unit +1 fire damage, or a melee unit +2 fire damage"

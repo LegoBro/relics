@@ -14,5 +14,5 @@ card:
   range: 1
   speed: 1
   extra_nbt: "VillagerData:{profession:\"minecraft:butcher\"}"
-  lore: "Discovers an emerald every time a passive mob is killed; give an emerald to gain +1 health"
+  lore: "Chopping Block - Discovers an emerald every time a passive mob is killed"
   emerald: True

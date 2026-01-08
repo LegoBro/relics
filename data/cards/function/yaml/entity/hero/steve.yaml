@@ -5,13 +5,13 @@ card:
   element: "hero"
   name: "steve"
   color: "green"
-  entity: "armor_stand"
+  entity: "mannequin"
   model_id: 1000
   cost: 0
-  maxHealth: 15
-  health: 15
+  maxHealth: 20
+  health: 20
   attack: 1
   range: 1
   speed: 0
   lore: ""
-  extra_nbt: 'ShowArms:1b,NoBasePlate:1b,DisabledSlots:4144959,equipment:{mainhand:{id:"minecraft:iron_pickaxe",count:1},feet:{id:"minecraft:leather_boots",count:1b,components:{"minecraft:dyed_color":3682347}},legs:{id:"minecraft:leather_leggings",count:1b,components:{"minecraft:dyed_color":2239935}},chest:{id:"minecraft:leather_chestplate",count:1b,components:{"minecraft:dyed_color":1356287}},head:{id:"minecraft:player_head",count:1b}}'
+  extra_nbt: 'profile:"MHF_Steve",equipment:{mainhand:{id:"minecraft:iron_pickaxe",count:1}}'

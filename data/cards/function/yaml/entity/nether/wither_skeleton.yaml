@@ -14,7 +14,7 @@ card:
   range: 1
   speed: 2
   apply_wither: 4
-  lore: "Deals an additional 4 wither damage"
+  lore: "Withering - Deal an additional 4 wither damage"
   wither_proof: True
   undead: True
   fire_proof: True

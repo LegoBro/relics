@@ -3,5 +3,4 @@ execute if score @s rightClick matches 1.. if score #holding_selector var matche
 execute if score #holding_card var matches 1.. run return run function main:player/raycast/use/hover
 
 ## If player is not right-clicking selector or holding a card, display stats
-execute as @n[tag=card.entity,limit=1,distance=..2,sort=nearest] run function main:player/raycast/display/entity
-title @s actionbar [{"score":{"name":"#armor","objective":"var"},"color":"gray","bold":true},{"translate":"🛡","color":"white","bold":false},{"text":" "},{"score":{"name":"#health","objective":"var"},"color":"red","bold":true},{"text":"/","color":"red","bold":false},{"score":{"name":"#maxHealth","objective":"var"},"color":"red","bold":true},{"translate":"♥","color":"white","bold":false},{"text":" "},{"score":{"name":"#attack","objective":"var"},"color":"dark_red","bold":true},{"translate":"🗡","color":"white","bold":false},{"text":" "},{"score":{"name":"#speed","objective":"var"},"color":"blue","bold":true},{"translate":"🥾","color":"white","bold":false},{"text":" "},{"score":{"name":"#range","objective":"var"},"color":"green","bold":true},{"translate":"🏹","color":"white","bold":false}]
+function main:player/raycast/display/entity

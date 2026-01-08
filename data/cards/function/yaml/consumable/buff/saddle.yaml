@@ -1,0 +1,10 @@
+card:
+  placement: 5
+  rarity: "uncommon"
+  type: "consumable"
+  element: "buff"
+  name: "saddle"
+  color: "#E0673A"
+  model_id: 157
+  cost: 11
+  lore: "Combine two units together, merging their stats; target keeps attack and range, and mount keeps speed and health"

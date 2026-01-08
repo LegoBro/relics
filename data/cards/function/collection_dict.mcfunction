@@ -295,5 +295,41 @@ execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~
 execute if score #pass var matches 1 run function cards:entity/overworld/sniffer/collection
 execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/camel"] 1
 execute if score #pass var matches 1 run function cards:entity/overworld/camel/collection
+execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/camel_husk"] 1
+execute if score #pass var matches 1 run function cards:entity/overworld/camel_husk/collection
+execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/strider"] 1
+execute if score #pass var matches 1 run function cards:entity/nether/strider/collection
+execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/farmer"] 1
+execute if score #pass var matches 1 run function cards:entity/overworld/farmer/collection
+execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/bogged"] 1
+execute if score #pass var matches 1 run function cards:entity/overworld/bogged/collection
+execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/parched"] 1
+execute if score #pass var matches 1 run function cards:entity/overworld/parched/collection
+execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/copper_golem"] 1
+execute if score #pass var matches 1 run function cards:entity/overworld/copper_golem/collection
+execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/mace"] 1
+execute if score #pass var matches 1 run function cards:consumable/attack/mace/collection
+execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/critical_hit"] 1
+execute if score #pass var matches 1 run function cards:consumable/attack/critical_hit/collection
+execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/wind_charge"] 1
+execute if score #pass var matches 1 run function cards:consumable/attack/wind_charge/collection
+execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/saddle"] 1
+execute if score #pass var matches 1 run function cards:consumable/buff/saddle/collection
+execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/iron_spear"] 1
+execute if score #pass var matches 1 run function cards:consumable/buff/iron_spear/collection
+execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/iron_sword"] 1
+execute if score #pass var matches 1 run function cards:consumable/buff/iron_sword/collection
+execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/lunge"] 1
+execute if score #pass var matches 1 run function cards:consumable/buff/lunge/collection
+execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/repeater"] 1
+execute if score #pass var matches 1 run function cards:consumable/buff/repeater/collection
+execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/flame_aspect"] 1
+execute if score #pass var matches 1 run function cards:consumable/buff/flame_aspect/collection
+execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/looting"] 1
+execute if score #pass var matches 1 run function cards:consumable/buff/looting/collection
+execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/enchantment_table"] 1
+execute if score #pass var matches 1 run function cards:consumable/defend/enchantment_table/collection
+execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/vault"] 1
+execute if score #pass var matches 1 run function cards:consumable/defend/vault/collection
 execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/steve"] 1
 execute if score #pass var matches 1 run function cards:entity/hero/steve/collection

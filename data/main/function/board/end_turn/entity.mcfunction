@@ -22,6 +22,10 @@ execute if score @s weakness matches 1.. run scoreboard players remove @s weakne
 execute if score @s blindness matches 1.. run scoreboard players remove @s blindness 1
 execute if score @s slowness matches 1.. run scoreboard players remove @s slowness 1
 
+execute if score @s spear matches 1 run item replace entity @s weapon with air
+execute if score @s spear matches 1.. run scoreboard players remove @s spear 1
+
+
 execute if score #player var matches 0 if score #cards_turn var matches 0 if score #hurt_hero var matches 1.. if entity @s[tag=card.hero,tag=hero.1] run function main:board/end_turn/apply_damage/hero_no_card
 execute if score #player var matches 1 if score #cards_turn var matches 0 if score #hurt_hero var matches 1.. if entity @s[tag=card.hero,tag=hero.2] run function main:board/end_turn/apply_damage/hero_no_card
 

@@ -1,0 +1,1 @@
+{"credit": "Made with Brickbench", "parent": "item/cards/consumable_template", "textures": {"background": "item/card/wind_charge/background", "foreground": "item/card/wind_charge/foreground", "description": "item/card/wind_charge/description", "cost": "item/card/number/left/8", "rarity": "item/card/front_uncommon", "type": "item/card/trait/attack"}}

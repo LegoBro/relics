@@ -1,0 +1,10 @@
+card:
+  placement: 4
+  rarity: "legendary"
+  type: "consumable"
+  element: "attack"
+  name: "mace"
+  color: "#E0673A"
+  model_id: 154
+  cost: 12
+  lore: "Deal 3 damage to targeted unit; on kill, return ethereal mace and 8 xp"

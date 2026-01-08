@@ -10,6 +10,7 @@ function cards:entity/end/endermite/insert
 function cards:consumable/buff/aqua_affinity/insert
 function cards:consumable/buff/emerald/insert
 function cards:entity/overworld/frog/insert
+function cards:consumable/buff/iron_sword/insert
 function cards:entity/overworld/pig/insert
 function cards:entity/overworld/turtle_egg/insert
 function cards:entity/overworld/vex/insert
@@ -17,6 +18,7 @@ function cards:entity/overworld/zombie/insert
 function cards:consumable/attack/chorus_fruit/insert
 function cards:consumable/defend/cobweb_trap/insert
 function cards:consumable/attack/iron_pickaxe/insert
+function cards:consumable/buff/repeater/insert
 function cards:entity/overworld/zombie_villager/insert
 function cards:consumable/attack/arrow_storm/insert
 function cards:entity/overworld/drowned/insert
@@ -24,8 +26,8 @@ function cards:entity/overworld/husk/insert
 function cards:consumable/defend/lava_pocket/insert
 function cards:consumable/buff/rotten_flesh/insert
 function cards:entity/overworld/spider/insert
-function cards:entity/overworld/creeper/insert
-function cards:consumable/attack/flint_and_steel/insert
+execute positioned ~1 ~ ~ run function cards:entity/overworld/creeper/insert
+execute positioned ~1 ~ ~ run function cards:consumable/attack/flint_and_steel/insert
 execute positioned ~1 ~ ~ run function cards:consumable/defend/hay_bale/insert
 execute positioned ~1 ~ ~ run function cards:consumable/buff/leather_armor/insert
 execute positioned ~1 ~ ~ run function cards:consumable/buff/sharpness/insert
@@ -42,5 +44,3 @@ execute positioned ~1 ~ ~ run function cards:consumable/buff/minecart/insert
 execute positioned ~1 ~ ~ run function cards:consumable/attack/piston/insert
 execute positioned ~1 ~ ~ run function cards:consumable/buff/splash_fire_resistance_potion/insert
 execute positioned ~1 ~ ~ run function cards:consumable/attack/anvil/insert
-execute positioned ~1 ~ ~ run function cards:entity/nether/piglin/insert
-execute positioned ~1 ~ ~ run function cards:consumable/buff/strength_potion/insert

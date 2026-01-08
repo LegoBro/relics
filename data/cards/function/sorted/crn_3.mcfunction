@@ -1,4 +1,22 @@
 ## Sorted view of cards
+function cards:entity/overworld/vindicator/insert
+function cards:consumable/buff/name_tag/insert
+function cards:entity/end/phantom/insert
+function cards:entity/overworld/ravager/insert
+function cards:consumable/attack/tnt_cannon/insert
+function cards:entity/overworld/witch/insert
+function cards:consumable/defend/vault/insert
+function cards:consumable/buff/miners_resilience/insert
+function cards:consumable/buff/netherite_armor/insert
+function cards:entity/overworld/parched/insert
+function cards:consumable/defend/sculk_catalyst/insert
+function cards:entity/overworld/sniffer/insert
+function cards:entity/overworld/cleric/insert
+function cards:entity/nether/piglin_brute/insert
+function cards:consumable/buff/elytra/insert
+function cards:consumable/attack/trident/insert
+function cards:entity/overworld/camel_husk/insert
+function cards:consumable/defend/skeleton_trap/insert
 function cards:entity/overworld/evoker/insert
 function cards:entity/overworld/elder_guardian/insert
 function cards:consumable/buff/enchanted_golden_apple/insert

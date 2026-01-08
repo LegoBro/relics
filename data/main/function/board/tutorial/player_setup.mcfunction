@@ -13,4 +13,4 @@ scoreboard players operation @s saturation = @e[type=armor_stand,tag=board.cente
 
 clear @s
 item replace entity @s hotbar.0 with carrot_on_a_stick[custom_data={selector:1b},item_model=arrow]
-item replace entity @s inventory.0 with potion[item_name={"translate":"forfeit"},potion_contents="minecraft:water"]
+item replace entity @s inventory.0 with potion[custom_name={"translate":"forfeit"},potion_contents="minecraft:water"]

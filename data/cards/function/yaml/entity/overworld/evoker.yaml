@@ -15,4 +15,4 @@ card:
   speed: 2
   special_attack: False
   illager: true
-  lore: "A powerful summoner of vexes"
+  lore: "Vex Army - Spawn a vex at the end of every turn"

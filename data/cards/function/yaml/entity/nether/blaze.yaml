@@ -14,6 +14,6 @@ card:
   range: 3
   speed: 1
   apply_fire: 4
-  lore: "Deals an additional 4 fire damage"
+  lore: "Light Ablaze - Deal an additional 4 fire damage"
   flying: true
   fire_proof: True

@@ -2,6 +2,9 @@
 
 #particle flame ~ ~10 ~
 # stores in scoreboard if dying entity was friendly or not
+
+execute as @p[tag=turn,tag=id,tag=looting] run function cards:consumable/buff/looting/draw
+
 execute as @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest,distance=..1.5] store result score #friendly var if entity @s[tag=friendly]
 
 execute as @e[type=armor_stand,tag=filled,tag=id,limit=1,distance=..1.5] run function main:board/clear_cell
@@ -13,6 +16,8 @@ execute if score #friendly var matches 1 run scoreboard players add @a[tag=id,ta
 execute if score #friendly var matches 0 run scoreboard players add @a[tag=id,tag=wait] entity.deaths 1
 
 function cards:entity/death/macro with entity @s data
+
+execute on passengers run function cards:entity/death/passengers
 
 ## Sculk Catalyst interaction
 execute if entity @e[tag=sculk_catalyst,tag=id] as @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest,distance=..1.5] at @s run data merge entity @s {CustomName:{"text":"Sculk Catalyst"}}

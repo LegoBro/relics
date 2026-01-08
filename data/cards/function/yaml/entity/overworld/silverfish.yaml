@@ -14,4 +14,4 @@ card:
   range: 1
   speed: 1
   arthropod: True
-  lore: "Hidden Friends - has a 50% chance for every cobblestone to destroy it and spawn a silverfish upon death"
+  lore: "Hidden Friends - on death, deals 1 damage to every building; if building is destroyed, summon a silverfish in its location"

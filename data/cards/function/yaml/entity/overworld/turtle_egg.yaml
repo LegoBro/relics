@@ -14,7 +14,7 @@ card:
   range: 0
   speed: 0
   armor: 1
-  lore: "Can't attack, but will hatch into a turtle after a while"
+  lore: "Hatching - Turns into a turtle after 6 turns"
   extra_nbt: 'CustomName:{"text":"Turtle Egg"},Marker:1b,Invisible:1b,DisabledSlots:4144959'
   water: True
   unselectable: true

@@ -13,5 +13,5 @@ card:
   attack: 3
   range: 1
   speed: 1
-  lore: "Gains +1 attack at the end of a turn for every adjacent cub"
+  lore: "Guardian - Gain +1 attack at the end of a turn for every adjacent cub"
   frozen: True

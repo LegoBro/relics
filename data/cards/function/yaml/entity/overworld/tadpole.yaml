@@ -13,5 +13,5 @@ card:
   attack: 0
   range: 1
   speed: 0
-  lore: "Becomes a frog after 3 turns"
+  lore: "Growth - Becomes a frog after 3 turns"
   water: True

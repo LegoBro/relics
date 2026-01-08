@@ -1,0 +1,19 @@
+card:
+  placement: 10
+  rarity: "epic"
+  type: "entity"
+  element: "overworld"
+  name: "parched"
+  color: "#E0673A"
+  entity: "parched"
+  model_id: 152
+  cost: 15
+  maxHealth: 2
+  health: 2
+  attack: 3
+  range: 4
+  speed: 1
+  armor: 1
+  lore: "Parched Quiver - Deal weakness for 5 turns to target"
+  undead: True
+  extra_nbt: 'equipment:{head:{id:"minecraft:book",count:1b},mainhand:{id:"minecraft:bow",count:1}}'

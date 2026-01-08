@@ -1,4 +1,22 @@
 ## Sorted view of cards
+function cards:consumable/attack/thunderstorm/insert
+function cards:entity/overworld/tnt/insert
+function cards:consumable/attack/tnt_cannon/insert
+function cards:consumable/attack/trident/insert
+function cards:entity/overworld/turtle/insert
+function cards:entity/overworld/turtle_egg/insert
+function cards:consumable/defend/vault/insert
+function cards:entity/overworld/vex/insert
+function cards:entity/overworld/vindicator/insert
+function cards:entity/overworld/wandering_trader/insert
+function cards:consumable/defend/water/insert
+function cards:consumable/defend/well/insert
+function cards:consumable/attack/wind_charge/insert
+function cards:entity/overworld/witch/insert
+function cards:consumable/defend/witch_hut/insert
+function cards:entity/nether/wither/insert
+function cards:entity/nether/wither_skeleton/insert
+function cards:consumable/defend/wither_trap/insert
 function cards:entity/overworld/wolf/insert
 function cards:entity/nether/zoglin/insert
 function cards:entity/overworld/zombie/insert

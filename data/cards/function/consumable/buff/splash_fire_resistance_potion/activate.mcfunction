@@ -9,5 +9,4 @@ execute at @n[type=armor_stand,tag=hovered.slot,tag=filled,tag=id,distance=..100
 execute at @n[type=armor_stand,tag=hovered.slot,tag=filled,tag=id,distance=..100] positioned ~ ~ ~-4 as @e[tag=card.entity,tag=id,limit=1,sort=nearest,distance=..1.5] run scoreboard players set @s fire_resistance 12
 execute at @n[type=armor_stand,tag=hovered.slot,tag=filled,tag=id,distance=..100] as @e[tag=card.entity,tag=id,limit=1,sort=nearest,distance=..1.5] run scoreboard players set @s fire_resistance 12
 
-function cards:consumable/defend/witch_hut/detect
-scoreboard players add @s play.potion 1
+function cards:consumable/generic/use_potion
