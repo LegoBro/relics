@@ -7,4 +7,4 @@ card:
   color: "#FBB1F2"
   model_id: 135
   cost: 4
-  lore: "Permanently increase the attack damage of a friendly non-ranged undead unit by +1 and heals +2"
+  lore: "Permanently increase the attack damage of a friendly undead unit by +1 and heals +2"

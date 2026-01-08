@@ -1,5 +1,5 @@
 ## Sorted view of cards
-execute store result score #rand var run loot spawn 0 -200 0 loot cards:open/10
+execute store result score #rand var run random value 0..33
 
 execute if score #rand var matches 0..4 run function cards:consumable/buff/rotten_flesh/unlock
 execute if score #rand var matches 5..7 run function cards:consumable/buff/goat_horn/unlock

@@ -1,7 +1,7 @@
 ## Special Attack
 
 #playsound minecraft:entity.arrow.shoot master @a[tag=id] ~ ~ ~ 10 0 1
-execute store result score #rand var run loot spawn 0 -200 0 loot cards:0_2
+execute store result score #rand var run random value 0..2
 execute if score #rand var matches 0 run scoreboard players set @s[tag=!hero.1,tag=!hero.2] speed_pot 5
 execute if score #rand var matches 0 run tellraw @a[tag=id] [{"text":"Witch throws a speed potion on ","color":"green"},{"selector":"@s"}]
 execute if score #rand var matches 1 run scoreboard players set @s strength 4

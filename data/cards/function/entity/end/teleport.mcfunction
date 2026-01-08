@@ -1,6 +1,6 @@
 ## Teleport to random location (if open)
-execute store result score #randx var run loot spawn 0 -200 0 loot cards:0_4
-execute store result score #randz var run loot spawn 0 -200 0 loot cards:0_4
+execute store result score #randx var run random value 0..4
+execute store result score #randz var run random value 0..4
 scoreboard players add #randz var 1
 tag @s add moving
 tag @e[type=armor_stand,tag=board,limit=1,sort=nearest,tag=id] add start

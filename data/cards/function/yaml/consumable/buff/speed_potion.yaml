@@ -7,4 +7,4 @@ card:
   color: "green"
   model_id: 32
   cost: 5
-  lore: "Increase a friendly unit's speed by 2 for 3 of your turns"
+  lore: "Increase a friendly unit's speed by 2 for 5 turns"

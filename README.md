@@ -179,7 +179,6 @@ Bee Hive last spawn (when building breaks) spawns bee as enemy team -> spawn bef
 Draw game settings don't apply properly
 Farmland talks about saturation -> XP on texture
 Clear Totem of Dying Effects after use
-Various improvements to card descriptions, and unifying of entity descriptions.
 Changed Bee card to properly show that it only has 2 poison instead of 3
 Ice Storm no longer damages/slows the hero
 Updated Vex card to display newer vex style
@@ -196,6 +195,7 @@ Make square for saddle appear different
 Reworked many hover displays to showcase what is happening more effectively.  Also, now only uses actionbar.
 Improved performance on many behind the scenes functionality
 Converted Heroes into mannequins
+Various improvements to card descriptions, and unifying of entity descriptions.
 
 ## 4.3
 

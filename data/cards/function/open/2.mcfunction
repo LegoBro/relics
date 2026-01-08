@@ -1,5 +1,5 @@
 ## Sorted view of cards
-execute store result score #rand var run loot spawn 0 -200 0 loot cards:open/2
+execute store result score #rand var run random value 1..102
 execute if score #rand var matches 1..5 run function cards:consumable/defend/cobblestone/unlock
 execute if score #rand var matches 6..9 run function cards:consumable/defend/sculk_block/unlock
 execute if score #rand var matches 10..14 run function cards:consumable/defend/cobweb_trap/unlock

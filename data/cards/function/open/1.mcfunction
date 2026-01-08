@@ -1,5 +1,5 @@
 ## Sorted view of cards
-execute store result score #rand var run loot spawn 0 -200 0 loot cards:open/1
+execute store result score #rand var run random value 1..89
 execute if score #rand var matches 1..5 run function cards:consumable/attack/chorus_fruit/unlock
 execute if score #rand var matches 6..10 run function cards:consumable/attack/iron_pickaxe/unlock
 execute if score #rand var matches 11..14 run function cards:consumable/attack/critical_hit/unlock

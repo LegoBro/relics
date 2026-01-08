@@ -7,7 +7,7 @@ card:
   color: "#b4d99e"
   cost: 7
   model_id: 123
-  lore: "Absorbs all lightning strikes"
+  lore: "Absorbs all lightning strikes; every 4 turns, attract a lightning that deals 3 damage to adjacent units or buildings"
   building:
     health: 3
     maxHealth: 3

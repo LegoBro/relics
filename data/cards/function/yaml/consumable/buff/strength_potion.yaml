@@ -7,4 +7,4 @@ card:
   color: "green"
   model_id: 24
   cost: 7
-  lore: "Increase the attack damage of a friendly non-ranged unit by +3 for 2 of your turns"
+  lore: "Increase the attack damage of a friendly non-ranged unit by +3 for 3 turns"

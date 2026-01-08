@@ -7,7 +7,7 @@ card:
   color: "green"
   cost: 13
   model_id: 110
-  lore: "Place a jail on an entity to instantly kill it; while on board, also costs 3 XP per turn to maintain"
+  lore: "Place a jail on a unit to instantly kill it; while on board, costs 3 XP per turn"
   building:
     health: 10
     maxHealth: 10

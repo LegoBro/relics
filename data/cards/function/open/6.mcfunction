@@ -1,5 +1,5 @@
 ## Sorted view of cards
-execute store result score #rand var run loot spawn 0 -200 0 loot cards:open/6
+execute store result score #rand var run random value 0..82
 
 execute if score #rand var matches 0..4 run function cards:entity/overworld/tadpole/unlock
 execute if score #rand var matches 5..9 run function cards:entity/overworld/frog/unlock

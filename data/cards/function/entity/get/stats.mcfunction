@@ -21,3 +21,6 @@ execute if score @s blindness matches 1.. run scoreboard players remove #range v
 execute if score #speed var matches ..-1 run scoreboard players set #speed var 0
 execute if score #range var matches ..-1 run scoreboard players set #range var 0
 execute if score #attack var matches ..-1 run scoreboard players set #attack var 0
+
+# DOTs
+function cards:entity/get/effects

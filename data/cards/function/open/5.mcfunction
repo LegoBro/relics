@@ -1,5 +1,5 @@
 ## Sorted view of cards
-execute store result score #rand var run loot spawn 0 -200 0 loot cards:open/5
+execute store result score #rand var run random value 0..54
 
 
 

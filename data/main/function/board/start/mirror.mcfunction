@@ -8,7 +8,7 @@ execute as @a[tag=game.start,limit=2] run function main:board/player_setup
 tag @a remove game.start
 tag @a remove board.load.player
 
-execute store result score #rand var run loot spawn 0 -200 0 loot cards:0_7
+execute store result score #rand var run random value 0..7
 execute if score #rand var matches 0 at @e[type=armor_stand,tag=board.player.1,tag=id] positioned ~ ~-2 ~ run clone 12 0 0 12 0 0 ~ ~ ~
 execute if score #rand var matches 0 at @e[type=armor_stand,tag=board.player.2,tag=id] positioned ~ ~-2 ~ run clone 12 0 0 12 0 0 ~ ~ ~
 

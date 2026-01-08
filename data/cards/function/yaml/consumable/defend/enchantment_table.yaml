@@ -7,7 +7,7 @@ card:
   color: "#E0673A"
   model_id: 164
   cost: 7
-  lore: "Place an enchantment table that gives +1XP every enchanted book used"
+  lore: "Place an enchantment table that gives +1 XP every enchanted book used"
   building:
     health: 4
     maxHealth: 4
