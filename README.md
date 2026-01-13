@@ -176,26 +176,28 @@ Lightning Rod - Added end of turn counter, which slowly oxidizes over time.  Whe
 
 ### Fixes
 Bee Hive last spawn (when building breaks) spawns bee as enemy team -> spawn before destroy?
-Draw game settings don't apply properly
-Farmland talks about saturation -> XP on texture
 Clear Totem of Dying Effects after use
+Draw game settings don't apply properly
+
+Farmland's description now matches its text
 Changed Bee card to properly show that it only has 2 poison instead of 3
 Ice Storm no longer damages/slows the hero
 Updated Vex card to display newer vex style
-
+Sherd quest now properly saves
 
 ### Improvements to do
-Multi-Open Card pack (fast_open tag now works)
 Convert all texts to translatable strings
 Sharable decks or suggested decks
 Fix vault giving too many cards
-Make square for saddle appear different
 
 ### Improvements Done
+Fast Open for card packs - Added a new setting in the deck manager to more quickly open card packs.
 Reworked many hover displays to showcase what is happening more effectively.  Also, now only uses actionbar.
 Improved performance on many behind the scenes functionality
 Converted Heroes into mannequins
 Various improvements to card descriptions, and unifying of entity descriptions.
+Draft Mode now gives 5 choices, your choice no longer affects what your opponent gets.
+
 
 ## 4.3
 

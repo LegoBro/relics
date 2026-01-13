@@ -36,6 +36,12 @@ execute if score #card var matches 1.. run function main:deck_builder/card_manag
 # Overwrite Selection
 execute if score #overwrite var matches 1.. run function main:deck_builder/card_manager/menu/decks/overwrite
 
+## Fast Select
+execute store result score #select_fast_open var run clear @s tipped_arrow[custom_data~{gui:True,fast_open:True}]
+execute if score #select_fast_open var matches 1.. run function main:deck_builder/toggle_fast_open
+execute store result score #select_fast_open var run clear @s spectral_arrow[custom_data~{gui:True,fast_open:True}]
+execute if score #select_fast_open var matches 1.. run function main:deck_builder/toggle_fast_open
+
 # Deck Viewing
 scoreboard players reset #deck
 execute if score #deck_1 var matches 1.. run scoreboard players set #deck var -1

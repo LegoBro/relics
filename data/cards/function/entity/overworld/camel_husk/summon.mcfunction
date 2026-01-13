@@ -12,6 +12,7 @@ scoreboard players set @n[tag=get_id] range 1
 tag @n[tag=get_id] add lunging
 scoreboard players set @n[tag=get_id] armor 3
 tag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] remove movable
+tag @n[tag=get_id] add undead
 tellraw @a[tag=id] [{"selector":"@s"},{text:" "},{"translate":"entity.spawns"},{text:" "},{"underlined":true,"translate":"card.camel_husk","hover_event":{"action":"show_item","id":"minecraft:carrot_on_a_stick","count":1,"components":{"minecraft:item_name":{"color":"#E0673A","translate":"card.camel_husk"},"minecraft:lore":[[{"translate":"cost","italic":false,"color":"white"},{"text":" 18","italic":false,"color":"white"},{"text":"        6 ","italic":false,"color":"white"},{"translate":"health","italic":false,"color":"white"}],[{"translate":"attack","italic":false,"color":"white"},{"text":" 6","italic":false,"color":"white"},{"text":"        3 ","italic":false,"color":"white"},{"translate":"armor","italic":false,"color":"white"}],[{"translate":"speed","italic":false,"color":"white"},{"text":" 3","italic":false,"color":"white"},{"text":"        1 ","italic":false,"color":"white"},{"translate":"range","italic":false,"color":"white"}],{"text":"","color":"white","italic":false},{"translate":"card.camel_husk.lore.0","color":"white","italic":false},{"translate":"card.camel_husk.lore.1","color":"white","italic":false}]}}}]
 tag @e[tag=get_id,limit=1] add moving
 tag @e[type=armor_stand,tag=board,tag=trap,tag=id,limit=1,distance=..0.5] add destination

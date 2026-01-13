@@ -14,5 +14,5 @@ card:
   range: 1
   speed: 1
   extra_nbt: "VillagerData:{profession:\"minecraft:librarian\"}"
-  lore: "Gain +1 health per enchantment used; give an emerald to gain a random enchantment and +1 attack"
+  lore: "Library - Gains +1 health per enchantment used; Emerald - gain a random enchantment and +1 attack"
   emerald: True

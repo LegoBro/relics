@@ -71,7 +71,8 @@ execute store result score #test var run data get block 0 0 0 Items[0].component
 execute if score #test var matches 1 run advancement grant @s only main:quests/bee
 execute store result score #test var run data get block 0 0 0 Items[0].components."minecraft:custom_data".Save.quests.tnt
 execute if score #test var matches 1 run advancement grant @s only main:quests/tnt
-
+execute store result score #test var run data get block 0 0 0 Items[0].components."minecraft:custom_data".Save.quests.sherd
+execute if score #test var matches 1 run advancement grant @s only main:quests/sherd
 
 execute store result score @s wins run data get block 0 0 0 Items[0].components."minecraft:custom_data".Save.wins
 execute store result score @s losses run data get block 0 0 0 Items[0].components."minecraft:custom_data".Save.losses

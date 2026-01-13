@@ -63,6 +63,7 @@ execute store result block 0 0 0 Items[0].components."minecraft:custom_data".Sav
 execute store result block 0 0 0 Items[0].components."minecraft:custom_data".Save.quests.piston int 1 if entity @s[advancements={main:quests/piston=true}]
 execute store result block 0 0 0 Items[0].components."minecraft:custom_data".Save.quests.bee int 1 if entity @s[advancements={main:quests/bee=true}]
 execute store result block 0 0 0 Items[0].components."minecraft:custom_data".Save.quests.tnt int 1 if entity @s[advancements={main:quests/tnt=true}]
+execute store result block 0 0 0 Items[0].components."minecraft:custom_data".Save.quests.sherd int 1 if entity @s[advancements={main:quests/sherd=true}]
 
 
 item replace entity @s enderchest.0 from block 0 0 0 container.0

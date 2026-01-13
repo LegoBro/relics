@@ -6,6 +6,10 @@ execute positioned ^ ^ ^-4 positioned ~ ~-1.5 ~ unless entity @n[tag=id,tag=boar
 execute if entity @n[tag=id,tag=target,distance=..100,tag=card.building] run return run function cards:entity/overworld/copper_golem/fail_attack
 execute positioned ^ ^ ^-4 if entity @n[tag=id,tag=attackable,distance=..1.5,tag=card.building] run return run function cards:entity/overworld/copper_golem/fail_attack
 
+## Can't be hero = fail
+execute if entity @n[tag=id,tag=target,distance=..100,tag=steve] run return run function cards:entity/overworld/copper_golem/fail_attack
+execute positioned ^ ^ ^-4 if entity @n[tag=id,tag=attackable,distance=..1.5,tag=steve] run return run function cards:entity/overworld/copper_golem/fail_attack
+
 ## Success
 # Tag friendlies, useful for moving stats later
 function cards:helper/tag_friendlies

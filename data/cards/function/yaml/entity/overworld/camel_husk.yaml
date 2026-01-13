@@ -16,3 +16,4 @@ card:
   armor: 3
   lore: "Weathered Wounds - Spawns partially damaged"
   lunging: True
+  undead: True

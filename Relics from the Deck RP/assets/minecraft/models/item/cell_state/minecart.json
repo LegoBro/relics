@@ -1,7 +1,0 @@
-{
-	"credit": "Made with Blockbench",
-	"parent": "item/cell_state/template",
-	"textures": {
-		"screen": "item/cell_state/minecart"
-	}
-}
