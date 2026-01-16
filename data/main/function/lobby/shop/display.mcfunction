@@ -1,6 +1,6 @@
 ## Displays the display
-execute if score #shop display matches ..-1 run scoreboard players set #shop display 10
-execute if score #shop display matches 11.. run scoreboard players set #shop display 0
+execute if score #shop display matches ..-1 run scoreboard players set #shop display 11
+execute if score #shop display matches 12.. run scoreboard players set #shop display 0
 
 scoreboard players operation @e[tag=shop.display.center] display = #shop display
 
