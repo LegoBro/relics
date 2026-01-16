@@ -15,7 +15,7 @@ jobs:
           host:  ${{ secrets.ftp_server }}
           user:  ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
-          remoteDir: "./axolotl_Relics_from_the_Deck/datapacks"
+          remoteDir: "./axolotl_Relics_from_the_Deck/datapacks/relics"
           options: "--only-newer"
       - name: RCON Connection 🔌
         uses: Plagiatus/RCON-Action@v0.2
