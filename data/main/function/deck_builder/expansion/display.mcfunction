@@ -22,3 +22,5 @@ execute if score @s display matches 8 run item replace entity @s armor.head with
 execute if score @s display matches 9 run item replace entity @s armor.head with paper[item_model="card_pack/9"]
 # Tales and Triumphs Update
 execute if score @s display matches 10 run item replace entity @s armor.head with paper[item_model="card_pack/10"]
+# Aggro Arsenal Update
+execute if score @s display matches 11 run item replace entity @s armor.head with paper[item_model="card_pack/11"]

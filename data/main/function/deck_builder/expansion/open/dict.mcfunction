@@ -22,5 +22,6 @@ execute if score @s display matches 7 run function main:deck_builder/expansion/o
 execute if score @s display matches 8 run function main:deck_builder/expansion/open/pack/8
 execute if score @s display matches 9 run function main:deck_builder/expansion/open/pack/9
 execute if score @s display matches 10 run function main:deck_builder/expansion/open/pack/10
+execute if score @s display matches 11 run function main:deck_builder/expansion/open/pack/11
 
 execute if score @s turnTimer matches 100 run function main:deck_builder/expansion/open/finish

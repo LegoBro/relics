@@ -15,7 +15,7 @@ I know this pack is a little bit of a mess, but I probably won't be cleaning it 
 
 # Update Changelogs
 
-## 5.0
+## 5.0 The Aggro Aresenal Update
 Updated to 1.21.11
 
 ### Updates

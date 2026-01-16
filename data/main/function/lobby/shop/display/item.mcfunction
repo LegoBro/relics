@@ -1,7 +1,7 @@
 ## Items
 tag @s remove display_delay
-execute if score @s display matches ..-1 run scoreboard players set @s display 10
-execute if score @s display matches 11.. run scoreboard players set @s display 0
+execute if score @s display matches ..-1 run scoreboard players set @s display 11
+execute if score @s display matches 12.. run scoreboard players set @s display 0
 
 # Default
 execute if score @s display matches 0 run item replace entity @s container.0 with paper[item_model="card_pack/0"]
@@ -25,6 +25,8 @@ execute if score @s display matches 8 run item replace entity @s container.0 wit
 execute if score @s display matches 9 run item replace entity @s container.0 with paper[item_model="card_pack/9"]
 # Tales and Triumphs Update
 execute if score @s display matches 10 run item replace entity @s container.0 with paper[item_model="card_pack/10"]
+# Aggro Arsenal Update
+execute if score @s display matches 11 run item replace entity @s container.0 with paper[item_model="card_pack/11"]
 
 data merge entity @s[tag=shop.display.left] {transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[1f,0f,-0.5f],scale:[1f,1f,1f]}}
 data merge entity @s[tag=shop.display.center] {transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,-1f],scale:[2f,2f,2f]}}
