@@ -16,10 +16,16 @@ execute if score @s setting matches 31 run scoreboard players set @s set.fatigue
 execute if score @s setting matches 32 run scoreboard players set @s set.fatigue -1
 execute if score @s setting matches 33 run scoreboard players set @s set.fatigue -2
 
+execute if score @s setting matches 40 run scoreboard players set @s set.hero_hp 10
+execute if score @s setting matches 41 run scoreboard players set @s set.hero_hp 15
+execute if score @s setting matches 42 run scoreboard players set @s set.hero_hp 20
+#execute if score @s setting matches 43 run scoreboard players set @s set.fatigue -2
+
 scoreboard players operation #set.mode var = @s set.mode
 scoreboard players operation #set.time var = @s set.time
 scoreboard players operation #set.handSize var = @s set.handSize
 scoreboard players operation #set.fatigue var = @s set.fatigue
+scoreboard players operation #set.hero_hp var = @s set.hero_hp
 
 
 function main:player/settings/display

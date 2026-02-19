@@ -18,8 +18,11 @@ scoreboard players reset @a[tag=id] play.piston
 tag @a[tag=id] remove looting
 
 # Clear ethereal cards
-clear @a[tag=id] *[custom_data~{ethereal:1b}]
-execute at @a[tag=id] run kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{ethereal:1b}}}},distance=..5]
+execute store result score #ethereals var run clear @a[tag=id] *[custom_data~{ethereal:1b}]
+execute at @a[tag=id] store result score #ethereals2 var run kill @e[type=item,nbt={Item:{components:{"minecraft:custom_data":{ethereal:1b}}}},distance=..5]
+scoreboard players operation #ethereals var += #ethereals2 var
+execute as @p[tag=id,tag=turn,advancements={main:quests/ethereal=false}] if score #ethereals var matches 2.. run advancement grant @s only main:quests/ethereal
+
 
 scoreboard players operation @a[tag=id] turnTimer = @e[type=armor_stand,tag=board.center,limit=1,tag=id] set.time
 scoreboard players reset @a[tag=id] endTurn

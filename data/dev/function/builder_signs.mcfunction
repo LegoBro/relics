@@ -1,0 +1,12 @@
+setblock -9901 34 -35 minecraft:dark_oak_wall_sign[facing=south,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:["","","",""]},components:{},front_text:{color:"black",has_glowing_text:0b,messages:["",{bold:1b,click_event:{action:"run_command",command:"function main:arena/create/deck_builder/signs/exit"},color:"red",text:"Exit"},{color:"dark_green",text:"[Right Click]"},""]},is_waxed:0b}
+
+setblock -9896 34 -35 minecraft:dark_oak_wall_sign[facing=south,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:["","","",""]},components:{},front_text:{color:"black",has_glowing_text:0b,messages:["",{bold:1b,click_event:{action:"run_command",command:"function main:arena/create/deck_builder/signs/store"},color:"aqua",text:"Store Cards"},{color:"dark_green",text:"[Right Click]"},""]},is_waxed:0b}
+
+setblock -9891 34 -28 minecraft:dark_oak_wall_sign[facing=west,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:["","","",""]},components:{},front_text:{color:"black",has_glowing_text:0b,messages:["",{bold:1b,click_event:{action:"run_command",command:"function main:arena/create/deck_builder/signs/save"},color:"light_purple",text:"Save/Load"},{color:"dark_green",text:"[Right Click]"},""]},is_waxed:0b}
+
+
+setblock -9906 34 -27 minecraft:dark_oak_wall_sign[facing=east,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:["","","",""]},components:{},front_text:{color:"black",has_glowing_text:0b,messages:["",{bold:1b,click_event:{action:"run_command",command:"function main:deck_builder/export"},color:"#ff961d",text:"Export"},{color:"dark_green",text:"[Right Click]"},""]},is_waxed:0b}
+setblock -9906 34 -28 minecraft:dark_oak_wall_sign[facing=east,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:["","","",""]},components:{},front_text:{color:"black",has_glowing_text:0b,messages:["",{bold:1b,click_event:{action:"run_command",command:"function main:deck_builder/import"},color:"#18aeff",text:"Import"},{color:"dark_green",text:"[Right Click]"},""]},is_waxed:0b}
+
+setblock -9906 34 -26 minecraft:dark_oak_wall_sign[facing=east,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:["","","",""]},components:{},front_text:{color:"black",has_glowing_text:0b,messages:["",{bold:1b,click_event:{action:"run_command",command:"function main:deck_builder/get_book"},color:"#ffffff",text:"Code Book"},{color:"dark_green",text:"[Right Click]"},""]},is_waxed:0b}
+

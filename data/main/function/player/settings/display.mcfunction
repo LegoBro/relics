@@ -16,3 +16,7 @@ execute if score #set.fatigue var matches -2000000 unless score #set.mode var ma
 execute if score #set.fatigue var matches -2 unless score #set.mode var matches 3 run tellraw @s [{"translate":"duel.invite.settings.fatigue","color":"gray"},{"translate":"3","color":"dark_green"}]
 execute if score #set.fatigue var matches -1 unless score #set.mode var matches 3 run tellraw @s [{"translate":"duel.invite.settings.fatigue","color":"gray"},{"translate":"2","color":"green"}]
 execute if score #set.fatigue var matches 0 unless score #set.mode var matches 3 run tellraw @s [{"translate":"duel.invite.settings.fatigue","color":"gray"},{"translate":"1","color":"gold"}]
+
+execute if score #set.hero_hp var matches 10 run tellraw @s [{"translate":"duel.invite.settings.hero_hp","color":"gray"},{"translate":"10","color":"red"}]
+execute if score #set.hero_hp var matches 15 run tellraw @s [{"translate":"duel.invite.settings.hero_hp","color":"gray"},{"translate":"15","color":"yellow"}]
+execute if score #set.hero_hp var matches 20 run tellraw @s [{"translate":"duel.invite.settings.hero_hp","color":"gray"},{"translate":"20","color":"dark_green"}]

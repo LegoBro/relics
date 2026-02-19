@@ -1,3 +1,2 @@
 scoreboard players set #change var -1
-function cards:entity/overworld/horse/give
-function cards:entity/overworld/horse/change
+execute if function cards:entity/overworld/horse/change run function cards:entity/overworld/horse/give

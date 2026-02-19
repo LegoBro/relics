@@ -109,7 +109,7 @@ execute if score #id var matches 40 run function cards:entity/nether/zoglin/hove
 execute if score #id var matches 38 run function cards:entity/nether/zombified_piglin/hover
 execute if score #id var matches 78 run function cards:entity/overworld/armorsmith/hover
 execute if score #id var matches 115 run function cards:entity/overworld/axolotl/hover
-execute if score #id var matches 34 run function cards:entity/overworld/baby_slime/hover
+execute if score #id var matches -1 run function cards:entity/overworld/baby_slime/hover
 execute if score #id var matches 61 run function cards:entity/overworld/bee/hover
 execute if score #id var matches 151 run function cards:entity/overworld/bogged/hover
 execute if score #id var matches 130 run function cards:entity/overworld/butcher/hover

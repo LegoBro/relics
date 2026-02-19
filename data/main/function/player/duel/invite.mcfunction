@@ -2,8 +2,10 @@
 scoreboard players set #raycast var 0
 tag @s add duel_invited
 scoreboard players operation @s duel.id = #id var
-tellraw @p[tag=duel_search] [{"translate":"duel.invite.1","color":"blue"},{"selector":"@s"},{"translate":"duel.invite.2","color":"blue"}]
-tellraw @s [{"selector":"@p[tag=duel_search]"},{"translate":"duel.invite.3","color":"blue"}]
+tellraw @p[tag=duel_search] [{"translate":"duel.invite.1","color":"blue",with:[{"selector":"@s"}]}]
+
+tellraw @s [{"translate":"duel.invite.3","color":"blue",with:[{"selector":"@p[tag=duel_search]"}]}]
+
 
 execute as @p[tag=duel_search] run scoreboard players operation #set.mode var = @s set.mode
 execute as @p[tag=duel_search] run scoreboard players operation #set.time var = @s set.time

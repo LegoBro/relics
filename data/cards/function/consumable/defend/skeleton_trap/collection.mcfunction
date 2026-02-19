@@ -1,3 +1,2 @@
 scoreboard players set #change var -1
-function cards:consumable/defend/skeleton_trap/give
-function cards:consumable/defend/skeleton_trap/change
+execute if function cards:consumable/defend/skeleton_trap/change run function cards:consumable/defend/skeleton_trap/give

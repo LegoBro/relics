@@ -1,7 +1,7 @@
 ## Use malleable slot
 item replace block 0 0 0 container.0 from entity @s enderchest.1
 
-function cards:collection_dict
+function cards:name_dict {command: "collection"}
 
 item replace entity @s enderchest.1 from block 0 0 0 container.0
 

@@ -13,6 +13,6 @@ execute as @e[type=armor_stand,tag=board,tag=id,tag=summon.bee.chosen] at @s run
 execute as @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest,distance=..1.5] store result score #friendly var if entity @s[tag=friendly]
 execute unless score #friendly var matches 1 as @e[type=bee,tag=new,tag=id] at @s run function cards:helper/not_friendly
 
-execute if entity @e[type=armor_stand,tag=id,tag=summon.bee.chosen] run function cards:consumable/defend/bee_hive/damage
+execute if entity @e[type=armor_stand,tag=id,tag=summon.bee.chosen] run function cards:consumable/defend/bee_hive/take_damage
 tag @e[type=armor_stand,tag=id,tag=summon.bee] remove summon.bee
 tag @e[type=armor_stand,tag=id,tag=summon.bee.chosen] remove summon.bee.chosen

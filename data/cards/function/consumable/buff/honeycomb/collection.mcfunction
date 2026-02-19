@@ -1,3 +1,2 @@
 scoreboard players set #change var -1
-function cards:consumable/buff/honeycomb/give
-function cards:consumable/buff/honeycomb/change
+execute if function cards:consumable/buff/honeycomb/change run function cards:consumable/buff/honeycomb/give

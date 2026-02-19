@@ -13,6 +13,7 @@ scoreboard players set @s set.mode 0
 scoreboard players set @s set.handSize 5
 scoreboard players set @s set.time 0
 scoreboard players set @s set.fatigue 0
+scoreboard players set @s set.hero_hp 15
 scoreboard players set @s menu 0
 scoreboard players set @s deck -1
 

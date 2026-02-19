@@ -1,0 +1,1 @@
+$data modify storage helper:deck deck set value $(raw_deck)

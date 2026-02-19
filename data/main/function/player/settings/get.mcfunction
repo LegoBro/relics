@@ -8,3 +8,6 @@ scoreboard players operation #handSize var = @s set.handSize
 
 execute unless score @s set.fatigue matches -200000000.. run scoreboard players set @s set.fatigue -2
 scoreboard players operation #fatigue var = @s set.fatigue
+
+execute unless score @s set.hero_hp matches 10.. run scoreboard players set @s set.hero_hp 20
+scoreboard players operation #hero_hp var = @s set.hero_hp

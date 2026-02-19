@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:sugar",
+      "components": {
+        "minecraft:item_model": "minecraft:trait/arthropod"
+      }
+    },
+    "title": {
+      "translate": "traits.arthropod",
+      "color": "white",
+      "bold": true
+    },
+    "description": {
+      "translate": "traits.arthropod.des",
+      "color": "dark_green"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "main:help_traits/flying",
+  "criteria": {
+    "auto": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

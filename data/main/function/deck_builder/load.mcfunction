@@ -74,6 +74,15 @@ execute if score #test var matches 1 run advancement grant @s only main:quests/t
 execute store result score #test var run data get block 0 0 0 Items[0].components."minecraft:custom_data".Save.quests.sherd
 execute if score #test var matches 1 run advancement grant @s only main:quests/sherd
 
+execute store result score #test var run data get block 0 0 0 Items[0].components."minecraft:custom_data".Save.quests.critical
+execute if score #test var matches 1 run advancement grant @s only main:quests/critical
+
+execute store result score #test var run data get block 0 0 0 Items[0].components."minecraft:custom_data".Save.quests.saddle
+execute if score #test var matches 1 run advancement grant @s only main:quests/saddle
+
+execute store result score #test var run data get block 0 0 0 Items[0].components."minecraft:custom_data".Save.quests.ethereal
+execute if score #test var matches 1 run advancement grant @s only main:quests/ethereal
+
 execute store result score @s wins run data get block 0 0 0 Items[0].components."minecraft:custom_data".Save.wins
 execute store result score @s losses run data get block 0 0 0 Items[0].components."minecraft:custom_data".Save.losses
 

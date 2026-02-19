@@ -19,5 +19,6 @@ execute if score @s[tag=card.building] health matches ..0 at @s run function car
 # Display
 kill @e[type=area_effect_cloud,tag=display_health,tag=id]
 
-tellraw @a[tag=id] [{"selector":"@s"},{"text":" "},{"translate":"attack.damage.take","color":"white"},{"text":" "},{"score":{"name":"#damage","objective":"var"},"bold":true,"color":"white"},{"text":" "},{"translate":"attack.damage","color":"white"}]
+#tellraw @a[tag=id] [{"selector":"@s"},{"text":" "},{"translate":"attack.damage.take","color":"white"},{"text":" "},{"score":{"name":"#damage","objective":"var"},"bold":true,"color":"white"},{"text":" "},{"translate":"attack.damage","color":"white"}]
+tellraw @a[tag=id] {"translate":"attack.damage.take","with":[{"selector":"@s"},{"score":{"name":"#damage","objective":"var"},"bold":true,"color":"white"}]}
 execute if score @s[tag=teleport] health matches 1.. at @s[tag=!in_minecart,tag=!moved_minecart] run function cards:entity/end/teleport

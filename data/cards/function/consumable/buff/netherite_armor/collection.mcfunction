@@ -1,3 +1,2 @@
 scoreboard players set #change var -1
-function cards:consumable/buff/netherite_armor/give
-function cards:consumable/buff/netherite_armor/change
+execute if function cards:consumable/buff/netherite_armor/change run function cards:consumable/buff/netherite_armor/give

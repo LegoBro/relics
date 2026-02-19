@@ -16,3 +16,4 @@ card:
   speed: 2
   lore: ""
   frozen: True
+  extra_nbt: "RabbitType:99"

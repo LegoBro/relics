@@ -12,5 +12,8 @@ execute if score #blindness var matches 1.. run function main:player/raycast/dis
 execute if score #slowness var matches 1.. run function main:player/raycast/display/attack/display/effect {effect:"slowness",color:"gray",icon:"🧪"}
 execute if score #spear var matches 1.. run function main:player/raycast/display/attack/display/effect {effect:"spear",color:"white",icon:"s"}
 
+execute if score #poison var matches 1.. run function main:player/raycast/display/attack/display/effect {effect:"poison",color:"green",icon:"🧪"}
+execute if score #fire var matches 1.. run function main:player/raycast/display/attack/display/effect {effect:"fire",color:"white",icon:"🔥"}
+
 
 function main:player/raycast/display/attack/macro with storage helper:raycast/display

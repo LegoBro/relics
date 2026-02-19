@@ -1,6 +1,6 @@
 ## Attacks using the target and attacker tags
 
-tellraw @a[tag=id] [{"selector":"@n[tag=attacker,tag=id,distance=..100]"},{text:" "},{"translate":"attack.normal","color":"white"},{text:" "},{"selector":"@n[tag=target,tag=id,distance=..100]"}]
+tellraw @a[tag=id] {"translate":"attack.normal","with":[{"selector":"@n[tag=attacker,tag=id,distance=..100]"},{"selector":"@n[tag=target,tag=id,distance=..100]"}]}
 
 
 execute as @n[tag=attacker,tag=id,distance=..100] run function cards:entity/get/attack

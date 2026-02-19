@@ -1,3 +1,2 @@
 scoreboard players set #change var -1
-function cards:consumable/attack/thunderstorm/give
-function cards:consumable/attack/thunderstorm/change
+execute if function cards:consumable/attack/thunderstorm/change run function cards:consumable/attack/thunderstorm/give

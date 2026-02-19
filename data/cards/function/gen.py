@@ -93,6 +93,9 @@ def createCard(yaml_path):
     
     generator.writeFunction(path + "/give", give_command)
 
+    insert_block_command = "item replace block ~ ~ ~ container.0 with " + item
+    generator.writeFunction(path + "/insert_block", insert_block_command)
+
     insert_command = "execute store result score #any var run data get entity @s EnderItems[0].components.\"minecraft:custom_data\".Collection[{id:" + str(card["model_id"]) + "}].count"
     
     insert_command += "\nexecute unless score #any var matches 1.. run item replace block 0 0 0 container.0 with iron_nugget[custom_data={gui:True}," + item_name + "]"
@@ -124,13 +127,14 @@ def createCard(yaml_path):
 
     change_command = "execute store result score #count var run data get block 0 0 0 Items[0].components.\"minecraft:custom_data\".Collection[{id:" + str(card['model_id']) + "}].count"
     change_command += "\nscoreboard players operation #count var += #change var"
+    change_command += "\nexecute if score #count var matches ..-1 run return fail"
     change_command += "\nexecute unless data block 0 0 0 Items[0].components.\"minecraft:custom_data\".Collection[{id:" + str(card['model_id']) + "}] run data modify block 0 0 0 Items[0].components.\"minecraft:custom_data\".Collection append value {count:0,id:" + str(card['model_id']) + "}"
     change_command += "\nexecute store result block 0 0 0 Items[0].components.\"minecraft:custom_data\".Collection[{id:" + str(card['model_id']) + "}].count int 1 run scoreboard players get #count var"
+    change_command += "\nreturn 1"
     generator.writeFunction(path + "/change", change_command)
 
     collection_command = "scoreboard players set #change var -1"
-    collection_command += f"\nfunction cards:{card['type']}/{card['element']}/{card['name']}/give"
-    collection_command += f"\nfunction cards:{card['type']}/{card['element']}/{card['name']}/change"
+    collection_command += f"\nexecute if function cards:{card['type']}/{card['element']}/{card['name']}/change run function cards:{card['type']}/{card['element']}/{card['name']}/give"
     
     generator.writeFunction(path + "/collection", collection_command)
 
@@ -321,12 +325,15 @@ def createConsumableCard(card, path):
     cast_command = '# Casts the consumable card'
 
     if  "hide" in card.keys() and card['hide']: # Hide traps if flag is set
-        trigger_command = f'\ntellraw @a[tag=id] [{{"selector":"@s"}},{{text:" "}},{{"translate":"move.trap_trigger"}},{{text:" "}},{card["use"]}]'
+        trigger_command = f'\ntellraw @a[tag=id] {{"translate":"move.trap_trigger","with":[{{"selector":"@s"}},{card["use"]}]}}'
+        #trigger_command = f'\ntellraw @a[tag=id] [{{"selector":"@s"}},{{text:" "}},{{"translate":"move.trap_trigger"}},{{text:" "}},{card["use"]}]'
         generator.writeFunction(path + "/trigger_message",trigger_command)
     elif card['placement'] == "anywhere_filled" or card['placement'] == "anywhere_friendly" or card['placement'] == "anywhere_friendly_moved" or card['placement'] == "emerald":
-        cast_command += f'\nexecute at @n[type=armor_stand,tag=hovered.slot,tag=filled,tag=id,distance=..100] run tellraw @a[tag=id] [{{"selector":"@s"}},{{text:" "}},{{"translate":"cast.use"}},{{text:" "}},{card["use"]},{{text:" "}},{{"translate":"on"}},{{text:" "}},{{"selector":"@e[tag=card.entity,tag=id,limit=1,sort=nearest]"}}]'
+        cast_command += f'\nexecute at @n[type=armor_stand,tag=hovered.slot,tag=filled,tag=id,distance=..100] run tellraw @a[tag=id] {{"translate":"cast.use.on",color:green,"with":[{{"selector":"@s"}},{card["use"]},{{"selector":"@e[tag=card.entity,tag=id,limit=1,sort=nearest]"}}]}}'
+        #tellraw @a[tag=id] [{{"selector":"@s"}},{{text:" "}},{{"translate":"cast.use"}},{{text:" "}},{card["use"]},{{text:" "}},{{"translate":"on"}},{{text:" "}},{{"selector":"@e[tag=card.entity,tag=id,limit=1,sort=nearest]"}}]'
     else:
-        cast_command += f'\ntellraw @a[tag=id] [{{"selector":"@s"}},{{text:" "}},{{"translate":"cast.use"}},{{text:" "}},{card["use"]}]'
+        #cast_command += f'\ntellraw @a[tag=id] [{{"selector":"@s"}},{{text:" "}},{{"translate":"cast.use"}},{{text:" "}},{card["use"]}]'
+        cast_command += f'\ntellraw @a[tag=id] {{"translate":"cast.use",color:green,"with":[{{"selector":"@s"}},{card["use"]}]}}'
 
     if  "building" in card.keys(): # Building
         cast_command += f'\nsummon armor_stand ~ ~1 ~ {{CustomName:{{"translate":"card.{card["name"]}"}},Invisible:1b,Silent:1b,Invulnerable:1b,Tags:["new","get_id","id","card","{card["name"]}","card.building","card.defend","attackable"],Team:"green",data:{{path:"{data_path}"}}}}'
@@ -587,22 +594,21 @@ def stype(val):
     return -1
 
 ## Collection click dict
-collection_command = "## Dictionary for collection clicking"
+collection_command = "## Dictionary for name to card"
 for card in collection:
     # print(card)
     collection_command += f"\nexecute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{{gui:True}},item_model=\"cards/" + card[1] + "\"] 1"
-    collection_command += f"\nexecute if score #pass var matches 1 run function cards:{card[2]}/{card[3]}/{card[1]}/collection"
+    collection_command += f"\n$execute if score #pass var matches 1 run function cards:{card[2]}/{card[3]}/{card[1]}/$(command)"
     pass
-generator.writeFunction("./collection_dict" , collection_command)
+generator.writeFunction("./name_dict" , collection_command)
 
 ## Collection Store dict
-store_command = "## Dictionary for collection Storing"
-store_command += "\nexecute store result score #card_id var run data get block 0 0 1 Items[0].components.\"minecraft:custom_data\".card.id"
+store_command = "## Dictionary for ID to card"
 
 for card in collection:
-    store_command += f"\nexecute if score #card_id var matches {card[0]} run function cards:{card[2]}/{card[3]}/{card[1]}/change"
+    store_command += f"\n$execute if score #card_id var matches {card[0]} run function cards:{card[2]}/{card[3]}/{card[1]}/$(command)"
     pass
-generator.writeFunction("./store_dict" , store_command)
+generator.writeFunction("./id_dict" , store_command)
 
 # Sort for storage display
 collection.sort(key=name)

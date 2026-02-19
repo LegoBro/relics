@@ -1,3 +1,2 @@
 scoreboard players set #change var -1
-function cards:consumable/defend/lava_pocket/give
-function cards:consumable/defend/lava_pocket/change
+execute if function cards:consumable/defend/lava_pocket/change run function cards:consumable/defend/lava_pocket/give

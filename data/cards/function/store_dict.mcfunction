@@ -1,5 +1,6 @@
 ## Dictionary for collection Storing
 execute store result score #card_id var run data get block 0 0 1 Items[0].components."minecraft:custom_data".card.id
+execute if score #card_id var matches -1 run function cards:entity/overworld/baby_slime/change
 execute if score #card_id var matches 1 run function cards:entity/overworld/cave_spider/change
 execute if score #card_id var matches 2 run function cards:entity/overworld/creeper/change
 execute if score #card_id var matches 3 run function cards:entity/overworld/iron_golem/change
@@ -33,7 +34,6 @@ execute if score #card_id var matches 30 run function cards:consumable/attack/bl
 execute if score #card_id var matches 31 run function cards:consumable/buff/golden_apple/change
 execute if score #card_id var matches 32 run function cards:consumable/buff/speed_potion/change
 execute if score #card_id var matches 33 run function cards:entity/overworld/fox/change
-execute if score #card_id var matches 34 run function cards:entity/overworld/baby_slime/change
 execute if score #card_id var matches 34 run function cards:entity/overworld/slime/change
 execute if score #card_id var matches 35 run function cards:entity/nether/hoglin/change
 execute if score #card_id var matches 36 run function cards:entity/nether/piglin/change

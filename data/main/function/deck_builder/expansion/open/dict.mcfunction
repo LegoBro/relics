@@ -1,7 +1,7 @@
 ## All packs are same
 scoreboard players add @s turnTimer 1
 
-effect give @p[tag=id] mining_fatigue 10 100 true
+execute if score @s turnTimer matches ..90 run effect give @p[tag=id] mining_fatigue 1 100 true
 effect clear @p[tag=id] resistance
 
 execute if entity @p[tag=id,tag=fast_open] if score @s turnTimer matches ..38 run scoreboard players set @s turnTimer 39

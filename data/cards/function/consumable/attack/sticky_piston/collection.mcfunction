@@ -1,3 +1,2 @@
 scoreboard players set #change var -1
-function cards:consumable/attack/sticky_piston/give
-function cards:consumable/attack/sticky_piston/change
+execute if function cards:consumable/attack/sticky_piston/change run function cards:consumable/attack/sticky_piston/give

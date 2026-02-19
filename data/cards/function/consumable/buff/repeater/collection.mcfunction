@@ -1,3 +1,2 @@
 scoreboard players set #change var -1
-function cards:consumable/buff/repeater/give
-function cards:consumable/buff/repeater/change
+execute if function cards:consumable/buff/repeater/change run function cards:consumable/buff/repeater/give

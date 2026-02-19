@@ -19,7 +19,7 @@
     "show_toast": false,
     "announce_to_chat": false
   },
-  "parent": "main:help_traits/emerald",
+  "parent": "main:help_traits/root",
   "criteria": {
     "auto": {
       "trigger": "minecraft:tick"

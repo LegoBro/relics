@@ -1,3 +1,2 @@
 scoreboard players set #change var -1
-function cards:consumable/buff/piercing/give
-function cards:consumable/buff/piercing/change
+execute if function cards:consumable/buff/piercing/change run function cards:consumable/buff/piercing/give

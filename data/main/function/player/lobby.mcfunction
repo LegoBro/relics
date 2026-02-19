@@ -12,7 +12,7 @@ item replace entity @s[tag=!waiting] hotbar.4 with carrot_on_a_stick[item_model=
 item replace entity @s hotbar.8 with gold_nugget[item_name={"translate":"coins","italic":false,"color":"gold"}]
 
 item replace entity @s inventory.11 with pink_carpet[item_name={"translate":"quick_play","italic":false,"color":"green"}]
-item replace entity @s inventory.13 with paper[item_name={"translate":"quick_deck_builder","italic":false,"color":"gold"}]
+item replace entity @s inventory.13 with paper[item_model="iron_pickaxe",item_name={"translate":"quick_deck_builder","italic":false,"color":"gold"}]
 item replace entity @s inventory.15 with ender_eye[item_name={"translate":"quick_spectate","italic":false,"color":"white"}]
 
 execute store result score #q_play var run clear @s pink_carpet 0
@@ -23,20 +23,28 @@ clear @s[tag=inv_changed]
 
 ## BOOK
 execute unless score @s[tag=!duel_invited,team=lobby] duel.timer matches ..0 run item replace entity @s hotbar.0 with written_book[item_name={"translate":"game.book","italic":false,"color":"green"},written_book_content={title:"",author:"Deckmaster",pages:[\
-    ["",{"translate":"Gamemodes:","color":"dark_gray","bold":true,"underlined":true},\
-        {"text":"\nClassic","color":"gold","bold":false,"underlined":true,"hover_event":{"action":"show_text","value":[{"text":"Classic gamemode that uses your decks."}]},"click_event":{"action":"run_command","command":"/trigger setting set 0"}},\
-        {"text":"\nMirror","underlined":true,"color":"dark_aqua","bold":false,"hover_event":{"action":"show_text","value":[{"text":"Both players are given the same premade deck."}]},"click_event":{"action":"run_command","command":"/trigger setting set 1"}},\
-        {"text":"\nDraft","underlined":true,"color":"dark_red","bold":false,"hover_event":{"action":"show_text","value":[{"text":"Both players pick one card to keep and one to give to their opponent until their deck is built."}]},"click_event":{"action":"run_command","command":"/trigger setting set 2"}},\
-        {"text":"\nNo Draw","underlined":true,"color":"dark_green","bold":false,"hover_event":{"action":"show_text","value":[{"text":"Get your entire deck immediately, but you can not draw anymore."}]},"click_event":{"action":"run_command","command":"/trigger setting set 3"}},\
-        {"text":"\n\nTurn Time:","bold":true,"color":"gray","underlined":true},{"text":" 30s","color":"blue","bold":false,"hover_event":{"action":"show_text","value":[{"text":"30 second turn time."}]},"click_event":{"action":"run_command","command":"/trigger setting set 10"}},\
-        {"text":" 60s","color":"dark_green","bold":false,"hover_event":{"action":"show_text","value":[{"text":"60 second turn time."}]},"click_event":{"action":"run_command","command":"/trigger setting set 11"}},\
-        {"text":"\n\nHand Size:","bold":true,"color":"gray","underlined":true},{"text":" 3","color":"red","bold":false,"hover_event":{"action":"show_text","value":[{"text":"You can draw up to 3 cards. (more can be gained from events)"}]},"click_event":{"action":"run_command","command":"/trigger setting set 20"}},\
-        {"text":" 5","color":"gold","bold":false,"hover_event":{"action":"show_text","value":[{"text":"You can draw up to 5 cards. (more can be gained from events)"}]},"click_event":{"action":"run_command","command":"/trigger setting set 21"}},\
-        {"text":" 8","color":"green","bold":false,"hover_event":{"action":"show_text","value":[{"text":"You can draw up to 8 cards. (more can be gained from events)"}]},"click_event":{"action":"run_command","command":"/trigger setting set 22"}},\
-        {"text":"\n\nFatigue:","bold":true,"color":"gray","underlined":true},{"text":" X","color":"red","bold":false,"hover_event":{"action":"show_text","value":[{"text":"Fatigue Disabled."}]},"click_event":{"action":"run_command","command":"/trigger setting set 30"}},\
-        {"text":" 1","color":"gold","bold":false,"hover_event":{"action":"show_text","value":[{"text":"Take fatigue damage after 1 deck reshuffle."}]},"click_event":{"action":"run_command","command":"/trigger setting set 31"}},\
-        {"text":" 2","color":"green","bold":false,"hover_event":{"action":"show_text","value":[{"text":"Take fatigue damage after 2 deck reshuffles."}]},"click_event":{"action":"run_command","command":"/trigger setting set 32"}},\
-        {"text":" 3","color":"dark_green","bold":false,"hover_event":{"action":"show_text","value":[{"text":"Take fatigue damage after 3 deck reshuffles."}]},"click_event":{"action":"run_command","command":"/trigger setting set 33"}}\
+    ["",{"translate":"set.gamemodes","color":"dark_gray","bold":true,"underlined":true},\
+        "\n",{"translate":"set.gamemodes.classic","color":"gold","bold":false,"underlined":true,"hover_event":{"action":"show_text","value":[{"translate":"set.gamemodes.classic.des"}]},"click_event":{"action":"run_command","command":"/trigger setting set 0"}},\
+        "\n",{"translate":"set.gamemodes.mirror","underlined":true,"color":"dark_aqua","bold":false,"hover_event":{"action":"show_text","value":[{"translate":"set.gamemodes.mirror.des"}]},"click_event":{"action":"run_command","command":"/trigger setting set 1"}},\
+        "\n",{"translate":"set.gamemodes.draft","underlined":true,"color":"dark_red","bold":false,"hover_event":{"action":"show_text","value":[{"translate":"set.gamemodes.draft.des"}]},"click_event":{"action":"run_command","command":"/trigger setting set 2"}},\
+        "\n",{"translate":"set.gamemodes.no_draw","underlined":true,"color":"dark_green","bold":false,"hover_event":{"action":"show_text","value":[{"translate":"set.gamemodes.no_draw.des"}]},"click_event":{"action":"run_command","command":"/trigger setting set 3"}},\
+        "\n\n",{"translate":"set.turn_time","bold":true,"color":"gray","underlined":true},\
+        {"text":" 30s","color":"blue","bold":false,"hover_event":{"action":"show_text","value":[{"translate":"set.turn_time.30"}]},"click_event":{"action":"run_command","command":"/trigger setting set 10"}},\
+        {"text":" 60s","color":"dark_green","bold":false,"hover_event":{"action":"show_text","value":[{"translate":"set.turn_time.60"}]},"click_event":{"action":"run_command","command":"/trigger setting set 11"}},\
+        "\n\n",{"translate":"set.hand_size","bold":true,"color":"gray","underlined":true},\
+        {"text":" 3","color":"red","bold":false,"hover_event":{"action":"show_text","value":[{"translate":"set.hand_size.3"}]},"click_event":{"action":"run_command","command":"/trigger setting set 20"}},\
+        {"text":" 5","color":"gold","bold":false,"hover_event":{"action":"show_text","value":[{"translate":"set.hand_size.5"}]},"click_event":{"action":"run_command","command":"/trigger setting set 21"}},\
+        {"text":" 8","color":"green","bold":false,"hover_event":{"action":"show_text","value":[{"translate":"set.hand_size.8"}]},"click_event":{"action":"run_command","command":"/trigger setting set 22"}},\
+    ],["",\    
+        {"translate":"set.fatigue","bold":true,"color":"gray","underlined":true},\
+        {"text":" X","color":"red","bold":false,"hover_event":{"action":"show_text","value":[{"translate":"set.fatigue.disabled"}]},"click_event":{"action":"run_command","command":"/trigger setting set 30"}},\
+        {"text":" 1","color":"gold","bold":false,"hover_event":{"action":"show_text","value":[{"translate":"set.fatigue.1"}]},"click_event":{"action":"run_command","command":"/trigger setting set 31"}},\
+        {"text":" 2","color":"green","bold":false,"hover_event":{"action":"show_text","value":[{"translate":"set.fatigue.2"}]},"click_event":{"action":"run_command","command":"/trigger setting set 32"}},\
+        {"text":" 3","color":"dark_green","bold":false,"hover_event":{"action":"show_text","value":[{"translate":"set.fatigue.3"}]},"click_event":{"action":"run_command","command":"/trigger setting set 33"}},\
+        "\n\n",{translate:"set.hero_hp","bold":true,"color":"gray","underlined":true},\
+        {"text":" 10","color":"red","bold":false,"hover_event":{"action":"show_text","value":[{"translate":"set.hero_hp.10.des"}]},"click_event":{"action":"run_command","command":"/trigger setting set 40"}},\
+        {"text":" 15","color":"yellow","bold":false,"hover_event":{"action":"show_text","value":[{"translate":"set.hero_hp.15.des"}]},"click_event":{"action":"run_command","command":"/trigger setting set 41"}},\
+        {"text":" 20","color":"dark_green","bold":false,"hover_event":{"action":"show_text","value":[{"translate":"set.hero_hp.20.des"}]},"click_event":{"action":"run_command","command":"/trigger setting set 42"}}\
 ]]}] 1
 
 
@@ -82,3 +90,5 @@ execute unless score @s set.mode matches 0.. run scoreboard players set @s set.m
 execute unless score @s set.time matches 0.. run scoreboard players set @s set.time 0
 execute unless score @s set.handSize matches 3.. run scoreboard players set @s set.handSize 5
 execute unless score @s set.fatigue matches -2000000000.. run scoreboard players set @s set.fatigue 0
+
+execute unless score @s set.hero_hp matches 0.. run scoreboard players set @s set.hero_hp 20

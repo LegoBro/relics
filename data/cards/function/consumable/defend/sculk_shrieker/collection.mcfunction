@@ -1,3 +1,2 @@
 scoreboard players set #change var -1
-function cards:consumable/defend/sculk_shrieker/give
-function cards:consumable/defend/sculk_shrieker/change
+execute if function cards:consumable/defend/sculk_shrieker/change run function cards:consumable/defend/sculk_shrieker/give

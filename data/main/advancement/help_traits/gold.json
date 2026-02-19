@@ -19,7 +19,7 @@
     "show_toast": false,
     "announce_to_chat": false
   },
-  "parent": "main:help_traits/flying",
+  "parent": "main:help_traits/emerald",
   "criteria": {
     "auto": {
       "trigger": "minecraft:tick"

@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:vex_spawn_egg"
+    },
+    "title": {
+      "translate": "quests.ethereal",
+      "color": "green",
+      "bold": true
+    },
+    "description": {
+      "translate": "quests.ethereal.des",
+      "color": "green"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false
+  },
+  "parent": "main:quests/unknown",
+  "criteria": {
+    "impossible": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "function": "main:player/advancement/quests/ethereal"
+  }
+}

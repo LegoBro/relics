@@ -6,3 +6,5 @@ scoreboard players operation @s apply_wither = #attack_wither var
 
 tag @s remove has_saddle
 tag @s add is_saddled
+
+function cards:consumable/buff/saddle/adv_recurse

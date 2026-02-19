@@ -1,4 +1,6 @@
 ## Dictionary for collection clicking
+execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/baby_slime"] 1
+execute if score #pass var matches 1 run function cards:entity/overworld/baby_slime/collection
 execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/cave_spider"] 1
 execute if score #pass var matches 1 run function cards:entity/overworld/cave_spider/collection
 execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/creeper"] 1
@@ -65,8 +67,6 @@ execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~
 execute if score #pass var matches 1 run function cards:consumable/buff/speed_potion/collection
 execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/fox"] 1
 execute if score #pass var matches 1 run function cards:entity/overworld/fox/collection
-execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/baby_slime"] 1
-execute if score #pass var matches 1 run function cards:entity/overworld/baby_slime/collection
 execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/slime"] 1
 execute if score #pass var matches 1 run function cards:entity/overworld/slime/collection
 execute store result score #pass var run clear @s carrot_on_a_stick[custom_data~{gui:True},item_model="cards/hoglin"] 1

@@ -19,7 +19,7 @@
     "show_toast": false,
     "announce_to_chat": false
   },
-  "parent": "main:help_traits/gold",
+  "parent": "main:help_traits/undead",
   "criteria": {
     "auto": {
       "trigger": "minecraft:tick"

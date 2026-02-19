@@ -1,3 +1,2 @@
 scoreboard players set #change var -1
-function cards:consumable/defend/cobblestone/give
-function cards:consumable/defend/cobblestone/change
+execute if function cards:consumable/defend/cobblestone/change run function cards:consumable/defend/cobblestone/give

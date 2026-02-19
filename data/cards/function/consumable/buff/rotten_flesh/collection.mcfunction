@@ -1,3 +1,2 @@
 scoreboard players set #change var -1
-function cards:consumable/buff/rotten_flesh/give
-function cards:consumable/buff/rotten_flesh/change
+execute if function cards:consumable/buff/rotten_flesh/change run function cards:consumable/buff/rotten_flesh/give

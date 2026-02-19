@@ -67,6 +67,7 @@ scoreboard objectives add set.mode dummy
 scoreboard objectives add set.arena dummy
 scoreboard objectives add set.music dummy
 scoreboard objectives add set.hero dummy
+scoreboard objectives add set.hero_hp dummy
 
 scoreboard objectives add card_packs dummy
 

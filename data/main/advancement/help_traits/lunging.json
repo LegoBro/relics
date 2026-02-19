@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:sugar",
+      "components": {
+        "minecraft:item_model": "minecraft:trait/lunging"
+      }
+    },
+    "title": {
+      "translate": "traits.lunging",
+      "color": "white",
+      "bold": true
+    },
+    "description": {
+      "translate": "traits.lunging.des",
+      "color": "dark_green"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "main:help_traits/evasive",
+  "criteria": {
+    "auto": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

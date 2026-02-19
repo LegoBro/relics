@@ -18,7 +18,20 @@ I know this pack is a little bit of a mess, but I probably won't be cleaning it 
 ## 5.0 The Aggro Aresenal Update
 Updated to 1.21.11
 
-### Updates
+### Gamemode Changes
+#### Draft Mode
+Now gives 5 choices, your choice no longer affects what your opponent gets.
+    The reason for this change is the lack for creating a full strategy, and being stuck with a large amount of (relatively) unusable cards.  By letting players choose every card in their deck, and giving them more options, we can open up more nuanced strategies.
+
+### Deck Builder
+#### Sharable decks
+Added a code system for sharing decks.
+    Now it is much easier to share decks with other players, and across save files.  You can even build a deck using codes outside of the game, and import it.  (Maybe someone will eventually build a web-based deck builder???)
+
+### New Advancements
+Super Critical
+So Light...
+Full Stack
 
 ### New Card Traits
 Passive - can place anywhere
@@ -58,19 +71,6 @@ Looting - Draw 1 card for every enemy unit killed this turn
 #### Defend
 Enchantment Table - Every enchanted Book gets refunded 1 XP
 Vault - Generates 1 card every 4 turns, when broken give all
-
-### Card Change Ideas
-
-Piercing - Cost Reduced by 2 (From 8 to 6)
-Outpost - Cost Increased by 3 (From 9 to 12), Health Increased by 2 (From 4 to 6), Adjacent damage increased by 1 (From 1 to 2)
-Targets - Cost Decreased by 2 (From 9 to 7)
-Warden - Now heals +5HP to full every entity it kills, +1 Speed
-Evoker - Cost Reduced by 5 (From 20 to 15), Range Increased by 1 (From 1 to 2), Now only spawns a Vex on a successful attack
-Pitcher Plant - Make not useless???
---Redstone's Ideas--
-Librarian - Change to: Whenever a mob is enchanted, give it +2 health; …
-Mooshroom - less health, guaranteed food
-Well - only target allies
 
 ### Card Changes
 #### Entities
@@ -165,7 +165,7 @@ Gilded Blackstone - Chance to discover item changed to 100% (Was 50%)
 Cobblestone - Cost Reduced by 2 (From 2 to 0)
     Cobblestone doesn't really do anything, so reducing it's cost will better situate it into being an early game defense.
     
-Witch Hut - Renamed to "Alchemy Hut", changed ability to return +2XP for every potion used, health increased by 1 (From 5 to 6), armor decreased by 2 (from 2 to 0)
+Witch Hut - changed ability to return +2XP for every potion used, health increased by 1 (From 5 to 6), armor decreased by 2 (from 2 to 0)
     Alchemy hut never really made sense as a structure, so changing it's core gameplay to enhance the use of normal potions will fit into more strategies.
 
 Hay Bale - No longer applies effect immediately on place
@@ -187,7 +187,6 @@ Sherd quest now properly saves
 
 ### Improvements to do
 Convert all texts to translatable strings
-Sharable decks or suggested decks
 Fix vault giving too many cards
 
 ### Improvements Done
@@ -196,8 +195,6 @@ Reworked many hover displays to showcase what is happening more effectively.  Al
 Improved performance on many behind the scenes functionality
 Converted Heroes into mannequins
 Various improvements to card descriptions, and unifying of entity descriptions.
-Draft Mode now gives 5 choices, your choice no longer affects what your opponent gets.
-
 
 ## 4.3
 

@@ -1,3 +1,2 @@
 scoreboard players set #change var -1
-function cards:consumable/attack/critical_hit/give
-function cards:consumable/attack/critical_hit/change
+execute if function cards:consumable/attack/critical_hit/change run function cards:consumable/attack/critical_hit/give

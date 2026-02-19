@@ -6,7 +6,7 @@ card:
   name: "baby_slime"
   color: "green"
   entity: "slime"
-  model_id: 34
+  model_id: -1
   cost: 0
   maxHealth: 1
   health: 1

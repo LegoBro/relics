@@ -14,5 +14,6 @@ tag @a remove game.start
 
 tag @a remove board.load.player
 
-execute at @e[type=armor_stand,tag=board.player.1,tag=id] positioned ~ ~-2 ~ run setblock ~ ~ ~ shulker_box
-execute at @e[type=armor_stand,tag=board.player.2,tag=id] positioned ~ ~-2 ~ run setblock ~ ~ ~ shulker_box
+## Override for shulker contents
+execute at @e[type=armor_stand,tag=board.player.1,tag=id] positioned ~ ~-2 ~ run setblock ~ ~ ~ shulker_box{Items:[]}
+execute at @e[type=armor_stand,tag=board.player.2,tag=id] positioned ~ ~-2 ~ run setblock ~ ~ ~ shulker_box{Items:[]}

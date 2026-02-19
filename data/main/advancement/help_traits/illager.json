@@ -1,0 +1,28 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:sugar",
+      "components": {
+        "minecraft:item_model": "minecraft:trait/illager"
+      }
+    },
+    "title": {
+      "translate": "traits.illager",
+      "color": "white",
+      "bold": true
+    },
+    "description": {
+      "translate": "traits.illager.des",
+      "color": "dark_green"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false
+  },
+  "parent": "main:help_traits/frozen",
+  "criteria": {
+    "auto": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

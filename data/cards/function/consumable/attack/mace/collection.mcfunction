@@ -1,3 +1,2 @@
 scoreboard players set #change var -1
-function cards:consumable/attack/mace/give
-function cards:consumable/attack/mace/change
+execute if function cards:consumable/attack/mace/change run function cards:consumable/attack/mace/give

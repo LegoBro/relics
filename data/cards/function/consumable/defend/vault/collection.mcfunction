@@ -1,3 +1,2 @@
 scoreboard players set #change var -1
-function cards:consumable/defend/vault/give
-function cards:consumable/defend/vault/change
+execute if function cards:consumable/defend/vault/change run function cards:consumable/defend/vault/give

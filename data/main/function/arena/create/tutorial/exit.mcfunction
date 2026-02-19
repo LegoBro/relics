@@ -1,4 +1,5 @@
 ## Deletes entities (structure remains to save CPU usage)
+tag @a[tag=id] remove t.skip
 tp @a[tag=id] 8 200 8
 clear @a[tag=id,gamemode=adventure]
 scoreboard players operation #id var = @s id
