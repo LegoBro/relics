@@ -5,6 +5,7 @@ function main:board/load
 scoreboard players set @e[type=armor_stand,tag=id,tag=board.center,limit=1] turnCost 4
 tag @e[type=armor_stand,tag=id,tag=board.center,limit=1] add noCardHurt
 
+function helper:new_match_id
 execute as @a[tag=game.start,limit=2] run function main:board/player_setup
 
 

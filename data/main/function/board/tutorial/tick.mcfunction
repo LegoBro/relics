@@ -2,6 +2,7 @@
 
 # Get id for the board and tag all entities with the same id.  This is to make sure nothing from other boards breaks each other
 # Remove all @e tags BEFORE adding it to all new entities.  It's better to clean up before than after in this case
+scoreboard players set #is_tutorial var 1
 tag @e remove id
 scoreboard players operation game.id var = @s id
 execute as @e if score @s id = game.id var run tag @s add id
@@ -28,6 +29,7 @@ scoreboard players operation @e[tag=draw.player.1,tag=id] set.fatigue = @e[tag=i
 
 
 scoreboard players set @a[tag=id,scores={turnTimer=-301..}] turnTimer -1000
+
 execute as @a[tag=id] at @s run function main:board/player/tick
 execute if score @s tut.spot matches 54 if entity @a[tag=id,tag=wait] run function main:board/end_turn
 

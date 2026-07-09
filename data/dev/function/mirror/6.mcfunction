@@ -1,3 +1,4 @@
+clear @s
 ## gives the player the default deck; mostly for updating new card information
 
 function cards:entity/overworld/wolf/give
@@ -32,3 +33,5 @@ function cards:consumable/defend/sculk_block/give
 function cards:consumable/defend/sculk_block/give
 function cards:consumable/defend/sculk_block/give
 
+function helper:deck/clone/inventory_to_shulker
+data modify block 12 0 5 Items set from block 0 0 1

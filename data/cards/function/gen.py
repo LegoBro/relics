@@ -15,6 +15,14 @@ def createCard(yaml_path):
     lore = "lore=[" # May include a ' after [ and before ]
 
     if card['type'] == "entity":
+        traits = entityGetTraits(card)
+        if len(traits) > 0:
+            lore += "["
+            for trait in traits:
+                lore += f'{{"sprite":"item/card/trait/{trait}",atlas:"items",color:white}},'
+            lore = lore[:-1]
+            lore += "],"
+
         lore += f'[{{"translate":"cost","italic":false,"color":"white"}},{{"text":" {card["cost"]}","italic":false,"color":"white"}},{{"text":"        {card["health"]} ","italic":false,"color":"white"}},{{"translate":"health","italic":false,"color":"white"}}]'
         if  "armor" in card.keys():
             pass
@@ -76,17 +84,17 @@ def createCard(yaml_path):
 
     insert_custom_data = "custom_data={gui:True, card:{id:" + str(card["model_id"]) + ",category:\"" + card["type"] + "\",element:\"" + card["element"] + "\",rarity:\"" + card["rarity"] + "\",name:\"" + card["name"] + "\",cost:" + str(card["cost"]) + ",placement:" + str(card["placement"]) + "}}"
 
-    item = "carrot_on_a_stick[" + lore + ',' + item_name + ", minecraft:unbreakable={}," + item_model + "," + custom_data + "]"
+    item = "carrot_on_a_stick[" + lore + ',' + item_name + ", minecraft:unbreakable={},tooltip_display={hidden_components:[\"unbreakable\"]}," + item_model + "," + custom_data + "]"
 
-    discover_item = "carrot_on_a_stick[" + lore + ',' + discover_item_name + ", minecraft:unbreakable={}," + item_model + "," + discover_custom_data + "]"
+    discover_item = "carrot_on_a_stick[" + lore + ',' + discover_item_name + ", minecraft:unbreakable={},tooltip_display={hidden_components:[\"unbreakable\"]}," + item_model + "," + discover_custom_data + "]"
 
-    insert_item_data = "[" + lore + ',' + item_name + ", minecraft:unbreakable={}," + item_model + "," + insert_custom_data + "]"
+    insert_item_data = "[" + lore + ',' + item_name + ", minecraft:unbreakable={},tooltip_display={hidden_components:[\"unbreakable\"]}," + item_model + "," + insert_custom_data + "]"
 
-    empty_insert_item_data = "[" + lore + ',' + item_name + ", minecraft:unbreakable={}," + insert_custom_data + ", item_model='air']"
+    empty_insert_item_data = "[" + lore + ',' + item_name + ", minecraft:unbreakable={},tooltip_display={hidden_components:[\"unbreakable\"]}," + insert_custom_data + ", item_model='air']"
 
     unlock_custom_data = "custom_data={gui:False, card:{id:" + str(card["model_id"]) + ",category:\"" + card["type"] + "\",element:\"" + card["element"] + "\",rarity:\"" + card["rarity"] + "\",name:\"" + card["name"] + "\",cost:" + str(card["cost"]) + ",placement:" + str(card["placement"]) + "}}"
 
-    unlock_item = "carrot_on_a_stick[" + lore + ',' + item_name + ", minecraft:unbreakable={}," + item_model + "," + unlock_custom_data + "]"
+    unlock_item = "carrot_on_a_stick[" + lore + ',' + item_name + ", minecraft:unbreakable={},tooltip_display={hidden_components:[\"unbreakable\"]}," + item_model + "," + unlock_custom_data + "]"
 
     give_command = "give @s " + item
     
@@ -295,7 +303,7 @@ def createEntityCard(card, path):
     # Fills up trait list with empty textures for safety
     card["traits"].extend(["empty","empty","empty","empty","empty","empty"])
 
-    summon_command += f'\ntellraw @a[tag=id] [{{"selector":"@s"}},{{text:" "}},{{"translate":"entity.spawns"}},{{text:" "}},{card["use"]}]'
+    summon_command += f'\ntellraw @a[tag=id] [{{"translate":"entity.spawns",with:[{{"selector":"@s"}},{card["use"]}]}}]'
     summon_command += f'\ntag @e[tag=get_id,limit=1] add moving'
     summon_command += f'\ntag @e[type=armor_stand,tag=board,tag=trap,tag=id,limit=1,distance=..0.5] add destination'
     summon_command += f'\nexecute as @e[type=armor_stand,tag=board,tag=destination] unless entity @e[tag=card.entity,tag=get_id,tag=id,limit=1,sort=nearest,tag=flying] at @s run function cards:consumable/defend/trap/trigger_dict'
@@ -311,7 +319,58 @@ def createEntityCard(card, path):
 
     makeEntityModelJson(card, path)
 
-    pass
+def entityGetTraits(card):
+    traits = []
+
+    if  "flying" in card.keys() and card['flying']:
+        traits.append("flying")
+
+    if  "fire_proof" in card.keys() and card['fire_proof']:
+        traits.append("fire")
+
+    if  "emerald" in card.keys() and card['emerald']:
+        traits.append("emerald")
+
+    if  "gold" in card.keys() and card['gold']:
+        traits.append("gold")
+    
+    if  "passive" in card.keys() and card['passive']:
+        traits.append("passive")
+    
+    if  "lunging" in card.keys() and card['lunging']:
+        traits.append("lunging")
+
+    if  "arthropod" in card.keys() and card['arthropod']:
+        traits.append("arthropod")
+            
+    if  "frozen" in card.keys() and card['frozen']:
+        traits.append("frozen")
+
+    if  "evasive" in card.keys() and card['evasive']:
+        traits.append("evasive")
+
+    if  "illager" in card.keys() and card['illager']:
+        traits.append("illager")
+        
+    if  "defensive" in card.keys() and card['defensive']:
+        traits.append("defensive")
+    
+    if  "water" in card.keys() and card['water']:
+        traits.append("water")
+
+    if  "teleport" in card.keys() and card['teleport']:
+        traits.append("teleport")
+
+    if  "ambush" in card.keys() and card['ambush']:
+        traits.append("ambush")
+
+    if  "wither_proof" in card.keys() and card['wither_proof']:
+        traits.append("wither")
+
+    if  "undead" in card.keys() and card['undead']:
+        traits.append("undead")
+
+    return traits
 
 def createConsumableCard(card, path):
 
@@ -399,8 +458,35 @@ def makeEntityModelJson(card, path):
 	         }
           }
     #print(model)
-    with open(f'./models/{card["name"]}.json', 'w') as outfile:
+    with open(f'./models/cards/{card["name"]}.json', 'w') as outfile:
         json.dump(model,outfile)
+    
+    model_gui = {
+	      "credit": "Made with Brickbench",
+	      "parent": "item/cards/gui_template",
+	      "textures": {
+		        "background": f"item/card/{card['name']}/background",
+		        "foreground": f"item/card/{card['name']}/foreground",
+		        "description": f"item/card/{card['name']}/description",
+		        "cost": f"item/card/number/left/{card['cost']}",
+		        "health": f"item/card/number/right/{card['health']}",
+		        "attack": f"item/card/number/left/{card['attack']}",
+		        "armor": f"item/card/number/right/{card['armor']}",
+                "speed": f"item/card/number/left/{card['speed']}",
+                "range": f"item/card/number/right/{card['range']}",
+                "rarity": f"item/card/front_{card['rarity']}",
+                "trait_1": f"item/card/trait/{card['traits'][0]}",
+                "trait_2": f"item/card/trait/{card['traits'][1]}",
+                "trait_3": f"item/card/trait/{card['traits'][2]}",
+                "trait_4": f"item/card/trait/{card['traits'][3]}",
+                "trait_5": f"item/card/trait/{card['traits'][4]}",
+                "trait_6": f"item/card/trait/{card['traits'][5]}",
+                "type":"item/card/trait/entity"
+                
+	         }
+          }
+    with open(f'./models/cards_gui/{card["name"]}.json', 'w') as outfile:
+        json.dump(model_gui,outfile)
 
 def makeConsumableModelJson(card, path):
 
@@ -446,8 +532,53 @@ def makeConsumableModelJson(card, path):
            }
         }
     #print(model)
-    with open(f'./models/{card["name"]}.json', 'w') as outfile:
+    with open(f'./models/cards/{card["name"]}.json', 'w') as outfile:
         json.dump(model,outfile)
+
+    if  "building" in card.keys():
+        model_gui = {
+    	      "credit": "Made with Brickbench",
+    	      "parent": "item/cards/gui_template",
+    	      "textures": {
+    		        "background": f"item/card/{card['name']}/background",
+    		        "foreground": f"item/card/{card['name']}/foreground",
+    		        "description": f"item/card/{card['name']}/description",
+    		        "cost": f"item/card/number/left/{card['cost']}",
+                    "health": f"item/card/number/right/{card['building']['health']}",
+                    "armor": f"item/card/number/right/{card['building']['armor']}",
+                    "rarity": f"item/card/front_{card['rarity']}",
+                    "type":"item/card/trait/building"
+    	         }
+              }
+    elif "hide" in card.keys() and card['hide']:
+        model_gui = {
+        "credit": "Made with Brickbench",
+        "parent": "item/cards/gui_template",
+        "textures": {
+              "background": f"item/card/{card['name']}/background",
+              "foreground": f"item/card/{card['name']}/foreground",
+              "description": f"item/card/{card['name']}/description",
+              "cost": f"item/card/number/left/{card['cost']}",
+              "rarity": f"item/card/front_{card['rarity']}",
+              "type":f"item/card/trait/trap"
+           }
+        }
+    else:
+        model_gui = {
+        "credit": "Made with Brickbench",
+        "parent": "item/cards/gui_template",
+        "textures": {
+              "background": f"item/card/{card['name']}/background",
+              "foreground": f"item/card/{card['name']}/foreground",
+              "description": f"item/card/{card['name']}/description",
+              "cost": f"item/card/number/left/{card['cost']}",
+              "rarity": f"item/card/front_{card['rarity']}",
+              "type":f"item/card/trait/{card['element']}"
+           }
+        }
+    #print(model)
+    with open(f'./models/cards_gui/{card["name"]}.json', 'w') as outfile:
+        json.dump(model_gui,outfile)
 
 
 

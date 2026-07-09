@@ -12,6 +12,11 @@ scoreboard players reset @s endTurn
 scoreboard players reset @s binding_timer
 scoreboard players reset @s tnt.kills
 scoreboard players reset @s play.piston
+scoreboard players reset @s leaveTimer
+# Make sure they have a rating!
+execute unless score @s rating matches 0.. run scoreboard players set @s rating 1000
+
+execute if entity @s[tag=selected_draft_reset] run function main:player/draft_reset
 
 ## If tournament maybe?
 execute if entity @s[tag=tournament] unless score #tournamentLobby var matches 1 run function main:player/load

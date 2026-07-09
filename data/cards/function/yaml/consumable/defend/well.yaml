@@ -5,7 +5,7 @@ card:
   element: "defend"
   name: "well"
   color: "green"
-  cost: 11
+  cost: 9
   model_id: 107
   lore: "Place a well that heals all nearby units by +2 health each turn"
   building:

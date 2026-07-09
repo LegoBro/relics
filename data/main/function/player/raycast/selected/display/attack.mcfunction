@@ -5,7 +5,7 @@
 #execute if entity @e[tag=attackable,tag=attacker,tag=special_attack,tag=id,limit=1,sort=nearest] at @s run function main:player/raycast/selected/attack/success_special
 
 
-execute as @n[tag=attacker,tag=id,distance=..100] run function cards:entity/get/attack
+execute as @n[tag=attacker,tag=id,distance=..100] at @s run function cards:entity/get/attack
 
 scoreboard players operation #damage var = #attack var
 

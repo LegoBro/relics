@@ -1,2 +1,2 @@
-execute unless score @s saturation matches 9.. run function cards:too_poor
-execute if score @s saturation matches 9.. run function cards:entity/nether/hoglin/summon
+execute unless score @s saturation matches 8.. run function cards:too_poor
+execute if score @s saturation matches 8.. run function cards:entity/nether/hoglin/summon

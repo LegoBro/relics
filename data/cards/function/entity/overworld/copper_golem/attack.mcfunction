@@ -9,13 +9,16 @@ execute positioned ^ ^ ^-4 if entity @n[tag=id,tag=attackable,distance=..1.5,tag
 ## Can't be hero = fail
 execute if entity @n[tag=id,tag=target,distance=..100,tag=steve] run return run function cards:entity/overworld/copper_golem/fail_attack
 execute positioned ^ ^ ^-4 if entity @n[tag=id,tag=attackable,distance=..1.5,tag=steve] run return run function cards:entity/overworld/copper_golem/fail_attack
+## Can't be draw/discard
+execute positioned ^ ^ ^-4 positioned ~ ~-1.5 ~ if entity @n[tag=id,tag=board,distance=..1.5,tag=discard_pile] run return run function cards:entity/overworld/copper_golem/fail_attack
+execute positioned ^ ^ ^-4 positioned ~ ~-1.5 ~ if entity @n[tag=id,tag=board,distance=..1.5,tag=draw_pile] run return run function cards:entity/overworld/copper_golem/fail_attack
 
 ## Success
 # Tag friendlies, useful for moving stats later
-function cards:helper/tag_friendlies
-function cards:helper/tag_movable
+function card:helper/tag_friendlies
+function card:helper/tag_movable
 
-execute positioned ^ ^ ^-4 run tag @n[tag=id,tag=attackable,distance=..1.5] add copper_golem.attack_back
+execute positioned ^ ^ ^-4 run tag @n[tag=id,tag=attackable,tag=card.entity,distance=..1.5] add copper_golem.attack_back
 
 execute positioned ^ ^ ^-4 positioned ~ ~-1.5 ~ run tag @n[tag=id,tag=board,distance=..1.5] add copper_golem.attack_board_back
 
@@ -31,8 +34,8 @@ execute as @n[tag=id,tag=copper_golem.attack_board_back,distance=..100] run func
 execute as @n[tag=id,tag=copper_golem.attack_board_front,distance=..100] run function main:board/cell/move/start_clear
 
 ## Copy moved entities friendly and movable to board
-execute as @n[tag=id,tag=copper_golem.attack_back,distance=..100] at @s run function cards:helper/entity_to_board
-execute as @n[tag=id,tag=target,distance=..100] at @s run function cards:helper/entity_to_board
+execute as @n[tag=id,tag=copper_golem.attack_back,distance=..100] at @s run function card:helper/entity_to_board
+execute as @n[tag=id,tag=target,distance=..100] at @s run function card:helper/entity_to_board
 
 tag @e[tag=id,distance=..100] remove copper_golem.attack_back
 tag @e[tag=id,distance=..100] remove copper_golem.attack_board_back

@@ -1,3 +1,4 @@
+clear @s
 ## Gives the player the default deck; mostly for updating new card information
 function cards:consumable/attack/arrow_storm/give
 function cards:entity/end/endermite/give
@@ -28,3 +29,6 @@ function cards:consumable/attack/splash_poison_potion/give
 function cards:consumable/attack/chorus_fruit/give
 function cards:entity/overworld/ravager/give
 function cards:consumable/buff/enchanted_golden_apple/give
+
+function helper:deck/clone/inventory_to_shulker
+data modify block 12 0 0 Items set from block 0 0 1

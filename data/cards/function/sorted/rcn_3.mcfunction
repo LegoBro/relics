@@ -1,7 +1,7 @@
 ## Sorted view of cards
+function cards:entity/overworld/vindicator/insert
 function cards:entity/overworld/ravager/insert
 function cards:consumable/defend/vault/insert
-function cards:entity/overworld/cleric/insert
 function cards:entity/nether/piglin_brute/insert
 function cards:entity/overworld/camel_husk/insert
 function cards:consumable/defend/sculk_shrieker/insert

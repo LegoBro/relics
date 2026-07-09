@@ -1,3 +1,4 @@
+clear @s
 ## Gives the player the default deck; mostly for updating new card information
 function cards:consumable/attack/anvil/give
 function cards:consumable/attack/iron_pickaxe/give
@@ -31,3 +32,6 @@ function cards:entity/overworld/creeper/give
 function cards:entity/overworld/spider/give
 function cards:entity/overworld/ravager/give
 function cards:entity/overworld/iron_golem/give
+
+function helper:deck/clone/inventory_to_shulker
+data modify block 10 0 0 Items set from block 0 0 1

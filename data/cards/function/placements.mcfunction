@@ -19,3 +19,4 @@ execute if score #placement var matches 14 run function cards:placements/not_own
 execute if score #placement var matches 15 run function cards:placements/minecart
 execute if score #placement var matches 16 run function cards:placements/undead
 execute if score #placement var matches 17 run function cards:placements/not_aquatic
+execute if score #placement var matches 18 run function cards:placements/spectral

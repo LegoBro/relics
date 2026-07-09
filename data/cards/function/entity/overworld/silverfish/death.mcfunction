@@ -1,6 +1,6 @@
 ## Death effects
 
-function cards:helper/tag_friendlies
+function card:helper/tag_friendlies
 tag @s add silverfish_origin
 
 execute as @e[type=armor_stand,tag=id,tag=card.building] at @s run function cards:entity/overworld/silverfish/convert

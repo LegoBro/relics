@@ -1,8 +1,5 @@
 # BLINDNESS
-execute at @e[type=armor_stand,tag=board,tag=filled,tag=id,limit=1,sort=nearest] positioned ~4 ~ ~ as @e[tag=attackable,tag=id,limit=1,sort=nearest,distance=..1.5] run tag @s add blindable
-execute at @e[type=armor_stand,tag=board,tag=filled,tag=id,limit=1,sort=nearest] positioned ~-4 ~ ~ as @e[tag=attackable,tag=id,limit=1,sort=nearest,distance=..1.5] run tag @s add blindable
-execute at @e[type=armor_stand,tag=board,tag=filled,tag=id,limit=1,sort=nearest] positioned ~ ~ ~4 as @e[tag=attackable,tag=id,limit=1,sort=nearest,distance=..1.5] run tag @s add blindable
-execute at @e[type=armor_stand,tag=board,tag=filled,tag=id,limit=1,sort=nearest] positioned ~ ~ ~-4 as @e[tag=attackable,tag=id,limit=1,sort=nearest,distance=..1.5] run tag @s add blindable
 
-scoreboard players set @e[tag=id,limit=1,sort=random,tag=blindable] blindness 1
-tag @e[tag=id,tag=blindable] remove blindable
+function card:helper/get_adjacent_board
+
+execute at @e[tag=id,tag=is_adjacent,distance=..100,limit=1,sort=random] run scoreboard players set @n[tag=id,tag=card.entity,distance=..1.5] blindness 1

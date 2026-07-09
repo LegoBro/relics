@@ -1,3 +1,4 @@
+clear @s
 ## Gives the player the default deck; mostly for updating new card information
 function cards:entity/overworld/sheep/give
 function cards:entity/overworld/slime/give
@@ -28,3 +29,6 @@ function cards:consumable/defend/cobweb_trap/give
 function cards:entity/overworld/pig/give
 function cards:entity/overworld/pig/give
 function cards:entity/overworld/mooshroom/give
+
+function helper:deck/clone/inventory_to_shulker
+data modify block 12 0 1 Items set from block 0 0 1

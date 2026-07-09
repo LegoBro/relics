@@ -2,7 +2,7 @@
 scoreboard players set #loop var 0
 
 function main:arena/loop
-execute positioned -128 150 -128 run summon armor_stand ~ ~ ~ {Tags:["arena.anchor","new"],NoGravity:1b}
+execute positioned -128 150 -128 run summon armor_stand ~ ~ ~ {Tags:["arena.anchor","new"],NoGravity:1b,Invisible:true}
 scoreboard players operation #loops var = #loop var
 execute as @e[type=armor_stand,tag=new,tag=arena.anchor] run scoreboard players operation @s id = #loops var
 execute as @e[type=armor_stand,tag=new,tag=arena.anchor] at @s if score #loop var matches 12.. run function main:arena/anchor/position_loop_z

@@ -1,3 +1,4 @@
+clear @s
 ## gives the player the default deck; mostly for updating new card information
 
 function cards:entity/overworld/pig/give
@@ -32,3 +33,5 @@ function cards:consumable/buff/diamond_armor/give
 function cards:consumable/defend/wither_trap/give
 function cards:consumable/defend/hay_bale/give
 
+function helper:deck/clone/inventory_to_shulker
+data modify block 12 0 4 Items set from block 0 0 1

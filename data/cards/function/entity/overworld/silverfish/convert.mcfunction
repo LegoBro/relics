@@ -7,6 +7,6 @@ execute run function cards:entity/apply_damage
 ## Summons entity as friendly,
 execute if score @s health matches 1.. run return 0
 execute positioned ~ ~-1 ~ run function cards:entity/overworld/silverfish/summon
-execute unless score #friendly var matches 1.. run function cards:helper/not_friendly
+execute unless score #friendly var matches 1.. run function card:helper/not_friendly
 #say convert?
 execute run scoreboard players add @a[tag=id,tag=turn] conversions 1

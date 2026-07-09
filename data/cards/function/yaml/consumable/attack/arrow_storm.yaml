@@ -6,5 +6,5 @@ card:
   name: "arrow_storm"
   color: "green"
   model_id: 20
-  cost: 4
+  cost: 3
   lore: "Deals 1 damage to target, as well as 1 damage to any adjacent tiles"

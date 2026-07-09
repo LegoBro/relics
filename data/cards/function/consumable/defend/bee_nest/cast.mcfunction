@@ -9,7 +9,6 @@ tag @e[type=armor_stand,tag=board,tag=id,limit=1,sort=nearest] remove movable
 scoreboard players operation @n[tag=get_id] id = game.id var
 scoreboard players set @n[tag=get_id] health 3
 scoreboard players set @n[tag=get_id] maxHealth 3
-scoreboard players set @n[tag=get_id] armor 1
 tag @n[tag=get_id] add fire_proof
 tag @e[tag=get_id] remove get_id
 scoreboard players remove @s saturation 6

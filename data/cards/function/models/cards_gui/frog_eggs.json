@@ -1,0 +1,1 @@
+{"credit": "Made with Brickbench", "parent": "item/cards/gui_template", "textures": {"background": "item/card/frog_eggs/background", "foreground": "item/card/frog_eggs/foreground", "description": "item/card/frog_eggs/description", "cost": "item/card/number/left/5", "rarity": "item/card/front_rare", "type": "item/card/trait/buff"}}

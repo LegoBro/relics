@@ -11,4 +11,5 @@ card:
   building:
     health: 4
     maxHealth: 4
+    armor: 1
     fire_proof: True

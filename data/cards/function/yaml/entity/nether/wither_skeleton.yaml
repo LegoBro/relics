@@ -18,3 +18,4 @@ card:
   wither_proof: True
   undead: True
   fire_proof: True
+  extra_nbt: "equipment:{mainhand:{id:'minecraft:stone_sword',count:1}}"

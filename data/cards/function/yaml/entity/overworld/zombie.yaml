@@ -7,7 +7,7 @@ card:
   color: "green"
   entity: "zombie"
   model_id: 11
-  cost: 2
+  cost: 1
   maxHealth: 3
   health: 3
   attack: 1

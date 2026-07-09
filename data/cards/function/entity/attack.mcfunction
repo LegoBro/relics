@@ -2,7 +2,7 @@
 
 tellraw @a[tag=id] {"translate":"attack.normal","with":[{"selector":"@n[tag=attacker,tag=id,distance=..100]"},{"selector":"@n[tag=target,tag=id,distance=..100]"}]}
 
-
+execute as @n[tag=attacker,tag=id,distance=..100] run swing @s
 execute as @n[tag=attacker,tag=id,distance=..100] run function cards:entity/get/attack
 
 scoreboard players operation #damage var = #attack var
@@ -18,6 +18,7 @@ tag @n[tag=target,tag=id,distance=..100] remove target
 tag @n[tag=swap_attacker,tag=id,distance=..100] add target
 tag @n[tag=swap_attacker,tag=id,distance=..100] remove swap_attacker
 
+execute as @n[tag=attacker,tag=id,distance=..100] run swing @s
 execute as @n[tag=attacker,tag=id,distance=..100] run function cards:entity/get/attack
 scoreboard players operation #damage var = #attack var
 

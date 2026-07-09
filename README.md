@@ -45,6 +45,9 @@ Unselectable - target can't be selected
 Unbuffable - target cannot have buffs applied to it
 
 
+## Music no work:
+Creative1-6, credits, end,  hal1-4, nether1-4, 
+
 ### New Cards
 #### Entity
 Gopper Golem - Swaps position of targeted entity with entity opposite from it
@@ -74,8 +77,8 @@ Vault - Generates 1 card every 4 turns, when broken give all
 
 ### Card Changes
 #### Entities
-Drowned - Impaler changed to require 2 other drowned to give trident, then 100% chance.
-    We didn't like the uncertainty of this card, and wanted to focus on adding value to synergistic cards such as pottery sherd
+Drowned - Impaler changed to require 2 other drowned to give trident, then 100% chance.  Attack gained from Impaler reduced by 1 (from +4 -> +3)
+    We didn't like the uncertainty of this card, and wanted to focus on adding value to synergistic cards such as pottery sherd.  The bonus attack has been reduced to help prevent it from being too powerful.
 
 Baby Magma Cube - Cost Reduced by 1 ( From 2 to 1)
     Baby Magma Cube fell far behind some similar cards that are cheaper
@@ -116,6 +119,20 @@ Warden - Increased speed by 1 (from 1 to 2)
 Silverfish - Hidden Friends Ability now deals 1 damage to all buildings, when one is broken, it spawns a silverfish
     The goal with this change is to have an interesting use case for silverfish in your deck, making it quite a valuable defense against bee spam or other building related strategies
 
+Sheep - Wooly Armor changed to be always every 4 turns
+    This is another case where reducing random chance in some ways makes the game easier to understand.
+
+Stray - Increased Frosted Arrows freeze chance to 100% (from 50%), reduced slow duration from 7 to 4 turns
+    Same as above, this change helps stray be more of a powerful glass cannon archtype
+
+Endermite - Increased damage by 1 (from 1 -> 2)
+    Endermite really didn't make sense at 1 attack, by the time a unit was on your side, it was definitely more than able to delete your endermite.  At 2 attack, I'm hoping it can fit into a more interesting usecase.
+
+Zombie - Decreased cost by 1 (from 2 to 1)
+    Zombie wasn't really valuable at cost of 2, so I'm hoping a 1 cost "tank" card might be of use to early game attacks.
+
+Skeleton Horse - Health increased by 3 (from 3 -> 6), Cost increased by 4 (from 8 -> 12)
+
 ##### Minor Entity Changes
 Phantom - Special Ability moved into Evasive trait
 Cub - Gained frozen trait
@@ -153,7 +170,24 @@ Chorus Fruit - Now guaranteed to work if there is an open board spot.
 Sticky Piston - Reduced Cost by 4 (from 8 -> 4)
     Sticky piston didn't really provide much value other than re-arranging your units or enemies units, so this should give it more power.
 
+Arrow Storm - Reduced cost by 1 (from 4 -> 3)
+    Arrow storm was nerfed a little too hard in the attack nerf wave, at a reduced cost it should be more useful.
+
+Blaze Strike - Reduced cost by 2 (from 8 -> 6)
+    Like arrow storm, blaze strike got nerfed a little too hard before, it's also easy to counter.  I'm hoping this will give it more utility.
+
 #### Buff
+Bread - Reduced XP gain by 1 (from 2 -> 1)
+    While this is a major nerf, bread seemed to be too valuable in almost any deck.  I'm hoping now it leaves more room for alternate XP generation cards.
+
+Sharpness - Reduced cost by 2 (from 5 -> 3)
+    This major buff will help sharpness stand out from strength, as it took more card slots to achieve the same effect, for more cost.
+
+Splash Fire Restistance Potion - Reduced cost by 2 (from 6 to 4)
+    Fire resistance is a really underutilized effect, so I'm hoping this will help it fit into it's niche scenarios more.
+
+Milk - Cost reduced by 4 (from 8 -> 4)
+    Milk never saw use at it's hefty 8 cost.  At 4, I'm thinking it will be a scary counter-attack utility.
 
 #### Defense
 Sculk Block - Health Increased by 1 (From 1 to 2)
@@ -174,6 +208,20 @@ Hay Bale - No longer applies effect immediately on place
 Lightning Rod - Added end of turn counter, which slowly oxidizes over time.  When fully oxidized, strike a lightning, but revert back to plain copper.
     Lightning Rod really wasn't that useful until now, there needed to be an additional purpose.  By functioning similarly to outpost, it can provide a unique twist for defenses, and allow cheaper conversion of units.
 
+Skeleton Trap - Now only spawns 2 skeleton horseman (from 4)
+    Skeleton Trap ended up providing way too much value, and now that skeleton horse has been greatly buffed, it should be easier for counter play.
+
+Bee Nest - Armor reduced by 1 (from 1 -> 0)
+    For being a relatively cheap building, bee
+
+Targets - Reduced cost by 2 (from 9 -> 7) 
+    Targets are a bit of a hassle to get value with.  At a reduced cost, they should be more useful.
+
+Farmland - Increased armor by 1 (from 0 -> 1)
+    Farmland can be really frustatingly countered by a 3 cost iron pickaxe, so this 1 armor will give a tiny bit more time to get it's value back.
+
+
+
 ### Fixes
 Bee Hive last spawn (when building breaks) spawns bee as enemy team -> spawn before destroy?
 Clear Totem of Dying Effects after use
@@ -185,16 +233,43 @@ Ice Storm no longer damages/slows the hero
 Updated Vex card to display newer vex style
 Sherd quest now properly saves
 
-### Improvements to do
-Convert all texts to translatable strings
-Fix vault giving too many cards
-
 ### Improvements Done
+Added a ton more text translation keys to make translators more powerful.
 Fast Open for card packs - Added a new setting in the deck manager to more quickly open card packs.
 Reworked many hover displays to showcase what is happening more effectively.  Also, now only uses actionbar.
 Improved performance on many behind the scenes functionality
 Converted Heroes into mannequins
 Various improvements to card descriptions, and unifying of entity descriptions.
+
+## Next Balance Changes
+Bread: Gives XP 2->1
+Skeleton Trap: Now only spawns 2 skeleton horseman (from 4)
+Drowned: Damage gained from Impaler reduced from +4 -> +3
+Sheep: Changed to gain +1 armor every 4 turns
+Stray: Frozen Shots freeze 100% (from 50%), duration reduced from 7 to 4 turns
+Repeater: XP 3->2
+Arrow Storm: Cost 4->3
+Sharpness: Cost Reduced from 5-> 3
+Bee Nest: Reduce Armor by 1 (from 1 -> 0)
+Fire Resist: Cost 6 -> 4
+Blaze Strike: Cost 8 -> 6
+Milk: Cost 8 -> 4
+Targets: Cost 9 -> 7
+Farmland: Armor 0 -> 1
+Endermite: Damage 1->2
+Zombie: Cost 2->1
+Copper Golem: Cost 8 -> 7
+Skeleton Horse: HP 3->6, Range 2->3, Cost 8->12
+Water: Remove Aquatic buff from dolphin
+
+
+
+
+
+
+
+
+
 
 ## 4.3
 

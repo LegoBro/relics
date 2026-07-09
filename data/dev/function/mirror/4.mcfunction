@@ -1,3 +1,4 @@
+clear @s
 ## Gives the player the default deck; mostly for updating new card information
 function cards:entity/nether/piglin/give
 function cards:entity/nether/piglin/give
@@ -28,3 +29,6 @@ function cards:entity/overworld/cleric/give
 function cards:consumable/buff/emerald/give
 function cards:consumable/attack/splash_poison_potion/give
 function cards:entity/nether/wither/give
+
+function helper:deck/clone/inventory_to_shulker
+data modify block 12 0 3 Items set from block 0 0 1

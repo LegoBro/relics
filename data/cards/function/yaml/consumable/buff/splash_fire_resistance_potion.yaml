@@ -6,5 +6,5 @@ card:
   name: "splash_fire_resistance_potion"
   color: "green"
   model_id: 45
-  cost: 6
+  cost: 4
   lore: "Removes all fire from an entity, as well as all adjacent entities for 12 turns"

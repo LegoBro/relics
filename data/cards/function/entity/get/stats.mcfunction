@@ -8,7 +8,7 @@
 function cards:entity/get/raw_stats
 
 # Extra display information for entities
-execute if score #range var matches 2.. if entity @s[tag=building.targets] run scoreboard players add #attack var 1
+execute if score #range var matches 2.. if entity @n[tag=card.building,tag=targets,tag=id] run function cards:consumable/defend/targets/check
 
 execute if score @s speed_pot matches 1.. run scoreboard players add #speed var 2
 execute if score @s slowness matches 1.. run scoreboard players remove #speed var 2

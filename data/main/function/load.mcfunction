@@ -1,5 +1,5 @@
 ## Main engine load
-
+execute unless loaded 8 200 8 run return run schedule function main:load 1s
 # VERSION
 scoreboard players set #version var 500
 
@@ -39,8 +39,10 @@ bossbar add minecraft:turn "Your Turn"
 scoreboard objectives add var dummy
 scoreboard objectives add id dummy
 scoreboard objectives add menu dummy
+scoreboard objectives add menu.ah dummy
 scoreboard objectives add deck dummy
 scoreboard objectives add duel.id dummy
+scoreboard objectives add match.id dummy
 scoreboard objectives add duel.timer dummy
 scoreboard objectives add turnCost dummy
 scoreboard objectives add rightClick minecraft.used:minecraft.carrot_on_a_stick
@@ -90,6 +92,7 @@ scoreboard objectives add tut.spot dummy
 scoreboard objectives add forfeit minecraft.used:potion
 
 scoreboard objectives add turnTimer minecraft.custom:minecraft.play_time
+scoreboard objectives add leaveTimer dummy
 scoreboard objectives add gameTimer dummy
 
 scoreboard objectives add apply_fire dummy
@@ -161,26 +164,32 @@ scoreboard players set #1200 var 1200
 
 kill @e[tag=display]
 #summon armor_stand 8 212 -29 {Invisible:1b,Marker:1b,Tags:["display","tick.ignore"],CustomNameVisible:1b,CustomName:{"text":"߷"}}
-summon armor_stand 3 203 -17 {Invisible:1b,Marker:1b,Tags:["display","tick.ignore"],CustomNameVisible:1b,CustomName:{"text":"Jump off to spectate"}}
+summon armor_stand 3 203 -17 {Invisible:1b,Marker:1b,Tags:["display","tick.ignore"],CustomNameVisible:1b,CustomName:{"translate":"lobby.spectate"}}
 #summon armor_stand -7 203 8 {Invisible:1b,Marker:1b,Tags:["display","tick.ignore"],CustomNameVisible:1b,CustomName:{"text":"🧱"}}
 
-summon armor_stand 8 204 23 {Invisible:1b,Marker:1b,Tags:["display","tick.ignore"],CustomNameVisible:1b,CustomName:{"text":"Info","color":"yellow","bold":true}}
-summon armor_stand -7 204 8 {Invisible:1b,Marker:1b,Tags:["display","tick.ignore"],CustomNameVisible:1b,CustomName:{"text":"Play","color":"green","bold":true}}
-summon armor_stand 23 204 8 {Invisible:1b,Marker:1b,Tags:["display","tick.ignore"],CustomNameVisible:1b,CustomName:{"text":"Workshop","color":"gold","bold":true}}
+summon armor_stand 8 204 23 {Invisible:1b,Marker:1b,Tags:["display","tick.ignore"],CustomNameVisible:1b,CustomName:{"translate":"lobby.info","color":"yellow","bold":true}}
+summon armor_stand -7 204 8 {Invisible:1b,Marker:1b,Tags:["display","tick.ignore"],CustomNameVisible:1b,CustomName:{"translate":"lobby.play","color":"green","bold":true}}
+summon armor_stand 23 204 8 {Invisible:1b,Marker:1b,Tags:["display","tick.ignore"],CustomNameVisible:1b,CustomName:{"translate":"lobby.workshop","color":"gold","bold":true}}
 
 #front_text:{messages:[{"text":""},{"text":""},{"text":""},{"text":""}]}
 
-setblock 20 217 20 minecraft:dark_oak_sign[rotation=14,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:["","","",""]},components:{},front_text:{color:"black",has_glowing_text:0b,messages:["",{bold:1b,click_event:{action:"run_command",command:"function main:lobby/parkour"},color:"gray",text:"Reward"},{color:"dark_green",text:"[Right Click]"},""]},is_waxed:0b}
-setblock 6 200 22 minecraft:dark_oak_wall_sign[facing=north,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:["","","",""]},components:{},front_text:{color:"black",has_glowing_text:0b,messages:["",{bold:1b,click_event:{action:"run_command",command:"function main:arena/create/tutorial"},color:"yellow",text:"Tutorial"},{color:"dark_green",text:"[Right Click]"},""]},is_waxed:0b}
-data merge block 5 200 22 {front_text:{messages:[{"text":""},{"color":"gold","bold":true,"click_event":{"action":"run_command",command:"function main:arena/create/tutorial_skip"},"text":"Practice Board"},{"color":"dark_green","text":"[Right Click]"},{"text":""}]}}
+setblock 20 217 20 minecraft:dark_oak_sign[rotation=14,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:["","","",""]},components:{},front_text:{color:"black",has_glowing_text:0b,messages:["",{bold:1b,click_event:{action:"run_command",command:"function main:lobby/parkour"},color:"gray",translate:"sign.parkour.reward"},{color:"dark_green",translate:"input.right_click"},""]},is_waxed:0b}
+setblock 6 200 22 minecraft:dark_oak_wall_sign[facing=north,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:["","","",""]},components:{},front_text:{color:"black",has_glowing_text:0b,messages:["",{bold:1b,click_event:{action:"run_command",command:"function main:arena/create/tutorial"},color:"yellow",translate:"sign.tutorial"},{color:"dark_green",translate:"input.right_click"},""]},is_waxed:0b}
+data merge block 5 200 22 {front_text:{messages:[{"text":""},{"color":"gold","bold":true,"click_event":{"action":"run_command",command:"function main:arena/create/tutorial_skip"},"translate":"sign.practice"},{"color":"dark_green",translate:"input.right_click"},{"text":""}]}}
 # Cheat Book
-setblock 6 200 30 minecraft:dark_oak_wall_sign[facing=east,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:["","","",""]},components:{},front_text:{color:"black",has_glowing_text:0b,messages:["",{bold:1b,click_event:{action:"run_command",command:"function main:arena/create/deck_builder/signs/cheat_info"},color:"dark_aqua",text:"Cheating Info"},{color:"dark_green",text:"[Right Click]"},""]},is_waxed:0b}
+setblock 6 200 30 minecraft:dark_oak_wall_sign[facing=east,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:["","","",""]},components:{},front_text:{color:"black",has_glowing_text:0b,messages:["",{bold:1b,click_event:{action:"run_command",command:"function main:arena/create/deck_builder/signs/cheat_info"},color:"dark_aqua",translate:"sign.cheating.info"},{color:"dark_green",translate:"input.right_click"},""]},is_waxed:0b}
 
-data merge block 10 200 22 {front_text:{messages:[{"text":"Booster Pack","color":"white","bold":true},{"text":"Purchase for","color":"yellow"},[{"text":"20","color":"gold"},{"text":"$","color":"white"}],{"text":"[Right Click]","color":"dark_green","click_event":{"action":"run_command",command:"function main:lobby/shop/purchase"}}]}}
+data merge block 10 200 22 {front_text:{messages:[{"translate":"sign.shop.booster","color":"white","bold":true},{"translate":"sign.card_pack.purchase","color":"yellow"},[{"text":"20","color":"gold"},{"text":"$","color":"white"}],{translate:"input.right_click","color":"dark_green","click_event":{"action":"run_command",command:"function main:lobby/shop/purchase"}}]}}
 data merge block 9 200 22 {front_text:{messages:[{"text":""},{"text":""},{"text":"<<<<<","color":"dark_green","click_event":{"action":"run_command",command:"function main:lobby/shop/left"}},{"text":""}]}}
 data merge block 11 200 22 {front_text:{messages:[{"text":""},{"text":""},{"text":">>>>>","color":"dark_green","click_event":{"action":"run_command",command:"function main:lobby/shop/right"}},{"text":""}]}}
 
-setblock -3 200 19 minecraft:birch_sign[rotation=10,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:["","","",""]},components:{},front_text:{color:"black",has_glowing_text:0b,messages:[{color:"dark_purple",text:"Special Thanks:"},{bold:1b,color:"green",text:"Stickypiston"},{bold:1b,color:"green",text:"Server Hosting"},{click_event:{action:"run_command",command:"function main:lobby/stickypiston"},color:"dark_green",text:"[Right Click]"}]},is_waxed:0b}
+setblock -3 200 19 minecraft:birch_sign[rotation=10,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:["","","",""]},components:{},front_text:{color:"black",has_glowing_text:0b,messages:[{color:"dark_purple",text:"Special Thanks:"},{bold:1b,color:"green",text:"Stickypiston"},{bold:1b,color:"green",text:"Server Hosting"},{click_event:{action:"run_command",command:"function main:lobby/stickypiston"},color:"dark_green",translate:"input.right_click"}]},is_waxed:0b}
+
+setblock 19 200 19 minecraft:dark_oak_sign[rotation=6,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:["","","",""]},components:{},front_text:{color:"black",has_glowing_text:0b,messages:["",{bold:1b,click_event:{action:"run_command",command:"function main:lobby/credits"},color:"blue",translate:"sign.credits"},{color:"dark_green",translate:"input.right_click"},""]},is_waxed:0b}
+
+setblock -7 200 8 minecraft:warped_wall_sign[facing=east,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:["","","",""]},components:{},front_text:{color:"black",has_glowing_text:0b,messages:["",{bold:1b,click_event:{action:"run_command",command:"function main:lobby/ready"},color:"gold",translate:"lobby.play"},{color:"dark_green",translate:"input.right_click"},""]},is_waxed:0b}
+
+setblock 24 200 8 minecraft:crimson_wall_sign[facing=west,waterlogged=false]{back_text:{color:"black",has_glowing_text:0b,messages:["","","",""]},components:{},front_text:{color:"black",has_glowing_text:0b,messages:["",{bold:1b,click_event:{action:"run_command",command:"function main:arena/create/deck_builder"},color:"aqua",translate:"deck_builder"},{color:"dark_green",translate:"input.right_click"},""]},is_waxed:1b}
 
 ## Shop Transition
 summon item_display 10 202.25 24 {Tags:["shop.display.new_left","transition","shop.display","display"],billboard:"fixed",transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[1f,0f,-0.5f],scale:[0f,0f,0f]},interpolation_duration:3}
@@ -198,7 +207,7 @@ summon item_display 10 202.25 24 {Tags:["shop.display.right","shop.display","dis
 scoreboard players set #shop display 0
 function main:lobby/shop/display
 
-summon villager 6 200 24 {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["display","stephen","follow"],CustomName:{"text":"Stephen","color":"yellow"},VillagerData:{profession:"minecraft:mason",type:"minecraft:plains"},Offers:{}}
+summon villager 6 200 24 {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["display","stephen","follow"],CustomName:{"translate":"villager.stephen","color":"yellow"},VillagerData:{profession:"minecraft:mason",type:"minecraft:plains"},Offers:{}}
 
 summon minecraft:glow_item_frame 25 201 5 {Fixed:1b,Tags:["display","tick.ignore"],Invisible:1b,Invulnerable:1b,Item:{id:"minecraft:carrot_on_a_stick",count:1b,components:{item_model:"cards/drowned"}},ItemRotation:3b,Facing:1b}
 summon minecraft:glow_item_frame 25 201 7 {Fixed:1b,Tags:["display","tick.ignore"],Invisible:1b,Invulnerable:1b,Item:{id:"minecraft:carrot_on_a_stick",count:1b,components:{item_model:"cards/wither_skeleton"}},ItemRotation:1b,Facing:1b}
@@ -237,3 +246,5 @@ summon block_display 17.22 201.03125 -4.0 {block_state:{Name:"minecraft:magenta_
 summon villager 17.35 200 -3.3 {Silent:1b,Invulnerable:1b,NoAI:1b,Tags:["lobby.npc","display","coffee"],active_effects:[{id:"minecraft:invisibility",amplifier:1,duration:-1,show_particles:0b}],Offers:{}}
 
 function music:load
+
+function main:lobby/credits_load

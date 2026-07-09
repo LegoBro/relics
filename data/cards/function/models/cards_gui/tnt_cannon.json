@@ -1,0 +1,1 @@
+{"credit": "Made with Brickbench", "parent": "item/cards/gui_template", "textures": {"background": "item/card/tnt_cannon/background", "foreground": "item/card/tnt_cannon/foreground", "description": "item/card/tnt_cannon/description", "cost": "item/card/number/left/14", "rarity": "item/card/front_epic", "type": "item/card/trait/attack"}}

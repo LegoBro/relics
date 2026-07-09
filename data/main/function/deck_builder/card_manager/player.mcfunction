@@ -14,4 +14,4 @@ execute if score @s menu matches -16..-1 run function main:deck_builder/card_man
 execute if score @s menu matches 0.. run function main:deck_builder/card_manager/menu/collection
 
 # Search for AH stuff
-function main:deck_builder/arena_hero/player
+execute at @n[type=marker,tag=id,tag=deck.builder.ah,distance=..100] run function main:deck_builder/arena_hero/player

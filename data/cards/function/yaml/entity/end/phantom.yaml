@@ -7,7 +7,7 @@ card:
   color: "green"
   entity: "phantom"
   model_id: 62
-  cost: 14
+  cost: 12
   maxHealth: 5
   health: 5
   attack: 4

@@ -11,7 +11,7 @@ execute as @e[type=armor_stand,tag=hovered.slot,tag=filled,tag=id,tag=!selected]
 team join red @e[type=armor_stand,tag=hovered.slot,tag=id]
 execute if score @s speed >= @e[type=armor_stand,tag=hovered.slot,tag=id,limit=1,tag=!minecart.rail_path] distance run team join yellow @e[type=armor_stand,tag=hovered.slot,tag=!filled,tag=!blocked,tag=id]
 execute if entity @e[type=armor_stand,tag=hovered.slot,tag=id,limit=1,tag=minecart.rail_path] run team join gray @e[type=armor_stand,tag=hovered.slot,tag=!filled,tag=!blocked,tag=id]
-execute if score @s[tag=!needs_vibration] range >= @e[type=armor_stand,tag=hovered.slot,tag=id,limit=1] distance run team join orange @e[type=armor_stand,tag=hovered.slot,tag=filled,tag=hostile,tag=id]
+execute if score @s[tag=!needs_vibration] range >= @e[type=armor_stand,tag=hovered.slot,tag=id,limit=1] distance unless entity @n[tag=id,tag=attackable,scores={invisibility=1..},distance=..1.5] run team join orange @e[type=armor_stand,tag=hovered.slot,tag=filled,tag=hostile,tag=id]
 
 ## Can attack friendlies
 execute store result score #can_attack_friendly var at @n[type=armor_stand,tag=selected,distance=..100,tag=id] if entity @n[tag=card.entity,tag=id,tag=can_attack_friendly,distance=..1.5]

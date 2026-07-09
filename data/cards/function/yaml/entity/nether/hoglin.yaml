@@ -7,7 +7,7 @@ card:
   color: "green"
   entity: "hoglin"
   model_id: 35
-  cost: 9
+  cost: 8
   maxHealth: 7
   health: 7
   attack: 3

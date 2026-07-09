@@ -8,8 +8,8 @@ card:
   entity: "frog"
   model_id: 132
   cost: 2
-  maxHealth: 3
-  health: 3
+  maxHealth: 2
+  health: 2
   attack: 1
   range: 1
   speed: 1

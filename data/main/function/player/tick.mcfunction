@@ -4,7 +4,8 @@ execute if entity @s[tag=!loaded] run function main:player/load
 ## Global Link - 
 scoreboard players add @s world.link 1
 execute unless score @s world.link = #GLOBAL world.link run scoreboard players set @s music.time -100
-execute unless score @s world.link = #GLOBAL world.link run function main:player/send_to_lobby
+execute unless score @s world.link = #GLOBAL world.link unless score @s match.id matches 1.. run function main:player/send_to_lobby
+execute unless score @s world.link = #GLOBAL world.link if score @s match.id matches 1.. run function main:player/verify_match
 
 team join in_game @s[scores={id=0..},team=!in_game]
 team join lobby @s[scores={id=-1},team=in_game]
