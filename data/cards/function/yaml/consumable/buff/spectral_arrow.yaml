@@ -1,5 +1,5 @@
 card:
-  placement: 7
+  placement: 18
   rarity: "uncommon"
   type: "consumable"
   element: "buff"

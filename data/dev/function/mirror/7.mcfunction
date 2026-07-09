@@ -1,3 +1,4 @@
+clear @s
 ## gives the player the default deck; mostly for updating new card information
 
 function cards:entity/overworld/axolotl/give
@@ -33,3 +34,5 @@ function cards:consumable/defend/water/give
 function cards:consumable/defend/sculk_catalyst/give
 function cards:consumable/defend/witch_hut/give
 
+function helper:deck/clone/inventory_to_shulker
+data modify block 12 0 6 Items set from block 0 0 1

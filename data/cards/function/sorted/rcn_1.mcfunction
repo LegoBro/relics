@@ -1,20 +1,20 @@
 ## Sorted view of cards
+function cards:consumable/attack/piston/insert
+function cards:consumable/attack/anvil/insert
 function cards:entity/overworld/bogged/insert
+function cards:entity/overworld/copper_golem/insert
 function cards:entity/overworld/farmer/insert
 function cards:entity/nether/piglin/insert
 function cards:consumable/buff/strength_potion/insert
+function cards:consumable/defend/targets/insert
 function cards:entity/overworld/turtle/insert
-function cards:consumable/attack/blaze_strike/insert
-function cards:entity/overworld/copper_golem/insert
 function cards:entity/end/enderman/insert
-function cards:consumable/buff/milk/insert
 function cards:consumable/buff/piercing/insert
 function cards:consumable/attack/splash_healing_potion/insert
 function cards:entity/overworld/stray/insert
 function cards:consumable/defend/diorite/insert
 function cards:consumable/defend/outpost/insert
 function cards:entity/overworld/pillager/insert
-function cards:consumable/defend/targets/insert
 function cards:consumable/defend/farmland/insert
 function cards:entity/overworld/camel/insert
 function cards:consumable/buff/iron_spear/insert
@@ -43,4 +43,4 @@ execute positioned ~1 ~ ~ run function cards:entity/nether/strider/insert
 execute positioned ~1 ~ ~ run function cards:entity/overworld/tnt/insert
 execute positioned ~1 ~ ~ run function cards:consumable/defend/lightning_rod/insert
 execute positioned ~1 ~ ~ run function cards:entity/overworld/parrot/insert
-execute positioned ~1 ~ ~ run function cards:entity/overworld/wolf/insert
+execute positioned ~1 ~ ~ run function cards:entity/overworld/snow_golem/insert

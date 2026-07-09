@@ -7,7 +7,7 @@ card:
   color: "#FBB1F2"
   entity: "villager"
   model_id: 145
-  cost: 11
+  cost: 9
   maxHealth: 3
   health: 3
   attack: 1

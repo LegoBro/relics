@@ -10,5 +10,5 @@ execute if entity @s[tag=!opening] run function main:deck_builder/expansion/get_
 
 execute as @e[type=player,tag=!saving,tag=id] at @s run function main:deck_builder/card_manager/player
 execute as @e[type=player,tag=saving,tag=id] run function main:deck_builder/saving
-execute as @e[type=marker,tag=id,tag=deck.builder.marker] at @s run function main:deck_builder/card_manager/update
-execute at @e[type=marker,tag=id,tag=deck.builder.ah] as @p[tag=id] run function main:deck_builder/arena_hero/update
+execute as @n[type=marker,tag=id,tag=deck.builder.marker,distance=..100] at @s run function main:deck_builder/card_manager/update
+#execute at @n[type=marker,tag=id,tag=deck.builder.ah,distance=..100] as @p[tag=id] run function main:deck_builder/arena_hero/update

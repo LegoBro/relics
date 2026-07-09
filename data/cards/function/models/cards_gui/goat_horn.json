@@ -1,0 +1,1 @@
+{"credit": "Made with Brickbench", "parent": "item/cards/gui_template", "textures": {"background": "item/card/goat_horn/background", "foreground": "item/card/goat_horn/foreground", "description": "item/card/goat_horn/description", "cost": "item/card/number/left/8", "rarity": "item/card/front_rare", "type": "item/card/trait/buff"}}

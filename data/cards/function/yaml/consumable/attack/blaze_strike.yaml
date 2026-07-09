@@ -6,5 +6,5 @@ card:
   name: "blaze_strike"
   color: "green"
   model_id: 30
-  cost: 8
+  cost: 6
   lore: "Deal 3 fire damage to an enemy unit as well as two adjacent horizontal spaces"

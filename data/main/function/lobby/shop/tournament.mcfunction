@@ -1,2 +1,2 @@
-tellraw @s {"translate":"Shop disabled in tournament mode!","color":"red"}
+tellraw @s {"translate":"shop.disabled","color":"red"}
 playsound minecraft:block.note_block.didgeridoo master @s

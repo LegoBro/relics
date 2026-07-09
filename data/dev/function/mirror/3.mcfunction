@@ -1,3 +1,4 @@
+clear @s
 ## Gives the player the default deck; mostly for updating new card information
 function cards:consumable/defend/lava_pocket/give
 function cards:consumable/defend/diorite/give
@@ -28,3 +29,6 @@ function cards:consumable/buff/diamond_armor/give
 function cards:entity/end/end_crystal/give
 function cards:entity/end/end_crystal/give
 function cards:entity/end/ender_dragon/give
+
+function helper:deck/clone/inventory_to_shulker
+data modify block 12 0 2 Items set from block 0 0 1

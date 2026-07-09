@@ -1,19 +1,19 @@
 ## Sorted view of cards
 execute store result score #rand var run loot spawn 0 -200 0 loot cards:open/1
-execute if score #rand var matches 1..5 run function cards:consumable/attack/chorus_fruit/unlock
-execute if score #rand var matches 6..10 run function cards:consumable/attack/iron_pickaxe/unlock
-execute if score #rand var matches 11..14 run function cards:consumable/attack/critical_hit/unlock
-execute if score #rand var matches 15..19 run function cards:consumable/attack/arrow_storm/unlock
+execute if score #rand var matches 1..5 run function cards:consumable/attack/arrow_storm/unlock
+execute if score #rand var matches 6..10 run function cards:consumable/attack/chorus_fruit/unlock
+execute if score #rand var matches 11..15 run function cards:consumable/attack/iron_pickaxe/unlock
+execute if score #rand var matches 16..19 run function cards:consumable/attack/critical_hit/unlock
 execute if score #rand var matches 20..23 run function cards:consumable/attack/sticky_piston/unlock
 execute if score #rand var matches 24..28 run function cards:consumable/attack/flint_and_steel/unlock
-execute if score #rand var matches 29..33 run function cards:consumable/attack/piston/unlock
-execute if score #rand var matches 34..38 run function cards:consumable/attack/anvil/unlock
-execute if score #rand var matches 39..43 run function cards:consumable/attack/blaze_strike/unlock
+execute if score #rand var matches 29..33 run function cards:consumable/attack/blaze_strike/unlock
+execute if score #rand var matches 34..38 run function cards:consumable/attack/piston/unlock
+execute if score #rand var matches 39..43 run function cards:consumable/attack/anvil/unlock
 execute if score #rand var matches 44..48 run function cards:consumable/attack/splash_healing_potion/unlock
 execute if score #rand var matches 49..52 run function cards:consumable/attack/wind_charge/unlock
-execute if score #rand var matches 53..56 run function cards:consumable/attack/splash_poison_potion/unlock
-execute if score #rand var matches 57..61 run function cards:consumable/attack/splash_damage_potion/unlock
-execute if score #rand var matches 62..65 run function cards:consumable/attack/ghast_fireball/unlock
+execute if score #rand var matches 53..56 run function cards:consumable/attack/ghast_fireball/unlock
+execute if score #rand var matches 57..60 run function cards:consumable/attack/splash_poison_potion/unlock
+execute if score #rand var matches 61..65 run function cards:consumable/attack/splash_damage_potion/unlock
 execute if score #rand var matches 66 run function cards:consumable/attack/mace/unlock
 execute if score #rand var matches 67..71 run function cards:consumable/attack/dragons_breath/unlock
 execute if score #rand var matches 72..76 run function cards:consumable/attack/ender_pearl/unlock

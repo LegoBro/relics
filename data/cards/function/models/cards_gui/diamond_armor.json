@@ -1,0 +1,1 @@
+{"credit": "Made with Brickbench", "parent": "item/cards/gui_template", "textures": {"background": "item/card/diamond_armor/background", "foreground": "item/card/diamond_armor/foreground", "description": "item/card/diamond_armor/description", "cost": "item/card/number/left/10", "rarity": "item/card/front_rare", "type": "item/card/trait/buff"}}

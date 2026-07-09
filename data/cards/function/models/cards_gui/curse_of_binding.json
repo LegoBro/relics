@@ -1,0 +1,1 @@
+{"credit": "Made with Brickbench", "parent": "item/cards/gui_template", "textures": {"background": "item/card/curse_of_binding/background", "foreground": "item/card/curse_of_binding/foreground", "description": "item/card/curse_of_binding/description", "cost": "item/card/number/left/8", "rarity": "item/card/front_uncommon", "type": "item/card/trait/buff"}}

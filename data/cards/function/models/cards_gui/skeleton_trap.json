@@ -1,0 +1,1 @@
+{"credit": "Made with Brickbench", "parent": "item/cards/gui_template", "textures": {"background": "item/card/skeleton_trap/background", "foreground": "item/card/skeleton_trap/foreground", "description": "item/card/skeleton_trap/description", "cost": "item/card/number/left/18", "rarity": "item/card/front_epic", "type": "item/card/trait/trap"}}

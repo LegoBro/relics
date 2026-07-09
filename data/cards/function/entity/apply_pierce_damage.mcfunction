@@ -13,4 +13,5 @@ execute if score @s health matches 1.. at @s run function cards:entity/damage/ma
 # Display
 kill @e[type=area_effect_cloud,tag=display_health,tag=id]
 
-tellraw @a[tag=id] [{"selector":"@s"},{"text":" took ","color":"white"},{"score":{"name":"#damage","objective":"var"},"bold":true,"color":"white"},{"text":" damage","color":"white"}]
+#tellraw @a[tag=id] [{"selector":"@s"},{"text":" took ","color":"white"},{"score":{"name":"#damage","objective":"var"},"bold":true,"color":"white"},{"text":" damage","color":"white"}]
+tellraw @a[tag=id] {"translate":"attack.damage.take","with":[{"selector":"@s"},{"score":{"name":"#damage","objective":"var"},"bold":true,"color":"white"}]}

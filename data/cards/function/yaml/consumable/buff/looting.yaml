@@ -6,5 +6,5 @@ card:
   name: "looting"
   color: "#E0673A"
   model_id: 163
-  cost: 9
+  cost: 3
   lore: "Draw 1 card for every unit killed this turn"

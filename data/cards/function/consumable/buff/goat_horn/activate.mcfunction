@@ -2,7 +2,7 @@
 # Evoker, Pillager, Ravager, Vindicator, Camel and Goat
 playsound minecraft:item.goat_horn.sound.1 hostile @a[tag=id] ~ ~ ~ 1 1 1
 
-function cards:helper/tag_friendlies
+function card:helper/tag_friendlies
 
 tag @e[tag=card.entity,tag=is_friendly,tag=illager] add apply_horn
 tag @e[tag=card.entity,tag=is_friendly,tag=lunging] add apply_horn

@@ -7,13 +7,13 @@ card:
   color: "green"
   entity: "skeleton_horse"
   model_id: 58
-  cost: 8
-  maxHealth: 3
-  health: 3
+  cost: 12
+  maxHealth: 6
+  health: 6
   attack: 2
   range: 2
   speed: 3
-  extra_nbt: 'Passengers:[{id:"minecraft:skeleton",Tags:["card.passenger"],Silent:1b,Invulnerable:1b,NoAI:1b,equipment:{mainhand:{id:"minecraft:bow",count:1},head:{id:"minecraft:golden_helmet",count:1,components:{minecraft:unbreakable={}}} }]'
+  extra_nbt: 'Passengers:[{id:"minecraft:skeleton",Tags:["card.passenger"],Silent:1b,Invulnerable:1b,NoAI:1b,equipment:{mainhand:{id:"minecraft:bow",count:1},head:{id:"minecraft:golden_helmet",count:1,components:{"minecraft:unbreakable":{}}}}}]'
   lore: ""
   undead: True
   flying: true

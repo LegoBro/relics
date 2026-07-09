@@ -16,3 +16,4 @@ card:
   apply_poison: 3
   lore: "Venom - deal an additional 3 poison damage"
   arthropod: true
+  ambush: true

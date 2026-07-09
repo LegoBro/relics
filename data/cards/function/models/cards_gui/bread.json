@@ -1,0 +1,1 @@
+{"credit": "Made with Brickbench", "parent": "item/cards/gui_template", "textures": {"background": "item/card/bread/background", "foreground": "item/card/bread/foreground", "description": "item/card/bread/description", "cost": "item/card/number/left/0", "rarity": "item/card/front_common", "type": "item/card/trait/buff"}}

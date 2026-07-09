@@ -1,6 +1,6 @@
   {
        "pack": {
-        "min_format": 94,
+        "min_format": 107,
         "max_format": 200,
         "description": "Gameplay Engine for Relics from the Deck"
        },

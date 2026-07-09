@@ -14,6 +14,6 @@ card:
   range: 1
   speed: 1
   extra_nbt: 'equipment:{head:{id:"minecraft:book",count:1b}}'
-  lore: "Impaler - when 2 other drowned are on the board, gets +2 range and +4 attack"
+  lore: "Impaler - when 2 other drowned are on the board, gets +2 range and +3 attack"
   undead: True
   water: True

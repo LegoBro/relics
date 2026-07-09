@@ -1,5 +1,5 @@
 ## Grab attack from mob
-function cards:helper/tag_friendlies
+function card:helper/tag_friendlies
 scoreboard players operation @e[tag=parrot,tag=new,tag=id,limit=1,sort=nearest] attack = @e[tag=card.entity,tag=id,tag=is_friendly,sort=random,tag=!hero.1,tag=!hero.2] attack
 scoreboard players operation @e[tag=parrot,tag=new,tag=id,limit=1,sort=nearest] maxHealth = @e[tag=card.entity,tag=id,tag=is_friendly,sort=random,tag=!hero.1,tag=!hero.2] maxHealth
 scoreboard players operation @e[tag=parrot,tag=new,tag=id,limit=1,sort=nearest] health = @e[tag=card.entity,tag=id,tag=is_friendly,sort=random,tag=!hero.1,tag=!hero.2] health

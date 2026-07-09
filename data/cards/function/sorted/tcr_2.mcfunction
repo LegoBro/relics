@@ -11,27 +11,27 @@ function cards:consumable/buff/aqua_affinity/insert
 function cards:consumable/buff/emerald/insert
 function cards:consumable/buff/iron_sword/insert
 function cards:consumable/buff/repeater/insert
+function cards:consumable/buff/sharpness/insert
+function cards:consumable/buff/looting/insert
+function cards:consumable/buff/milk/insert
 function cards:consumable/buff/rotten_flesh/insert
+function cards:consumable/buff/splash_fire_resistance_potion/insert
 function cards:consumable/buff/golden_apple/insert
 function cards:consumable/buff/leather_armor/insert
-function cards:consumable/buff/sharpness/insert
 function cards:consumable/buff/speed_potion/insert
 function cards:consumable/buff/honeycomb/insert
 function cards:consumable/buff/frog_eggs/insert
 function cards:consumable/buff/golden_armor/insert
 function cards:consumable/buff/minecart/insert
-function cards:consumable/buff/splash_fire_resistance_potion/insert
 function cards:consumable/buff/flame_aspect/insert
 function cards:consumable/buff/strength_potion/insert
-function cards:consumable/buff/milk/insert
 function cards:consumable/buff/piercing/insert
-function cards:consumable/buff/iron_armor/insert
+execute positioned ~1 ~ ~ run function cards:consumable/buff/curse_of_binding/insert
+execute positioned ~1 ~ ~ run function cards:consumable/buff/iron_armor/insert
 execute positioned ~1 ~ ~ run function cards:consumable/buff/spectral_arrow/insert
 execute positioned ~1 ~ ~ run function cards:consumable/buff/goat_horn/insert
 execute positioned ~1 ~ ~ run function cards:consumable/buff/haste_potion/insert
-execute positioned ~1 ~ ~ run function cards:consumable/buff/looting/insert
 execute positioned ~1 ~ ~ run function cards:consumable/buff/lunge/insert
-execute positioned ~1 ~ ~ run function cards:consumable/buff/curse_of_binding/insert
 execute positioned ~1 ~ ~ run function cards:consumable/buff/diamond_armor/insert
 execute positioned ~1 ~ ~ run function cards:consumable/buff/invisibility_potion/insert
 execute positioned ~1 ~ ~ run function cards:consumable/buff/saddle/insert

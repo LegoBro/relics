@@ -1,0 +1,1 @@
+{"credit": "Made with Brickbench", "parent": "item/cards/gui_template", "textures": {"background": "item/card/haste_potion/background", "foreground": "item/card/haste_potion/foreground", "description": "item/card/haste_potion/description", "cost": "item/card/number/left/9", "rarity": "item/card/front_uncommon", "type": "item/card/trait/buff"}}

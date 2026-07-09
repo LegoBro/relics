@@ -1,4 +1,15 @@
 ## Begins the game by clearing up player stuff
+
+execute at @e[type=armor_stand,tag=board.player.1,tag=id] run data modify block 0 0 1 Items set from block ~ ~-3 ~ Items
+function helper:deck/clone/shulker_to_data
+
+## Copy data to selected_deck???
+function helper:deck/clone/data_to_selected
+function helper:deck/clone/selected_to_data
+tag @s add selected_draft_reset
+
+#execute at @e[type=armor_stand,tag=board.player.2,tag=id] run #function main:player/use_card/copy
+
 scoreboard players reset @a[tag=id] turnCount
 clear @a[tag=id]
 item replace entity @a[tag=id] hotbar.0 with carrot_on_a_stick[custom_data={selector:1b},item_model=arrow]

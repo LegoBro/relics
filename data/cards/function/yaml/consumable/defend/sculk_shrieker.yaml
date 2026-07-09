@@ -9,6 +9,7 @@ card:
   model_id: 126
   lore: "When an enemy entity travels to an adjacent spot, discover a random sculk block; after 4 triggers, discover the Warden"
   building:
-    health: 4
-    maxHealth: 4
+    health: 5
+    maxHealth: 5
+    armor: 3
     fire_proof: True

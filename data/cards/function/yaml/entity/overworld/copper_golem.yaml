@@ -7,7 +7,7 @@ card:
   color: "#E0673A"
   entity: "copper_golem"
   model_id: 153
-  cost: 8
+  cost: 7
   maxHealth: 4
   health: 4
   special_attack: true

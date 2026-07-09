@@ -7,7 +7,7 @@ card:
   color: "green"
   entity: "snow_golem"
   model_id: 6
-  cost: 9
+  cost: 7
   maxHealth: 3
   health: 3
   special_attack: true

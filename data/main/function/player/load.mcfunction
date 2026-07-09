@@ -16,5 +16,7 @@ scoreboard players set @s set.fatigue 0
 scoreboard players set @s set.hero_hp 15
 scoreboard players set @s menu 0
 scoreboard players set @s deck -1
+scoreboard players set @s rating 1000
 
 execute if entity @s[name="LegoBro"] run advancement grant @s only main:quests/deckmaster
+

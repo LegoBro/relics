@@ -1,0 +1,1 @@
+{"credit": "Made with Brickbench", "parent": "item/cards/gui_template", "textures": {"background": "item/card/ender_pearl/background", "foreground": "item/card/ender_pearl/foreground", "description": "item/card/ender_pearl/description", "cost": "item/card/number/left/13", "rarity": "item/card/front_common", "type": "item/card/trait/attack"}}

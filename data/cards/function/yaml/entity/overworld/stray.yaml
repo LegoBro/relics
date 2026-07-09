@@ -14,6 +14,6 @@ card:
   range: 3
   speed: 1
   extra_nbt: 'equipment:{head:{id:"minecraft:book",count:1b}}'
-  lore: "Frosted Arrows - shots have a 50% chance of giving slowness for 7 turns"
+  lore: "Frosted Arrows - attacks give slowness for 4 turns"
   undead: True
   frozen: True

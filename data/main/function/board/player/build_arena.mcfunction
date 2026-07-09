@@ -53,6 +53,8 @@ execute if score @s[tag=player.2] set.arena matches 16 run data merge block ~ ~ 
 # fort
 execute if score @s[tag=player.1] set.arena matches 17 run data merge block ~ ~ ~ {ignoreEntities:0b,rotation: "NONE", mode:"LOAD", posX:0,posY:0,posZ:0,sizeX:32,sizeZ:32,sizeY:32,name:"main:arena/arena/fort/1"}
 execute if score @s[tag=player.2] set.arena matches 17 run data merge block ~ ~ ~ {ignoreEntities:0b,rotation: "NONE", mode:"LOAD", posX:0,posY:0,posZ:0,sizeX:32,sizeZ:32,sizeY:32,name:"main:arena/arena/fort/2"}
-
+# sandtower
+execute if score @s[tag=player.1] set.arena matches 18 run data merge block ~ ~ ~ {ignoreEntities:0b,rotation: "NONE", mode:"LOAD", posX:0,posY:0,posZ:0,sizeX:32,sizeZ:32,sizeY:32,name:"main:arena/arena/sandtower/1"}
+execute if score @s[tag=player.2] set.arena matches 18 run data merge block ~ ~ ~ {ignoreEntities:0b,rotation: "NONE", mode:"LOAD", posX:0,posY:0,posZ:0,sizeX:32,sizeZ:32,sizeY:32,name:"main:arena/arena/sandtower/2"}
 
 setblock ~ ~1 ~ redstone_block

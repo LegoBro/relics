@@ -6,5 +6,5 @@ card:
   name: "curse_of_binding"
   color: "#FBB1F2"
   model_id: 138
-  cost: 10
+  cost: 8
   lore: "Your opponent can't discard any cards the next 3 turns"

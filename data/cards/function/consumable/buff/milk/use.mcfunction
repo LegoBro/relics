@@ -1,2 +1,2 @@
-execute unless score @s saturation matches 8.. run function cards:too_poor
-execute if score @s saturation matches 8.. run function cards:consumable/buff/milk/cast
+execute unless score @s saturation matches 4.. run function cards:too_poor
+execute if score @s saturation matches 4.. run function cards:consumable/buff/milk/cast

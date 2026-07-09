@@ -14,5 +14,5 @@ card:
   attack: 0
   range: 1
   speed: 1
-  lore: "Wooly Armor - has a chance to grow armor"
+  lore: "Wooly Armor - grows armor every 4 turns"
   passive: True

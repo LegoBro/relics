@@ -6,6 +6,7 @@ function cards:consumable/defend/suspicious_sand/insert
 function cards:consumable/defend/hay_bale/insert
 function cards:consumable/defend/water/insert
 function cards:consumable/defend/bee_nest/insert
+function cards:consumable/defend/targets/insert
 function cards:consumable/defend/lightning_rod/insert
 function cards:consumable/defend/enchantment_table/insert
 function cards:consumable/defend/spawner/insert
@@ -13,10 +14,9 @@ function cards:consumable/defend/sculk_shrieker/insert
 function cards:consumable/defend/bee_hive/insert
 function cards:consumable/defend/diorite/insert
 function cards:consumable/defend/outpost/insert
-function cards:consumable/defend/targets/insert
 function cards:consumable/defend/cherry_sapling/insert
-function cards:consumable/defend/farmland/insert
 function cards:consumable/defend/well/insert
+function cards:consumable/defend/farmland/insert
 function cards:consumable/defend/witch_hut/insert
 function cards:consumable/defend/jail/insert
 function cards:consumable/defend/vault/insert

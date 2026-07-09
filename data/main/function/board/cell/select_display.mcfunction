@@ -11,5 +11,9 @@ execute if score #can_attack_friendly var matches 1.. if score @s distance <= #r
 # Entity has saddle equipped
 execute if score @s distance <= #speed var if entity @n[tag=id,tag=card.entity,tag=has_saddle,distance=..1.5] run item replace entity @s[tag=filled] armor.head with book[item_model="cell_state/saddle"]
 
+
+# Invisibility?
+execute if score @s distance <= #range var if entity @n[tag=attackable,tag=id,distance=..1.5,scores={invisibility=1..}] run item replace entity @s armor.head with book[item_model="cell_state/empty"]
+
 # Void
 execute if score @s distance matches 0 run item replace entity @s armor.head with book[item_model="cell_state/empty"]

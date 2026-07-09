@@ -1,0 +1,1 @@
+{"credit": "Made with Brickbench", "parent": "item/cards/gui_template", "textures": {"background": "item/card/name_tag/background", "foreground": "item/card/name_tag/foreground", "description": "item/card/name_tag/description", "cost": "item/card/number/left/13", "rarity": "item/card/front_epic", "type": "item/card/trait/buff"}}

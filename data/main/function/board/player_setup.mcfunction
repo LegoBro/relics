@@ -8,6 +8,7 @@ tag @s remove turn
 scoreboard players set @s endTurn 0
 scoreboard players set @s turnTimer -2400
 scoreboard players operation @s id = game.id var
+scoreboard players operation @s match.id = match_id var
 
 execute if entity @a[tag=board.load.player,tag=player.1] run function main:board/player/2
 execute unless entity @a[tag=board.load.player,tag=player.1] run function main:board/player/1
