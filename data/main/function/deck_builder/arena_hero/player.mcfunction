@@ -17,7 +17,7 @@ item replace block 0 0 0 container.26 with air
 
 
 
-execute if items entity @s player.cursor * run function main:deck_builder/arena_hero/update
+execute if items entity @s player.cursor *[!custom_data~{card:{}}] run function main:deck_builder/arena_hero/update
 
 clear @s player_head
 clear @s structure_block

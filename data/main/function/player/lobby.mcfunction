@@ -25,8 +25,6 @@ clear @s[tag=inv_changed]
 execute unless score @s[tag=!duel_invited,team=lobby] duel.timer matches ..0 run item replace entity @s hotbar.0 with written_book[item_name={"translate":"game.book","italic":false,"color":"green"},written_book_content={title:"",author:"Deckmaster",pages:[\
     ["",{"translate":"set.gamemodes","color":"dark_gray","bold":true,"underlined":true},\
         "\n",{"translate":"set.gamemodes.classic","color":"gold","bold":false,"underlined":true,"hover_event":{"action":"show_text","value":[{"translate":"set.gamemodes.classic.des"}]},"click_event":{"action":"run_command","command":"/trigger setting set 0"}},\
-        "\n",{"translate":"set.gamemodes.mirror","underlined":true,"color":"dark_aqua","bold":false,"hover_event":{"action":"show_text","value":[{"translate":"set.gamemodes.mirror.des"}]},"click_event":{"action":"run_command","command":"/trigger setting set 1"}},\
-        "\n",{"translate":"set.gamemodes.draft","underlined":true,"color":"dark_red","bold":false,"hover_event":{"action":"show_text","value":[{"translate":"set.gamemodes.draft.des"}]},"click_event":{"action":"run_command","command":"/trigger setting set 2"}},\
         "\n",{"translate":"set.gamemodes.no_draw","underlined":true,"color":"dark_green","bold":false,"hover_event":{"action":"show_text","value":[{"translate":"set.gamemodes.no_draw.des"}]},"click_event":{"action":"run_command","command":"/trigger setting set 3"}},\
         "\n\n",{"translate":"set.turn_time","bold":true,"color":"gray","underlined":true},\
         {"text":" 30s","color":"blue","bold":false,"hover_event":{"action":"show_text","value":[{"translate":"set.turn_time.30"}]},"click_event":{"action":"run_command","command":"/trigger setting set 10"}},\
@@ -46,6 +44,10 @@ execute unless score @s[tag=!duel_invited,team=lobby] duel.timer matches ..0 run
         {"text":" 15","color":"yellow","bold":false,"hover_event":{"action":"show_text","value":[{"translate":"set.hero_hp.15.des"}]},"click_event":{"action":"run_command","command":"/trigger setting set 41"}},\
         {"text":" 20","color":"dark_green","bold":false,"hover_event":{"action":"show_text","value":[{"translate":"set.hero_hp.20.des"}]},"click_event":{"action":"run_command","command":"/trigger setting set 42"}}\
 ]]}] 1
+
+## Disabled Modes
+#        "\n",{"translate":"set.gamemodes.mirror","underlined":true,"color":"dark_aqua","bold":false,"hover_event":{"action":"show_text","value":[{"translate":"set.gamemodes.mirror.des"}]},"click_event":{"action":"run_command","command":"/trigger setting set 1"}},\
+#        "\n",{"translate":"set.gamemodes.draft","underlined":true,"color":"dark_red","bold":false,"hover_event":{"action":"show_text","value":[{"translate":"set.gamemodes.draft.des"}]},"click_event":{"action":"run_command","command":"/trigger setting set 2"}},\
 
 
 item replace entity @s weapon.offhand with air

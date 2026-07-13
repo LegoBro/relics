@@ -44,10 +44,6 @@ Defensive - doesn't advance to targets spot when dealing a killing blow
 Unselectable - target can't be selected
 Unbuffable - target cannot have buffs applied to it
 
-
-## Music no work:
-Creative1-6, credits, end,  hal1-4, nether1-4, 
-
 ### New Cards
 #### Entity
 Gopper Golem - Swaps position of targeted entity with entity opposite from it
